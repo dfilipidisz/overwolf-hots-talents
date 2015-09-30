@@ -9,8 +9,8 @@
     "access-name": "com.davidf.hotstalents",
     "description": "Check out Heroes of the Storm talent picks for every Hero, ordered by popularity or win rate.",
     "dock_button_title": "HoTS Talent Picks",
-    "icon": "IconMouseOver.jpg",
-    "icon_gray": "IconMouseNormal.jpg"
+    "icon": "IconMouseOver.png",
+    "icon_gray": "IconMouseNormal.png"
   },
   "data": {
     "start_window": "MainWindow",

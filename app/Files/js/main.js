@@ -241,7 +241,7 @@ $(document).ready(function() {
   }
   
   function fetchDataFile() {
-    $.getJSON( "json/data.json", function( data ) {
+    $.getJSON( "https://raw.githubusercontent.com/dfilipidisz/hotslogs-scraper/master/data.json", function( data ) {
       talentData = data;
       
       window.localStorage.setItem('lastCheckForUpdate', Date.now());

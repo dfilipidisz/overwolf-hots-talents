@@ -1,0 +1,68 @@
+@purple-light: #1f154a;
+@purple-dark: #0e0b22;
+@border-blue: #4183ca;
+
+html {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: transparent;
+}
+
+section.page {
+  border: 1px solid @border-blue;
+  padding: 10px;
+  background: linear-gradient(to bottom, @purple-light 0%, @purple-dark 100%);
+}
+
+#minimized {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px 1px white;
+    cursor: pointer;
+  }
+}
+
+#talents-container {
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+
+#hero-chooser {
+  position: relative;
+  height: 40px;
+  
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px 1px white;
+    z-index: 3300;
+  }
+  
+  .form-control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    z-index: 3200;
+    width: 95%;
+    padding-left: 30px;
+  }
+}

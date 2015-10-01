@@ -5,34 +5,32 @@
   	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   	<title>HoTS Talent Picks</title>
     
-    <style>
-      html {
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        background-color: blue;
-        border: 3px solid darkblue;
-      }
-      
-      #minimized img {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-        border: 2px solid white;
-      }
-      
-    </style>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet/less" type="text/css" href="less/main.less" />
     
   </head>
 
   <body>
     
-    <section id=minimized>
+    <section id='minimized'>
       <img src="img/Icon.png" />
     </section>
     
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <section id='talents-container' class='page hidden'>
+      
+      <div id='hero-chooser'>
+        <img src="img/Icon.png" />
+        <select class='form-control'>
+          <option>None</option>
+          <option>Chen</option>
+        </select>
+      </div>
+      
+    </section>
+    
+    <script src="bower_components/less/dist/less.min.js" type="text/javascript"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/index.js"></script>
     <!--<script src="js/main.js"></script>-->
   </body>
 </html>

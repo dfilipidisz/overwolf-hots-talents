@@ -109,7 +109,7 @@ $(document).ready(function() {
   }
   
   $('#minimized').click(callbacks.onSwitchPageToContainer);
-  $('#talents-container').mouseleave(callbacks.onLeaveContainer);
+  //$('#talents-container').mouseleave(callbacks.onLeaveContainer);
   $('#heroSelect').change(callbacks.onSelectHero);
   
   startUp();

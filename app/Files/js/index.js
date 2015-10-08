@@ -2,7 +2,7 @@ $(document).ready(function() {
   "use strict";
   
   var talentData;
-  
+  var selectedType = 'popularity';
   var selectedHero = "";
   
   var callbacks = {
@@ -28,7 +28,7 @@ $(document).ready(function() {
       if ($(this).val() !== 'none') { 
         selectedHero = makeStringSafe($(this).val());
         window.localStorage.setItem('selectedHero', selectedHero);
-        buildHeroTalentsDOM();
+        buildTalentRows();
       }
       else {
         console.log('Reset display');
@@ -36,9 +36,43 @@ $(document).ready(function() {
         $('#popularity').empty();
         $('#winrate').empty();
       }
+    },
+    
+    changeTypeToPopularity: function() {
+      selectedType = 'popularity';
+      changePopularityDOM();
+    },
+    
+    changeTypeToWinrate: function() {
+      selectedType = 'winrate';
+      changePopularityDOM();
+    },
+    
+    switchSubrows: function() {
+      console.log('switching');
+      if ($(this).children('i').hasClass('glyphicon-chevron-down')) {
+        $(this).children('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+      }
+      else if ($(this).children('i').hasClass('glyphicon-chevron-up')) {
+        $(this).children('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+      }
     }
   };
   
+  function changePopularityDOM() {
+    $('#popularity').removeClass('active');
+    $('#winrate').removeClass('active');
+    
+    switch(selectedType) {
+      case 'popularity':
+        $('#popularity').addClass('active');
+        break;
+      case 'winrate':
+        $('#winrate').addClass('active');
+        break;
+    }
+  }
+                  
   function makeStringSafe(str) {
     var t = replaceAll(str, ' ', '');
     t = replaceAll(t, "'", '');
@@ -59,7 +93,7 @@ $(document).ready(function() {
     if (sh !== null) {
       $('#heroSelect').val(sh);
       selectedHero = sh;
-      buildHeroTalentsDOM();
+      buildTalentRows();
     }
   }
   
@@ -108,9 +142,74 @@ $(document).ready(function() {
     });
   }
   
+  function buildTalentRows() {
+    var d = talentData[selectedHero];
+    var buffer = "";
+    
+    if (selectedType === 'popularity') {
+      buffer += buildLevelRows(d, 1);
+      buffer += buildLevelRows(d, 4);
+      buffer += buildLevelRows(d, 7);
+      buffer += buildLevelRows(d, 10);
+      buffer += buildLevelRows(d, 13);
+      buffer += buildLevelRows(d, 16);
+      buffer += buildLevelRows(d, 20);
+    }
+    else if (selectedType === 'winrate') {
+      
+    }
+    
+    $('#talents').empty().append(buffer);
+  }
+  
+  function buildLevelRows(d, lvl) {
+    var buffer = "";
+    var talent = getTalent(d, lvl, 1);
+    
+    buffer += "<div class=talent-row>";
+    buffer += "<div class=main-row>";
+    buffer += "<div class='hexagon'><span></span></div>";
+    buffer += "<div class=talent-holder>";
+    buffer += "<span class=title>"+talent.title+"</span>";
+    buffer += "<span class=percent>"+talent[selectedType]+"%</span>";
+    buffer += "<span class=switch><i class='glyphicon glyphicon-chevron-down'></i></span>";
+    buffer += "</div>";
+    buffer += "</div>";
+    
+    //insert subrows here
+    
+    buffer += "</div>";
+    
+    return buffer;
+  }
+  
+  function getTalent(heroData, lvl, rank) {
+    var arr = [];
+    
+    if (selectedType === 'popularity') {
+      arr = heroData['lvl'+lvl].sort(function compare(a, b) {
+        if (parseFloat(a.popularity) < parseFloat(b.popularity)) return 1;
+        if (parseFloat(a.popularity) > parseFloat(b.popularity)) return -1;
+        return 0;
+      });  
+    }
+    else if (selectedType === 'winrate') {
+      arr = heroData['lvl'+lvl].sort(function compare(a, b) {
+        if (parseFloat(a.winrate) < parseFloat(b.winrate)) return 1;
+        if (parseFloat(a.winrate) > parseFloat(b.winrate)) return -1;
+        return 0;
+      });
+    }
+    
+    return arr[rank-1];
+  }
+  
   $('#minimized').click(callbacks.onSwitchPageToContainer);
   //$('#talents-container').mouseleave(callbacks.onLeaveContainer);
   $('#heroSelect').change(callbacks.onSelectHero);
+  $('#popularity').click(callbacks.changeTypeToPopularity);
+  $('#winrate').click(callbacks.changeTypeToWinrate);
+  $('.talent-holder').on('click', '.switch', callbacks.switchSubrows);
   
   startUp();
   

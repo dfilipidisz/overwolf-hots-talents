@@ -121,35 +121,14 @@ section.page {
   position: relative;
   width: 30px; 
   height: 17.32px;
-  /*background-color: @purple-dark;*/
+  background-color: @purple-dark;
+  
   margin: 8.66px 0;
   box-shadow: 0 0 5px rgba(0,0,0,0.6);
   border-left: solid 4px @talent-border;
   border-right: solid 4px @talent-border;
   color: white;
   
-  
-  &.t1 {
-    background: url('img/t1.png');
-  }
-  &.t4 {
-    background: url('img/t4.png');
-  }
-  &.t7 {
-    background: url('img/t7.png');
-  }
-  &.t10 {
-    background: url('img/t10.png');
-  }
-  &.t13 {
-    background: url('img/t13.png');
-  }
-  &.t16 {
-    background: url('img/t16.png');
-  }
-  &.t20 {
-    background: url('img/t20.png');
-  }
   
   &:before,
   &:after {
@@ -190,4 +169,71 @@ section.page {
     background: inherit;
   }
   
+}
+
+#talents {
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+  
+  .talent-row {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    
+    .sub-row {
+      margin-top: 3px;
+    }
+    
+    .main-row,
+    .sub-row {
+      width: 100%;
+      position: relative;
+      height: 30px;
+      margin-left: 5px;
+      
+      .hexagon {
+        position: absolute;
+        left: -15px;
+        top: 0;
+      }
+      
+      .talent-holder {
+        border: 1px solid white;
+        height: 35px;
+        padding-left: 25px;
+        line-height: 30px;
+        color: white;
+        position: relative;
+        
+        .switch {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 34px;
+          width: 35px;
+          border-left: 1px solid white;
+          line-height: 35px;
+          text-align: center;
+          cursor: pointer;
+        }
+        
+        .percent {
+          position: absolute;
+          top: 0;
+          right: 36px;
+          height: 34px;
+          width: 60px;
+          padding-right: 5px;
+          border-left: 1px solid white;
+          line-height: 35px;
+          text-align: right;
+        }
+      }
+    }
+    
+    .sub-row {
+      
+    }
+  }
 }

@@ -2,7 +2,7 @@ $(document).ready(function() {
   "use strict";
   
   var talentData;
-  
+  var selectedType = 'popularity';
   var selectedHero = "";
   
   var callbacks = {
@@ -34,6 +34,16 @@ $(document).ready(function() {
         $('#popularity').empty();
         $('#winrate').empty();
       }
+    },
+    
+    changeTypeToPopularity: function() {
+      selectedType = 'popularity';
+      changePopularityDOM();
+    },
+    
+    changeTypeToWinrate: function() {
+      selectedType = 'winrate';
+      changePopularityDOM();
     },
     
     onOpenPopularSubrow: function() {
@@ -76,6 +86,20 @@ $(document).ready(function() {
       $('#lvl'+$(this).data('lvl')+'-sub-row6-winrate').addClass('hidden');
     }
   };
+  
+  function changePopularityDOM() {
+    $('#popularity').removeClass('active');
+    $('#winrate').removeClass('active');
+    
+    switch(selectedType) {
+      case 'popularity':
+        $('#popularity').addClass('active');
+        break;
+      case 'winrate':
+        $('#winrate').addClass('active');
+        break;
+    }
+  }
   
   function buildHeroTalentsDOM() {
     var d = talentData[selectedHero];
@@ -254,10 +278,12 @@ $(document).ready(function() {
   $('#heroSelect').change(callbacks.onSelectHero);
   $('.close-app').click(callbacks.onCloseApp);
   $('.navigation').mousedown(callbacks.onStartWindowDrag);
-  $('#popularity').on('click', '.open-subrow', callbacks.onOpenPopularSubrow);
-  $('#popularity').on('click', '.close-subrow', callbacks.onClosePopularSubrow);
-  $('#winrate').on('click', '.open-subrow-winrate', callbacks.onOpenPopularSubrowWinrate);
-  $('#winrate').on('click', '.close-subrow-winrate', callbacks.onClosePopularSubrowWinrate);
+  $('#popularity').click(callbacks.changeTypeToPopularity);
+  $('#winrate').click(callbacks.changeTypeToWinrate);
+  //$('#popularity').on('click', '.open-subrow', callbacks.onOpenPopularSubrow);
+  //$('#popularity').on('click', '.close-subrow', callbacks.onClosePopularSubrow);
+  //$('#winrate').on('click', '.open-subrow-winrate', callbacks.onOpenPopularSubrowWinrate);
+  //$('#winrate').on('click', '.close-subrow-winrate', callbacks.onClosePopularSubrowWinrate);
   
   startUp();
   

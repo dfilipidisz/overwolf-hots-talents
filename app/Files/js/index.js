@@ -51,10 +51,14 @@ $(document).ready(function() {
     switchSubrows: function() {
       console.log('switching');
       if ($(this).children('i').hasClass('glyphicon-chevron-down')) {
+        //Open surows
         $(this).children('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+        $('.sub-row.lvl'+$(this).data('lvl')).removeClass('hidden');
       }
       else if ($(this).children('i').hasClass('glyphicon-chevron-up')) {
+        //Close subrows
         $(this).children('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        $('.sub-row.lvl'+$(this).data('lvl')).addClass('hidden');
       }
     }
   };
@@ -143,6 +147,8 @@ $(document).ready(function() {
   }
   
   function buildTalentRows() {
+    console.log('Build rows');
+    
     var d = talentData[selectedHero];
     var buffer = "";
     
@@ -172,11 +178,20 @@ $(document).ready(function() {
     buffer += "<div class=talent-holder>";
     buffer += "<span class=title>"+talent.title+"</span>";
     buffer += "<span class=percent>"+talent[selectedType]+"%</span>";
-    buffer += "<span class=switch><i class='glyphicon glyphicon-chevron-down'></i></span>";
+    buffer += "<span class=switch data-lvl="+lvl+"><i class='glyphicon glyphicon-chevron-down'></i></span>";
     buffer += "</div>";
     buffer += "</div>";
     
-    //insert subrows here
+    for (var i = 1; i < d['lvl'+lvl].length; i++) {
+      talent = getTalent(d, lvl, i+1);
+      buffer += "<div class='sub-row hidden lvl"+lvl+"'>";
+      buffer += "<div class=talent-holder>";
+      buffer += "<span class=title>"+talent.title+"</span>";
+      buffer += "<span class=percent>"+talent[selectedType]+"%</span>";
+      buffer += "<span class=switch-placeholder></span>";
+      buffer += "</div>";
+      buffer += "</div>";
+    }
     
     buffer += "</div>";
     
@@ -209,7 +224,7 @@ $(document).ready(function() {
   $('#heroSelect').change(callbacks.onSelectHero);
   $('#popularity').click(callbacks.changeTypeToPopularity);
   $('#winrate').click(callbacks.changeTypeToWinrate);
-  $('.talent-holder').on('click', '.switch', callbacks.switchSubrows);
+  $(document).on('click', '.switch', callbacks.switchSubrows);
   
   startUp();
   

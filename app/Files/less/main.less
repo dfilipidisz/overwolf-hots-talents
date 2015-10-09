@@ -179,7 +179,7 @@ section.page {
   .talent-row {
     width: 100%;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     
     .sub-row {
       margin-top: 3px;
@@ -196,6 +196,7 @@ section.page {
         position: absolute;
         left: -15px;
         top: 0;
+        z-index: 5000;
       }
       
       .talent-holder {
@@ -205,6 +206,8 @@ section.page {
         line-height: 30px;
         color: white;
         position: relative;
+        z-index: 4000;
+        background-color: @purple-light;
         
         .switch {
           position: absolute;
@@ -216,6 +219,15 @@ section.page {
           line-height: 35px;
           text-align: center;
           cursor: pointer;
+        }
+        
+        .switch-placeholder {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 34px;
+          width: 35px;
+          border-left: 1px solid white;
         }
         
         .percent {

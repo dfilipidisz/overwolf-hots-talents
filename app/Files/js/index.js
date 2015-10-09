@@ -6,19 +6,35 @@ $(document).ready(function() {
   var selectedHero = "";
   
   var callbacks = {
+    onCloseApp: function() {
+      overwolf.windows.getCurrentWindow(function(result){
+	    if (result.status=="success"){
+	      overwolf.windows.close(result.window.id);
+	    }
+	  });
+    },
+    
+    onDragWindow: function() {
+      overwolf.windows.getCurrentWindow(function(result){
+        if (result.status=="success"){
+          overwolf.windows.dragMove(result.window.id);
+        }
+      });
+    },
+    
     onSwitchPageToContainer: function() {
-      $(this).animate({width: '-=60', height: '-=60'}, 200, function() {
+      $(this).animate({width: '-=60', height: '-=60'}, 100, function() {
         $(this).addClass('hidden');
         $('#talents-container').removeClass('hidden');
-        $('#talents-container').animate({width: '100%', height: '100%', padding: '+=10'}, 200);
+        $('#talents-container').animate({width: '100%', height: '100%', padding: '+=10'}, 100);
       });
     },
     
     onLeaveContainer: function() {
-      $('#talents-container').animate({width: '0', height: '0', padding: '-=10'}, 200, function() {
+      $('#talents-container').animate({width: '0', height: '0', padding: '-=10'}, 100, function() {
         $('#talents-container').addClass('hidden');
         $('#minimized').removeClass('hidden');
-        $('#minimized').animate({width: '+=60', height: '+=60'}, 200, function() {
+        $('#minimized').animate({width: '+=60', height: '+=60'}, 100, function() {
           
         });
       });
@@ -33,19 +49,21 @@ $(document).ready(function() {
       else {
         console.log('Reset display');
         window.localStorage.removeItem('selectedHero');
-        $('#popularity').empty();
-        $('#winrate').empty();
+        //$('#popularity').empty();
+        //$('#winrate').empty();
       }
     },
     
     changeTypeToPopularity: function() {
       selectedType = 'popularity';
       changePopularityDOM();
+      buildTalentRows();
     },
     
     changeTypeToWinrate: function() {
       selectedType = 'winrate';
       changePopularityDOM();
+      buildTalentRows();
     },
     
     switchSubrows: function() {
@@ -152,18 +170,13 @@ $(document).ready(function() {
     var d = talentData[selectedHero];
     var buffer = "";
     
-    if (selectedType === 'popularity') {
-      buffer += buildLevelRows(d, 1);
-      buffer += buildLevelRows(d, 4);
-      buffer += buildLevelRows(d, 7);
-      buffer += buildLevelRows(d, 10);
-      buffer += buildLevelRows(d, 13);
-      buffer += buildLevelRows(d, 16);
-      buffer += buildLevelRows(d, 20);
-    }
-    else if (selectedType === 'winrate') {
-      
-    }
+    buffer += buildLevelRows(d, 1);
+    buffer += buildLevelRows(d, 4);
+    buffer += buildLevelRows(d, 7);
+    buffer += buildLevelRows(d, 10);
+    buffer += buildLevelRows(d, 13);
+    buffer += buildLevelRows(d, 16);
+    buffer += buildLevelRows(d, 20);
     
     $('#talents').empty().append(buffer);
   }
@@ -220,11 +233,13 @@ $(document).ready(function() {
   }
   
   $('#minimized').click(callbacks.onSwitchPageToContainer);
-  //$('#talents-container').mouseleave(callbacks.onLeaveContainer);
+  $('#talents-container').mouseleave(callbacks.onLeaveContainer);
   $('#heroSelect').change(callbacks.onSelectHero);
   $('#popularity').click(callbacks.changeTypeToPopularity);
   $('#winrate').click(callbacks.changeTypeToWinrate);
   $(document).on('click', '.switch', callbacks.switchSubrows);
+  $('#close-app').click(callbacks.onCloseApp);
+  $('#minimized').mousedown(callbacks.onDragWindow);
   
   startUp();
   

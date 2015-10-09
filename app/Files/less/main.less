@@ -44,6 +44,7 @@ section.page {
   width: 0;
   height: 0;
   padding: 0;
+  padding-top: 0 !important;
 }
 
 #hero-chooser {
@@ -243,9 +244,23 @@ section.page {
         }
       }
     }
+  }
+}
+
+#navbar {
+  height: 30px;
+  width: 100%;
+  position: relative;
+  color: white;
+  
+  ul {
+    list-style-type: none;
     
-    .sub-row {
-      
+    li {
+      float: right;
+      i {
+        cursor: pointer;
+      }
     }
   }
 }

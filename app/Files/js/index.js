@@ -187,7 +187,7 @@ $(document).ready(function() {
     
     buffer += "<div class=talent-row>";
     buffer += "<div class=main-row>";
-    buffer += "<div class='hexagon'><span></span></div>";
+    buffer += "<div class='hexagon'><span><span class=talent-text>"+lvl+"</span></span></div>";
     buffer += "<div class=talent-holder>";
     buffer += "<span class=title>"+talent.title+"</span>";
     buffer += "<span class=percent>"+talent[selectedType]+"%</span>";

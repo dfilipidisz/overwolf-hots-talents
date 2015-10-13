@@ -25,7 +25,8 @@
         "transparent": true,
         "resizable": true,
         "size": {"width":400, "height":500},
-        "min_size": {"width":400, "height":500}
+        "min_size": {"width":400, "height":600},
+        "max_size": {"width":600, "height":1000}
       }
     }
   }

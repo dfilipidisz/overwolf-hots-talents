@@ -17,6 +17,7 @@ html {
 
 body {
   background-color: transparent;
+  -webkit-user-select: none;
 }
 
 section.page {
@@ -239,6 +240,10 @@ section.page {
           border-left: 1px solid white;
         }
         
+        .title {
+          cursor: default;
+        }
+        
         .percent {
           position: absolute;
           top: 0;
@@ -249,6 +254,7 @@ section.page {
           border-left: 1px solid white;
           line-height: 35px;
           text-align: right;
+          cursor: default;
         }
       }
     }

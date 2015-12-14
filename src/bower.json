@@ -16,6 +16,6 @@
   "dependencies": {
     "less": "2.5.3",
     "jquery": "2.1.4",
-    "bootstrap": "3.3.5"
+    "bootstrap": "3.3.6"
   }
 }

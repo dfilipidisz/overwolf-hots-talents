@@ -1,3 +1,8 @@
+**v2.0.2** - 2015.12.23
+
+* Add Republic of Gamers logo
+* Add new heroes: Artanis, Cho'Gall, Lunara 
+
 **v2.0.1** - 2015.12.14
 
 * Update dependencies

@@ -1,6 +1,6 @@
 {
   "name": "overwolf-hots-talents",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "devDependencies": {
     "gulp": "3.9.0",

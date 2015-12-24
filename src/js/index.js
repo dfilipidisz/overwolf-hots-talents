@@ -189,7 +189,7 @@ $(document).ready(function() {
     buffer += "<div class=main-row>";
     buffer += "<div class='hexagon'><span><span class=talent-text>"+lvl+"</span></span></div>";
     buffer += "<div class=talent-holder>";
-    buffer += "<span class=title>"+talent.title+"</span>";
+    buffer += "<span class=title><img src='img/talent.png' />"+talent.title+"</span>";
     buffer += "<span class=percent>"+talent[selectedType]+"%</span>";
     buffer += "<span class=switch data-lvl="+lvl+"><i class='glyphicon glyphicon-chevron-down'></i></span>";
     buffer += "</div>";
@@ -199,7 +199,7 @@ $(document).ready(function() {
       talent = getTalent(d, lvl, i+1);
       buffer += "<div class='sub-row hidden lvl"+lvl+"'>";
       buffer += "<div class=talent-holder>";
-      buffer += "<span class=title>"+talent.title+"</span>";
+      buffer += "<span class=title><img src='img/talent.png' />"+talent.title+"</span>";
       buffer += "<span class=percent>"+talent[selectedType]+"%</span>";
       buffer += "<span class=switch-placeholder></span>";
       buffer += "</div>";

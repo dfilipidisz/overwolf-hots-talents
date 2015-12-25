@@ -10,5 +10,19 @@ window.talentPics = [
   "needlespine",
   "vile-nest",
   "networked-carapace",
-  "calldown-mule"
+  "calldown-mule",
+  "adrenaline-boost",
+  "assault-strain",
+  "bombard-strain",
+  "envenomed-spikes",
+  "evolutionary-link",
+  "evolution-complete",
+  "evolve-monstrosity",
+  "hivemind",
+  "locust-brood",
+  "locust-nest",
+  "soma-transference",
+  "spatial-efficiency",
+  "ultimate-evolution",
+  "volatile-mutation"
 ];

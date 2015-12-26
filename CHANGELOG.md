@@ -1,3 +1,8 @@
+**v2.1.0** - 2015.12.26
+
+* Add Contact link to footer
+* Add talent images
+
 **v2.0.2** - 2015.12.23
 
 * Add Republic of Gamers logo

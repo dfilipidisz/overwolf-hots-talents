@@ -44,7 +44,18 @@ $(document).ready(function() {
       if ($(this).val() !== 'none') { 
         selectedHero = makeStringSafe($(this).val());
         window.localStorage.setItem('selectedHero', selectedHero);
-        buildTalentRows();
+        
+        switch(selectedType) {
+          case 'popularity':
+          case 'winrate':
+            $('[data-toggle="tooltip"]').tooltip('destroy');
+            buildTalentRows();
+            break;
+          case 'popbuilds':
+            buildPopularBuilds();
+            break;
+        }
+        
       }
       else {
         console.log('Reset display');
@@ -57,13 +68,21 @@ $(document).ready(function() {
     changeTypeToPopularity: function() {
       selectedType = 'popularity';
       changePopularityDOM();
+      $('[data-toggle="tooltip"]').tooltip('destroy');
       buildTalentRows();
     },
     
     changeTypeToWinrate: function() {
       selectedType = 'winrate';
       changePopularityDOM();
+      $('[data-toggle="tooltip"]').tooltip('destroy');
       buildTalentRows();
+    },
+    
+    changeTypeToPopbuilds: function() {
+      selectedType = 'popbuilds';
+      changePopularityDOM();
+      buildPopularBuilds();
     },
     
     switchSubrows: function() {
@@ -84,6 +103,7 @@ $(document).ready(function() {
   function changePopularityDOM() {
     $('#popularity').removeClass('active');
     $('#winrate').removeClass('active');
+    $('#popbuilds').removeClass('active');
     
     switch(selectedType) {
       case 'popularity':
@@ -91,6 +111,9 @@ $(document).ready(function() {
         break;
       case 'winrate':
         $('#winrate').addClass('active');
+        break;
+      case 'popbuilds':
+        $('#popbuilds').addClass('active');
         break;
     }
   }
@@ -178,6 +201,7 @@ $(document).ready(function() {
     buffer += buildLevelRows(d, 16);
     buffer += buildLevelRows(d, 20);
     
+    $('#popular-builds').empty();
     $('#talents').empty().append(buffer);
   }
   
@@ -241,11 +265,44 @@ $(document).ready(function() {
     return "talent-placeholder";
   }
   
+  function buildPopularBuilds() {
+    var d = talentData[selectedHero].popularBuilds;
+    console.log("PBUILDS");
+    console.log(d);
+    
+    var buffer = "<table class='popbuilds-table'>";
+    buffer += "<thead><tr><th>Pick #</th><th>Win %</th><th>1</th><th>4</th><th>7</th><th>10</th><th>13</th><th>16</th><th>20</th></tr></thead>";
+    buffer += "<tbody>";
+    
+    d.forEach(function(build) {
+      buffer += "<tr>";
+      
+      buffer += "<td>"+build.count+"</td>";
+      buffer += "<td>"+(build.winp ? build.winp+"%" : "" )+"</td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl1)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl1+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl4)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl4+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl7)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl7+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl10)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl10+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl13)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl13+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl16)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl16+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl20)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl20+"' width=25 height=30 /></td>";
+      
+      buffer += "</tr>";
+    });
+    
+    buffer += "</tbody></table>";
+      
+    $('#talents').empty();
+    $('#popular-builds').empty().append(buffer);
+    $('[data-toggle="tooltip"]').tooltip();
+  }
+  
   $('#minimized').click(callbacks.onSwitchPageToContainer);
   $('#talents-container').mouseleave(callbacks.onLeaveContainer);
   $('#heroSelect').change(callbacks.onSelectHero);
   $('#popularity').click(callbacks.changeTypeToPopularity);
   $('#winrate').click(callbacks.changeTypeToWinrate);
+  $('#popbuilds').click(callbacks.changeTypeToPopbuilds);
   $(document).on('click', '.switch', callbacks.switchSubrows);
   $('#close-app').click(callbacks.onCloseApp);
   $('#minimized').mousedown(callbacks.onDragWindow);

@@ -12,7 +12,7 @@ var clean = require('gulp-clean');
 
 var paths = {
   css: ['src/bower_components/bootstrap/dist/css/bootstrap.css', 'temp/css/*.css'],
-  js: ['src/bower_components/jquery/dist/jquery.js', 'src/js/talentPics.js', 'src/js/url_slug.js', 'src/js/index.js'],
+  js: ['src/bower_components/jquery/dist/jquery.js', 'src/bower_components/bootstrap/dist/js/bootstrap.min.js', 'src/js/talentPics.js', 'src/js/url_slug.js', 'src/js/index.js'],
   appImages: ['src/img/Icon.png', 'src/img/rog.png', 'src/img/talent-placeholder.png', 'src/img/talents/*'],
   appIcons: ['src/img/IconMouseOver.png', 'src/img/IconMouseNormal.png'],
   moveStoreImages: ['src/img/Icon.png', 'src/img/Screenshot1.jpg', 'src/img/Tile.jpg'],

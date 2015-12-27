@@ -75,6 +75,26 @@ window.talentPics = [
   { safestr: "triple-strike", displaystr: "Triple Strike"},
   { safestr: "warp-sickness", displaystr: "Warp Sickness"},
   { safestr: "zealot-charge", displaystr: "Zealot Charge"},
-  { safestr: "force-of-will", displaystr: "Force of Will"}
+  { safestr: "force-of-will", displaystr: "Force of Will"},
+  { safestr: "absolute-zero", displaystr: "Absolute Zero"},
+  { safestr: "army-of-the-dead", displaystr: "Army of the Dead"},
+  { safestr: "biting-cold", displaystr: "Biting Cold"},
+  { safestr: "block", displaystr: "Block"},
+  { safestr: "death-touch", displaystr: "Death Touch"},
+  { safestr: "destruction", displaystr: "Desctruction"},
+  { safestr: "embrace-death", displaystr: "Embrace Death"},
+  { safestr: "eternal-hunger", displaystr: "Eternal Hunger"},
+  { safestr: "frostmourne-feeds", displaystr: "Frostmourne Feeds"},
+  { safestr: "frost-presence", displaystr: "Frost Presence"},
+  { safestr: "frost-strike", displaystr: "Frost Strike"},
+  { safestr: "frozen-wastes", displaystr: "Frozen Wastes"},
+  { safestr: "immortal-coil", displaystr: "Immortal Coil"},
+  { safestr: "legion-of-northrend", displaystr: "Legion of Northrend"},
+  { safestr: "obliterate", displaystr: "Obliterate"},
+  { safestr: "relentless", displaystr: "Relentless"},
+  { safestr: "rune-tap", displaystr: "Rune Tap"},
+  { safestr: "stoneskin", displaystr: "Stoneskin"},
+  { safestr: "summon-sindragosa", displaystr: "Summon Sindragosa"},
+  { safestr: "trail-of-frost", displaystr: "Trail of Frost"}
   
 ];

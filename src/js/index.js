@@ -258,11 +258,20 @@ $(document).ready(function() {
   
   function lookupTalentPic(title) {
     for (var i = 0; i < window.talentPics.length; i++) {
-      if (window.talentPics[i] === url_slug(title)) {
-        return window.talentPics[i];
+      if (window.talentPics[i].safestr === url_slug(title)) {
+        return window.talentPics[i].safestr;  
       }
     }
     return "talent-placeholder";
+  }
+  
+  function lookupTalentTitle(title) {
+    for (var i = 0; i < window.talentPics.length; i++) {
+      if (window.talentPics[i].safestr === url_slug(title)) {
+        return window.talentPics[i].displaystr;
+      }
+    }
+    return title;
   }
   
   function buildPopularBuilds() {
@@ -279,13 +288,13 @@ $(document).ready(function() {
       
       buffer += "<td>"+build.count+"</td>";
       buffer += "<td>"+(build.winp ? build.winp+"%" : "" )+"</td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl1)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl1+"' width=25 height=30 /></td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl4)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl4+"' width=25 height=30 /></td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl7)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl7+"' width=25 height=30 /></td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl10)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl10+"' width=25 height=30 /></td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl13)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl13+"' width=25 height=30 /></td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl16)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl16+"' width=25 height=30 /></td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl20)+".png' data-toggle='tooltip' data-placement='bottom' title='"+build.lvl20+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl1)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl1)+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl4)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl4)+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl7)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl7)+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl10)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl10)+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl13)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl13)+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl16)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl16)+"' width=25 height=30 /></td>";
+      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl20)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl20)+"' width=25 height=30 /></td>";
       
       buffer += "</tr>";
     });

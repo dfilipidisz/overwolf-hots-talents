@@ -257,27 +257,28 @@ $(document).ready(function() {
   }
   
   function lookupTalentPic(title) {
-    for (var i = 0; i < window.talentPics.length; i++) {
-      if (window.talentPics[i].safestr === url_slug(title)) {
-        return window.talentPics[i].safestr;  
-      }
+    var slug = url_slug(title);
+    
+    if (typeof window.talentPics[slug] !== "undefined") {
+      return slug;
     }
-    return "talent-placeholder";
+    else {
+      return "talent-placeholder";
+    }
   }
   
   function lookupTalentTitle(title) {
-    for (var i = 0; i < window.talentPics.length; i++) {
-      if (window.talentPics[i].safestr === url_slug(title)) {
-        return window.talentPics[i].displaystr;
-      }
+    var slug = url_slug(title);
+    if (typeof window.talentPics[slug] !== "undefined") {
+      return window.talentPics[slug];
     }
-    return title;
+    else {
+      return title;
+    }
   }
   
   function buildPopularBuilds() {
     var d = talentData[selectedHero].popularBuilds;
-    console.log("PBUILDS");
-    console.log(d);
     
     var buffer = "<table class='popbuilds-table'>";
     buffer += "<thead><tr><th>Pick #</th><th>Win %</th><th>1</th><th>4</th><th>7</th><th>10</th><th>13</th><th>16</th><th>20</th></tr></thead>";
@@ -300,10 +301,11 @@ $(document).ready(function() {
     });
     
     buffer += "</tbody></table>";
-      
+    
     $('#talents').empty();
     $('#popular-builds').empty().append(buffer);
     $('[data-toggle="tooltip"]').tooltip();
+    
   }
   
   $('#minimized').click(callbacks.onSwitchPageToContainer);

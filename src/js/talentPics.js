@@ -359,5 +359,22 @@ window.talentPics = {
   "show-stopper": "Show Stopper",
   "speed-metal": "Speed Metal",
   "stage-dive": "Stage Dive",
-  "tour-bus": "Tour Bus"
+  "tour-bus": "Tour Bus",
+  "amplified-healing": "Amplified Healing",
+  "benediction": "Benediction",
+  "blessed-champion": "Blessed Champion",
+  "boundless-conviction": "Boundless Conviction",
+  "bulwark-of-light": "Bulwark of Light",
+  "burden-of-guilt": "Burden of Guilt",
+  "divine-hurricane": "Divine Hurricane",
+  "divine-shield": "Divine Shield",
+  "divine-storm": "Divine Storm",
+  "fist-of-justice": "Fist of Justice",
+  "gathering-radiance": "Gathering Radiance",
+  "hammer-of-the-lightbringer": "Hammer of the Lightbringer",
+  "holy-fire": "Holy Fire",
+  "holy-shock": "Holy Shock",
+  "reach": "Reach",
+  "redemption": "Redemption",
+  "wave-of-light": "Wave of Light"
 };

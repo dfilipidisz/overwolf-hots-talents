@@ -16,7 +16,8 @@
     "start_window": "MainWindow",
     "externally_connectable": {
       "matches": [
-        "https://raw.githubusercontent.com/*"
+        "https://raw.githubusercontent.com/*",
+        "http://owanalytics.noip.me/*"
       ]
     },
     "windows": {

@@ -437,5 +437,22 @@ window.talentPics = {
   "roar": "Roar",
   "sins-exposed": "Sins Exposed",
   "subdue": "Subdue",
-  "the-crusade-marches-on": "The Crusade Marches On"
+  "the-crusade-marches-on": "The Crusade Marches On",
+  "earthen-shields": "Earthen Shields",
+  "earthquake": "Earthquake",
+  "forked-lightning": "Forked Lightning",
+  "frostwolf-s-grace": "Frostwolf's Grace",
+  "grace-of-air": "Grace of Air",
+  "mana-tide": "Mana Tide",
+  "rabid-wolves": "Rabid Wolves",
+  "restless-wolves": "Restless Wolves",
+  "ride-the-lightning": "Ride the Lightning",
+  "ride-the-wind": "Ride the Wind",
+  "rolling-thunder": "Rolling Thunder",
+  "spirit-journey": "Spirit Journey",
+  "stone-wolves": "Stone Wolves",
+  "sundering": "Sundering",
+  "tempest-fury": "Tempest Fury",
+  "wind-shear": "Wind Shear",
+  "worldbreaker": "Worldbreaker"
 };

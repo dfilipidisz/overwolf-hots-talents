@@ -512,5 +512,22 @@ window.talentPics = {
   "soothing-breeze": "Soothing Breeze",
   "transcendence": "Transcendence",
   "transgression": "Transgression",
-  "way-of-the-hundred-fists": "Way of the Hundred Fists"
+  "way-of-the-hundred-fists": "Way of the Hundred Fists",
+  "annihilating-spirit": "Annihilating Spirit",
+  "blood-ritual": "Blood Ritual",
+  "dead-rush": "Dead Rush",
+  "death-ritual": "Death Ritual",
+  "fresh-corpses": "Fresh Corpses",
+  "gargantuan": "Gargantuan",
+  "gidbinn": "Gidbinn",
+  "humongoid": "Humongoid",
+  "infested-toads": "Infested Toads",
+  "leaping-spiders": "Leaping Spiders",
+  "promote": "Promote",
+  "ravenous-spirit": "Ravenous Spirit",
+  "specialized-toxin": "Specialized Toxin",
+  "spider-cluster": "Spider Cluster",
+  "thing-of-the-deep": "Thing of the Deep",
+  "toad-affinity": "Toad Affinity",
+  "toads-of-hugeness": "Toads of Hugeness"
 };

@@ -622,5 +622,22 @@ window.talentPics = {
   "napalm-strike": "Napalm Strike",
   "orbital-bfg": "Orbital BFG",
   "resistant": "Resistant",
-  "slowing-mines": "Slowing Mines"
+  "slowing-mines": "Slowing Mines",
+  "armor-piercing-rounds": "Armor Piercing Rounds",
+  "big-red-button": "Big Red Button",
+  "commandeer-odin": "Commandeer Odin",
+  "concussion-grenade": "Consussion Grenade",
+  "dash": "Dash",
+  "drakken-laser-drill": "Drakken Laser Drill",
+  "focusing-diodes": "Focusing Diodes",
+  "lead-rain": "Lead Rain",
+  "lock-and-load": "Lock and Load",
+  "melting-point": "Melting Point",
+  "quarterback": "Quarterback",
+  "rapid-fire": "Rapid Fire",
+  "shredder-grenade": "Shredder Grenade",
+  "sizzlin-attacks": "Sizzlin' Attacks",
+  "spray-n-pray": "Spray 'n' Pray",
+  "stim-pack": "Stim Pack",
+  "problem-solver": "Problem Solver"
 };

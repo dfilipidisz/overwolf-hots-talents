@@ -794,5 +794,22 @@ window.talentPics = {
   "slimy-end": "Slimy End",
   "slimy-pufferfish": "Slimy Pufferfish",
   "tufferfish": "Tufferfish",
-  "wrath-of-cod": "Wrath of Cod"
+  "wrath-of-cod": "Wrath of Cod",
+  "break-it-down": "Break it Down!",
+  "clockwerk-steam-fists": "Clockwerk Steam Fists",
+  "engine-gunk": "Engine Gunk",
+  "extra-tnt": "Extra TNT",
+  "ez-pz-dimensional-ripper": "EZ-PZ Dimensional Ripper",
+  "goblin-fusion": "Goblin Fusion",
+  "grav-o-bomb-3000": "Grav-O-Bomb 3000",
+  "hyperfocus-coils": "Hyperfocus Coils",
+  "kwik-release-charge": "Kwik Release Charge",
+  "long-ranged-turrets": "Long-Ranged Turrets",
+  "mecha-lord": "Mecha-Lord",
+  "miniature-black-hole": "Miniature Black Hole",
+  "reduce-reuse-recycle": "Reduce, Reuse, Recycle",
+  "robo-goblin": "Robo-Goblin",
+  "rock-it-turret-xl": "Rock-it! Turret XL",
+  "scrap-o-matic-smelter": "Scrap-o-Matic Smelter",
+  "turret-storage": "Turret Storage"
 };

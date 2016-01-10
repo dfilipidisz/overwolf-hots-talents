@@ -110,7 +110,7 @@ $(document).ready(function() {
         
       }
       else {
-        console.log('Reset display');
+        //console.log('Reset display');
         window.localStorage.removeItem('selectedHero');
         //$('#popularity').empty();
         //$('#winrate').empty();
@@ -175,7 +175,6 @@ $(document).ready(function() {
     },
     
     switchSubrows: function() {
-      console.log('switching');
       if ($(this).children('i').hasClass('glyphicon-chevron-down')) {
         //Open surows
         $(this).children('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
@@ -277,8 +276,6 @@ $(document).ready(function() {
   }
   
   function buildTalentRows() {
-    console.log('Build rows');
-    
     var d = talentData[selectedHero];
     var buffer = "";
     
@@ -406,7 +403,6 @@ $(document).ready(function() {
     data: {event: "start-app"},
     crossDomain: true,
     success: function(data) {
-      console.log(data);
       sessionID = data.sessionid;
     },
     error: function(jqxhr, status, error) {

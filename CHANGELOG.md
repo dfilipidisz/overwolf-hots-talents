@@ -1,3 +1,10 @@
+**v2.2.0** - 2016.01.10
+
+* Update dependencies
+* Update RoG logo
+* Add talent pictures for every hero
+* Add Popular Builds from hotslogs.com
+
 **v2.1.0** - 2015.12.26
 
 * Add Contact link to footer

@@ -4,6 +4,7 @@
 * Update RoG logo
 * Add talent pictures for every hero
 * Add Popular Builds from hotslogs.com
+* Add initial version of app analytics
 
 **v2.1.0** - 2015.12.26
 

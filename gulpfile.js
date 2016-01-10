@@ -3,7 +3,7 @@ var less = require('gulp-less');
 var path = require('path');
 var concatCss = require('gulp-concat-css');
 var runSequence = require('run-sequence');
-var minifyCss = require('gulp-minify-css'); 
+var cssnano = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
@@ -38,7 +38,7 @@ gulp.task('buildless', function () {
 gulp.task('concatcss', function () {
   return gulp.src(paths.css)
     .pipe(concatCss('css/bundle.css', {rebaseUrls: false}))
-    .pipe(minifyCss({rebase: false}))
+    .pipe(cssnano({rebase: false}))
     .pipe(gulp.dest('dist/app/Files'));
 });
 

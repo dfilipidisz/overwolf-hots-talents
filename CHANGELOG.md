@@ -1,3 +1,7 @@
+**v2.2.1** - 2016.01.13
+
+* Add Greymane
+
 **v2.2.0** - 2016.01.10
 
 * Update dependencies

@@ -1,3 +1,7 @@
+**v2.2.2** - 2016.01.19
+
+* Change analytics sending
+
 **v2.2.1** - 2016.01.13
 
 * Add Greymane

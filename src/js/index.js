@@ -5,21 +5,15 @@ $(document).ready(function() {
   var selectedType = 'popularity';
   var selectedHero = "";
   var sessionID = null;
+  var Config = {
+    analyticsURL: "http://owanalytics.noip.me/event"
+    //analyticsURL: "http://127.0.0.1:3800/event"
+  };
   
   var callbacks = {
     onCloseApp: function() {
       
-      $.ajax({
-        url: "http://owanalytics.noip.me/event",
-        method: "POST",
-        data: {event: "close-app", sessionid: sessionID},
-        crossDomain: true,
-        error: function(jqxhr, status, error) {
-          console.log("error");
-          console.log(status);
-          console.log(error);
-        }
-      });
+      sendAnalytics({event: "close-app", sessionid: sessionID});
       
       overwolf.windows.getCurrentWindow(function(result){
 	    if (result.status=="success"){
@@ -38,17 +32,7 @@ $(document).ready(function() {
     
     onSwitchPageToContainer: function() {
       
-      $.ajax({
-        url: "http://owanalytics.noip.me/event",
-        method: "POST",
-        data: {sessionid: sessionID, event: "custom", data: {name: "open-panel"}},
-        crossDomain: true,
-        error: function(jqxhr, status, error) {
-          console.log("error");
-          console.log(status);
-          console.log(error);
-        }
-      });
+      sendAnalytics({sessionid: sessionID, event: "custom", data: {name: "open-panel"}});
       
       $(this).animate({width: '-=60', height: '-=60'}, 100, function() {
         $(this).addClass('hidden');
@@ -58,17 +42,8 @@ $(document).ready(function() {
     },
     
     onLeaveContainer: function() {
-      $.ajax({
-        url: "http://owanalytics.noip.me/event",
-        method: "POST",
-        data: {sessionid: sessionID, event: "custom", data: {name: "hide-panel"}},
-        crossDomain: true,
-        error: function(jqxhr, status, error) {
-          console.log("error");
-          console.log(status);
-          console.log(error);
-        }
-      });
+
+      sendAnalytics({sessionid: sessionID, event: "custom", data: {name: "hide-panel"}});
       
       $('#talents-container').animate({width: '0', height: '0', padding: '-=10'}, 100, function() {
         $('#talents-container').addClass('hidden');
@@ -80,18 +55,7 @@ $(document).ready(function() {
     },
     
     onSelectHero: function(e) {
-      
-      $.ajax({
-        url: "http://owanalytics.noip.me/event",
-        method: "POST",
-        data: {sessionid: sessionID, event: "custom", data: {name: "select-hero", hero: $(this).val()}},
-        crossDomain: true,
-        error: function(jqxhr, status, error) {
-          console.log("error");
-          console.log(status);
-          console.log(error);
-        }
-      });
+      sendAnalytics({sessionid: sessionID, event: "custom", data: {name: "select-hero", value: $(this).val()}});
       
       if ($(this).val() !== 'none') { 
         selectedHero = makeStringSafe($(this).val());
@@ -118,18 +82,7 @@ $(document).ready(function() {
     },
     
     changeTypeToPopularity: function() {
-      
-      $.ajax({
-        url: "http://owanalytics.noip.me/event",
-        method: "POST",
-        data: {sessionid: sessionID, event: "click", data: {element: "popularity"}},
-        crossDomain: true,
-        error: function(jqxhr, status, error) {
-          console.log("error");
-          console.log(status);
-          console.log(error);
-        }
-      });
+      sendAnalytics({sessionid: sessionID, event: "click", data: {element: "popularity"}});
       
       selectedType = 'popularity';
       changePopularityDOM();
@@ -138,17 +91,7 @@ $(document).ready(function() {
     },
     
     changeTypeToWinrate: function() {
-      $.ajax({
-        url: "http://owanalytics.noip.me/event",
-        method: "POST",
-        data: {sessionid: sessionID, event: "click", data: {element: "winrate"}},
-        crossDomain: true,
-        error: function(jqxhr, status, error) {
-          console.log("error");
-          console.log(status);
-          console.log(error);
-        }
-      });
+      sendAnalytics({sessionid: sessionID, event: "click", data: {element: "winrate"}});
       
       selectedType = 'winrate';
       changePopularityDOM();
@@ -157,17 +100,7 @@ $(document).ready(function() {
     },
     
     changeTypeToPopbuilds: function() {
-      $.ajax({
-        url: "http://owanalytics.noip.me/event",
-        method: "POST",
-        data: {sessionid: sessionID, event: "click", data: {element: "popbuilds"}},
-        crossDomain: true,
-        error: function(jqxhr, status, error) {
-          console.log("error");
-          console.log(status);
-          console.log(error);
-        }
-      });
+      sendAnalytics({sessionid: sessionID, event: "click", data: {element: "popbuilds"}});
       
       selectedType = 'popbuilds';
       changePopularityDOM();
@@ -187,6 +120,20 @@ $(document).ready(function() {
       }
     }
   };
+  
+  function sendAnalytics(dataToSend) {
+    $.ajax({
+      url: Config.analyticsURL,
+      method: "POST",
+      data: dataToSend,
+      crossDomain: true,
+      error: function(jqxhr, status, error) {
+        console.log("error");
+        console.log(status);
+        console.log(error);
+      }
+    });
+  }
   
   function changePopularityDOM() {
     $('#popularity').removeClass('active');
@@ -398,7 +345,7 @@ $(document).ready(function() {
   
   //Request session id from event server
   $.ajax({
-    url: "http://owanalytics.noip.me/event",
+    url: Config.analyticsURL,
     method: "POST",
     data: {event: "start-app"},
     crossDomain: true,
@@ -411,8 +358,6 @@ $(document).ready(function() {
       console.log(error);
     }
   });
-  
-  
   
   //Attach event handlers
   $('#minimized').click(callbacks.onSwitchPageToContainer);

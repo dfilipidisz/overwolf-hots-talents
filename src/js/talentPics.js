@@ -907,7 +907,7 @@ window.talentPics = {
   "wildfire-bear": "Wildfire Bear",
   "blazing-bulwark": "Blazing Bulwark",
   "crippling-blow": "Crippling Blow",
-  "c-thun-s-gift": "C'thun's Gift",
+  "c-thun-s-gift": "C\'thun\'s Gift",
   "favor-of-the-old-gods": "Favor Of The Old Gods",
   "fire-eater": "Fire Eater",
   "frenzied-fists": "Frenzied Fists",

@@ -5,6 +5,7 @@ $(document).ready(function() {
   var selectedType = 'popularity';
   var selectedHero = "";
   var sessionID = null;
+  var hearthbeatID = null;
   var Config = {
     analyticsURL: "http://owanalytics.noip.me/event"
     //analyticsURL: "http://127.0.0.1:3800/event"
@@ -12,6 +13,8 @@ $(document).ready(function() {
   
   var callbacks = {
     onCloseApp: function() {
+      
+      clearInterval(hearthbeatID);
       
       sendAnalytics({event: "close-app", sessionid: sessionID});
       
@@ -328,7 +331,7 @@ $(document).ready(function() {
       buffer += "<td><img src='img/"+lookupTalentPic(build.lvl10)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl10)+"' width=25 height=30 /></td>";
       buffer += "<td><img src='img/"+lookupTalentPic(build.lvl13)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl13)+"' width=25 height=30 /></td>";
       buffer += "<td><img src='img/"+lookupTalentPic(build.lvl16)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl16)+"' width=25 height=30 /></td>";
-      buffer += "<td><img src='img/"+lookupTalentPic(build.lvl20)+".png' data-toggle='tooltip' data-placement='bottom' title='"+lookupTalentTitle(build.lvl20)+"' width=25 height=30 /></td>";
+      buffer += '<td><img src="img/' + lookupTalentPic(build.lvl20) + '.png" data-toggle="tooltip" data-placement="bottom" title=' + lookupTalentTitle(build.lvl20) + ' width=25 height=30 /></td>';
       
       buffer += "</tr>";
     });
@@ -341,6 +344,10 @@ $(document).ready(function() {
     
   }
   
+  function sendHearthbeats() {
+    sendAnalytics({sessionid: sessionID, event: "hearthbeat"});
+  }
+  
   //Start the app
   
   //Request session id from event server
@@ -351,6 +358,9 @@ $(document).ready(function() {
     crossDomain: true,
     success: function(data) {
       sessionID = data.sessionid;
+      
+      //Start off hearthbeats
+      hearthbeatID = setInterval(sendHearthbeats, 60000);
     },
     error: function(jqxhr, status, error) {
       console.log("error");

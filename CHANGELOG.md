@@ -1,3 +1,10 @@
+**v2.3.0** - 2016.02.03
+
+* Added Li-Ming 
+* Updated Anub'arak, Arthas, Diablo, Gazlowe, Murky talent pictures
+* Updated Rehgar and Nova talents
+* Update various talent pictures
+
 **v2.2.3** - 2016.02.02
 
 * Add hearthbeat sending

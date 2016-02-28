@@ -1,3 +1,8 @@
+**v2.3.1** - 2016.02.28
+
+* Updated various talent pictures
+* Update dependencies
+
 **v2.3.0** - 2016.02.03
 
 * Added Li-Ming 

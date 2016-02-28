@@ -8,7 +8,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var processhtml = require('gulp-processhtml')
-var clean = require('gulp-clean');
+var del = require('del');
 
 var paths = {
   css: ['src/bower_components/bootstrap/dist/css/bootstrap.css', 'temp/css/*.css'],
@@ -122,13 +122,15 @@ gulp.task('moveChangelog', function(){
 // ---------- Clean tasks ---------
 
 gulp.task('preClean', function () {
-  return gulp.src('dist', {read: false})
-    .pipe(clean());
+  return del([
+    'dist/**'
+  ]);
 });
 
 gulp.task('postClean', function () {
-  return gulp.src('temp', {read: false})
-    .pipe(clean());
+  return del([
+    'temp/**'
+  ]);
 });
 
 // ---------- Main build task ---------

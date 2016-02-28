@@ -3,15 +3,15 @@
   "version": "2.3.0",
   "private": true,
   "devDependencies": {
+    "del": "2.2.0",
+    "run-sequence": "1.1.5",
     "gulp": "3.9.1",
     "gulp-less": "3.0.5",
     "gulp-concat-css": "2.2.0",
-    "run-sequence": "1.1.5",
     "gulp-cssnano": "2.1.1",
     "gulp-uglify": "1.5.3",
     "gulp-concat": "2.6.0",
     "gulp-imagemin": "2.4.0",
-    "gulp-processhtml": "1.1.0",
-    "gulp-clean": "0.3.1"
+    "gulp-processhtml": "1.1.0"
   }
 }

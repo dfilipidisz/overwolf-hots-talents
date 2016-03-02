@@ -1,3 +1,7 @@
+**v2.3.2** - 2016.03.02
+
+* Added Xul
+
 **v2.3.1** - 2016.02.28
 
 * Updated various talent pictures

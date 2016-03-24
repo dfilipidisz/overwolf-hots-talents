@@ -1,0 +1,22 @@
+{
+  "name": "overwolf-hots-talents",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dfilipidisz/overfwolf-hots-talents",
+  "authors": [
+    "David Filipidisz <dfilipidisz@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "4.5.0",
+    "hint.css": "2.2.0",
+    "less": "2.6.1",
+    "pure": "0.6.0"
+  }
+}

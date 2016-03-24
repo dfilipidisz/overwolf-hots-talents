@@ -1,0 +1,16 @@
+{
+    "linting.prefer": [
+        "ESLint"
+    ],
+    "linting.usePreferredOnly": true,
+    "spaceUnits": 2,
+    "fileFilters": [
+        {
+            "name": "",
+            "patterns": [
+                "bower_components",
+                "node_modules"
+            ]
+        }
+    ]
+}

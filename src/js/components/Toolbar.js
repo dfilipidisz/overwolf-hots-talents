@@ -1,0 +1,41 @@
+const React = require('react');
+import { PAGES } from '../constants';
+import { connect } from 'react-redux';
+const { sendAnalytics } = require('../actions/analytics');
+const { navigateTo } = require('../actions/navigation');
+
+class Toolbar extends React.Component {
+  
+  closeApp() {
+    overwolf.windows.getCurrentWindow(function(result) {
+      if (result.status === 'success') {
+        overwolf.windows.close(result.window.id);
+      }
+	});
+  }
+  
+  render() {
+    
+    let { page, sessionid, navigateTo, sendAnalytics } = this.props;
+    
+    return (
+      <div id='toolbar'>
+        <ul>
+          <li className={ page === PAGES.TALENTS ? 'active' : null } onClick={ () => {navigateTo(PAGES.TALENTS); } }>TALENTS</li>
+          <li className={ page === PAGES.FEEDBACK ? 'active' : null } onClick={ () => { navigateTo(PAGES.FEEDBACK); } }>FEEDBACK</li>
+          <li className={ page === PAGES.ABOUT ? 'active' : null } onClick={ () => { navigateTo(PAGES.ABOUT); } }>ABOUT</li>
+        </ul>
+        <div className='app-ops'>
+          <ul>
+            <li onClick={this.closeApp}><i className='fa fa-close' /></li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+};
+
+module.exports = connect(
+  state => ({ page: state.navigation.page, sessionid: state.analytics.sessionid }),
+  { sendAnalytics, navigateTo }
+)(Toolbar);

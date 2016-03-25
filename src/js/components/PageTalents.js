@@ -4,6 +4,7 @@ import { TALENTS_PAGES } from '../constants';
 const SelectHero = require('./SelectHero');
 const TalentTables = require('./TalentTables');
 const PopularBuilds = require('./PopularBuilds');
+const Notifications = require('./Notifications');
 
 class PopularBuildsPage extends React.Component {
   render () {
@@ -18,6 +19,7 @@ class PopularBuildsPage extends React.Component {
     
     return (
       <section>  
+        <Notifications />
         <SelectHero />
         <PopularBuilds />
       </section>
@@ -38,6 +40,7 @@ class WinrateTalents extends React.Component {
     
     return (
       <section>  
+        <Notifications />
         <SelectHero />
         <TalentTables type='winrate' />
       </section>
@@ -58,6 +61,7 @@ class PopularTalents extends React.Component {
     
     return (
       <section>  
+        <Notifications />
         <SelectHero />
         <TalentTables type='popularity' />
       </section>

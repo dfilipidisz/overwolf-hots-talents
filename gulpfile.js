@@ -7,7 +7,6 @@ var cssnano = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
-//var processhtml = require('gulp-processhtml')
 var del = require('del');
 var browserify = require('browserify');
 var babelify = require('babelify');
@@ -16,9 +15,7 @@ var buffer = require('vinyl-buffer');
 
 var paths = {
   css: ['temp/css/*.css'],
-  //js: ['src/bower_components/jquery/dist/jquery.js', 'src/bower_components/bootstrap/dist/js/bootstrap.min.js', 'src/js/talentPics.js', 'src/js/url_slug.js', 'src/js/index.js'],
   js: ['temp/js/bundle.js'],
-  //appImages: ['src/img/Icon.png', 'src/img/rog.png', 'src/img/talent-placeholder.png', 'src/img/talents/*'],
   appImages: ['src/img/Icon.png', 'src/img/rog.png', 'src/img/talent-placeholder.png', 'src/img/hero-portraits.png'],
   talents: ['src/img/talents/*'],
   appIcons: ['src/img/IconMouseOver.png', 'src/img/IconMouseNormal.png'],
@@ -69,23 +66,6 @@ gulp.task('transpileJS', function(callback) {
         .pipe(gulp.dest('dist/app/Files/js'));
 });
 
-/*gulp.task('buildJs', function(callback) {
-  runSequence('uglifyJs',
-              callback);
-});*/
-
-/*gulp.task('uglifyJs', function() {
-  return gulp.src(paths.js)
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/app/Files/js'));
-});*/
-
-// ---------- Build Images ---------
-
-/*gulp.task('buildImages', function(callback) {
-  runSequence(['buildAppImages', 'buildAppIcons'],
-              callback);
-});*/
 gulp.task('buildImages', function(callback) {
   runSequence(['buildAppIcons', 'buildAppImages', 'buildTalents'],
               callback);
@@ -115,29 +95,12 @@ gulp.task('buildAppIcons', function () {
     .pipe(gulp.dest('dist/app'));
 });
 
-// ---------- Build HTML ---------
-
-/*gulp.task('buildHtml', function () {
-    return gulp.src('src/html/index.html')
-               .pipe(processhtml())
-               .pipe(gulp.dest('dist/app/Files'));
-});*/
-
 // ---------- Move files ---------
 
-/*gulp.task('moveFiles', function(callback) {
-  runSequence(['moveFonts', 'moveManifest', 'moveStoreFiles', 'moveStoreImages', 'moveChangelog'],
-              callback);
-});*/
 gulp.task('moveFiles', function(callback) {
   runSequence(['moveManifest', 'moveStoreFiles', 'moveStoreImages', 'moveChangelog', 'moveHtml', 'moveFontAwesome', 'moveFontAwesomeCSS', 'moveReactSelectCSS', 'moveHintCSS', 'movePureCSS'],
               callback);
 });
-
-/*gulp.task('moveFonts', function(){
-  gulp.src(paths.moveFonts, { base: './src' })
-  .pipe(gulp.dest('dist/app/Files'));
-});*/
 
 gulp.task('moveFontAwesome', function(){
   gulp.src(paths.moveFonts, { base: './bower_components/components-font-awesome' })
@@ -206,15 +169,8 @@ gulp.task('postClean', function () {
 
 // ---------- Main build task ---------
 
-/*gulp.task('build', function(callback) {
-  runSequence('preClean',
-              ['buildCss', 'buildJs', 'buildImages', 'buildHtml', 'moveFiles'],
-              'postClean',
-              callback);
-});*/
 gulp.task('build', function(callback) {
   runSequence('preClean',
-              //['buildCss', 'buildJs', 'buildHtml'],
               ['buildCss', 'buildJs', 'buildImages', 'moveFiles'],
               'postClean',
               callback);

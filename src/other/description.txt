@@ -1,5 +1,5 @@
-<h3>HoTS talent pick statistics</h3>
+<h3>HoTS talent statistics</h3>
 
-Check out in-game what talents are the most popular or has the highest win rate for every hero.
+Check out in-game up-to-date talent statistics for every hero, sorted by popularity or win rate. See the most used and popular builds to up your game!
 
-All data provided by www.hotslogs.com
+Talent statistics data provided by <a href="http://www.hotslogs.com">www.hotslogs.com</a>

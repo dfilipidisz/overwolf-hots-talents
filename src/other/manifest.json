@@ -2,13 +2,13 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta":{
-    "name": "Heroes of the Storm Talent Picks",
+    "name": "Heroes of the Storm Talent Stats",
     "author": "David Filipidisz",    
-    "version": "2.3.2",
+    "version": "3.0.0",
     "minimum-overwolf-version": "0.82.0",
     "access-name": "com.davidf.hotstalents",
-    "description": "Check out Heroes of the Storm talent picks for every Hero, ordered by popularity or win rate.",
-    "dock_button_title": "HoTS Talent Picks",
+    "description": "Up-to-date Heroes of the Storm talent statistics for every Hero, ordered by popularity or win rate.",
+    "dock_button_title": "HoTS Talent Stats",
     "icon": "IconMouseOver.png",
     "icon_gray": "IconMouseNormal.png"
   },
@@ -16,6 +16,7 @@
     "start_window": "MainWindow",
     "externally_connectable": {
       "matches": [
+        "https://fonts.googleapis.com/*",
         "https://raw.githubusercontent.com/*",
         "http://owanalytics.noip.me/*"
       ]
@@ -25,9 +26,9 @@
         "file": "Files/index.html",
         "transparent": true,
         "resizable": true,
-        "size": {"width":400, "height":500},
+        "size": {"width":400, "height":600},
         "min_size": {"width":400, "height":600},
-        "max_size": {"width":600, "height":1000}
+        "max_size": {"width":600, "height":2000}
       }
     }
   }

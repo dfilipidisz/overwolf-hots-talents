@@ -1,3 +1,11 @@
+**v3.0.0** - 2016.XX.XX
+
+* Full rewrite and redesign
+* Removed analytics
+* Added Feedback and About page
+* Updated hero and talent images
+* Updated various meta data (title, description, images, etc.)
+
 **v2.3.2** - 2016.03.02
 
 * Added Xul

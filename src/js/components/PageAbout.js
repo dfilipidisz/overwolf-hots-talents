@@ -10,7 +10,6 @@ module.exports = class PageAbout extends React.Component {
   }
   
   render() {
-    console.log(PACKAGE);
     return (
       <section>
         <h3>HotS Talent Picks</h3>

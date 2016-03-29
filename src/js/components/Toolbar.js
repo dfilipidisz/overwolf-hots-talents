@@ -1,7 +1,6 @@
 const React = require('react');
 import { PAGES } from '../constants';
 import { connect } from 'react-redux';
-const { sendAnalytics } = require('../actions/analytics');
 const { navigateTo } = require('../actions/navigation');
 
 class Toolbar extends React.Component {
@@ -16,7 +15,7 @@ class Toolbar extends React.Component {
   
   render() {
     
-    let { page, sessionid, navigateTo, sendAnalytics } = this.props;
+    let { page, sessionid, navigateTo } = this.props;
     
     return (
       <div id='toolbar'>
@@ -36,6 +35,6 @@ class Toolbar extends React.Component {
 };
 
 module.exports = connect(
-  state => ({ page: state.navigation.page, sessionid: state.analytics.sessionid }),
-  { sendAnalytics, navigateTo }
+  state => ({ page: state.navigation.page }),
+  { navigateTo }
 )(Toolbar);

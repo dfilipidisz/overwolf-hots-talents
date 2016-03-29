@@ -1,8 +1,8 @@
 const React = require('react');
 import { connect } from 'react-redux';
-const { sendFeedback } = require('../actions/analytics');
+import { ANALYTICS_URL } from '../constants';
 
-/*module.exports = */class PageFeedback extends React.Component {
+class PageFeedback extends React.Component {
   
   constructor(props) {
     super(props);
@@ -16,9 +16,19 @@ const { sendFeedback } = require('../actions/analytics');
   sendFeedback(e) {
     e.preventDefault(); 
     let m = this.state.message;
-    this.setState({message: ''});
-    this.props.sendFeedback(m); 
     
+    let fetchInit = {
+      method: 'POST', 
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({event: 'feedback', message: m})
+    };
+      
+    fetch(ANALYTICS_URL, fetchInit);
+    
+    this.setState({message: ''});
   }
   
   render() {
@@ -38,5 +48,5 @@ const { sendFeedback } = require('../actions/analytics');
 
 module.exports = connect(
   state => ({  }),
-  { sendFeedback }
+  null
 )(PageFeedback);

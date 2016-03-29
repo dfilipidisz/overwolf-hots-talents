@@ -1,5 +1,4 @@
 const React = require('react');
-//const PAGES = require('../pages');
 import { TALENTS_PAGES } from '../constants';
 
 module.exports = class SecondaryToolbar extends React.Component {

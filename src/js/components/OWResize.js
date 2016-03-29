@@ -1,5 +1,4 @@
 const React = require('react');
-//const PAGES = require('../pages');
 import { PAGES } from '../constants';
  
 export let OWResize = ComposedComponent => class extends React.Component {

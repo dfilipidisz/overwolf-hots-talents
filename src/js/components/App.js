@@ -12,7 +12,7 @@ import { PAGES } from '../constants';
 const Footer = require('./Footer');
 
 const { navigateTo } = require('../actions/navigation');
-const { talentsNavigateTo, fetchTalentData } = require('../actions/talents');
+const { talentsNavigateTo } = require('../actions/talents');
 
 import { connect } from 'react-redux';
 
@@ -22,7 +22,7 @@ class Main extends React.Component {
     let children = null;
     if (this.props.page === PAGES.MINIMIZED) {
       return (
-        <PageMinimized navigateTo={this.props.navigateTo} fetchTalentData={this.props.fetchTalentData} />
+        <PageMinimized />
       );
     }
     else if (this.props.page === PAGES.TALENTS) {
@@ -62,6 +62,6 @@ class Main extends React.Component {
 
 module.exports = connect(
   state => ({ page: state.navigation.page, talentsPage: state.talents.page }),
-  { navigateTo, talentsNavigateTo, fetchTalentData }
+  { navigateTo, talentsNavigateTo }
 )(HideApp(OWMove(OWResize(Main))));
 

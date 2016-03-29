@@ -11,15 +11,10 @@ const reducer = combineReducers({
   ...reducers
 })
 
-/*const store = createStore(
-  reducer
-)*/
-
 const finalCreateStore = compose(
   applyMiddleware(thunk)
 )(createStore);
 const store = finalCreateStore(reducer);
-
 
 ReactDOM.render(
   <Provider store={store}>

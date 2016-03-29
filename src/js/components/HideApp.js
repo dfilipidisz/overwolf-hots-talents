@@ -1,5 +1,4 @@
 const React = require('react');
-//const PAGES = require('../pages');
 import { PAGES } from '../constants';
  
 export let HideApp = ComposedComponent => class extends React.Component {
@@ -9,7 +8,7 @@ export let HideApp = ComposedComponent => class extends React.Component {
   }
   
   hoverOut() {
-    //this.props.navigateTo(PAGES.MINIMIZED);
+    this.props.navigateTo(PAGES.MINIMIZED);
   }
   
   render() {

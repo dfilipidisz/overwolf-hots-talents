@@ -25,11 +25,9 @@ export const TALENTS_PAGES = {
 };
 
 export const SEND_ANALYTICS = 'SEND_ANALYTICS';
-export const SEND_FEEDBACK = 'SEND_FEEDBACK';
-export const RECEIVE_SESSIONID = 'RECEIVE_SESSIONID';
 
-export const ANALYTICS_URL = 'http://127.0.0.1:3800/event';
-//export const ANALYTICS_URL = 'http://owanalytics.noip.me/event';
+//export const ANALYTICS_URL = 'http://127.0.0.1:3800/event';
+export const ANALYTICS_URL = 'http://owanalytics.noip.me/event';
 
 export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
 

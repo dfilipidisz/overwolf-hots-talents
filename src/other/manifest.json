@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta":{
-    "name": "Heroes of the Storm Talent Stats",
+    "name": "Heroes of the Storm Talent Picks",
     "author": "David Filipidisz",    
     "version": "3.0.0",
     "minimum-overwolf-version": "0.82.0",

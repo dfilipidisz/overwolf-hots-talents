@@ -1,4 +1,4 @@
-**v3.0.0** - 2016.XX.XX
+**v3.0.0** - 2016.03.30
 
 * Full rewrite and redesign
 * Removed analytics

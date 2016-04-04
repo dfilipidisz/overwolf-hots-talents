@@ -1,3 +1,9 @@
+**v3.0.1** - 2016.04.04
+
+* More talent image updates
+* Fixed text selection problems
+* Changed link colors for better readability
+
 **v3.0.0** - 2016.03.30
 
 * Full rewrite and redesign

@@ -1,3 +1,7 @@
+**v3.0.2** - 2016.04.08
+
+* Finished talent image updates
+
 **v3.0.1** - 2016.04.04
 
 * More talent image updates

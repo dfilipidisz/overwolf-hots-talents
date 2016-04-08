@@ -1,7 +1,7 @@
 import { CLOSE_NOTIFICATION } from '../constants';
 
 const initialState = {
-  isClosed: false,
+  isClosed: true,
   notes: []
 }
 

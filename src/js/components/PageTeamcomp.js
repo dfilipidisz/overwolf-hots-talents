@@ -6,7 +6,9 @@ const { fetchTeamcompData } = require('../actions/teamcomp');
 class PageTeamcomp extends React.Component {
   
   componentDidMount() {
-    this.props.fetchTeamcompData();
+    if (this.props.teamcomp.data === null) {
+      this.props.fetchTeamcompData();
+    }
   }
   
   render() {

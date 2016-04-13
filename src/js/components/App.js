@@ -8,6 +8,7 @@ const PageMinimized = require('./PageMinimized');
 const PageTalents = require('./PageTalents');
 const PageFeedback = require('./PageFeedback');
 const PageAbout = require('./PageAbout');
+const PageTeamcomp = require('./PageTeamcomp');
 import { PAGES } from '../constants';
 const Footer = require('./Footer');
 
@@ -49,6 +50,15 @@ class Main extends React.Component {
         <div id='app-border'>
           <Toolbar />
           <PageAbout navigateTo={this.props.navigateTo} />
+          <Footer />
+        </div>
+      );
+    }
+    else if (this.props.page === PAGES.TEAMCOMP) {
+      return (
+        <div id='app-border'>
+          <Toolbar />
+          <PageTeamcomp />
           <Footer />
         </div>
       );

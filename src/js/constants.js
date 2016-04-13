@@ -25,6 +25,8 @@ export const TALENTS_PAGES = {
   POPULAR_BUILDS: 'POPULAR_BUILDS'
 };
 
+export const TEAMCOMP_DATA_FETCH = 'TEAMCOMP_DATA_FETCH';
+
 export const SEND_ANALYTICS = 'SEND_ANALYTICS';
 
 //export const ANALYTICS_URL = 'http://127.0.0.1:3800/event';

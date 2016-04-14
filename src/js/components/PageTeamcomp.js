@@ -2,17 +2,31 @@ const React = require('react');
 import { PAGES } from '../constants';
 import { connect } from 'react-redux';
 const { fetchTeamcompData } = require('../actions/teamcomp');
+const FilterBar = require('./FilterBar');
+const HeroList = require('./HeroList');
+const HeroComp = require('./HeroComp');
+
+class CompStats extends React.Component {
+  
+  render() {
+    return (
+      <div className='comp-stats'>
+        <span>Composition Win rate: <b>xx.x%</b></span>
+      </div>
+    );
+  }
+}
 
 class PageTeamcomp extends React.Component {
   
   componentDidMount() {
-    if (this.props.teamcomp.data === null) {
+    if (this.props.data === null) {
       this.props.fetchTeamcompData();
     }
   }
   
   render() {
-    let { fetch } = this.props.teamcomp;
+    let { fetch } = this.props;
     
     if (fetch === 'loading') {
       return (
@@ -25,8 +39,8 @@ class PageTeamcomp extends React.Component {
       return (
         <section>
           <div className='alert danger'>
-            <p>{this.props.teamcomp.error}</p>
-            <i className='fa fa-close' onClick={this.props.closeNotification} />
+            <p>{this.props.error}</p>
+            <i className='fa fa-close' />
           </div>
         </section>
       );
@@ -34,7 +48,10 @@ class PageTeamcomp extends React.Component {
     else if (fetch === 'done') {
       return (
         <section>
-          d
+          <HeroComp />
+          <CompStats />
+          <FilterBar />
+          <HeroList />
         </section>
       );
     }
@@ -43,6 +60,6 @@ class PageTeamcomp extends React.Component {
 }
 
 module.exports = connect(
-  state => ({ teamcomp: state.teamcomp }),
+  state => ({ fetch: state.teamcomp.fetch, error: state.teamcomp.error, data: state.teamcomp.data }),
   { fetchTeamcompData }
 )(PageTeamcomp);

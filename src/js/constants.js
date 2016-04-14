@@ -26,6 +26,9 @@ export const TALENTS_PAGES = {
 };
 
 export const TEAMCOMP_DATA_FETCH = 'TEAMCOMP_DATA_FETCH';
+export const CHANGE_FILTER = 'CHANGE_FILTER';
+export const COMP_ADD_HERO = 'COMP_ADD_HERO';
+export const COMP_REMOVE_HERO = 'COMP_REMOVE_HERO';
 
 export const SEND_ANALYTICS = 'SEND_ANALYTICS';
 

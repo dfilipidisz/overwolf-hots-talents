@@ -1,4 +1,4 @@
-import { TEAMCOMP_DATA_FETCH } from '../constants';
+import { TEAMCOMP_DATA_FETCH, CHANGE_FILTER, COMP_ADD_HERO, COMP_REMOVE_HERO } from '../constants';
 
 function fetchStart() {
   return {
@@ -32,11 +32,7 @@ export function fetchTeamcompData() {
     dispatch(fetchStart());
     
     let fetchInit = {
-      method: 'GET', 
-      headers: {
-        //Accept: 'application/json',
-        //'Content-Type': 'application/json'
-      }
+      method: 'GET'
     };
     
     return fetch('https://raw.githubusercontent.com/dfilipidisz/hotslogs-scraper/master/teamcomp.json', fetchInit)
@@ -51,4 +47,43 @@ export function fetchTeamcompData() {
         dispatch(fetchError('Network error: ' + error));  
       });
   };
+}
+
+function changeFilterEvent(value) {
+  return {
+    type: CHANGE_FILTER,
+    value: value
+  };
+}
+  
+export function changeFilter(value) {
+  return function(dispatch) {
+    dispatch(changeFilterEvent(value));
+  }
+}
+  
+function compAddHeroEvent(hero) {
+  return {
+    type: COMP_ADD_HERO,
+    hero: hero
+  };
+}
+  
+export function compAddHero(hero) {
+  return function(dispatch) {
+    dispatch(compAddHeroEvent(hero));
+  }
+}
+  
+function compRemoveHeroEvent(hero) {
+  return {
+    type: COMP_REMOVE_HERO,
+    hero: hero
+  };
+}
+  
+export function compRemoveHero(hero) {
+  return function(dispatch) {
+    dispatch(compRemoveHeroEvent(hero));
+  }
 }

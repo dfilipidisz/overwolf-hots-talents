@@ -5,17 +5,7 @@ const { fetchTeamcompData } = require('../actions/teamcomp');
 const FilterBar = require('./FilterBar');
 const HeroList = require('./HeroList');
 const HeroComp = require('./HeroComp');
-
-class CompStats extends React.Component {
-  
-  render() {
-    return (
-      <div className='comp-stats'>
-        <span>Composition Win rate: <b>xx.x%</b></span>
-      </div>
-    );
-  }
-}
+const CompStats = require('./CompStats');
 
 class PageTeamcomp extends React.Component {
   

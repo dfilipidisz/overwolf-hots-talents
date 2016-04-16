@@ -21,9 +21,9 @@ class HeroList extends React.Component {
     HEROES.forEach((hero) => {
       if (this.props.filter !== '') {
         if (hero.label.toLowerCase().indexOf(this.props.filter.toLowerCase()) > -1 ) {
-          if (!this.isInComp(hero.label)) {
+          if (!this.isInComp(hero.value)) {
             items.push(
-              <div key={hero.value} className='hero-list-item' onClick={() => {this.props.compAddHero(hero.label)}}>
+              <div key={hero.value} className='hero-list-item' onClick={() => {this.props.compAddHero(hero.value)}}>
                 {hero.label}
               </div>
             );  
@@ -33,7 +33,7 @@ class HeroList extends React.Component {
       else {
         if (!this.isInComp(hero.label)) {
           items.push(
-            <div key={hero.value} className='hero-list-item' onClick={() => {this.props.compAddHero(hero.label)}}>
+            <div key={hero.value} className='hero-list-item' onClick={() => {this.props.compAddHero(hero.value)}}>
               {hero.label}
             </div>
           );

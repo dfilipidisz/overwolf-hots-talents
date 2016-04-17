@@ -4,25 +4,7 @@ import { connect } from 'react-redux';
 class CompStats extends React.Component {
   
   render() {
-    let { comp, data } = this.props;
-    
-    let filteredComps = [];
-    data.forEach((c) => {
-      
-      let hasTheseCount = 0;
-      comp.forEach((h) => {
-        if (c.heroes.indexOf(h) > -1 ) {
-          hasTheseCount++;
-        }  
-      });
-      
-      if (hasTheseCount === comp.length) {
-        filteredComps.push(c);
-      }
-      
-    });
-    
-    console.log('Found ' + filteredComps.length + ' comps');
+    let { comp } = this.props;
     
     if (comp.length === 0) {
       return (
@@ -32,10 +14,10 @@ class CompStats extends React.Component {
       );
     }
     else {
-      if (filteredComps.length > 0) {
+      if (this.props.list.length > 0) {
         return (
           <div className='comp-stats'>
-            <span>Composition Win rate: <b>{filteredComps[0].winp}%</b></span>
+            <span>Composition Win rate: <b>{this.props.list[0].winp}%</b></span>
           </div>
         );  
       }
@@ -52,6 +34,6 @@ class CompStats extends React.Component {
 }
 
 module.exports = connect(
-  state => ({ comp: state.teamcomp.comp, data: state.teamcomp.data }),
+  state => ({ comp: state.teamcomp.comp }),
   null
 )(CompStats);

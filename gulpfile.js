@@ -20,7 +20,7 @@ var paths = {
   talents: ['src/img/talents/*'],
   appIcons: ['src/img/IconMouseOver.png', 'src/img/IconMouseNormal.png'],
   moveStoreImages: ['src/img/Icon.png', 'src/img/Screenshot1.jpg', 'src/img/Screenshot2.jpg', 'src/img/Tile.jpg'],
-  moveFonts: ['bower_components/components-font-awesome/fonts/*.*'],
+  moveFonts: ['bower_components/font-awesome/fonts/*.*'],
   moveManifest: ['src/other/manifest.json'],
   moveStoreFiles: ['src/other/store.json', 'src/other/description.txt'],
   moveHtmls: ['src/html/index.html'],
@@ -103,12 +103,12 @@ gulp.task('moveFiles', function(callback) {
 });
 
 gulp.task('moveFontAwesome', function(){
-  gulp.src(paths.moveFonts, { base: './bower_components/components-font-awesome' })
+  gulp.src(paths.moveFonts, { base: './bower_components/font-awesome' })
   .pipe(gulp.dest('dist/app/Files'));
 });
 
 gulp.task('moveFontAwesomeCSS', function(){
-  gulp.src(['bower_components/components-font-awesome/css/font-awesome.min.css'], { base: './bower_components/components-font-awesome' })
+  gulp.src(['bower_components/font-awesome/css/font-awesome.min.css'], { base: './bower_components/font-awesome' })
   .pipe(gulp.dest('dist/app/Files'));
 });
 

@@ -1,3 +1,9 @@
+**v3.1.0** - 2016.04.18
+
+* New Feature: Team Compositions
+* Updated dependencies
+* Fixed a typo
+
 **v3.0.2** - 2016.04.08
 
 * Finished talent image updates

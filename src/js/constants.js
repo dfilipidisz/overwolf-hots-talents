@@ -80,6 +80,7 @@ export const HEROES = [
   { value: 'TheButcher', label: 'The Butcher'},
   { value: 'TheLostVikings', label: 'The Lost Vikings'},
   { value: 'Thrall', label: 'Thrall'},
+  { value: 'Tracer', label: 'Tracer'},
   { value: 'Tychus', label: 'Tychus'},
   { value: 'Tyrael', label: 'Tyrael'},
   { value: 'Tyrande', label: 'Tyrande'},

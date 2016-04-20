@@ -1,3 +1,7 @@
+**v3.1.1** - 2016.04.21
+
+* Added Tracer
+
 **v3.1.0** - 2016.04.18
 
 * New Feature: Team Compositions

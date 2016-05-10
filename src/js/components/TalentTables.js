@@ -16,6 +16,12 @@ function talentSortWinrateDesc(a, b) {
   return 0;
 }
 
+function talentSortKeyAsc(a, b) {
+  if (parseInt(a.key, 10) < parseInt(b.key, 10)) { return -1; }
+  if (parseInt(a.key, 10) > parseInt(b.key, 10)) { return  1; }
+  return 0;
+}
+
 class TalentTables extends React.Component {
   
   openTalentRow (lvl) {
@@ -52,17 +58,36 @@ class TalentTables extends React.Component {
     else if (type === 'winrate') {
       sorted = data['lvl' + lvl].sort(talentSortWinrateDesc);
     }
+    else if (type === 'makeyourown') {
+      sorted = data['lvl' + lvl].sort(talentSortKeyAsc);
+    }
     else {
       return null;
     }
+
+    if (typeof data['saved' + lvl] === 'undefined') {
+      data['saved' + lvl] = 0;
+    }
+
+    let i = type === 'makeyourown' ? data['saved' + lvl] : 0;
     
     if (isClosed) {
       rows.push(
         <tr key={lvl} onClick={this.openTalentRow.bind(this, lvl)}>
           <td className='level'>{lvl}</td>
-          <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(sorted[0].title)} /></td>
-          <td className='name'>{sorted[0].title}</td>
-          <td className='percent'>{sorted[0][type]}%</td>
+          <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(sorted[i].title)} /></td>
+          {
+            type !== 'makeyourown' ?
+                <td className='name'>{sorted[i].title}</td>
+                :
+                <td className='name'>{sorted[i].key}</td>
+          }
+          {
+            type !== 'makeyourown' ?
+                <td className='percent'>{sorted[i][type]}%</td>
+                :
+                null
+          }
         </tr>
       );
     }
@@ -72,8 +97,18 @@ class TalentTables extends React.Component {
           <tr key={talent.title} onClick={this.closeTalentRow.bind(this, lvl)}>
             { talentIndex === 0 ? <td className='level' rowSpan={sorted.length}>{lvl}</td> : null }
             <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(talent.title)} /></td>
-            <td className='name'>{talent.title}</td>
-            <td className='percent'>{talent[type]}%</td>
+            {
+              type !== 'makeyourown' ?
+                  <td className='name'>{talent.title}</td>
+                  :
+                  <td className='name'>{talent.key}</td>
+            }
+            {
+              type !== 'makeyourown' ?
+                  <td className='percent'>{talent[type]}%</td>
+                  :
+                  null
+            }
           </tr>
         );
       });

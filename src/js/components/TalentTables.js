@@ -36,8 +36,11 @@ class TalentTables extends React.Component {
     }
   }
   
-  closeTalentRow (lvl) {
-    console.log('CLOSING ' + lvl);
+  closeTalentRow (lvl, data, talentIndex) {
+    console.log('CLOSING ' + lvl, talentIndex);
+
+    data['saved' + lvl] = talentIndex;
+
     switch (parseInt(lvl, 10)) {
       case  1: this.props.closeTalentLevel(0); break;
       case  4: this.props.closeTalentLevel(1); break;
@@ -94,14 +97,14 @@ class TalentTables extends React.Component {
     else {
       sorted.forEach((talent, talentIndex) => {
         rows.push(
-          <tr key={talent.title} onClick={this.closeTalentRow.bind(this, lvl)}>
+          <tr key={talent.title} onClick={this.closeTalentRow.bind(this, lvl, data, talentIndex)}>
             { talentIndex === 0 ? <td className='level' rowSpan={sorted.length}>{lvl}</td> : null }
             <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(talent.title)} /></td>
             {
               type !== 'makeyourown' ?
                   <td className='name'>{talent.title}</td>
                   :
-                  <td className='name'>{talent.key}</td>
+                  <td className='name'>{ talentIndex === i ? '-> ' : null }{talent.key}</td>
             }
             {
               type !== 'makeyourown' ?

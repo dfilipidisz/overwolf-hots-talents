@@ -73,25 +73,28 @@ gulp.task('buildImages', function(callback) {
 
 gulp.task('buildAppImages', function () {
   return gulp.src(paths.appImages)
-    .pipe(imagemin({
-      optimizationLevel: 7
-    }))
+    .pipe(imagemin([
+      imagemin.jpegtran(), 
+      imagemin.optipng()
+    ]))
     .pipe(gulp.dest('dist/app/Files/img'));
 });
 
 gulp.task('buildTalents', function () {
   return gulp.src(paths.talents)
-    .pipe(imagemin({
-      optimizationLevel: 7
-    }))
+    .pipe(imagemin([
+      imagemin.jpegtran(), 
+      imagemin.optipng()
+    ]))
     .pipe(gulp.dest('dist/app/Files/img/talents'));
 });
 
 gulp.task('buildAppIcons', function () {
   return gulp.src(paths.appIcons)
-    .pipe(imagemin({
-      optimizationLevel: 7
-    }))
+    .pipe(imagemin([
+      imagemin.jpegtran(), 
+      imagemin.optipng()
+    ]))
     .pipe(gulp.dest('dist/app'));
 });
 

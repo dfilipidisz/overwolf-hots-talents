@@ -14,9 +14,9 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "4.6.1",
+    "font-awesome": "4.6.3",
     "hint.css": "2.2.1",
-    "less": "2.6.1",
+    "less": "2.7.1",
     "pure": "0.6.0"
   }
 }

@@ -46,6 +46,7 @@ export const HEROES = [
   { value: 'Brightwing', label: 'Brightwing'},
   { value: 'Chen', label: 'Chen'},
   { value: 'Cho', label: 'Cho'},
+  { value: 'Chromie', label: 'Chromie'},
   { value: 'Dehaka', label: 'Dehaka'},
   { value: 'Diablo', label: 'Diablo'},
   { value: 'ETC', label: 'E.T.C.'},

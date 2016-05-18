@@ -61,8 +61,6 @@
 .frenzy-of-kalimdor,
 .maelstrom-shells,
 .war-paint,
-.nerves-of-steel,
-.ignore-pain,
 .tenderizer,
 .remorseless,
 .distortion-beam,
@@ -71,7 +69,6 @@
 .impatience-is-a-virtue,
 .master-assassin,
 .relentless-soldier,
-.that-s-the-stuff,
 .vigorous-strike,
 .manticore,
 .envenomed-spines,
@@ -86,7 +83,13 @@
 .angelic-momentum,   
 .lunar-momentum,     
 .swarm-momentum,
-.dampen-magic { background: url(../img/talents/general.png); }
+.iron-forged-momentum,
+.dampen-magic,
+.hammer-gains,
+.spectral-leech,
+.ossein-renewal,
+.hungry-for-more,
+.sizzlin-attacks { background: url(../img/talents/general.png); }
 
 .follow-through,           
 .giant-killer,                
@@ -97,11 +100,11 @@
 .manticore,                                                     //Valla
 .untouchable,                                                   //Tracer
 .bronze-talons,                                                 //Chromie
+.sizzlin-attacks,
 .focused-attack          { background-position:      0px 0px; } 
 .spell-shield            { background-position:    -30px 0px; }
 .relentless-soldier,                                            //Tychus
 .relentless              { background-position:    -60px 0px; }
-.nerves-of-steel,                                               //Sonya
 .stoneskin               { background-position:    -90px 0px; } 
 .viking-bribery,                                                //The Lost Vikings
 .bribe                   { background-position:   -120px 0px; }
@@ -111,16 +114,17 @@
 .hardened-focus          { background-position:   -240px 0px; }
 .storm-shield            { background-position:   -270px 0px; }
 .rewind                  { background-position:   -300px 0px; }
+.ossein-renewal,                                                //Leoric
 .amplified-healing       { background-position:   -330px 0px; }
 .calldown-mule           { background-position:   -360px 0px; }
-.regeneration-master,    
-.hunter-gatherer         { background-position:   -390px 0px; } //Rexxar
+.hunter-gatherer,                                               //Rexxar
+.hungry-for-more,                                               //Stitches
+.regeneration-master     { background-position:   -390px 0px; } 
 .mercenary-lord          { background-position:   -420px 0px; }
 .imposing-presence,       
 .primal-intimidation     { background-position:   -450px 0px; } //Rexxar
 .blood-for-blood         { background-position:   -480px 0px; }
 .hardened-shield,             
-.ignore-pain,                                                   //Sonya
 .hardened-skin           { background-position:   -510px 0px; } //Rexxar
 .seasoned-marksman       { background-position:   -540px 0px; }
 .impatience-is-a-virtue,                                        //The Lost Vikings
@@ -130,12 +134,13 @@
 .angelic-momentum,                                              //Tyrael
 .lunar-momentum,                                                //Tyrande
 .swarm-momentum,                                                //Zagara
+.iron-forged-momentum,                                          //Muradin
 .battle-momentum         { background-position:   -570px 0px; }
 .war-paint,                                                     //Sonya  
-.that-s-the-stuff,                                              //Tychus
 .vigorous-strike,                                               //Tyrael
 .leeching-rounds,                                               //Tracer
 .hammer-gains,                                                  //Falstad
+.spectral-leech,                                                //Leoric
 .vigorous-assault        { background-position:   -600px 0px; } 
 .first-aid               { background-position:   -630px 0px; }
 .overdrive               { background-position:   -660px 0px; }
@@ -511,14 +516,14 @@
 .power-surge,              
 .surge-of-stamina,      
 .frenzied-fists        { background-position:    0px 0px; }
-.blazing-bulwark,         
-.seared-flesh,            
+.blazing-bulwark,                     
 .fire-eater,            
 .twilight-veil         { background-position:  -30px 0px; }
 .fuel-for-the-flame    { background-position:  -60px 0px; }
 .runed-gauntlet,            
 .runic-feedback        { background-position:  -90px 0px; }
 .rollback              { background-position: -120px 0px; }
+.seared-flesh,
 .i-am-hurrying,          
 .the-will-of-gall      { background-position: -150px 0px; }
 .hammer-of-twilight,     
@@ -1155,14 +1160,12 @@
 .lingering-apparition,     
 .royal-focus,              
 .paralyzing-rage,         
-.consume-vitality,         
-.ossein-renewal,           
+.consume-vitality,             
 .entomb,                  
 .buried-alive,             
 .march-of-the-black-king, 
 .death-march,              
-.drain-momentum,           
-.spectral-leech { background: url(../img/talents/leoric.png); }          
+.drain-momentum { background: url(../img/talents/leoric.png); }          
 
 .mana-thirst,               
 .ghastly-reach,             
@@ -1178,13 +1181,11 @@
 .royal-focus              { background-position: -150px 0px; }
 .paralyzing-rage,          
 .consume-vitality         { background-position: -180px 0px; }
-.ossein-renewal           { background-position: -210px 0px; }
 .entomb,                     
-.buried-alive             { background-position: -240px 0px; }
+.buried-alive             { background-position: -210px 0px; }
 .march-of-the-black-king, 
-.death-march              { background-position: -270px 0px; }
-.drain-momentum           { background-position: -300px 0px; }
-.spectral-leech           { background-position: -330px 0px; }
+.death-march              { background-position: -240px 0px; }
+.drain-momentum           { background-position: -270px 0px; }
 
 //Li Li
 .pro-toss,             
@@ -1759,7 +1760,9 @@
 .leap,                   
 .arreat-crater,           
 .wrath-of-the-berserker, 
-.anger-management { background: url(../img/talents/sonya.png); }            
+.anger-management,
+.nerves-of-steel,
+.ignore-pain { background: url(../img/talents/sonya.png); }            
 
 .endless-fury,              
 .no-escape               { background-position:    0px 0px; }
@@ -1777,45 +1780,45 @@
 .wrath-of-the-berserker, 
 .anger-management        { background-position: -210px 0px; }
 .ferocious-healing       { background-position: -240px 0px; }
+.nerves-of-steel         { background-position: -270px 0px; }
+.ignore-pain             { background-position: -300px 0px; }
 
 //Stitches
 .chew-your-food,        
 .savor-the-flavor,      
 .indigestion,            
-.hungry-for-more,        
 .heavy-slam,            
 .putrid-ground,         
 .mega-smash,            
 .pulverize,              
 .vile-cleaver,          
 .toxic-gas,              
-.last-bite,               
+.last-bite,              
 .putrid-bile,           
 .regenerative-bile,      
 .gorge,                 
 .hungry-hungry-stitches, 
 .helping-hand,          
 .fishing-hook,           
-.shish-kabob { background: url(../img/talents/stitches.png); }            
+.shish-kabob { background: url(../img/talents/stitches.png); }           
 
-.chew-your-food,           
-.savor-the-flavor,        
+.chew-your-food,        
+.savor-the-flavor,       
 .indigestion            { background-position:    0px 0px; }
-.hungry-for-more        { background-position:  -60px 0px; }
 .heavy-slam,              
 .putrid-ground,           
 .mega-smash,             
-.pulverize              { background-position:  -90px 0px; }
-.vile-cleaver,             
-.toxic-gas              { background-position: -120px 0px; }
-.last-bite              { background-position: -150px 0px; }
+.pulverize              { background-position:  -30px 0px; }
+.vile-cleaver,           
+.toxic-gas              { background-position:  -60px 0px; }
+.last-bite              { background-position:  -90px 0px; }
 .putrid-bile,            
-.regenerative-bile      { background-position: -180px 0px; }
-.gorge,                   
-.hungry-hungry-stitches { background-position: -210px 0px; }
-.helping-hand,            
-.fishing-hook           { background-position: -240px 0px; }
-.shish-kabob            { background-position: -270px 0px; }
+.regenerative-bile      { background-position: -120px 0px; }
+.gorge,                  
+.hungry-hungry-stitches { background-position: -150px 0px; }
+.helping-hand,           
+.fishing-hook           { background-position: -180px 0px; }
+.shish-kabob            { background-position: -210px 0px; }
 
 //Sylvanas
 .overflowing-quiver,     
@@ -2061,8 +2064,7 @@
 .press-the-advantage,   
 .dash,                  
 .combat-tactician,      
-.in-the-rhythm,        
-.sizzlin-attacks,       
+.in-the-rhythm,          
 .fully-loaded,          
 .the-bigger-they-are,   
 .quarterback,           
@@ -2075,15 +2077,16 @@
 .neosteel-coating,      
 .spray-n-pray,         
 .lead-rain,             
-.armor-piercing-rounds { background: url(../img/talents/tychus.png); } 
+.armor-piercing-rounds,
+.that-s-the-stuff { background: url(../img/talents/tychus.png); } 
 
 .shrug-it-off,          
 .bob-and-weave         { background-position:    0px 0px; }
 .press-the-advantage   { background-position:  -30px 0px; }
 .dash                  { background-position:  -60px 0px; }
 .combat-tactician      { background-position:  -90px 0px; }
-.in-the-rhythm,         
-.sizzlin-attacks       { background-position: -120px 0px; }
+.that-s-the-stuff,
+.in-the-rhythm,        { background-position: -120px 0px; }
 .fully-loaded          { background-position: -150px 0px; }
 .the-bigger-they-are   { background-position: -180px 0px; }
 .quarterback,             

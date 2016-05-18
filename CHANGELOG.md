@@ -1,3 +1,9 @@
+**v3.1.2** - 2016.05.18
+
+* Added Chromie
+* Updated talent pictures
+* Updated dependencies
+
 **v3.1.1** - 2016.04.21
 
 * Added Tracer

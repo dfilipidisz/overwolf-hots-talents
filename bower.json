@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "font-awesome": "4.6.3",
-    "hint.css": "2.2.1",
+    "hint.css": "2.3.0",
     "less": "2.7.1",
     "pure": "0.6.0"
   }

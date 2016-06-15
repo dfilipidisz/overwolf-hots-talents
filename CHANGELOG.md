@@ -1,3 +1,8 @@
+**v3.1.3** - 2016.06.15
+
+* Added Medivh
+* Updated dependencies
+
 **v3.1.2** - 2016.05.18
 
 * Added Chromie

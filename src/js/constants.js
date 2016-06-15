@@ -66,6 +66,7 @@ export const HEROES = [
   { value: 'LtMorales', label: 'Lt. Morales'},
   { value: 'Lunara', label: 'Lunara'},
   { value: 'Malfurion', label: 'Malfurion'},
+  { value: 'Medivh', label: 'Medivh'},
   { value: 'Muradin', label: 'Muradin'},
   { value: 'Murky', label: 'Murky'},
   { value: 'Nazeebo', label: 'Nazeebo'},

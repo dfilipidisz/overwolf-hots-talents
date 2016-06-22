@@ -44,6 +44,22 @@ function talentFetch() {
 }
 
 function talentDataArrived(payload) {
+  for (let hero in payload) {
+    if (!payload.hasOwnProperty(hero)) {
+      continue;
+    }
+
+    for (let lvl in payload[hero]) {
+      if (!payload[hero].hasOwnProperty(lvl) || lvl === 'popularBuilds') {
+        continue;
+      }
+
+      for (let i = 0, tot = payload[hero][lvl].length; i < tot; ++i) {
+        payload[hero][lvl][i].key = i + 1;
+      }
+    }
+  }
+
   return {
     type: TALENTS_SUCCESSFUL_FETCH,
     data: payload

@@ -13,6 +13,7 @@ module.exports = class SecondaryToolbar extends React.Component {
           <li className={ page === TALENTS_PAGES.POPULARITY ? 'active' : null } onClick={ () => { navigateTo(TALENTS_PAGES.POPULARITY); } }>POPULARITY</li>
           <li className={ page === TALENTS_PAGES.WINRATE ? 'active' : null } onClick={ () => { navigateTo(TALENTS_PAGES.WINRATE); } }>WIN RATE</li>
           <li className={ page === TALENTS_PAGES.POPULAR_BUILDS ? 'active' : null } onClick={ () => { navigateTo(TALENTS_PAGES.POPULAR_BUILDS); } }>POPULAR BUILDS</li>
+          <li className={ page === TALENTS_PAGES.MAKE_YOUR_BUILDS ? 'active' : null } onClick={ () => { navigateTo(TALENTS_PAGES.MAKE_YOUR_BUILDS); } }>MAKE YOUR BUILDS</li>
         </ul>
       </div>
     );

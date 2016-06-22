@@ -16,6 +16,12 @@ function talentSortWinrateDesc(a, b) {
   return 0;
 }
 
+function talentSortKeyAsc(a, b) {
+  if (parseInt(a.key, 10) < parseInt(b.key, 10)) { return -1; }
+  if (parseInt(a.key, 10) > parseInt(b.key, 10)) { return  1; }
+  return 0;
+}
+
 class TalentTables extends React.Component {
   
   openTalentRow (lvl) {
@@ -30,8 +36,11 @@ class TalentTables extends React.Component {
     }
   }
   
-  closeTalentRow (lvl) {
-    console.log('CLOSING ' + lvl);
+  closeTalentRow (lvl, data, talentIndex) {
+    console.log('CLOSING ' + lvl, talentIndex);
+
+    data['saved' + lvl] = talentIndex;
+
     switch (parseInt(lvl, 10)) {
       case  1: this.props.closeTalentLevel(0); break;
       case  4: this.props.closeTalentLevel(1); break;
@@ -42,9 +51,17 @@ class TalentTables extends React.Component {
       case 20: this.props.closeTalentLevel(6); break;
     }
   }
+
+  editTalentRow (lvl, data) {
+    data['lvl' + lvl].msg = prompt('Specify you talent message', data['lvl' + lvl].msg || '');
+  }
   
   makeTableForLevel (lvl, data, type, isClosed) {
-    let sorted, rows = [];
+    let sorted, rows = [], i = 0;
+
+    if (typeof data['saved' + lvl] === 'undefined') {
+      data['saved' + lvl] = 0;
+    }
     
     if (type === 'popularity') {
       sorted = data['lvl' + lvl].sort(talentSortPopularityDesc);  
@@ -52,28 +69,59 @@ class TalentTables extends React.Component {
     else if (type === 'winrate') {
       sorted = data['lvl' + lvl].sort(talentSortWinrateDesc);
     }
+    else if (type === 'makeyourown') {
+      sorted = data['lvl' + lvl].sort(talentSortKeyAsc);
+      i = data['saved' + lvl];
+    }
     else {
       return null;
     }
-    
+
     if (isClosed) {
       rows.push(
         <tr key={lvl} onClick={this.openTalentRow.bind(this, lvl)}>
           <td className='level'>{lvl}</td>
-          <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(sorted[0].title)} /></td>
-          <td className='name'>{sorted[0].title}</td>
-          <td className='percent'>{sorted[0][type]}%</td>
+          <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(sorted[i].title)} /></td>
+          {
+            type !== 'makeyourown' ?
+                <td className='name'>{sorted[i].title}</td>
+                :
+                <td className='name'>
+                  { sorted[i].key }
+                  { sorted.msg ? ' - ' + sorted.msg : null }
+                </td>
+          }
+          {
+            type !== 'makeyourown' ?
+                <td className='percent'>{sorted[i][type]}%</td>
+                :
+                null
+          }
         </tr>
       );
     }
     else {
       sorted.forEach((talent, talentIndex) => {
         rows.push(
-          <tr key={talent.title} onClick={this.closeTalentRow.bind(this, lvl)}>
+          <tr key={talent.title} onClick={this.closeTalentRow.bind(this, lvl, data, talentIndex)}>
             { talentIndex === 0 ? <td className='level' rowSpan={sorted.length}>{lvl}</td> : null }
             <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(talent.title)} /></td>
-            <td className='name'>{talent.title}</td>
-            <td className='percent'>{talent[type]}%</td>
+            {
+              type !== 'makeyourown' ?
+                  <td className='name'>{talent.title}</td>
+                  :
+                  <td className='name'>
+                    { talentIndex === i ? '-> ' : null }
+                    { talent.key + ' ' }
+                    { talentIndex === i ? <button onClick={(e) => this.editTalentRow(lvl, data) && e.stopPropagation()}>Edit</button> : null }
+                  </td>
+            }
+            {
+              type !== 'makeyourown' ?
+                  <td className='percent'>{talent[type]}%</td>
+                  :
+                  null
+            }
           </tr>
         );
       });

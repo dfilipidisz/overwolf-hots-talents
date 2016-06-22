@@ -58,12 +58,33 @@ class PopularTalents extends React.Component {
         </section>
       );
     }
-    
+
+    return (
+      <section>
+        <Notifications />
+        <SelectHero />
+        <TalentTables type='popularity' />
+      </section>
+    );
+  }
+}
+
+class MakeYourBuild extends React.Component {
+  render () {
+
+    if (this.props.isFetching) {
+      return (
+        <section className='loading'>
+          <i className='fa fa-circle-o-notch fa-spin' />
+        </section>
+      );
+    }
+
     return (
       <section>  
         <Notifications />
         <SelectHero />
-        <TalentTables type='popularity' />
+        <TalentTables type='makeyourown' />
       </section>
     );
   }
@@ -88,6 +109,11 @@ class PageTalents extends React.Component {
     else if (page === TALENTS_PAGES.POPULAR_BUILDS) {
       return (
         <PopularBuildsPage isFetching={isFetching} />
+      );
+    }
+    else if (page === TALENTS_PAGES.MAKE_YOUR_BUILDS) {
+      return (
+        <MakeYourBuild isFetching={isFetching} />
       );
     }
     else {

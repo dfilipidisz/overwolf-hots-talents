@@ -54,6 +54,7 @@ export const HEROES = [
   { value: 'Gall', label: 'Gall'},
   { value: 'Gazlowe', label: 'Gazlowe'},
   { value: 'Greymane', label: 'Greymane'},
+  { value: 'Guldan', label: 'Gul\'Dan'},
   { value: 'Illidan', label: 'Illidan'},
   { value: 'Jaina', label: 'Jaina'},
   { value: 'Johanna', label: 'Johanna'},

@@ -1,14 +1,14 @@
 import { CLOSE_NOTIFICATION } from '../constants';
 
 const initialState = {
-  isClosed: true,
+  isClosed: false,
   notes: []
 }
 
 export default function update(state = initialState, action) {
   if(action.type === CLOSE_NOTIFICATION) {
-    return { 
-      isClosed: true 
+    return {
+      isClosed: true
     }
   }
   return state;

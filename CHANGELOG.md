@@ -1,3 +1,10 @@
+**v3.1.4** - 2016.07.14
+
+* Added Gul'dan
+* Updated dependencies
+* Updated talent images
+* Added notification about DX11 issues
+
 **v3.1.3** - 2016.06.15
 
 * Added Medivh
@@ -48,7 +55,7 @@
 
 **v2.3.0** - 2016.02.03
 
-* Added Li-Ming 
+* Added Li-Ming
 * Updated Anub'arak, Arthas, Diablo, Gazlowe, Murky talent pictures
 * Updated Rehgar and Nova talents
 * Update various talent pictures
@@ -81,7 +88,7 @@
 **v2.0.2** - 2015.12.23
 
 * Add Republic of Gamers logo
-* Add new heroes: Artanis, Cho'Gall, Lunara 
+* Add new heroes: Artanis, Cho'Gall, Lunara
 
 **v2.0.1** - 2015.12.14
 

@@ -1,3 +1,7 @@
+**v3.1.5** - 2016.07.14
+
+* Remove note about DX11 issues (non-existent)
+
 **v3.1.4** - 2016.07.14
 
 * Added Gul'dan

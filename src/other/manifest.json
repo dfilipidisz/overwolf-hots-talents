@@ -4,7 +4,7 @@
   "meta":{
     "name": "Heroes of the Storm Talent Picks",
     "author": "David Filipidisz",
-    "version": "3.1.4",
+    "version": "3.1.5",
     "minimum-overwolf-version": "0.82.0",
     "access-name": "com.davidf.hotstalents",
     "description": "Up-to-date Heroes of the Storm talent statistics for every Hero, ordered by popularity or win rate.",

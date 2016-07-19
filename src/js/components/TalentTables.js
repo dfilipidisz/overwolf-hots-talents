@@ -17,7 +17,7 @@ function talentSortWinrateDesc(a, b) {
 }
 
 class TalentTables extends React.Component {
-  
+
   openTalentRow (lvl) {
     switch (parseInt(lvl, 10)) {
       case  1: this.props.openTalentLevel(0); break;
@@ -29,9 +29,8 @@ class TalentTables extends React.Component {
       case 20: this.props.openTalentLevel(6); break;
     }
   }
-  
+
   closeTalentRow (lvl) {
-    console.log('CLOSING ' + lvl);
     switch (parseInt(lvl, 10)) {
       case  1: this.props.closeTalentLevel(0); break;
       case  4: this.props.closeTalentLevel(1); break;
@@ -42,12 +41,12 @@ class TalentTables extends React.Component {
       case 20: this.props.closeTalentLevel(6); break;
     }
   }
-  
+
   makeTableForLevel (lvl, data, type, isClosed) {
     let sorted, rows = [];
-    
+
     if (type === 'popularity') {
-      sorted = data['lvl' + lvl].sort(talentSortPopularityDesc);  
+      sorted = data['lvl' + lvl].sort(talentSortPopularityDesc);
     }
     else if (type === 'winrate') {
       sorted = data['lvl' + lvl].sort(talentSortWinrateDesc);
@@ -55,7 +54,7 @@ class TalentTables extends React.Component {
     else {
       return null;
     }
-    
+
     if (isClosed) {
       rows.push(
         <tr key={lvl} onClick={this.openTalentRow.bind(this, lvl)}>
@@ -78,7 +77,7 @@ class TalentTables extends React.Component {
         );
       });
     }
-    
+
     return (
       <table key={lvl + '-lvl-' + type} className='talent-table'>
         <tbody>
@@ -86,17 +85,17 @@ class TalentTables extends React.Component {
         </tbody>
       </table>
     );
-    
+
   }
-  
+
   render () {
-    
+
     let { type, data, selectedHero, talentsClosed } = this.props;
-    
+
     if (selectedHero !== null) {
       let hero = data[selectedHero];
       let displayData = [];
-    
+
       displayData.push(this.makeTableForLevel(1, hero, type, talentsClosed[0]));
       displayData.push(this.makeTableForLevel(4, hero, type, talentsClosed[1]));
       displayData.push(this.makeTableForLevel(7, hero, type, talentsClosed[2]));
@@ -104,14 +103,14 @@ class TalentTables extends React.Component {
       displayData.push(this.makeTableForLevel(13, hero, type, talentsClosed[4]));
       displayData.push(this.makeTableForLevel(16, hero, type, talentsClosed[5]));
       displayData.push(this.makeTableForLevel(20, hero, type, talentsClosed[6]));
-      
+
       return (
         <div>
           {displayData}
         </div>
-      ); 
+      );
     }
-    
+
     return <div className='no-hero-selected-padding' />;
   }
 }

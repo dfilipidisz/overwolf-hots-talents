@@ -24,27 +24,20 @@ function fetchError(error) {
 }
 
 export function fetchTeamcompData() {
-  console.log('Start fetching teamcomp data');
-  
   return function (dispatch) {
-    
-    console.log('Dispacth request');
     dispatch(fetchStart());
-    
+
     let fetchInit = {
       method: 'GET'
     };
-    
+
     return fetch('https://raw.githubusercontent.com/dfilipidisz/hotslogs-scraper/master/teamcomp.json', fetchInit)
       .then(response => response.json())
-      .then((res) => { 
-        console.log('Got data');
-        console.log(res);
-        dispatch(fetchDone(res));    
+      .then((res) => {
+        dispatch(fetchDone(res));
       })
       .catch((error) => {
-        console.log('Network error: ' + error);
-        dispatch(fetchError('Network error: ' + error));  
+        dispatch(fetchError('Network error: ' + error));
       });
   };
 }
@@ -55,33 +48,33 @@ function changeFilterEvent(value) {
     value: value
   };
 }
-  
+
 export function changeFilter(value) {
   return function(dispatch) {
     dispatch(changeFilterEvent(value));
   }
 }
-  
+
 function compAddHeroEvent(hero) {
   return {
     type: COMP_ADD_HERO,
     hero: hero
   };
 }
-  
+
 export function compAddHero(hero) {
   return function(dispatch) {
     dispatch(compAddHeroEvent(hero));
   }
 }
-  
+
 function compRemoveHeroEvent(hero) {
   return {
     type: COMP_REMOVE_HERO,
     hero: hero
   };
 }
-  
+
 export function compRemoveHero(hero) {
   return function(dispatch) {
     dispatch(compRemoveHeroEvent(hero));

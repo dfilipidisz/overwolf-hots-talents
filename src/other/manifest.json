@@ -29,7 +29,7 @@
         "resizable": true,
         "size": {"width":400, "height":367},
         "min_size": {"width":400, "height":367},
-        "max_size": {"width":800, "height":2000}
+        "max_size": {"width":2000, "height":2000}
       }
     }
   }

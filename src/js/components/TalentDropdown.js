@@ -85,6 +85,8 @@ class TalentDropdown extends React.Component {
 	      value={this.props.value}
 	      valueComponent={TalentValue}
         className='talent-dropdown'
+        onOpen={this.props.onOpen}
+        onClose={this.props.onClose}
 	    />
     );
   }

@@ -11,6 +11,7 @@
 @import 'talent-pictures.less';
 @import 'alert.less';
 @import 'team-comp.less';
+@import 'builds.less';
 
 html {
   overflow: hidden;
@@ -23,7 +24,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  
+
   .noselect;
 }
 
@@ -32,13 +33,13 @@ section {
   padding: 10px;
   padding-top: 0;
   padding-bottom: 0;
-  
+
   .noselect;
-  
+
   &.loading {
     text-align: center;
     font-size: 30px;
-    
+
     .noselect;
   }
 }
@@ -54,19 +55,19 @@ footer {
   color: white;
   cursor: default;
   margin-bottom: 20px;
-  
+
   p {
     margin-bottom: 0;
-    
+
     img {
       margin-bottom: -15px;
     }
   }
-  
+
   .divider {
     padding: 0 10px;
   }
-  
+
   .noselect;
 }
 
@@ -74,6 +75,7 @@ footer {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 #app-border {
@@ -86,3 +88,11 @@ footer {
   height: 190px;
 }
 
+.input-block {
+  width: 100%;
+}
+
+.oht-input {
+  margin-bottom: 5px;
+  border-radius: 0;
+}

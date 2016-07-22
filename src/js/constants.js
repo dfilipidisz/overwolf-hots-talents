@@ -22,7 +22,8 @@ export const TALENTS_CLOSE_TALENT_LEVEL = 'TALENTS_CLOSE_TALENT_LEVEL';
 export const TALENTS_PAGES = {
   POPULARITY: 'POPULARITY',
   WINRATE: 'WINRATE',
-  POPULAR_BUILDS: 'POPULAR_BUILDS'
+  POPULAR_BUILDS: 'POPULAR_BUILDS',
+  BUILDS: 'BUILDS'
 };
 
 export const TEAMCOMP_DATA_FETCH = 'TEAMCOMP_DATA_FETCH';
@@ -32,10 +33,13 @@ export const COMP_REMOVE_HERO = 'COMP_REMOVE_HERO';
 
 export const SEND_ANALYTICS = 'SEND_ANALYTICS';
 
-//export const ANALYTICS_URL = 'http://127.0.0.1:3800/event';
-export const ANALYTICS_URL = 'http://owanalytics.noip.me/event';
+// export const SERVER_URL = 'http://owanalytics.noip.me';
+export const SERVER_URL = 'http://127.0.0.1:4000';
 
 export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
+
+export const GOT_USER = 'GOT_USER';
+export const LOAD_USER_BUILDS = 'LOAD_USER_BUILDS';
 
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},

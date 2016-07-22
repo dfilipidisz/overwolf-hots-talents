@@ -5,10 +5,11 @@ const SelectHero = require('./SelectHero');
 const TalentTables = require('./TalentTables');
 const PopularBuilds = require('./PopularBuilds');
 const Notifications = require('./Notifications');
+import Builds from './Builds';
 
-class PopularBuildsPage extends React.Component {
+class BuildsPage extends React.Component {
   render () {
-    
+
     if (this.props.isFetching) {
       return (
         <section className='loading'>
@@ -16,9 +17,30 @@ class PopularBuildsPage extends React.Component {
         </section>
       );
     }
-    
+
     return (
-      <section>  
+      <section>
+        <Notifications />
+        <SelectHero />
+        <Builds />
+      </section>
+    );
+  }
+}
+
+class PopularBuildsPage extends React.Component {
+  render () {
+
+    if (this.props.isFetching) {
+      return (
+        <section className='loading'>
+          <i className='fa fa-circle-o-notch fa-spin' />
+        </section>
+      );
+    }
+
+    return (
+      <section>
         <Notifications />
         <SelectHero />
         <PopularBuilds />
@@ -29,7 +51,7 @@ class PopularBuildsPage extends React.Component {
 
 class WinrateTalents extends React.Component {
   render () {
-    
+
     if (this.props.isFetching) {
       return (
         <section className='loading'>
@@ -37,9 +59,9 @@ class WinrateTalents extends React.Component {
         </section>
       );
     }
-    
+
     return (
-      <section>  
+      <section>
         <Notifications />
         <SelectHero />
         <TalentTables type='winrate' />
@@ -50,7 +72,7 @@ class WinrateTalents extends React.Component {
 
 class PopularTalents extends React.Component {
   render () {
-    
+
     if (this.props.isFetching) {
       return (
         <section className='loading'>
@@ -58,9 +80,9 @@ class PopularTalents extends React.Component {
         </section>
       );
     }
-    
+
     return (
-      <section>  
+      <section>
         <Notifications />
         <SelectHero />
         <TalentTables type='popularity' />
@@ -70,11 +92,11 @@ class PopularTalents extends React.Component {
 }
 
 class PageTalents extends React.Component {
-  
+
   render() {
-    
+
     let { page, isFetching } = this.props;
-    
+
     if (page === TALENTS_PAGES.POPULARITY) {
       return (
         <PopularTalents isFetching={isFetching} />
@@ -90,12 +112,17 @@ class PageTalents extends React.Component {
         <PopularBuildsPage isFetching={isFetching} />
       );
     }
+    else if (page === TALENTS_PAGES.BUILDS) {
+      return (
+        <BuildsPage isFetching={isFetching} />
+      );
+    }
     else {
       return (
         <section />
       );
     }
-    
+
   }
 };
 

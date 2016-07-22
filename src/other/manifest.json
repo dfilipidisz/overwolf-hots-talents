@@ -12,6 +12,7 @@
     "icon": "IconMouseOver.png",
     "icon_gray": "IconMouseNormal.png"
   },
+  "permissions": ["Profile"],
   "data": {
     "start_window": "MainWindow",
     "externally_connectable": {
@@ -26,8 +27,8 @@
         "file": "Files/index.html",
         "transparent": true,
         "resizable": true,
-        "size": {"width":400, "height":800},
-        "min_size": {"width":400, "height":600},
+        "size": {"width":400, "height":367},
+        "min_size": {"width":400, "height":367},
         "max_size": {"width":800, "height":2000}
       }
     }

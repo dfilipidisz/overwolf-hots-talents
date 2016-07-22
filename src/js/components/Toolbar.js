@@ -4,19 +4,19 @@ import { connect } from 'react-redux';
 const { navigateTo } = require('../actions/navigation');
 
 class Toolbar extends React.Component {
-  
+
   closeApp() {
     overwolf.windows.getCurrentWindow(function(result) {
       if (result.status === 'success') {
         overwolf.windows.close(result.window.id);
       }
-	});
+	  });
   }
-  
+
   render() {
-    
+
     let { page, sessionid, navigateTo } = this.props;
-    
+
     return (
       <div id='toolbar'>
         <ul>

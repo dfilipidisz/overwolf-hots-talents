@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 import { OWResize } from './OWResize';
 import { OWMove } from './OWMove';
 import { HideApp } from './HideApp';
@@ -6,7 +6,7 @@ const Toolbar = require('./Toolbar');
 const SecondaryToolbar = require('./SecondaryToolbar');
 const PageMinimized = require('./PageMinimized');
 const PageTalents = require('./PageTalents');
-const PageFeedback = require('./PageFeedback');
+import PageFeedback from './PageFeedback';
 const PageAbout = require('./PageAbout');
 const PageTeamcomp = require('./PageTeamcomp');
 import { PAGES } from '../constants';
@@ -17,8 +17,33 @@ const { talentsNavigateTo } = require('../actions/talents');
 
 import { connect } from 'react-redux';
 
+import { getUser } from '../actions/user';
+
 class Main extends React.Component {
-  
+
+  constructor (props) {
+    super(props);
+
+    this.updateWindowSize = this._updateWindowSize.bind(this);
+  }
+
+  componentDidMount () {
+    if (this.props.username === null) {
+      this.props.getUser();
+    }
+
+    window.requestAnimationFrame(this.updateWindowSize);
+  }
+
+  _updateWindowSize () {
+    overwolf.windows.getCurrentWindow(function(result) {
+      if (result.status === 'success') {
+        overwolf.windows.changeSize(result.window.id, result.window.width, document.body.clientHeight);
+      }
+    });
+    window.requestAnimationFrame(this.updateWindowSize);
+  }
+
   render() {
     let children = null;
     if (this.props.page === PAGES.MINIMIZED) {
@@ -66,12 +91,11 @@ class Main extends React.Component {
     else {
       return null;
     }
-    
+
   }
 }
 
 module.exports = connect(
-  state => ({ page: state.navigation.page, talentsPage: state.talents.page }),
-  { navigateTo, talentsNavigateTo }
+  state => ({ page: state.navigation.page, talentsPage: state.talents.page, username: state.user.username }),
+  { navigateTo, talentsNavigateTo, getUser }
 )(HideApp(OWMove(OWResize(Main))));
-

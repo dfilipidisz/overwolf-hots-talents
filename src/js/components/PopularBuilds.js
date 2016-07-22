@@ -4,11 +4,11 @@ const getSimpleTalentName = require('../utilities/getSimpleTalentName');
 const getNormalTalentName = require('../utilities/getNormalTalentName');
 
 class PopularBuilds extends React.Component {
-  
+
   makeTable (data) {
     let builds = data.popularBuilds;
     let rows = [];
-    
+
     builds.forEach((build, buildIndex) => {
       rows.push(
         <tr key={buildIndex}>
@@ -24,7 +24,7 @@ class PopularBuilds extends React.Component {
         </tr>
       );
     });
-    
+
     return (
       <table className='popular-builds-table'>
         <tbody>
@@ -33,11 +33,11 @@ class PopularBuilds extends React.Component {
       </table>
     );
   }
-  
+
   render () {
-    
+
     let { data, selectedHero } = this.props;
-    
+
     if (selectedHero !== null) {
       let hero = data[selectedHero];
       
@@ -45,9 +45,9 @@ class PopularBuilds extends React.Component {
         <div>
           {this.makeTable(hero)}
         </div>
-      ); 
+      );
     }
-    
+
     return <div className='no-hero-selected-padding' />;
   }
 }

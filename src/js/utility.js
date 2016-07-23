@@ -31,3 +31,11 @@ export const makeFetchInit = function (method = 'POST', headers = defaultHeaders
     body: JSON.stringify(data)
   };
 };
+
+export const dragWindow = function () {
+  overwolf.windows.getCurrentWindow(function(result) {
+    if (result.status === 'success') {
+      overwolf.windows.dragMove(result.window.id);
+    }
+  });
+};

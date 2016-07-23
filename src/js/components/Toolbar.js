@@ -2,6 +2,7 @@ const React = require('react');
 import { PAGES } from '../constants';
 import { connect } from 'react-redux';
 const { navigateTo } = require('../actions/navigation');
+import { dragWindow } from '../utility';
 
 class Toolbar extends React.Component {
 
@@ -18,7 +19,7 @@ class Toolbar extends React.Component {
     let { page, sessionid, navigateTo } = this.props;
 
     return (
-      <div id='toolbar'>
+      <div id='toolbar' onMouseDown={dragWindow} style={{cursor: 'move'}}>
         <ul>
           <li className={ page === PAGES.TALENTS ? 'active' : null } onClick={ () => {navigateTo(PAGES.TALENTS); } }>TALENTS</li>
           <li className={ page === PAGES.TEAMCOMP ? 'active' : null } onClick={ () => {navigateTo(PAGES.TEAMCOMP); } }>TEAM COMP</li>

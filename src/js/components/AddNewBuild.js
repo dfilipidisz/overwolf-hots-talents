@@ -45,19 +45,40 @@ class AddNewBuild extends React.Component {
             <textarea rows='6' className='form-control oht-input' placeholder='Build Description (optional)' value={this.state.description} />
           </div>
           <div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
-            <TalentDropdown data={data} lvl='1' value={this.state.talents[0]} onChange={this.changeTalent.bind(this, 0)} />
-            <TalentDropdown data={data} lvl='4' value={this.state.talents[1]} onChange={this.changeTalent.bind(this, 1)} />
-            <TalentDropdown data={data} lvl='7' value={this.state.talents[2]} onChange={this.changeTalent.bind(this, 2)} />
-            <TalentDropdown data={data} lvl='10' value={this.state.talents[3]} onChange={this.changeTalent.bind(this, 3)} />
-            <TalentDropdown data={data} lvl='13' value={this.state.talents[4]} onChange={this.changeTalent.bind(this, 4)}
-              onOpen={() => {this.setState({isLastOpen: true});}}
-              onClose={() => {this.setState({isLastOpen: false});}} />
-            <TalentDropdown data={data} lvl='16' value={this.state.talents[5]} onChange={this.changeTalent.bind(this, 5)}
-              onOpen={() => {this.setState({isLastOpen: true});}}
-              onClose={() => {this.setState({isLastOpen: false});}}/>
-            <TalentDropdown data={data} lvl='20' value={this.state.talents[6]} onChange={this.changeTalent.bind(this, 6)}
-              onOpen={() => {this.setState({isLastOpen: true});}}
-              onClose={() => {this.setState({isLastOpen: false});}}/>
+            <div className='talent-dropdown-container'>
+              <span className='lvl'>1</span>
+              <TalentDropdown data={data} lvl='1' value={this.state.talents[0]} onChange={this.changeTalent.bind(this, 0)} />
+            </div>
+            <div className='talent-dropdown-container'>
+              <span className='lvl'>4</span>
+              <TalentDropdown data={data} lvl='4' value={this.state.talents[1]} onChange={this.changeTalent.bind(this, 1)} />
+            </div>
+            <div className='talent-dropdown-container'>
+              <span className='lvl'>7</span>
+              <TalentDropdown data={data} lvl='7' value={this.state.talents[2]} onChange={this.changeTalent.bind(this, 2)} />
+            </div>
+            <div className='talent-dropdown-container'>
+              <span className='lvl'>10</span>
+              <TalentDropdown data={data} lvl='10' value={this.state.talents[3]} onChange={this.changeTalent.bind(this, 3)} />
+            </div>
+            <div className='talent-dropdown-container'>
+              <span className='lvl'>13</span>
+              <TalentDropdown data={data} lvl='13' value={this.state.talents[4]} onChange={this.changeTalent.bind(this, 4)}
+                onOpen={() => {this.setState({isLastOpen: true});}}
+                onClose={() => {this.setState({isLastOpen: false});}} />
+            </div>
+            <div className='talent-dropdown-container'>
+              <span className='lvl'>16</span>
+              <TalentDropdown data={data} lvl='16' value={this.state.talents[5]} onChange={this.changeTalent.bind(this, 5)}
+                onOpen={() => {this.setState({isLastOpen: true});}}
+                onClose={() => {this.setState({isLastOpen: false});}}/>
+            </div>
+            <div className='talent-dropdown-container'>
+              <span className='lvl'>20</span>
+              <TalentDropdown data={data} lvl='20' value={this.state.talents[6]} onChange={this.changeTalent.bind(this, 6)}
+                onOpen={() => {this.setState({isLastOpen: true});}}
+                onClose={() => {this.setState({isLastOpen: false});}}/>
+            </div>
             {this.state.isLastOpen
               ? <div className='no-hero-selected-padding'></div>
               : null}

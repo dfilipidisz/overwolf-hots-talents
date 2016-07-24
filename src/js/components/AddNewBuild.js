@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import TalentDropdown from './TalentDropdown';
 import * as constants from '../constants';
 import { checkStatus, makeFetchInit } from '../utility';
+import { addNewBuild } from '../actions/builds';
 
 class AddNewBuild extends React.Component {
 
@@ -124,6 +125,7 @@ class AddNewBuild extends React.Component {
           .then((res) => {
             if (res.success) {
               this.resetFields();
+              this.props.addNewBuild(res.build);
             }
             else {
               this.setState({
@@ -133,6 +135,7 @@ class AddNewBuild extends React.Component {
             }
           })
           .catch((error) => {
+            console.log(error);
             this.setState({
               warning: <p style={{marginTop: '0px'}}>Server error. Please try again later.</p>,
               formLoading: false
@@ -143,13 +146,18 @@ class AddNewBuild extends React.Component {
   }
 
   render () {
-    const { data } = this.props;
+    if (this.props.selectedHero === null) {
+      return <div className='no-hero-selected-padding'><p>Please select a hero to add a new build.</p></div>;
+    }
+
+    const data = this.props.data[this.props.selectedHero];
+    const heroName = constants.HEROES.find((el) => {return el.value === this.props.selectedHero;});
 
     return (
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-            <h3 style={{marginTop: '5px', marginBottom: '5px'}}>Create New Build for {this.props.hero}</h3>
+            <h3 style={{marginTop: '5px', marginBottom: '5px'}}>Create New Build for {heroName.label}</h3>
           </div>
         </div>
         <div className='row'>
@@ -233,5 +241,6 @@ class AddNewBuild extends React.Component {
 }
 
 export default connect(
-  state => ({ builds: state.builds.builds, username: state.user.username, selectedHero: state.talents.selectedHero })
+  state => ({data: state.talents.data, builds: state.builds.builds, username: state.user.username, selectedHero: state.talents.selectedHero }),
+  { addNewBuild }
 )(AddNewBuild);

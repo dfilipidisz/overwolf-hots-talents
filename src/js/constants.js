@@ -39,7 +39,8 @@ export const SERVER_URL = 'http://127.0.0.1:4000';
 export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
 
 export const GOT_USER = 'GOT_USER';
-export const LOAD_USER_BUILDS = 'LOAD_USER_BUILDS';
+export const LOAD_MY_BUILDS = 'LOAD_MY_BUILDS';
+export const ADD_NEW_BUILD = 'ADD_NEW_BUILD';
 
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},

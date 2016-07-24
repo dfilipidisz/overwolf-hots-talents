@@ -19,6 +19,5 @@ export let OWMove = ComposedComponent => class extends React.Component {
         </div>
       );
     }
-
   }
 };

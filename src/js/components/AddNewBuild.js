@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import TalentDropdown from './TalentDropdown';
+import * as constants from '../constants';
+import { checkStatus, makeFetchInit } from '../utility';
 
 class AddNewBuild extends React.Component {
 
@@ -8,18 +10,48 @@ class AddNewBuild extends React.Component {
     super(props);
 
     this.changeName = this._changeName.bind(this);
-    this.changeTalent = this._changeTalent.bind(this)
+    this.changeDescription = this._changeDescription.bind(this);
+    this.changeTalent = this._changeTalent.bind(this);
+    this.checkBuild = this._checkBuild.bind(this);
+    this.resetFields = this._resetFields.bind(this);
 
     this.state = {
       name: '',
       description: '',
       talents: [null, null, null, null, null, null, null],
-      isLastOpen: false
+      isPublic: true,
+      isAnonymous: false,
+      isLastOpen: false,
+      warning: null,
+      formLoading: false
     }
+  }
+
+  componentDidUpdate (prevProps) {
+    if (prevProps.selectedHero !== this.props.selectedHero) {
+      this.resetFields();
+    }
+  }
+
+  _resetFields () {
+    this.setState({
+      name: '',
+      description: '',
+      talents: [null, null, null, null, null, null, null],
+      isPublic: true,
+      isAnonymous: false,
+      isLastOpen: false,
+      warning: null,
+      formLoading: false
+    });
   }
 
   _changeName (e) {
     this.setState({name: e.target.value});
+  }
+
+  _changeDescription (e) {
+    this.setState({description: e.target.value});
   }
 
   _changeTalent (lvl, value) {
@@ -27,6 +59,87 @@ class AddNewBuild extends React.Component {
 
     newTalents[parseInt(lvl, 10)] = value;
     this.setState({talents: newTalents});
+  }
+
+  _checkBuild (e) {
+    e.preventDefault();
+
+    this.setState({formLoading: true});
+
+    let fieldsMissing = [];
+
+    if (this.state.name === '') { fieldsMissing.push('Build Name');}
+    this.state.talents.forEach((tier, tierIndex) => {
+      if (tier === null) {
+        let lvl = 0;
+        switch (tierIndex) {
+          case 0: lvl = 1; break;
+          case 1: lvl = 4; break;
+          case 2: lvl = 7; break;
+          case 3: lvl = 10; break;
+          case 4: lvl = 13; break;
+          case 5: lvl = 16; break;
+          case 6: lvl = 20; break;
+        }
+        fieldsMissing.push(`Lvl ${lvl} Talent`);
+      }
+    });
+
+    if (fieldsMissing.length !== 0) {
+      this.setState({warning: (<p style={{marginTop: '0px'}}>
+        Please make sure the following fields are filled out:
+        {fieldsMissing.map((field, index) => {
+          if (index === fieldsMissing.length - 1) {
+            return <b key={field}> {field}</b>;
+          }
+          return <b key={field}> {field},</b>;
+        })}
+      </p>),
+      formLoading: false});
+    }
+    else {
+
+      if (this.props.username === null || this.props.username === undefined) {
+        this.setState({
+          warning: <p style={{marginTop: '0px'}}>Please make sure you are signed in to Overwolf to use this feature.</p>,
+          formLoading: false
+        });
+      }
+      else {
+        // Save the build to server
+
+        const fetchInit = makeFetchInit(undefined, undefined, {
+          name: this.state.name,
+          description: this.state.description,
+          talents: this.state.talents,
+          isPublic: this.state.isPublic,
+          isAnonymous: this.state.isAnonymous,
+          username: this.props.username,
+          hero: this.props.selectedHero
+        });
+
+        fetch(`${constants.SERVER_URL}/api/save-build`, fetchInit)
+          .then(checkStatus)
+          .then(response => response.json())
+          .then((res) => {
+            if (res.success) {
+              this.resetFields();
+            }
+            else {
+              this.setState({
+                warning: <p style={{marginTop: '0px'}}>{res.error}</p>,
+                formLoading: false
+              });
+            }
+          })
+          .catch((error) => {
+            this.setState({
+              warning: <p style={{marginTop: '0px'}}>Server error. Please try again later.</p>,
+              formLoading: false
+            });
+          });
+      }
+    }
   }
 
   render () {
@@ -42,7 +155,7 @@ class AddNewBuild extends React.Component {
         <div className='row'>
           <div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
             <input type='text' className='form-control oht-input' placeholder='Build Name' value={this.state.name} onChange={this.changeName} />
-            <textarea rows='6' className='form-control oht-input' placeholder='Build Description (optional)' value={this.state.description} />
+            <textarea rows='11' className='form-control oht-input' placeholder='Build Description (optional)' value={this.state.description} onChange={this.changeDescription} />
           </div>
           <div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
             <div className='talent-dropdown-container'>
@@ -84,11 +197,41 @@ class AddNewBuild extends React.Component {
               : null}
           </div>
         </div>
+        <div className='row'>
+          <div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
+            {this.state.warning
+              ?
+                <div className='alert alert-warning' style={{borderRadius: '0px'}}>
+                  {this.state.warning}
+                </div>
+              : null}
+          </div>
+          <div className='col-xs-12 col-sm-5 col-md-5 col-lg-5'>
+            <div className="checkbox">
+              <label>
+                <input type="checkbox" checked={this.state.isPublic}
+                  onChange={() => {this.setState({isPublic: !this.state.isPublic});}} />
+                  Public <small>(can be seen by everyone)</small>
+              </label>
+            </div>
+            <div className="checkbox">
+              <label>
+                <input type="checkbox" checked={this.state.isAnonymous}
+                  disabled={!this.state.isPublic}
+                  onChange={() => {this.setState({isAnonymous: !this.state.isAnonymous});}}/> Anonymous <small>(hides your name)</small>
+              </label>
+            </div>
+            <button className='pure-button pure-button-primary'
+              style={{borderRadius: '0px'}}
+              onClick={this.checkBuild}
+              disabled={this.state.formLoading}>{this.state.formLoading ? <i className='fa fa-circle-o-notch fa-spin' /> : 'Save New Build'}</button>
+          </div>
+        </div>
       </div>
     );
   }
 }
 
 export default connect(
-  state => ({ builds: state.builds.builds })
+  state => ({ builds: state.builds.builds, username: state.user.username, selectedHero: state.talents.selectedHero })
 )(AddNewBuild);

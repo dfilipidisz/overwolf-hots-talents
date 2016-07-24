@@ -13,7 +13,7 @@ class Notifications extends React.Component {
     }
     else {
       return (
-        <div className='alert'>
+        <div className='oht-alert'>
           <p>With Patch 19 HotS implemented a DirectX 11 renderer. Overwolf has some problems with games running in DirectX 11, but there is a workaround: <a href='http://blizz.ly/29FCm5E' target='_blank'>Blizzard post</a></p>
           <i className='fa fa-close' onClick={this.props.closeNotification} />
         </div>

@@ -383,8 +383,9 @@
   },
   "css": [
     "grid.less",
-    "forms.less"
+    "forms.less",
+    "alerts.less"
   ],
   "js": [],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=bd49ea200c7002f05349916850ce5c7e"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=fbad47c9d7ff7f47a57eb161dbb66e5d"
 }

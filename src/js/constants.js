@@ -40,7 +40,12 @@ export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
 
 export const GOT_USER = 'GOT_USER';
 export const LOAD_MY_BUILDS = 'LOAD_MY_BUILDS';
+export const LOAD_MY_FAVORITES = 'LOAD_MY_FAVORITES';
 export const ADD_NEW_BUILD = 'ADD_NEW_BUILD';
+export const UPDATE_BUILD = 'UPDATE_BUILD';
+export const DELETE_BUILD = 'DELETE_BUILD';
+export const FAVORITE_BUILD = 'FAVORITE_BUILD';
+export const UNFAVORITE_BUILD = 'UNFAVORITE_BUILD';
 
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},

@@ -1,7 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { checkStatus, makeFetchInit } from '../utility';
 const getSimpleTalentName = require('../utilities/getSimpleTalentName');
 import * as constants from '../constants';
+import moment from 'moment';
+import { updateBuild, deleteBuild, favoriteBuild, unFavoriteBuild } from '../actions/builds';
 
 class BuildBox extends React.Component {
 
@@ -11,6 +14,10 @@ class BuildBox extends React.Component {
     this.updateBuild = this._updateBuild.bind(this);
     this.changePublicState = this._changePublicState.bind(this);
     this.changeAnonState = this._changeAnonState.bind(this);
+    this.deleteBuild = this._deleteBuild.bind(this);
+    this.favorite = this._favorite.bind(this);
+    this.unFavorite = this._unFavorite.bind(this);
+    this.isFavorite = this._isFavorite.bind(this);
 
     this.state = {
       isSettingsOpen: false,
@@ -30,8 +37,7 @@ class BuildBox extends React.Component {
       .then(response => response.json())
       .then((res) => {
         if (res.success) {
-          /* this.resetFields();
-          this.props.addNewBuild(res.build);*/
+          this.props.updateBuild(this.state.build._id, part);
         }
         else {
           this.setState({ build: Object.assign({}, this.props.build) });
@@ -59,15 +65,94 @@ class BuildBox extends React.Component {
     this.updateBuild({anon: !this.state.build.anon});
   }
 
+  _deleteBuild (e) {
+    e.preventDefault();
+
+    const fetchInit = makeFetchInit(undefined, undefined, {
+      username: this.props.username,
+      id: this.state.build._id
+    });
+
+    fetch(`${constants.SERVER_URL}/api/delete-build`, fetchInit)
+      .then(checkStatus)
+      .then(response => response.json())
+      .then((res) => {
+        if (res.success) {
+          this.props.deleteBuild(this.state.build._id);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  _isFavorite (id) {
+    if (this.props.favorites === null) {
+      return false;
+    }
+
+    return this.props.favorites.some((fav) => {
+      return fav._id === id;
+    });
+  }
+
+  _favorite () {
+    const fetchInit = makeFetchInit(undefined, undefined, {
+      username: this.props.username,
+      buildid: this.state.build._id
+    });
+
+    fetch(`${constants.SERVER_URL}/api/add-favorite-build`, fetchInit)
+      .then(checkStatus)
+      .then(response => response.json())
+      .then((res) => {
+        if (res.success) {
+          console.log(res.builds);
+          this.props.favoriteBuild(res.builds);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  _unFavorite () {
+    const fetchInit = makeFetchInit(undefined, undefined, {
+      username: this.props.username,
+      buildid: this.state.build._id
+    });
+
+    fetch(`${constants.SERVER_URL}/api/remove-favorite-build`, fetchInit)
+      .then(checkStatus)
+      .then(response => response.json())
+      .then((res) => {
+        if (res.success) {
+          console.log(res.builds);
+          this.props.unFavoriteBuild(res.builds);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   render () {
     const { build } = this.state;
-
+//(this.isFavorite(build._id) ? this.unFavorite : this.favorite)
     return (
       <div className='build-box'>
         <div className='header'>
           <div className={'hero-portrait ' + build.hero} />
           <span>{build.name}</span>
-          <i className='favorite fa fa-star' />
+          <i className={'favorite fa fa-star' + (this.isFavorite(build._id) ? ' active' : '')}
+            onClick={() => {
+              if (this.isFavorite(build._id)) {
+                this.unFavorite();
+              }
+              else {
+                this.favorite();
+              }
+            }}/>
           <i className='settings-toggle fa fa-cog active'
             onClick={() => {
               this.setState({isSettingsOpen: !this.state.isSettingsOpen});
@@ -84,7 +169,7 @@ class BuildBox extends React.Component {
                     </div>
                   </div>
                   <div className="col-xs-4 col-xs-offset-2">
-                    <button className='pure-button button-error button-xsmall'>Delete</button>
+                    <button className='pure-button button-error button-xsmall' onClick={this.deleteBuild}>Delete</button>
                   </div>
                 </div>
                 <div className="form-group">
@@ -107,7 +192,7 @@ class BuildBox extends React.Component {
           <div className='parcel hint--left' data-hint={build.talents[6]}><div className={`talent-pic ${getSimpleTalentName(build.talents[6])}`} /></div>
         </div>
         <div className='footer'>
-          <span className='left'>12 days ago by {build.creator}</span>
+          <span className='left'>{moment(build.createdAt).fromNow()} by {build.creator}</span>
           <span className='right' onClick={() => {
             this.setState({isDescriptionOpen: !this.state.isDescriptionOpen});
           }}>{this.state.isDescriptionOpen ? 'Hide description' : 'Show description'}</span>
@@ -122,4 +207,7 @@ class BuildBox extends React.Component {
 
 }
 
-export default BuildBox;
+export default connect (
+  state => ({ username: state.user.username }),
+  { updateBuild, deleteBuild, favoriteBuild, unFavoriteBuild }
+)(BuildBox);

@@ -2,7 +2,8 @@ import * as constants from '../constants';
 
 const initialState = {
   mybuilds: null,
-  favorites: null
+  favorites: null,
+  allbuilds: null
 };
 
 export default function update (state = initialState, action) {
@@ -14,6 +15,11 @@ export default function update (state = initialState, action) {
   else if (action.type === constants.LOAD_MY_FAVORITES) {
     return Object.assign({}, state, {
       favorites: action.builds || []
+    });
+  }
+  else if (action.type === constants.LOAD_ALL_BUILDS) {
+    return Object.assign({}, state, {
+      allbuilds: action.builds || []
     });
   }
   else if (action.type === constants.ADD_NEW_BUILD) {

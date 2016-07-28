@@ -25,6 +25,13 @@ const defaultHeaders = {
 };
 
 export const makeFetchInit = function (method = 'POST', headers = defaultHeaders, data = {}) {
+  if (method === 'GET') {
+    return {
+      method,
+      headers
+    };
+  }
+
   return {
     method,
     headers,

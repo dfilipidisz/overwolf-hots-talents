@@ -53,6 +53,32 @@ export const loadMyFavorites = function () {
   };
 };
 
+const _loadAllBuilds = function (builds) {
+  return {
+    type: constants.LOAD_ALL_BUILDS,
+    builds
+  };
+};
+
+export const loadAllBuilds = function () {
+  return function (dispatch, getState) {
+    const user = getState().user;
+    const fetchInit = makeFetchInit('GET');
+
+    fetch(`${constants.SERVER_URL}/api/get-all-builds`, fetchInit)
+      .then(checkStatus)
+      .then(response => response.json())
+      .then((res) => {
+        if (res.success) {
+          dispatch(_loadAllBuilds(res.builds));
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+};
+
 const _addNewBuild = function (build) {
   return {
     type: constants.ADD_NEW_BUILD,

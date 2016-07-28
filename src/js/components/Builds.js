@@ -3,6 +3,7 @@ import FavoriteBuilds from './FavoriteBuilds';
 import AddNewBuild from './AddNewBuild';
 import CommunityBuilds from './CommunityBuilds';
 import MyBuilds from './MyBuilds';
+import { connect } from 'react-redux';
 
 class Builds extends React.Component {
 
@@ -10,16 +11,20 @@ class Builds extends React.Component {
     super(props);
 
     this.state = {
-      tab: 'mybuilds'
+      tab: 'favorites'
     }
   }
 
   render () {
-    if (this.props.loading) {
+    if (this.props.username === null) {
       return (
-        <section className='loading'>
-          <i className='fa fa-circle-o-notch fa-spin' />
-        </section>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+              <p>Please Sign in to Overwolf to use the Community Builds functionality.</p>
+            </div>
+          </div>
+        </div>
       );
     }
 
@@ -68,4 +73,6 @@ class Builds extends React.Component {
   }
 }
 
-export default Builds;
+export default connect(
+  state => ({ username: state.user.username })
+)(Builds);

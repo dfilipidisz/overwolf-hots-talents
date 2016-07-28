@@ -10,7 +10,9 @@ const _gotUser = function (username) {
 export const getUser = function () {
   return function (dispatch) {
     overwolf.profile.getCurrentUser((response) => {
-      dispatch(_gotUser(response.username));
+      if (response.status === 'success' && (response.username !== undefined && response.username !== null)) {
+        dispatch(_gotUser(response.username));
+      }
     });
   };
 };

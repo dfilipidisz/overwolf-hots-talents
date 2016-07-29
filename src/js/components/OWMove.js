@@ -1,31 +1,23 @@
 const React = require('react');
 import { PAGES } from '../constants';
- 
+import { dragWindow } from '../utility';
+
 export let OWMove = ComposedComponent => class extends React.Component {
-  
+
   constructor() {
     super();
   }
-  
-  dragMove(e) {
-    overwolf.windows.getCurrentWindow(function(result) {
-      if (result.status === 'success') {
-        overwolf.windows.dragMove(result.window.id);
-      }
-    });
-  }
-  
+
   render() {
     if (this.props.page !== PAGES.MINIMIZED) {
-      return <ComposedComponent {...this.props} />;  
+      return <ComposedComponent {...this.props} />;
     }
     else {
       return (
-        <div className='ow-move-container' onMouseDown={this.dragMove}>
+        <div className='ow-move-container' onMouseDown={dragWindow}>
           <ComposedComponent {...this.props} />
         </div>
       );
     }
-    
   }
 };

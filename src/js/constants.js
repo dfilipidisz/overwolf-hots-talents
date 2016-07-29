@@ -1,4 +1,3 @@
-
 export const INCREASE = 'INCREASE';
 export const DECREASE = 'DECREASE';
 
@@ -22,7 +21,8 @@ export const TALENTS_CLOSE_TALENT_LEVEL = 'TALENTS_CLOSE_TALENT_LEVEL';
 export const TALENTS_PAGES = {
   POPULARITY: 'POPULARITY',
   WINRATE: 'WINRATE',
-  POPULAR_BUILDS: 'POPULAR_BUILDS'
+  POPULAR_BUILDS: 'POPULAR_BUILDS',
+  BUILDS: 'BUILDS'
 };
 
 export const TEAMCOMP_DATA_FETCH = 'TEAMCOMP_DATA_FETCH';
@@ -32,10 +32,20 @@ export const COMP_REMOVE_HERO = 'COMP_REMOVE_HERO';
 
 export const SEND_ANALYTICS = 'SEND_ANALYTICS';
 
-//export const ANALYTICS_URL = 'http://127.0.0.1:3800/event';
-export const ANALYTICS_URL = 'http://owanalytics.noip.me/event';
+// export const SERVER_URL = 'http://owanalytics.noip.me';
+export const SERVER_URL = 'http://127.0.0.1:4000';
 
 export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
+
+export const GOT_USER = 'GOT_USER';
+export const LOAD_MY_BUILDS = 'LOAD_MY_BUILDS';
+export const LOAD_MY_FAVORITES = 'LOAD_MY_FAVORITES';
+export const LOAD_ALL_BUILDS = 'LOAD_ALL_BUILDS';
+export const ADD_NEW_BUILD = 'ADD_NEW_BUILD';
+export const UPDATE_BUILD = 'UPDATE_BUILD';
+export const DELETE_BUILD = 'DELETE_BUILD';
+export const FAVORITE_BUILD = 'FAVORITE_BUILD';
+export const UNFAVORITE_BUILD = 'UNFAVORITE_BUILD';
 
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},

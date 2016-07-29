@@ -24,7 +24,7 @@ var paths = {
   moveManifest: ['src/other/manifest.json'],
   moveStoreFiles: ['src/other/store.json', 'src/other/description.txt'],
   moveHtmls: ['src/html/index.html'],
-}; 
+};
 
 process.env.NODE_ENV = 'production';
 
@@ -74,7 +74,7 @@ gulp.task('buildImages', function(callback) {
 gulp.task('buildAppImages', function () {
   return gulp.src(paths.appImages)
     .pipe(imagemin([
-      imagemin.jpegtran(), 
+      imagemin.jpegtran(),
       imagemin.optipng()
     ]))
     .pipe(gulp.dest('dist/app/Files/img'));
@@ -83,7 +83,7 @@ gulp.task('buildAppImages', function () {
 gulp.task('buildTalents', function () {
   return gulp.src(paths.talents)
     .pipe(imagemin([
-      imagemin.jpegtran(), 
+      imagemin.jpegtran(),
       imagemin.optipng()
     ]))
     .pipe(gulp.dest('dist/app/Files/img/talents'));
@@ -92,7 +92,7 @@ gulp.task('buildTalents', function () {
 gulp.task('buildAppIcons', function () {
   return gulp.src(paths.appIcons)
     .pipe(imagemin([
-      imagemin.jpegtran(), 
+      imagemin.jpegtran(),
       imagemin.optipng()
     ]))
     .pipe(gulp.dest('dist/app'));
@@ -101,7 +101,7 @@ gulp.task('buildAppIcons', function () {
 // ---------- Move files ---------
 
 gulp.task('moveFiles', function(callback) {
-  runSequence(['moveManifest', 'moveStoreFiles', 'moveStoreImages', 'moveChangelog', 'moveHtml', 'moveFontAwesome', 'moveFontAwesomeCSS', 'moveReactSelectCSS', 'moveHintCSS', 'movePureCSS'],
+  runSequence(['moveManifest', 'moveStoreFiles', 'moveStoreImages', 'moveChangelog', 'moveHtml', 'moveFontAwesome', 'moveFontAwesomeCSS', 'moveReactSelectCSS', 'moveHintCSS', 'movePureCSS', 'moveCustomBootstrap'],
               callback);
 });
 
@@ -126,7 +126,17 @@ gulp.task('moveHintCSS', function(){
 });
 
 gulp.task('movePureCSS', function(){
-  gulp.src(['bower_components/pure/forms-min.css', 'bower_components/pure/buttons-min.css'], { base: './bower_components/pure/' })
+  gulp.src([
+    'bower_components/pure/forms-min.css',
+    'bower_components/pure/buttons-min.css'
+  ], { base: './bower_components/pure/' })
+  .pipe(gulp.dest('dist/app/Files/css'));
+});
+
+gulp.task('moveCustomBootstrap', function(){
+  gulp.src([
+    'src/less/bootstrap.min.css'
+  ], { base: './src/less/' })
   .pipe(gulp.dest('dist/app/Files/css'));
 });
 

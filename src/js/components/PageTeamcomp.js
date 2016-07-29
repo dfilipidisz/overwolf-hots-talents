@@ -43,7 +43,7 @@ class PageTeamcomp extends React.Component {
     else if (fetch === 'error') {
       return (
         <section>
-          <div className='alert danger'>
+          <div className='oht-alert danger'>
             <p>{this.props.error}</p>
             <i className='fa fa-close' />
           </div>
@@ -71,7 +71,7 @@ class PageTeamcomp extends React.Component {
       return (
         <section>
           {this.state.showNotification
-            ? <div className='alert'>
+            ? <div className='oht-alert'>
                 <p>This function is in <b>beta</b> stage. Only contains the top 1000 comps with 200+ games. More comps and polish in the works!</p>
                 <i className='fa fa-close' onClick={() => {this.setState({showNotification: false});}} />
               </div>

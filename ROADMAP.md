@@ -16,9 +16,10 @@ Planned features for the future, in no particular order, with notes.
 
 ### New features
 
-- **Share/save your talent builds.** Suggested by [Zweer](https://github.com/Zweer). Needs fleshing out.
+- **Share/save your talent builds.** Suggested by [Zweer](https://github.com/Zweer). Needs fleshing out. Show builds from popular sites (IcyVeins, HeroesFire, HeroesNexus, etc.)
 - **Commend system** Maybe a positive feedback loop could help decrease the toxicity. So far we only have negative loop (report).
 - **LED API integration.** On some Logitech keyboards. Not important, but the API is now in Overwolf, so why not?
 - **Historical data display.** Charts. Beautiful charts. Everyone loves chart. Especially pies.
 - **News Bar** Display stats/facts/results of ongoing eSport events in a small bar, news channel style. (?)
-- **Save hero league stats** Record the end-of-match results and aggregate them to a nice graph. My performance this season or something like that. 
+- **Save hero league stats** Record the end-of-match results and aggregate them to a nice graph. My performance this season or something like that.
+- **Settings** Separate menu. Disable auto-close was suggested for now.

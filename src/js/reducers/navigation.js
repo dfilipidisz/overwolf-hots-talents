@@ -1,4 +1,4 @@
-import { NAVIGATE_TO, PAGES } from '../constants';
+import { NAVIGATE_TO, MINIMIZE_APP, PAGES } from '../constants';
 
 const initialState = {
   page: PAGES.MINIMIZED
@@ -6,9 +6,14 @@ const initialState = {
 
 export default function update(state = initialState, action) {
   if(action.type === NAVIGATE_TO) {
-    return {
+    return Object.assign({}, state, {
       page: action.page
-    }
+    });
+  }
+  else if (action.type === MINIMIZE_APP) {
+    return Object.assign({}, state, {
+      page: PAGES.MINIMIZED
+    });
   }
   return state;
 }

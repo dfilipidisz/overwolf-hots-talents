@@ -2,7 +2,7 @@ import React from 'react';
 import { OWResize } from './OWResize';
 import { OWMove } from './OWMove';
 import { HideApp } from './HideApp';
-const Toolbar = require('./Toolbar');
+import Toolbar from './Toolbar';
 const SecondaryToolbar = require('./SecondaryToolbar');
 const PageMinimized = require('./PageMinimized');
 const PageTalents = require('./PageTalents');

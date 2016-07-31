@@ -1,7 +1,7 @@
-const React = require('react');
+import React from 'react';
 import { PAGES } from '../constants';
 import { connect } from 'react-redux';
-const { navigateTo } = require('../actions/navigation');
+import { navigateTo, minimizeApp } from '../actions/navigation';
 import { dragWindow } from '../utility';
 
 class Toolbar extends React.Component {
@@ -15,8 +15,7 @@ class Toolbar extends React.Component {
   }
 
   render() {
-
-    let { page, sessionid, navigateTo } = this.props;
+    const { page, sessionid, navigateTo, autoClose } = this.props;
 
     return (
       <div id='toolbar' onMouseDown={dragWindow} style={{cursor: 'move'}}>
@@ -30,6 +29,9 @@ class Toolbar extends React.Component {
           <ul>
             <li onClick={this.closeApp}><i className='fa fa-close' /></li>
             <li className={ page === PAGES.SETTINGS ? 'active' : null } onClick={ () => {navigateTo(PAGES.SETTINGS);}}><i className='fa fa-cog' /></li>
+            {!autoClose
+              ? <li onClick={this.props.minimizeApp}><i className='fa fa-minus' /></li>
+              : null}
           </ul>
         </div>
       </div>
@@ -37,7 +39,7 @@ class Toolbar extends React.Component {
   }
 };
 
-module.exports = connect(
-  state => ({ page: state.navigation.page }),
-  { navigateTo }
+export default connect(
+  state => ({ page: state.navigation.page, autoClose: state.settings.autoClose }),
+  { navigateTo, minimizeApp }
 )(Toolbar);

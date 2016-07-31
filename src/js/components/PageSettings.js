@@ -21,7 +21,7 @@ class PageSettings extends React.Component {
               <form className="form-horizontal">
                 <div className="form-group">
                   <label className="col-xs-4 control-label">Window Auto Close</label>
-                  <div class="col-xs-8">
+                  <div className="col-xs-8">
                     <div className="checkbox">
                       <label>
                         <input type="checkbox" checked={this.props.autoClose} onChange={() => {this.props.toggleAutoClose();}} />

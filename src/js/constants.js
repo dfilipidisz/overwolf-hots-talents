@@ -8,7 +8,8 @@ export const PAGES = {
   TALENTS: 'TALENTS',
   FEEDBACK: 'FEEDBACK',
   ABOUT: 'ABOUT',
-  TEAMCOMP: 'TEAMCOMP'
+  TEAMCOMP: 'TEAMCOMP',
+  SETTINGS: 'SETTINGS'
 };
 
 export const TALENTS_NAVIGATE_TO = 'TALENTS_NAVIGATE_TO';
@@ -46,6 +47,8 @@ export const UPDATE_BUILD = 'UPDATE_BUILD';
 export const DELETE_BUILD = 'DELETE_BUILD';
 export const FAVORITE_BUILD = 'FAVORITE_BUILD';
 export const UNFAVORITE_BUILD = 'UNFAVORITE_BUILD';
+
+export const SETTING_TOGGLE_AUTO_CLOSE = 'SETTING_TOGGLE_AUTO_CLOSE';
 
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},

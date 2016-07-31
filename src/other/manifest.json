@@ -27,8 +27,8 @@
         "file": "Files/index.html",
         "transparent": true,
         "resizable": true,
-        "size": {"width":400, "height":367},
-        "min_size": {"width":400, "height":367},
+        "size": {"width":470, "height":367},
+        "min_size": {"width":470, "height":367},
         "max_size": {"width":2000, "height":2000}
       }
     }

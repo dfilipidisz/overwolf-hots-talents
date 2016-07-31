@@ -29,6 +29,7 @@ class Toolbar extends React.Component {
         <div className='app-ops'>
           <ul>
             <li onClick={this.closeApp}><i className='fa fa-close' /></li>
+            <li className={ page === PAGES.SETTINGS ? 'active' : null } onClick={ () => {navigateTo(PAGES.SETTINGS);}}><i className='fa fa-cog' /></li>
           </ul>
         </div>
       </div>

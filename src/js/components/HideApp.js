@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { PAGES } from '../constants';
-import { navigateTo } from '../actions/navigation';
+import { minimizeApp } from '../actions/navigation';
 
 export const HideApp = WrappedComponent => {
   class AppHider extends React.Component {
@@ -11,7 +11,7 @@ export const HideApp = WrappedComponent => {
 
     hoverOut() {
       if (this.props.autoClose) {
-        this.props.navigateTo(PAGES.MINIMIZED);
+        this.props.minimizeApp();
       }
     }
 
@@ -37,6 +37,6 @@ export const HideApp = WrappedComponent => {
 
   return connect(
     state => ({ page: state.navigation.page, autoClose: state.settings.autoClose }),
-    { navigateTo }
+    { minimizeApp }
   )(AppHider);
 };

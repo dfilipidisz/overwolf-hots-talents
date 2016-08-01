@@ -3,6 +3,7 @@ export const DECREASE = 'DECREASE';
 
 export const NAVIGATE_TO = 'NAVIGATE_TO';
 export const MINIMIZE_APP = 'MINIMIZE_APP';
+export const MAXIMIZE_APP = 'MAXIMIZE_APP';
 
 export const PAGES = {
   MINIMIZED: 'MINIMIZED',

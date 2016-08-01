@@ -2,19 +2,19 @@ const React = require('react');
 import { PAGES } from '../constants';
 import { connect } from 'react-redux';
 const { fetchTalentData } = require('../actions/talents');
-const { navigateTo } = require('../actions/navigation');
+const { maximizeApp } = require('../actions/navigation');
 
 class PageMinimized extends React.Component {
-  
+
   componentWillMount () {
     if (this.props.data === null) {
-      this.props.fetchTalentData();  
+      this.props.fetchTalentData();
     }
   }
-  
+
   render() {
     return (
-      <div id='page-minimized' onClick={ (e) => { this.props.navigateTo(PAGES.TALENTS); } }>
+      <div id='page-minimized' onClick={ (e) => { this.props.maximizeApp(); } }>
         <img src='img/Icon.png' width='50' height='50' />
       </div>
     );
@@ -23,5 +23,5 @@ class PageMinimized extends React.Component {
 
 module.exports = connect(
   state => ({ data: state.talents.data }),
-  { fetchTalentData, navigateTo }
+  { fetchTalentData, maximizeApp }
 )(PageMinimized);

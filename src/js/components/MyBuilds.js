@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { loadMyBuilds, loadMyFavorites } from '../actions/builds';
+import { loadAllBuilds } from '../actions/builds';
 import BuildBox from './BuildBox';
 import * as constants from '../constants';
 
@@ -11,16 +11,13 @@ class MyBuilds extends React.Component {
   }
 
   componentDidMount () {
-    if (this.props.mybuilds === null) {
-      this.props.loadMyBuilds();
-    }
-    if (this.props.favorites === null) {
-      this.props.loadMyFavorites();
+    if (this.props.builds === null) {
+      this.props.loadAllBuilds();
     }
   }
 
   render () {
-    if (this.props.mybuilds === null) {
+    if (this.props.builds === null) {
       return (
         <section className='loading'>
           <i className='fa fa-circle-o-notch fa-spin' />
@@ -43,17 +40,21 @@ class MyBuilds extends React.Component {
         </div>
         <div style={{maxHeight: '351px', overflowY: 'scroll', overflowX: 'hidden', paddingRight: '10px'}}>
         <div className='row'>
-          {this.props.mybuilds.map((build) => {
-            if ((this.props.selectedHero !== null && this.props.selectedHero === build.hero)
-                || this.props.selectedHero === null) {
+          { this.props.builds.filter((build) => {
+              // Filter according to hero selection and current user
+              return (((this.props.selectedHero !== null && this.props.selectedHero === build.hero)
+                      || this.props.selectedHero === null)
+                    && build.creator === this.props.username);
+            }).map((build) => {
+              // Return actual nodes
               return (
                 <div key={build._id} className='col-xs-12 col-sm-6 col-md-6 col-lg-4'>
                   <BuildBox build={build} favorites={this.props.favorites} />
                 </div>
               );
-            }
-          })}
-          {this.props.mybuilds.length === 0
+            })
+          }
+          {this.props.builds.length === 0
             ? <div className='col-xs-12 col-sm-6 col-md-6 col-lg-4'><p>You haven't created any builds yet.</p></div>
             : null}
           </div>
@@ -64,6 +65,6 @@ class MyBuilds extends React.Component {
 }
 
 export default connect(
-  state => ({ mybuilds: state.builds.mybuilds, favorites: state.builds.favorites, selectedHero: state.talents.selectedHero }),
-  { loadMyBuilds, loadMyFavorites }
+  state => ({ builds: state.builds.builds, favorites: state.builds.favorites, selectedHero: state.talents.selectedHero, username: state.user.username }),
+  { loadAllBuilds }
 )(MyBuilds);

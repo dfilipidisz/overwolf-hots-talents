@@ -1,4 +1,4 @@
-import { NAVIGATE_TO } from '../constants';
+import { NAVIGATE_TO, MINIMIZE_APP, MAXIMIZE_APP } from '../constants';
 
 export function navigateTo(page) {
   return {
@@ -6,3 +6,21 @@ export function navigateTo(page) {
     page: page
   }
 }
+
+export function minimizeApp() {
+  return {
+    type: MINIMIZE_APP
+  }
+}
+
+const _maximizeApp = function () {
+  return {
+    type: MAXIMIZE_APP
+  };
+};
+
+export const maximizeApp = function () {
+  return function (dispatch) {
+    dispatch(_maximizeApp());
+  }
+};

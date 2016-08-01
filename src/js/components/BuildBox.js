@@ -91,8 +91,8 @@ class BuildBox extends React.Component {
       return false;
     }
 
-    return this.props.favorites.some((fav) => {
-      return fav._id === id;
+    return this.props.favorites.some((favorite) => {
+      return favorite === id;
     });
   }
 
@@ -107,8 +107,7 @@ class BuildBox extends React.Component {
       .then(response => response.json())
       .then((res) => {
         if (res.success) {
-          console.log(res.builds);
-          this.props.favoriteBuild(res.builds);
+          this.props.favoriteBuild(this.state.build._id, res.favorites);
         }
       })
       .catch((error) => {
@@ -127,8 +126,7 @@ class BuildBox extends React.Component {
       .then(response => response.json())
       .then((res) => {
         if (res.success) {
-          console.log(res.builds);
-          this.props.unFavoriteBuild(res.builds);
+          this.props.unFavoriteBuild(this.state.build._id, res.favorites);
         }
       })
       .catch((error) => {
@@ -138,13 +136,13 @@ class BuildBox extends React.Component {
 
   render () {
     const { build } = this.state;
-//(this.isFavorite(build._id) ? this.unFavorite : this.favorite)
+
     return (
       <div className='build-box'>
         <div className='header'>
           <div className={'hero-portrait ' + build.hero} />
           <span>{build.name}</span>
-          <i className={'favorite fa fa-star' + (this.isFavorite(build._id) ? ' active' : '')}
+          <i className={'favorite fa fa-star' + (this.isFavorite(build._id) ? ' active' : '') + (this.props.hideSettings || build.creator !== this.props.username ? ' moveRight' : '')}
             onClick={() => {
               if (this.isFavorite(build._id)) {
                 this.unFavorite();
@@ -153,10 +151,14 @@ class BuildBox extends React.Component {
                 this.favorite();
               }
             }}/>
-          <i className='settings-toggle fa fa-cog active'
-            onClick={() => {
-              this.setState({isSettingsOpen: !this.state.isSettingsOpen});
-            }} />
+          {this.props.hideSettings || build.creator !== this.props.username
+            ? null
+            :
+              <i className='settings-toggle fa fa-cog active'
+                onClick={() => {
+                  this.setState({isSettingsOpen: !this.state.isSettingsOpen});
+                }} />
+          }
         </div>
         {this.state.isSettingsOpen
           ?
@@ -193,19 +195,29 @@ class BuildBox extends React.Component {
         </div>
         <div className='footer'>
           <span className='left'>{moment(build.createdAt).fromNow()} by {build.creator}</span>
-          <span className='right' onClick={() => {
-            this.setState({isDescriptionOpen: !this.state.isDescriptionOpen});
-          }}>{this.state.isDescriptionOpen ? 'Hide description' : 'Show description'}</span>
-          {this.state.isDescriptionOpen
-            ?
-              <div style={{marginTop: '5px'}} dangerouslySetInnerHTML={{__html: build.description}} />
-            : null}
+          {build.description === ''
+            ? null
+            : (<span className='right' onClick={() => {
+                this.setState({isDescriptionOpen: !this.state.isDescriptionOpen});
+              }}>{this.state.isDescriptionOpen ? 'Hide description' : 'Show description'}</span>
+            )}
+          {build.description === ''
+            ? null
+            : (this.state.isDescriptionOpen
+              ?
+                <div style={{marginTop: '5px'}} dangerouslySetInnerHTML={{__html: build.description}} />
+              : null)}
         </div>
       </div>
     );
   }
-
 }
+
+BuildBox.propTypes = {
+  build: React.PropTypes.object.isRequired,
+  favorites: React.PropTypes.array.isRequired,
+  hideSettings: React.PropTypes.bool
+};
 
 export default connect (
   state => ({ username: state.user.username }),

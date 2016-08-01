@@ -2,7 +2,7 @@ import React from 'react';
 import { OWResize } from './OWResize';
 import { OWMove } from './OWMove';
 import { HideApp } from './HideApp';
-const Toolbar = require('./Toolbar');
+import Toolbar from './Toolbar';
 const SecondaryToolbar = require('./SecondaryToolbar');
 const PageMinimized = require('./PageMinimized');
 const PageTalents = require('./PageTalents');
@@ -11,6 +11,7 @@ const PageAbout = require('./PageAbout');
 const PageTeamcomp = require('./PageTeamcomp');
 import { PAGES } from '../constants';
 const Footer = require('./Footer');
+import PageSettings from './PageSettings';
 
 const { navigateTo } = require('../actions/navigation');
 const { talentsNavigateTo } = require('../actions/talents');
@@ -84,6 +85,15 @@ class Main extends React.Component {
         <div id='app-border'>
           <Toolbar />
           <PageTeamcomp />
+          <Footer />
+        </div>
+      );
+    }
+    else if (this.props.page === PAGES.SETTINGS) {
+      return (
+        <div id='app-border'>
+          <Toolbar />
+          <PageSettings />
           <Footer />
         </div>
       );

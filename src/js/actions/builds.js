@@ -1,76 +1,24 @@
 import * as constants from '../constants';
 import { checkStatus, makeFetchInit } from '../utility';
 
-const _loadMyBuilds = function (builds) {
-  return {
-    type: constants.LOAD_MY_BUILDS,
-    builds
-  };
-};
-
-export const loadMyBuilds = function () {
-  return function (dispatch, getState) {
-    const user = getState().user;
-    const fetchInit = makeFetchInit(undefined, undefined, {username: user.username});
-
-    fetch(`${constants.SERVER_URL}/api/get-my-builds`, fetchInit)
-      .then(checkStatus)
-      .then(response => response.json())
-      .then((res) => {
-        if (res.success) {
-          dispatch(_loadMyBuilds(res.builds));
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-};
-
-const _loadMyFavorites = function (builds) {
-  return {
-    type: constants.LOAD_MY_FAVORITES,
-    builds
-  };
-};
-
-export const loadMyFavorites = function () {
-  return function (dispatch, getState) {
-    const user = getState().user;
-    const fetchInit = makeFetchInit(undefined, undefined, {username: user.username});
-
-    fetch(`${constants.SERVER_URL}/api/get-my-favorites`, fetchInit)
-      .then(checkStatus)
-      .then(response => response.json())
-      .then((res) => {
-        if (res.success) {
-          dispatch(_loadMyFavorites(res.builds));
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-};
-
-const _loadAllBuilds = function (builds) {
+const _loadAllBuilds = function (data) {
   return {
     type: constants.LOAD_ALL_BUILDS,
-    builds
+    data
   };
 };
 
 export const loadAllBuilds = function () {
   return function (dispatch, getState) {
     const user = getState().user;
-    const fetchInit = makeFetchInit('GET');
+    const fetchInit = makeFetchInit(undefined, undefined, {username: user.username});
 
     fetch(`${constants.SERVER_URL}/api/get-all-builds`, fetchInit)
       .then(checkStatus)
       .then(response => response.json())
       .then((res) => {
         if (res.success) {
-          dispatch(_loadAllBuilds(res.builds));
+          dispatch(_loadAllBuilds(res.data));
         }
       })
       .catch((error) => {
@@ -87,15 +35,8 @@ const _addNewBuild = function (build) {
 };
 
 export const addNewBuild = function (build) {
-  return function (dispatch, getState) {
-    const mybuilds = getState().builds.mybuilds;
-
-    if (mybuilds === null) {
-      loadMyBuilds();
-    }
-    else {
-      dispatch(_addNewBuild(build));
-    }
+  return function (dispatch) {
+    dispatch(_addNewBuild(build));
   }
 };
 
@@ -126,28 +67,30 @@ export const deleteBuild = function (id) {
   }
 };
 
-const _favoriteBuild = function (builds) {
+const _favoriteBuild = function (builds, favorites) {
   return {
     type: constants.FAVORITE_BUILD,
-    builds
+    builds,
+    favorites
   };
 };
 
-export const favoriteBuild = function (builds) {
+export const favoriteBuild = function (builds, favorites) {
   return function (dispatch) {
-    dispatch(_favoriteBuild(builds));
+    dispatch(_favoriteBuild(builds, favorites));
   }
 };
 
-const _unFavoriteBuild = function (builds) {
+const _unFavoriteBuild = function (builds, favorites) {
   return {
     type: constants.UNFAVORITE_BUILD,
-    builds
+    builds,
+    favorites
   };
 };
 
-export const unFavoriteBuild = function (builds) {
+export const unFavoriteBuild = function (builds, favorites) {
   return function (dispatch) {
-    dispatch(_unFavoriteBuild(builds));
+    dispatch(_unFavoriteBuild(builds, favorites));
   }
 };

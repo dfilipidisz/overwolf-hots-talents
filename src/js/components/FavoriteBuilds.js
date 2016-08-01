@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BuildBox from './BuildBox';
-import { loadMyFavorites } from '../actions/builds';
+import { loadAllBuilds } from '../actions/builds';
 
 class FavoriteBuilds extends React.Component {
 
@@ -10,13 +10,13 @@ class FavoriteBuilds extends React.Component {
   }
 
   componentDidMount () {
-    if (this.props.favorites === null) {
-      this.props.loadMyFavorites();
+    if (this.props.builds === null) {
+      this.props.loadAllBuilds();
     }
   }
 
   render () {
-    if (this.props.favorites === null) {
+    if (this.props.builds === null) {
       return (
         <section className='loading'>
           <i className='fa fa-circle-o-notch fa-spin' />
@@ -39,16 +39,24 @@ class FavoriteBuilds extends React.Component {
         </div>
         <div style={{maxHeight: '351px', overflowY: 'scroll', overflowX: 'hidden', paddingRight: '10px'}}>
         <div className='row'>
-          {this.props.favorites.map((build) => {
-            if ((this.props.selectedHero !== null && this.props.selectedHero === build.hero)
-                || this.props.selectedHero === null) {
+          { this.props.favorites.map((favid) => {
+              // Match the builds with their stored IDs
+              return this.props.builds.find((build) => {
+                return build._id === favid;
+              });
+            }).filter((build) => {
+              // Filter according to selected hero
+              return ((this.props.selectedHero !== null && this.props.selectedHero === build.hero)
+                      || this.props.selectedHero === null) ;
+            }).map((build) => {
+              // Return actual nodes
               return (
                 <div key={build._id} className='col-xs-12 col-sm-6 col-md-6 col-lg-4'>
                   <BuildBox build={build} favorites={this.props.favorites} />
                 </div>
               );
-            }
-          })}
+            })
+          }
           {this.props.favorites.length === 0
             ? <div className='col-xs-12 col-sm-6 col-md-6 col-lg-4'><p>You haven't favorited any builds yet.</p></div>
             : null}
@@ -60,6 +68,6 @@ class FavoriteBuilds extends React.Component {
 }
 
 export default connect(
-  state => ({ favorites: state.builds.favorites, selectedHero: state.talents.selectedHero }),
-  { loadMyFavorites }
+  state => ({ favorites: state.builds.favorites, builds: state.builds.builds, selectedHero: state.talents.selectedHero }),
+  { loadAllBuilds }
 )(FavoriteBuilds);

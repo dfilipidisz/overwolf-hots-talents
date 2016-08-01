@@ -11,7 +11,7 @@ class Builds extends React.Component {
     super(props);
 
     this.state = {
-      tab: 'favorites'
+      tab: 'mybuilds'
     }
   }
 

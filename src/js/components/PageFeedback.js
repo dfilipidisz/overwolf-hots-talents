@@ -7,10 +7,14 @@ class PageFeedback extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.edit = this._edit.bind(this);
+
     this.state = {message: ''};
   }
 
-  edit(e) {
+  _edit (e) {
+    console.log(e);
     this.setState({message: e.target.value});
   }
 
@@ -28,7 +32,7 @@ class PageFeedback extends React.Component {
       <section>
         <p>Have an idea? Found a bug? Hate an OP hero? You can send me a message in the text area below:</p>
         <form className='pure-form'>
-          <textarea className='feedback-wide-text' rows='5' value={this.state.message} onChange={this.edit.bind(this)} />
+          <textarea className='feedback-wide-text' rows='5' value={this.state.message} onChange={this.edit} />
         </form>
         <button className='pure-button pure-button-primary feedback-wide-send-btn'
           onClick={this.sendFeedback.bind(this)}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import BuildBox from './BuildBox';
 import { loadAllBuilds } from '../actions/builds';
+import * as constants from '../constants';
 
 class FavoriteBuilds extends React.Component {
 

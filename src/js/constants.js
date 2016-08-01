@@ -40,8 +40,6 @@ export const SERVER_URL = 'http://127.0.0.1:4000';
 export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
 
 export const GOT_USER = 'GOT_USER';
-export const LOAD_MY_BUILDS = 'LOAD_MY_BUILDS';
-export const LOAD_MY_FAVORITES = 'LOAD_MY_FAVORITES';
 export const LOAD_ALL_BUILDS = 'LOAD_ALL_BUILDS';
 export const ADD_NEW_BUILD = 'ADD_NEW_BUILD';
 export const UPDATE_BUILD = 'UPDATE_BUILD';

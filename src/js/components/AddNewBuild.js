@@ -4,6 +4,7 @@ import TalentDropdown from './TalentDropdown';
 import * as constants from '../constants';
 import { checkStatus, makeFetchInit } from '../utility';
 import { addNewBuild } from '../actions/builds';
+import { loadAllBuilds } from '../actions/builds';
 
 class AddNewBuild extends React.Component {
 
@@ -25,6 +26,12 @@ class AddNewBuild extends React.Component {
       isLastOpen: false,
       warning: null,
       formLoading: false
+    }
+  }
+
+  componentDidMount () {
+    if (this.props.builds === null) {
+      this.props.loadAllBuilds();
     }
   }
 
@@ -146,6 +153,14 @@ class AddNewBuild extends React.Component {
   }
 
   render () {
+    if (this.props.builds === null) {
+      return (
+        <section className='loading'>
+          <i className='fa fa-circle-o-notch fa-spin' />
+        </section>
+      );
+    }
+
     if (this.props.selectedHero === null) {
       return <div className='no-hero-selected-padding'><p>Please select a hero to add a new build.</p></div>;
     }
@@ -241,6 +256,6 @@ class AddNewBuild extends React.Component {
 }
 
 export default connect(
-  state => ({data: state.talents.data, builds: state.builds.builds, username: state.user.username, selectedHero: state.talents.selectedHero }),
+  state => ({builds: state.builds.builds, data: state.talents.data, username: state.user.username, selectedHero: state.talents.selectedHero }),
   { addNewBuild }
 )(AddNewBuild);

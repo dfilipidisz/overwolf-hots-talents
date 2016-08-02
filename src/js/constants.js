@@ -35,8 +35,7 @@ export const COMP_REMOVE_HERO = 'COMP_REMOVE_HERO';
 
 export const SEND_ANALYTICS = 'SEND_ANALYTICS';
 
-// export const SERVER_URL = 'http://owanalytics.noip.me';
-export const SERVER_URL = 'http://127.0.0.1:4000';
+export const SERVER_URL = 'http://owanalytics.noip.me';
 
 export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
 

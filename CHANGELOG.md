@@ -1,3 +1,13 @@
+**v3.2.0** - 2016.08.02
+
+* Added Community Build system
+* Added Settings page
+* Added setting for Window Auto Close
+* Changed window resizing behavior to work better with wider screens
+* Remember which page was open before window minimization
+* Dependency updates
+* Added new store images and updated description
+
 **v3.1.5** - 2016.07.14
 
 * Remove note about DX11 issues (non-existent)

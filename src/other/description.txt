@@ -2,4 +2,6 @@
 
 Check out in-game up-to-date talent statistics for every hero, sorted by popularity or win rate. See the most used and popular builds to up your game!
 
+Browse community builds and save them for easier access, or create your own builds!
+
 Talent statistics data provided by <a href="http://www.hotslogs.com">www.hotslogs.com</a>

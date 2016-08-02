@@ -19,7 +19,7 @@ var paths = {
   appImages: ['src/img/Icon.png', 'src/img/rog.png', 'src/img/talent-placeholder.png', 'src/img/hero-portraits.png'],
   talents: ['src/img/talents/*'],
   appIcons: ['src/img/IconMouseOver.png', 'src/img/IconMouseNormal.png'],
-  moveStoreImages: ['src/img/Icon.png', 'src/img/Screenshot1.jpg', 'src/img/Screenshot2.jpg', 'src/img/Tile.jpg'],
+  moveStoreImages: ['src/img/Icon.png', 'src/img/Screenshot1.jpg', 'src/img/Screenshot2.jpg', 'src/img/Screenshot3.jpg', 'src/img/Screenshot4.jpg', 'src/img/Tile.jpg'],
   moveFonts: ['bower_components/font-awesome/fonts/*.*'],
   moveManifest: ['src/other/manifest.json'],
   moveStoreFiles: ['src/other/store.json', 'src/other/description.txt'],

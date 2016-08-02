@@ -78,7 +78,7 @@ class BuildBox extends React.Component {
       .then(response => response.json())
       .then((res) => {
         if (res.success) {
-          this.props.deleteBuild(this.state.build._id);
+          this.props.deleteBuild(this.state.build._id, res.favorites);
         }
       })
       .catch((error) => {

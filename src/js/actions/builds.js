@@ -54,16 +54,17 @@ export const updateBuild = function (id, part) {
   }
 };
 
-const _deleteBuild = function (id) {
+const _deleteBuild = function (id, favorites) {
   return {
     type: constants.DELETE_BUILD,
-    id
+    id,
+    favorites
   };
 };
 
-export const deleteBuild = function (id) {
+export const deleteBuild = function (id, favorites) {
   return function (dispatch) {
-    dispatch(_deleteBuild(id));
+    dispatch(_deleteBuild(id, favorites));
   }
 };
 

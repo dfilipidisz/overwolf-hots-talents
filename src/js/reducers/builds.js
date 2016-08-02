@@ -36,7 +36,8 @@ export default function update (state = initialState, action) {
     newBuilds.splice(bIndex, 1);
 
     return Object.assign({}, state, {
-      builds: newBuilds
+      builds: newBuilds,
+      favorites: action.favorites
     });
   }
   else if (action.type === constants.FAVORITE_BUILD || action.type === constants.UNFAVORITE_BUILD) {

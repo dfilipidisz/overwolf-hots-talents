@@ -54,6 +54,7 @@ export const HEROES = [
   { value: 'Anubarak', label: 'Anub\'arak'},
   { value: 'Artanis', label: 'Artanis'},
   { value: 'Arthas', label: 'Arthas'},
+  { value: 'Auriel', label: 'Auriel'},
   { value: 'Azmodan', label: 'Azmodan'},
   { value: 'Brightwing', label: 'Brightwing'},
   { value: 'Chen', label: 'Chen'},

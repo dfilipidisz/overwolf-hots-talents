@@ -19,6 +19,7 @@ const { talentsNavigateTo } = require('../actions/talents');
 import { connect } from 'react-redux';
 
 import { getUser } from '../actions/user';
+import { initLed } from '../actions/led';
 
 class Main extends React.Component {
 
@@ -34,6 +35,8 @@ class Main extends React.Component {
     }
 
     window.requestAnimationFrame(this.updateWindowSize);
+
+    this.props.initLed();
   }
 
   _updateWindowSize () {
@@ -107,5 +110,5 @@ class Main extends React.Component {
 
 module.exports = connect(
   state => ({ page: state.navigation.page, talentsPage: state.talents.page, username: state.user.username }),
-  { navigateTo, talentsNavigateTo, getUser }
+  { navigateTo, talentsNavigateTo, getUser, initLed }
 )(HideApp(OWMove(OWResize(Main))));

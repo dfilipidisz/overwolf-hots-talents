@@ -51,6 +51,10 @@ export const SETTING_TOGGLE_AUTO_CLOSE = 'SETTING_TOGGLE_AUTO_CLOSE';
 
 export const INIT_LED = 'INIT_LED';
 export const TOGGLE_LED_POWER = 'TOGGLE_LED_POWER';
+export const LED_DEVICE_ERROR = 'LED_DEVICE_ERROR';
+export const LED_CHANGE_KEY = 'LED_CHANGE_KEY';
+export const LED_CHANGE_COLOR = 'LED_CHANGE_COLOR';
+export const RESET_LAYOUT = 'RESET_LAYOUT';
 
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},
@@ -112,6 +116,8 @@ export const HEROES = [
 
 const K = overwolf.logitech.led.enums.KeyboardNames;
 
+export const KeyboardNames = Object.keys(K);
+
 export const defaultLayout = [
   {
     command: 'Hero Ability 1',
@@ -141,6 +147,11 @@ export const defaultLayout = [
   {
     command: 'Mount/Dismount',
     keyname: K.Y,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Hearthstone',
+    keyname: K.B,
     color: { r: 28, g: 27, b: 58 }
   },
   {

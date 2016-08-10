@@ -24,6 +24,7 @@ class Toolbar extends React.Component {
           <li className={ page === PAGES.TEAMCOMP ? 'active' : null } onClick={ () => {navigateTo(PAGES.TEAMCOMP); } }>TEAM COMP</li>
           <li className={ page === PAGES.FEEDBACK ? 'active' : null } onClick={ () => { navigateTo(PAGES.FEEDBACK); } }>FEEDBACK</li>
           <li className={ page === PAGES.ABOUT ? 'active' : null } onClick={ () => { navigateTo(PAGES.ABOUT); } }>ABOUT</li>
+          <li className={ page === PAGES.TEST ? 'active' : null } onClick={ () => { navigateTo(PAGES.TEST); } }>TEST</li>
         </ul>
         <div className='app-ops'>
           <ul>

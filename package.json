@@ -33,5 +33,8 @@
   },
   "scripts": {
     "build:dev": "browserify -d -t babelify src/js/boot.js -o dist/app/Files/js/bundle.js"
+  },
+  "dependencies": {
+    "node-vibrant": "^2.1.2"
   }
 }

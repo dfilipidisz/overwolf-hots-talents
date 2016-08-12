@@ -9,7 +9,8 @@ class PageTest extends React.Component {
     this.intervalid = null;
 
     this.state = {
-      url: ''
+      url: '',
+      vibrant: null
     };
   }
 
@@ -39,6 +40,7 @@ class PageTest extends React.Component {
           V.getPalette((err, palett) => {
             console.log(err);
             console.log(palett);
+            this.setState({vibrant: palett});
           });
         }
         else {
@@ -54,9 +56,36 @@ class PageTest extends React.Component {
   }
 
   render() {
+
+    //<img src={this.state.url} style={{width: '200px'}} />
+
+    if (this.state.vibrant !== null) {
+      return (
+        <section>
+          <table style={{tableLayout: 'fixed', width: '100%'}}>
+            <tbody>
+              {Object.keys(this.state.vibrant).map((el) => {
+                return (
+                  <tr>
+                    <td>{el}</td>
+                    <td>{this.state.vibrant[el].population}</td>
+                    <td><div style={{
+                      width: '30px',
+                      height: '30px',
+                      backgroundColor: 'rgb('+this.state.vibrant[el].rgb[0]+', '+this.state.vibrant[el].rgb[1]+', '+this.state.vibrant[el].rgb[2]+')'}} /></td>
+                    <td>{Vibrant.Util.rgbDiff(this.state.vibrant[el].rgb, [255, 255, 255])}</td>
+                  </tr>
+                );
+              })}
+
+            </tbody>
+          </table>
+        </section>
+      );
+    }
+
     return (
       <section>
-        <img src={this.state.url} style={{width: '200px'}} />
       </section>
     );
   }

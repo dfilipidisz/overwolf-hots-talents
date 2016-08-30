@@ -14,13 +14,13 @@ class PopularBuilds extends React.Component {
         <tr key={buildIndex}>
           <td>{build.count}</td>
           <td>{build.winp === null ? null : build.winp + '%' }</td>
-          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl1)} data-hint={getNormalTalentName(build.lvl1, data)} /></td>
-          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl4)} data-hint={getNormalTalentName(build.lvl4, data)} /></td>
-          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl7)} data-hint={getNormalTalentName(build.lvl7, data)} /></td>
-          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl10)} data-hint={getNormalTalentName(build.lvl10, data)} /></td>
-          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl13)} data-hint={getNormalTalentName(build.lvl13, data)} /></td>
-          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl16)} data-hint={getNormalTalentName(build.lvl16, data)} /></td>
-          <td><div className={'hint--bottom-left talent-pic ' + getSimpleTalentName(build.lvl20)} data-hint={getNormalTalentName(build.lvl20, data)} /></td>
+          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl1, this.props.selectedHero)} data-hint={getNormalTalentName(build.lvl1, data)} /></td>
+          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl4, this.props.selectedHero)} data-hint={getNormalTalentName(build.lvl4, data)} /></td>
+          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl7, this.props.selectedHero)} data-hint={getNormalTalentName(build.lvl7, data)} /></td>
+          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl10, this.props.selectedHero)} data-hint={getNormalTalentName(build.lvl10, data)} /></td>
+          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl13, this.props.selectedHero)} data-hint={getNormalTalentName(build.lvl13, data)} /></td>
+          <td><div className={'hint--bottom talent-pic ' + getSimpleTalentName(build.lvl16, this.props.selectedHero)} data-hint={getNormalTalentName(build.lvl16, data)} /></td>
+          <td><div className={'hint--bottom-left talent-pic ' + getSimpleTalentName(build.lvl20, this.props.selectedHero)} data-hint={getNormalTalentName(build.lvl20, data)} /></td>
         </tr>
       );
     });
@@ -40,7 +40,7 @@ class PopularBuilds extends React.Component {
 
     if (selectedHero !== null) {
       let hero = data[selectedHero];
-      
+
       return (
         <div>
           {this.makeTable(hero)}

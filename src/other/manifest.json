@@ -5,14 +5,14 @@
     "name": "Heroes of the Storm Talent Picks",
     "author": "David Filipidisz",
     "version": "3.2.1",
-    "minimum-overwolf-version": "0.82.0",
+    "minimum-overwolf-version": "0.93.1",
     "access-name": "com.davidf.hotstalents",
     "description": "Up-to-date Heroes of the Storm talent statistics for every Hero, ordered by popularity or win rate.",
     "dock_button_title": "HoTS Talent Stats",
     "icon": "IconMouseOver.png",
     "icon_gray": "IconMouseNormal.png"
   },
-  "permissions": ["Profile"],
+  "permissions": ["Profile", "LogitechLed"],
   "data": {
     "start_window": "MainWindow",
     "externally_connectable": {

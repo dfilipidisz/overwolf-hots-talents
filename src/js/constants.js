@@ -49,6 +49,13 @@ export const UNFAVORITE_BUILD = 'UNFAVORITE_BUILD';
 
 export const SETTING_TOGGLE_AUTO_CLOSE = 'SETTING_TOGGLE_AUTO_CLOSE';
 
+export const INIT_LED = 'INIT_LED';
+export const TOGGLE_LED_POWER = 'TOGGLE_LED_POWER';
+export const LED_DEVICE_ERROR = 'LED_DEVICE_ERROR';
+export const LED_CHANGE_KEY = 'LED_CHANGE_KEY';
+export const LED_CHANGE_COLOR = 'LED_CHANGE_COLOR';
+export const RESET_LAYOUT = 'RESET_LAYOUT';
+
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},
   { value: 'Anubarak', label: 'Anub\'arak'},
@@ -105,4 +112,131 @@ export const HEROES = [
   { value: 'Xul', label: 'Xul'},
   { value: 'Zagara', label: 'Zagara'},
   { value: 'Zeratul', label: 'Zeratul'},
+];
+
+const K = overwolf.logitech.led.enums.KeyboardNames;
+
+export const KeyboardNames = Object.keys(K);
+
+export const defaultLayout = [
+  {
+    command: 'Hero Ability 1',
+    keyname: K.Q,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Hero Ability 2',
+    keyname: K.W,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Hero Ability 3',
+    keyname: K.E,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Heroic Ability',
+    keyname: K.R,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Hero Trait',
+    keyname: K.D,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Mount/Dismount',
+    keyname: K.Y,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Hearthstone',
+    keyname: K.B,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Use Talent 1',
+    keyname: K.ONE,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Use Talent 2',
+    keyname: K.TWO,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Use Talent 3',
+    keyname: K.THREE,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Use Talent 4',
+    keyname: K.FOUR,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Use Talent 5',
+    keyname: K.FIVE,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Use Talent 6',
+    keyname: K.SIX,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Spotlight',
+    keyname: K.SPACE,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Ping Minimap',
+    keyname: K.G,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Quick Retreat Ping',
+    keyname: K.V,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Leader Panel',
+    keyname: K.TAB,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Character Sheet Panel',
+    keyname: K.C,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Attack',
+    keyname: K.A,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Stop Attack',
+    keyname: K.S,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Hold',
+    keyname: K.H,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Cancel',
+    keyname: K.ESC,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Announce Modifier',
+    keyname: K.LEFT_ALT,
+    color: { r: 28, g: 27, b: 58 }
+  },
+  {
+    command: 'Queue Command Modifier',
+    keyname: K.LEFT_SHIFT,
+    color: { r: 28, g: 27, b: 58 }
+  }
 ];

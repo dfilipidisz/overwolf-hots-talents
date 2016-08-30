@@ -12,7 +12,6 @@ const PageTeamcomp = require('./PageTeamcomp');
 import { PAGES } from '../constants';
 const Footer = require('./Footer');
 import PageSettings from './PageSettings';
-import PageTest from './PageTest';
 
 const { navigateTo } = require('../actions/navigation');
 const { talentsNavigateTo } = require('../actions/talents');
@@ -99,14 +98,6 @@ class Main extends React.Component {
           <Toolbar />
           <PageSettings />
           <Footer />
-        </div>
-      );
-    }
-    else if (this.props.page === PAGES.TEST) {
-      return (
-        <div id='app-border'>
-          <Toolbar />
-          <PageTest />
         </div>
       );
     }

@@ -4,37 +4,34 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-es2015": "6.13.2",
+    "babel-preset-es2015": "6.14.0",
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-1": "6.13.0",
     "babel-polyfill": "6.13.0",
     "babelify": "7.3.0",
     "browserify": "13.1.0",
-    "del": "2.2.1",
+    "del": "2.2.2",
     "gulp": "3.9.1",
     "gulp-concat": "2.6.0",
     "gulp-concat-css": "2.3.0",
     "gulp-cssnano": "2.1.2",
-    "gulp-imagemin": "3.0.2",
+    "gulp-imagemin": "3.0.3",
     "gulp-less": "3.1.0",
     "gulp-uglify": "2.0.0",
     "moment": "2.14.1",
-    "react": "15.3.0",
-    "react-color": "2.2.2",
-    "react-dom": "15.3.0",
+    "react": "15.3.1",
+    "react-color": "2.2.6",
+    "react-dom": "15.3.1",
     "react-redux": "4.4.5",
     "react-select": "1.0.0-beta14",
     "redux": "3.5.2",
     "redux-thunk": "2.1.0",
     "run-sequence": "1.2.2",
-    "uglify-js": "2.7.0",
+    "uglify-js": "2.7.3",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0"
   },
   "scripts": {
     "build:dev": "browserify -d -t babelify src/js/boot.js -o dist/app/Files/js/bundle.js"
-  },
-  "dependencies": {
-    "node-vibrant": "^2.1.2"
   }
 }

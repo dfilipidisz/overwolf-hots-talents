@@ -1,3 +1,8 @@
+**v3.2.1** - 2016.08.10
+
+* Patch 19.4 talent changes
+* Added new hero Auriel
+
 **v3.2.0** - 2016.08.02
 
 * Added Community Build system

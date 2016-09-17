@@ -1,3 +1,10 @@
+**v3.3.0** - 2016.09.17
+
+* LED API integration
+* Added Alarak
+* Updated talent images
+* Updated dependencies
+
 **v3.2.1** - 2016.08.10
 
 * Patch 19.4 talent changes

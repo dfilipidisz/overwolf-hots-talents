@@ -45,6 +45,10 @@ class TalentTables extends React.Component {
   makeTableForLevel (lvl, data, type, isClosed) {
     let sorted, rows = [];
 
+    if (data['lvl' + lvl] === null) {
+      return null;
+    }
+
     if (type === 'popularity') {
       sorted = data['lvl' + lvl].sort(talentSortPopularityDesc);
     }

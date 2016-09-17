@@ -58,6 +58,7 @@ export const RESET_LAYOUT = 'RESET_LAYOUT';
 
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur'},
+  { value: 'Alarak', label: 'Alarak'},
   { value: 'Anubarak', label: 'Anub\'arak'},
   { value: 'Artanis', label: 'Artanis'},
   { value: 'Arthas', label: 'Arthas'},

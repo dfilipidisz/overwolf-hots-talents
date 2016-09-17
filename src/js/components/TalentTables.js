@@ -59,7 +59,7 @@ class TalentTables extends React.Component {
       rows.push(
         <tr key={lvl} onClick={this.openTalentRow.bind(this, lvl)}>
           <td className='level'>{lvl}</td>
-          <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(sorted[0].title, this.props.selectedHero)} /></td>
+          <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(sorted[0].title)} /></td>
           <td className='name'>{sorted[0].title}</td>
           <td className='percent'>{sorted[0][type]}%</td>
         </tr>
@@ -70,7 +70,7 @@ class TalentTables extends React.Component {
         rows.push(
           <tr key={talent.title} onClick={this.closeTalentRow.bind(this, lvl)}>
             { talentIndex === 0 ? <td className='level' rowSpan={sorted.length}>{lvl}</td> : null }
-            <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(talent.title, this.props.selectedHero)} /></td>
+            <td className='pic'><div className={'talent-pic ' + getSimpleTalentName(talent.title)} /></td>
             <td className='name'>{talent.title}</td>
             <td className='percent'>{talent[type]}%</td>
           </tr>

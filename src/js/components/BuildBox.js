@@ -185,13 +185,13 @@ class BuildBox extends React.Component {
             </div>
           : null}
         <div className='talents'>
-          <div className='parcel hint--right' data-hint={build.talents[0]}><div className={`talent-pic ${getSimpleTalentName(build.talents[0], this.props.selectedHero)}`} /></div>
-          <div className='parcel hint--right' data-hint={build.talents[1]}><div className={`talent-pic ${getSimpleTalentName(build.talents[1], this.props.selectedHero)}`} /></div>
-          <div className='parcel hint--bottom' data-hint={build.talents[2]}><div className={`talent-pic ${getSimpleTalentName(build.talents[2], this.props.selectedHero)}`} /></div>
-          <div className='parcel hint--bottom' data-hint={build.talents[3]}><div className={`talent-pic ${getSimpleTalentName(build.talents[3], this.props.selectedHero)}`} /></div>
-          <div className='parcel hint--bottom' data-hint={build.talents[4]}><div className={`talent-pic ${getSimpleTalentName(build.talents[4], this.props.selectedHero)}`} /></div>
-          <div className='parcel hint--left' data-hint={build.talents[5]}><div className={`talent-pic ${getSimpleTalentName(build.talents[5], this.props.selectedHero)}`} /></div>
-          <div className='parcel hint--left' data-hint={build.talents[6]}><div className={`talent-pic ${getSimpleTalentName(build.talents[6], this.props.selectedHero)}`} /></div>
+          <div className='parcel hint--right' data-hint={build.talents[0]}><div className={`talent-pic ${getSimpleTalentName(build.talents[0])}`} /></div>
+          <div className='parcel hint--right' data-hint={build.talents[1]}><div className={`talent-pic ${getSimpleTalentName(build.talents[1])}`} /></div>
+          <div className='parcel hint--bottom' data-hint={build.talents[2]}><div className={`talent-pic ${getSimpleTalentName(build.talents[2])}`} /></div>
+          <div className='parcel hint--bottom' data-hint={build.talents[3]}><div className={`talent-pic ${getSimpleTalentName(build.talents[3])}`} /></div>
+          <div className='parcel hint--bottom' data-hint={build.talents[4]}><div className={`talent-pic ${getSimpleTalentName(build.talents[4])}`} /></div>
+          <div className='parcel hint--left' data-hint={build.talents[5]}><div className={`talent-pic ${getSimpleTalentName(build.talents[5])}`} /></div>
+          <div className='parcel hint--left' data-hint={build.talents[6]}><div className={`talent-pic ${getSimpleTalentName(build.talents[6])}`} /></div>
         </div>
         <div className='footer'>
           <span className='left'>{moment(build.createdAt).fromNow()} by {build.creator}</span>
@@ -220,6 +220,6 @@ BuildBox.propTypes = {
 };
 
 export default connect (
-  state => ({ username: state.user.username, selectedHero: state.talents.selectedHero }),
+  state => ({ username: state.user.username }),
   { updateBuild, deleteBuild, favoriteBuild, unFavoriteBuild }
 )(BuildBox);

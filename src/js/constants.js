@@ -112,6 +112,7 @@ export const HEROES = [
   { value: 'Valla', label: 'Valla'},
   { value: 'Xul', label: 'Xul'},
   { value: 'Zagara', label: 'Zagara'},
+  { value: 'Zarya', label: 'Zarya'},
   { value: 'Zeratul', label: 'Zeratul'},
 ];
 

@@ -62,10 +62,10 @@ export function fetchTalentData() {
       }
     };
 
-    return fetch('https://raw.githubusercontent.com/dfilipidisz/hotslogs-scraper/master/data.json', fetchInit)
+    return fetch('http://hots-tool.ddns.net/public/data.json', fetchInit)
       .then(checkStatus)
       .then(response => response.json())  //parse json
-      .then((res) => { 
+      .then((res) => {
         dispatch(talentDataArrived(res));
       })
       .catch((error) => {

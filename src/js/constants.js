@@ -20,22 +20,13 @@ export const TALENTS_CLOSE_TALENT_LEVEL = 'TALENTS_CLOSE_TALENT_LEVEL';
 export const TALENTS_PAGES = {
   POPULARITY: 'POPULARITY',
   WINRATE: 'WINRATE',
-  BUILDS: 'BUILDS'
 };
 
-export const SEND_ANALYTICS = 'SEND_ANALYTICS';
-
-export const SERVER_URL = 'http://owanalytics.noip.me';
+export const SERVER_URL = 'http://hots-tool.ddns.net';
 
 export const CLOSE_NOTIFICATION = 'CLOSE_NOTIFICATION';
 
 export const GOT_USER = 'GOT_USER';
-export const LOAD_ALL_BUILDS = 'LOAD_ALL_BUILDS';
-export const ADD_NEW_BUILD = 'ADD_NEW_BUILD';
-export const UPDATE_BUILD = 'UPDATE_BUILD';
-export const DELETE_BUILD = 'DELETE_BUILD';
-export const FAVORITE_BUILD = 'FAVORITE_BUILD';
-export const UNFAVORITE_BUILD = 'UNFAVORITE_BUILD';
 
 export const SETTING_TOGGLE_AUTO_CLOSE = 'SETTING_TOGGLE_AUTO_CLOSE';
 

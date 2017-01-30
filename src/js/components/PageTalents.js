@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { TALENTS_PAGES } from '../constants';
 const SelectHero = require('./SelectHero');
 const TalentTables = require('./TalentTables');
-const PopularBuilds = require('./PopularBuilds');
 const Notifications = require('./Notifications');
 import Builds from './Builds';
 
@@ -23,27 +22,6 @@ class BuildsPage extends React.Component {
         <Notifications />
         <SelectHero />
         <Builds />
-      </section>
-    );
-  }
-}
-
-class PopularBuildsPage extends React.Component {
-  render () {
-
-    if (this.props.isFetching) {
-      return (
-        <section className='loading'>
-          <i className='fa fa-circle-o-notch fa-spin' />
-        </section>
-      );
-    }
-
-    return (
-      <section>
-        <Notifications />
-        <SelectHero />
-        <PopularBuilds />
       </section>
     );
   }
@@ -105,11 +83,6 @@ class PageTalents extends React.Component {
     else if (page === TALENTS_PAGES.WINRATE) {
       return (
         <WinrateTalents isFetching={isFetching} />
-      );
-    }
-    else if (page === TALENTS_PAGES.POPULAR_BUILDS) {
-      return (
-        <PopularBuildsPage isFetching={isFetching} />
       );
     }
     else if (page === TALENTS_PAGES.BUILDS) {

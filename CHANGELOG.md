@@ -1,3 +1,9 @@
+**v3.4.0** - 2017.01.30
+
+* Added missed heroes
+* Dep updates
+* Removed unused features
+
 **v3.3.0** - 2016.09.17
 
 * LED API integration

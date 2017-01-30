@@ -1,6 +1,3 @@
-export const INCREASE = 'INCREASE';
-export const DECREASE = 'DECREASE';
-
 export const NAVIGATE_TO = 'NAVIGATE_TO';
 export const MINIMIZE_APP = 'MINIMIZE_APP';
 export const MAXIMIZE_APP = 'MAXIMIZE_APP';
@@ -10,7 +7,6 @@ export const PAGES = {
   TALENTS: 'TALENTS',
   FEEDBACK: 'FEEDBACK',
   ABOUT: 'ABOUT',
-  TEAMCOMP: 'TEAMCOMP',
   SETTINGS: 'SETTINGS'
 };
 
@@ -27,11 +23,6 @@ export const TALENTS_PAGES = {
   POPULAR_BUILDS: 'POPULAR_BUILDS',
   BUILDS: 'BUILDS'
 };
-
-export const TEAMCOMP_DATA_FETCH = 'TEAMCOMP_DATA_FETCH';
-export const CHANGE_FILTER = 'CHANGE_FILTER';
-export const COMP_ADD_HERO = 'COMP_ADD_HERO';
-export const COMP_REMOVE_HERO = 'COMP_REMOVE_HERO';
 
 export const SEND_ANALYTICS = 'SEND_ANALYTICS';
 

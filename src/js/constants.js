@@ -74,9 +74,11 @@ export const HEROES = [
   { value: 'Murky', label: 'Murky'},
   { value: 'Nazeebo', label: 'Nazeebo'},
   { value: 'Nova', label: 'Nova'},
+  { value: 'Ragnaros', label: 'Ragnaros'},
   { value: 'Raynor', label: 'Raynor'},
   { value: 'Rehgar', label: 'Rehgar'},
   { value: 'Rexxar', label: 'Rexxar'},
+  { value: 'Samuro', label: 'Samuro'},
   { value: 'SgtHammer', label: 'Sgt. Hammer'},
   { value: 'Sonya', label: 'Sonya'},
   { value: 'Stitches', label: 'Stitches'},
@@ -90,11 +92,14 @@ export const HEROES = [
   { value: 'Tyrael', label: 'Tyrael'},
   { value: 'Tyrande', label: 'Tyrande'},
   { value: 'Uther', label: 'Uther'},
+  { value: 'Valeera', label: 'Valeera'},
   { value: 'Valla', label: 'Valla'},
+  { value: 'Varian', label: 'Varian'},
   { value: 'Xul', label: 'Xul'},
   { value: 'Zagara', label: 'Zagara'},
   { value: 'Zarya', label: 'Zarya'},
   { value: 'Zeratul', label: 'Zeratul'},
+  { value: 'Zuljin', label: 'Zul\'jin'},
 ];
 
 const K = overwolf.logitech.led.enums.KeyboardNames;

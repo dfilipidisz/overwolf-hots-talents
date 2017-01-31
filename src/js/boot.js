@@ -5,6 +5,8 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
+import '../sass/index.scss';
+
 import * as reducers from './reducers';
 const App = require('./components/App');
 

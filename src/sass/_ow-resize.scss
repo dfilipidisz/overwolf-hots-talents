@@ -1,13 +1,11 @@
-@dragAreaWidth: 5px;
-
-@import 'variables.less';
+$dragAreaWidth: 5px;
 
 .ow-resize-container {
   position: relative;
 }
 
 .ow-resize-left {
-  width: @dragAreaWidth;
+  width: $dragAreaWidth;
   position: absolute;
   cursor: w-resize;
   top: 0;
@@ -17,7 +15,7 @@
 }
 
 .ow-resize-right {
-  width: @dragAreaWidth;
+  width: $dragAreaWidth;
   position: absolute;
   cursor: e-resize;
   top: 0;
@@ -27,7 +25,7 @@
 }
 
 .ow-resize-top {
-  height: @dragAreaWidth;
+  height: $dragAreaWidth;
   position: absolute;
   cursor: n-resize;
   top: 0;
@@ -37,7 +35,7 @@
 }
 
 .ow-resize-bottom {
-  height: @dragAreaWidth;
+  height: $dragAreaWidth;
   position: absolute;
   cursor: s-resize;
   left: 0;

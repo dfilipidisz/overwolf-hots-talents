@@ -1,55 +1,51 @@
-@import 'variables.less';
-@import 'general.less';
-
 .talent-table {
   width: 100%;
   border-spacing: 0;
   margin-bottom: 10px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.6);
-  
+
   &:hover {
     tbody tr td.level {
       background-color: white;
-      color: lighten(@purple-dark, 10%);
+      color: lighten($purple-dark, 10%);
     }
   }
-  
+
   tbody tr {
-    background-color: lighten(@purple-dark, 15%);
-    
+    background-color: lighten($purple-dark, 15%);
+
     &:nth-child(even) {
-      background-color: lighten(@purple-dark, 12%);
+      background-color: lighten($purple-dark, 12%);
     }
   }
-  
+
   tbody tr td {
-    
+
     height: 40px;
     cursor: pointer;
     empty-cells: show;
-    
-    .noselect;
-    
+
+    @include noselect;
+
     &.level {
-      background-color: lighten(@purple-dark, 10%);
+      background-color: lighten($purple-dark, 10%);
       text-align: center;
       width: 40px;
       font-weight: bold;
       font-size: 20px;
     }
-    
+
     &.pic {
       width: 40px;
     }
-    
+
     &.name {
       padding-left: 5px;
     }
-    
+
     &.percent {
       width: 60px;
       text-align: center;
-    } 
-  } 
+    }
+  }
 }
-

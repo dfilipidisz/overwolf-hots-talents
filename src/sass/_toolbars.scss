@@ -1,9 +1,6 @@
-@import 'variables.less';
-@import 'general.less';
-
 #toolbar {
-  height: @toolbar-height;
-  background-color: @purple-dark;
+  height: $toolbar-height;
+  background-color: $purple-dark;
   position: relative;
   padding-right: 120px;
   font-size: 14px;
@@ -16,24 +13,24 @@
     padding: 0;
 
     li {
-      height: @toolbar-height;
+      height: $toolbar-height;
       float: left;
-      line-height: @toolbar-height;
+      line-height: $toolbar-height;
       padding: 0 10px;
       color: #bbb;
 
       &.active {
-        background-color: lighten(@purple-dark, 5%);
+        background-color: lighten($purple-dark, 5%);
         color: white;
       }
 
       &:hover {
         cursor: pointer;
         color: white;
-        background-color: lighten(@purple-dark, 5%);
+        background-color: lighten($purple-dark, 5%);
       }
 
-      .noselect;
+      @include noselect;
     }
   }
 
@@ -49,23 +46,23 @@
       padding: 0;
 
       li {
-        height: @toolbar-height;
+        height: $toolbar-height;
         float: right;
-        line-height: @toolbar-height;
+        line-height: $toolbar-height;
         padding: 0 10px;
 
-        .noselect;
+        @include noselect;
       }
 
     }
   }
 
-  .clearfix;
+  @include clearfix;
 }
 
 #secondary-toolbar {
-  height: @secondary-toolbar-height;
-  background-color: lighten(@purple-dark, 10%);
+  height: $secondary-toolbar-height;
+  background-color: lighten($purple-dark, 10%);
   position: relative;
   font-size: 12px;
   font-weight: bold;
@@ -77,26 +74,26 @@
     padding: 0;
 
     li {
-      height: @secondary-toolbar-height;
+      height: $secondary-toolbar-height;
       float: left;
-      line-height: @secondary-toolbar-height;
+      line-height: $secondary-toolbar-height;
       padding: 0 10px;
       color: #bbb;
 
       &.active {
-        background-color: lighten(@purple-dark, 15%);
+        background-color: lighten($purple-dark, 15%);
         color: white;
       }
 
       &:hover {
         cursor: pointer;
         color: white;
-        background-color: lighten(@purple-dark, 15%);
+        background-color: lighten($purple-dark, 15%);
       }
 
-      .noselect;
+      @include noselect;
     }
   }
 
-  .clearfix;
+  @include clearfix;
 }

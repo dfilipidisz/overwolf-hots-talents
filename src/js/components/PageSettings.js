@@ -104,7 +104,7 @@ class PageSettings extends React.Component {
                   })}
                   <div className="form-group">
                     <div className="col-xs-8 col-xs-offset-4">
-                      <button className='pure-button pure-button-primary'
+                      <button className='btn btn-primary'
                         style={{borderRadius: '0px'}}
                         onClick={this.resetLayout}>Reset</button>
                     </div>

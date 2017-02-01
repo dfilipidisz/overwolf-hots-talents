@@ -112,7 +112,11 @@
 .manticore,
 .farflight-quiver,
 .sin-for-sin,
-.refreshing-elixir { background: url(../img/talents/general.png); }
+.refreshing-elixir,
+.Diablo.speed-demon,
+.Diablo.fearful-presence,
+.Diablo.hellgate,
+.ETC.hammeron, { background: url(../img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -127,8 +131,10 @@
 .give-em-the-axe,                                               //Muradin
 .manticore,                                                     //Valla
 .sizzlin-attacks,
+.ETC.hammeron,
 .focused-attack          { background-position:      0px 0px; }
 .spell-shield            { background-position:    -30px 0px; }
+.Diablo.speed-demon,
 .relentless-soldier,                                            //Tychus
 .kharazim-sixth-sense,                                          //Kharazim
 .flea-bag,                                                      //Stitches
@@ -139,6 +145,7 @@
 .wingman,                                                       //Falstad
 .covert-mission,                                                //Nova
 .bribe                   { background-position:   -120px 0px; }
+.Diablo.hellgate,
 .bolt-of-the-storm       { background-position:   -150px 0px; }
 .cleanse                 { background-position:   -180px 0px; }
 .ice-block               { background-position:   -210px 0px; }
@@ -154,6 +161,7 @@
 .regeneration-master     { background-position:   -390px 0px; }
 .mercenary-lord          { background-position:   -420px 0px; }
 .imposing-presence,
+.Diablo.fearful-presence,
 .primal-intimidation     { background-position:   -450px 0px; } //Rexxar
 .Azmodan.sin-for-sin,
 .blood-for-blood         { background-position:   -480px 0px; }
@@ -161,7 +169,7 @@
 .hardened-skin           { background-position:   -510px 0px; } //Rexxar
 .seasoned-marksman       { background-position:   -540px 0px; }
 .impatience-is-a-virtue,                                        //The Lost Vikings
-.diabolical-momentum,                                           //Diablo
+.Diablo.diabolical-momentum,
 .blessed-momentum,                                              //Johanna
 .bladed-momentum,                                               //Kerrigan
 .angelic-momentum,                                              //Tyrael
@@ -790,224 +798,237 @@
 .Dehaka.ferocious-stalker    { background-position: -330px 0px; }
 
 //Diablo
-.soul-feast,
-.soul-catcher,
-.soul-steal,
-.siphon-the-dead,
-.devil-s-due,
-.essence-of-the-slain,
-.overwhelming-force,
-.from-the-shadows,
-.demonic-strength,
-.continuous-overpower,
-.fire-devil,
-.firestorm,
-.rampage,
-.devastating-charge,
-.apocalypse,
-.dying-breath,
-.lightning-breath,
-.hellstorm,
-.life-leech,
-.domination,
-.lord-of-terror { background: url(../img/talents/diablo.png); }
+.Diablo.soul-feast,
+.Diablo.soul-catcher,
+.Diablo.soul-steal,
+.Diablo.siphon-the-dead,
+.Diablo.devils-due,
+.Diablo.essence-of-the-slain,
+.Diablo.overwhelming-force,
+.Diablo.from-the-shadows,
+.Diablo.demonic-strength,
+.Diablo.continuous-overpower,
+.Diablo.fire-devil,
+.Diablo.firestorm,
+.Diablo.rampage,
+.Diablo.devastating-charge,
+.Diablo.apocalypse,
+.Diablo.dying-breath,
+.Diablo.lightning-breath,
+.Diablo.hellstorm,
+.Diablo.life-leech,
+.Diablo.domination,
+.Diablo.lord-of-terror,
+.Diablo.bulwark,
+.Diablo.soul-shield,
+.Diablo.hellfire,
+.Diablo.debilitating-flames, { background: url(../img/talents/diablo.png); }
 
-.soul-feast,
-.soul-catcher,
-.soul-steal,
-.siphon-the-dead      { background-position:    0px 0px; }
-.devil-s-due,
-.essence-of-the-slain { background-position:  -30px 0px; }
-.overwhelming-force,
-.from-the-shadows     { background-position:  -60px 0px; }
-.demonic-strength,
-.continuous-overpower { background-position:  -90px 0px; }
-.fire-devil,
-.firestorm,
-.rampage              { background-position: -120px 0px; }
-.devastating-charge   { background-position: -150px 0px; }
-.apocalypse,
-.dying-breath         { background-position: -180px 0px; }
-.lightning-breath,
-.hellstorm            { background-position: -210px 0px; }
-.life-leech           { background-position: -240px 0px; }
-.domination           { background-position: -270px 0px; }
-.lord-of-terror       { background-position: -300px 0px; }
+.Diablo.soul-feast,
+.Diablo.soul-catcher,
+.Diablo.soul-steal,
+.Diablo.devils-due,
+.Diablo.siphon-the-dead      { background-position:    0px 0px; }
+.Diablo.soul-shield,
+.Diablo.essence-of-the-slain { background-position:  -30px 0px; }
+.Diablo.overwhelming-force,
+.Diablo.bulwark,
+.Diablo.from-the-shadows     { background-position:  -60px 0px; }
+.Diablo.demonic-strength,
+.Diablo.domination,
+.Diablo.continuous-overpower { background-position:  -90px 0px; }
+.Diablo.fire-devil,
+.Diablo.firestorm,
+.Diablo.debilitating-flames,
+.Diablo.rampage              { background-position: -120px 0px; }
+.Diablo.devastating-charge   { background-position: -150px 0px; }
+.Diablo.apocalypse,
+.Diablo.dying-breath         { background-position: -180px 0px; }
+.Diablo.lightning-breath,
+.Diablo.hellstorm            { background-position: -210px 0px; }
+.Diablo.life-leech           { background-position: -240px 0px; }
+//           { background-position: -270px 0px; }
+.Diablo.lord-of-terror       { background-position: -300px 0px; }
+.Diablo.hellfire             { background-position: -330px 0px; }
 
 //E.T.C.
-.rolling-like-a-stone,
-.double-necked-guitar,
-.show-stopper,
-.pwn-shop-guitar,
-.guitar-hero,
-.groupies,
-.prog-rock,
-.just-keep-rockin,
-.hammer-on,
-.mic-check,
-.loud-speakers,
-.face-smelt,
-.encore,
-.pinball-wizard,
-.mosh-pit,
-.tour-bus,
-.stage-dive,
-.crowd-pleaser,
-.speed-metal,
-.echo-pedal,
-.death-metal { background: url(../img/talents/etc.png); }
+.ETC.rolling-like-a-stone,
+.ETC.double-necked-guitar,
+.ETC.show-stopper,
+.ETC.pwn-shop-guitar,
+.ETC.guitar-hero,
+.ETC.groupies,
+.ETC.prog-rock,
+.ETC.just-keep-rockin,
+.ETC.mic-check,
+.ETC.loud-speakers,
+.ETC.face-smelt,
+.ETC.encore,
+.ETC.pinball-wizard,
+.ETC.mosh-pit,
+.ETC.tour-bus,
+.ETC.stage-dive,
+.ETC.crowd-pleaser,
+.ETC.speed-metal,
+.ETC.echo-pedal,
+.ETC.death-metal,
+.ETC.block-party,
+.ETC.crowd-surfer,
+.ETC.aggressive-shredding { background: url(../img/talents/etc.png); }
 
-.rolling-like-a-stone,
-.double-necked-guitar,
-.show-stopper          { background-position:    0px 0px; }
-.pwn-shop-guitar,
-.guitar-hero,
-.groupies              { background-position:  -30px 0px; }
-.prog-rock,
-.just-keep-rockin      { background-position:  -60px 0px; }
-.hammer-on             { background-position:  -90px 0px; }
-.mic-check,
-.loud-speakers,
-.face-smelt,
-.encore                { background-position: -120px 0px; }
-.pinball-wizard        { background-position: -150px 0px; }
-.mosh-pit,
-.tour-bus              { background-position: -180px 0px; }
-.stage-dive,
-.crowd-pleaser         { background-position: -210px 0px; }
-.speed-metal           { background-position: -240px 0px; }
-.echo-pedal            { background-position: -270px 0px; }
-.death-metal           { background-position: -300px 0px; }
-
+.ETC.rolling-like-a-stone,
+.ETC.double-necked-guitar,
+.ETC.crowd-surfer,
+.ETC.show-stopper          { background-position:    0px 0px; }
+.ETC.pwn-shop-guitar,
+.ETC.guitar-hero,
+.ETC.aggressive-shredding,
+.ETC.groupies              { background-position:  -30px 0px; }
+.ETC.prog-rock,
+.ETC.just-keep-rockin      { background-position:  -60px 0px; }
+.ETC.block-party           { background-position:  -90px 0px; }
+.ETC.mic-check,
+.ETC.loud-speakers,
+.ETC.pinball-wizard        { background-position: -120px 0px; }
+.ETC.encore                { background-position: -150px 0px; }
+.ETC.mosh-pit,
+.ETC.tour-bus              { background-position: -180px 0px; }
+.ETC.stage-dive,
+.ETC.crowd-pleaser         { background-position: -210px 0px; }
+.ETC.speed-metal           { background-position: -240px 0px; }
+.ETC.echo-pedal            { background-position: -270px 0px; }
+.ETC.death-metal           { background-position: -300px 0px; }
+.ETC.face-smelt            { background-position: -330px 0px; }
 
 //Falstad
-.gathering-storm,
-.power-throw,
-.secret-weapon,
-.crippling-hammer,
-.hammer-time,
-.updraft,
-.free-roll,
-.afterburner,
-.charged-up,
-.thunderstrikes,
-.flow-rider,
-.aerie-gusts,
-.boomerang,
-.hinterland-blast,
-.call-of-the-wildhammer,
-.mighty-gust,
-.wind-tunnel,
-.static-shield,
-.epic-mount { background: url(../img/talents/falstad.png); }
+.Falstad.gathering-storm,
+.Falstad.power-throw,
+.Falstad.secret-weapon,
+.Falstad.crippling-hammer,
+.Falstad.hammer-time,
+.Falstad.updraft,
+.Falstad.free-roll,
+.Falstad.afterburner,
+.Falstad.charged-up,
+.Falstad.thunderstrikes,
+.Falstad.flow-rider,
+.Falstad.aerie-gusts,
+.Falstad.boomerang,
+.Falstad.hinterland-blast,
+.Falstad.call-of-the-wildhammer,
+.Falstad.mighty-gust,
+.Falstad.wind-tunnel,
+.Falstad.static-shield,
+.Falstad.epic-mount { background: url(../img/talents/falstad.png); }
 
-.gathering-storm,
-.power-throw,
-.secret-weapon,
-.crippling-hammer,
-.hammer-time            { background-position:    0px 0px; }
-.updraft,
-.free-roll,
-.afterburner            { background-position:  -30px 0px; }
-.charged-up,
-.thunderstrikes         { background-position:  -60px 0px; }
-.flow-rider,
-.aerie-gusts            { background-position:  -90px 0px; }
-.boomerang              { background-position: -120px 0px; }
-.hinterland-blast,
-.call-of-the-wildhammer { background-position: -150px 0px; }
-.mighty-gust,
-.wind-tunnel            { background-position: -180px 0px; }
-.static-shield          { background-position: -210px 0px; }
-.epic-mount             { background-position: -240px 0px; }
+.Falstad.gathering-storm,
+.Falstad.power-throw,
+.Falstad.secret-weapon,
+.Falstad.crippling-hammer,
+.Falstad.hammer-time            { background-position:    0px 0px; }
+.Falstad.updraft,
+.Falstad.free-roll,
+.Falstad.afterburner            { background-position:  -30px 0px; }
+.Falstad.charged-up,
+.Falstad.static-shield,
+.Falstad.thunderstrikes         { background-position:  -60px 0px; }
+.Falstad.flow-rider,
+.Falstad.aerie-gusts            { background-position:  -90px 0px; }
+.Falstad.boomerang              { background-position: -120px 0px; }
+.Falstad.hinterland-blast,
+.Falstad.call-of-the-wildhammer { background-position: -150px 0px; }
+.Falstad.mighty-gust,
+.Falstad.wind-tunnel            { background-position: -180px 0px; }
+//          { background-position: -210px 0px; }
+.Falstad.epic-mount             { background-position: -240px 0px; }
 
 //Gall
-.spurred-onward,
-.shove,
-.eye-of-kilrogg,
-.bomb-s-away,
-.runic-persistence,
-.dark-descent,
-.double-back,
-.rising-dread,
-.twilight-nova,
-.edge-of-madness,
-.giant-scorcher,
-.shadowflare,
-.double-trouble,
-.shadow-bolt-volley,
-.shadowfury,
-.twisting-nether,
-.the-nether-calls,
-.speed-of-twilight,
-.dread-shield,
-.psychotic-break { background: url(../img/talents/gall.png); }
+.Gall.spurred-onward,
+.Gall.shove,
+.Gall.eye-of-kilrogg,
+.Gall.bombs-away,
+.Gall.runic-persistence,
+.Gall.dark-descent,
+.Gall.double-back,
+.Gall.rising-dread,
+.Gall.twilight-nova,
+.Gall.edge-of-madness,
+.Gall.giant-scorcher,
+.Gall.shadowflare,
+.Gall.double-trouble,
+.Gall.shadow-bolt-volley,
+.Gall.shadowfury,
+.Gall.twisting-nether,
+.Gall.the-nether-calls,
+.Gall.speed-of-twilight,
+.Gall.dread-shield,
+.Gall.psychotic-break { background: url(../img/talents/gall.png); }
 
-.spurred-onward      { background-position:    0px 0px; }
-.shove               { background-position:  -30px 0px; }
-.eye-of-kilrogg      { background-position:  -60px 0px; }
-.bomb-s-away         { background-position:  -90px 0px; }
-.runic-persistence,
-.dark-descent        { background-position: -120px 0px; }
-.double-back,
-.rising-dread,
-.twilight-nova       { background-position: -150px 0px; }
-.edge-of-madness,
-.giant-scorcher      { background-position: -180px 0px; }
-.shadowflare,
-.double-trouble      { background-position: -210px 0px; }
-.shadow-bolt-volley,
-.shadowfury          { background-position: -240px 0px; }
-.twisting-nether,
-.the-nether-calls    { background-position: -270px 0px; }
-.speed-of-twilight   { background-position: -300px 0px; }
-.dread-shield        { background-position: -330px 0px; }
-.psychotic-break     { background-position: -360px 0px; }
+.Gall.spurred-onward      { background-position:    0px 0px; }
+.Gall.shove               { background-position:  -30px 0px; }
+.Gall.eye-of-kilrogg      { background-position:  -60px 0px; }
+.Gall.bombs-away         { background-position:  -90px 0px; }
+.Gall.runic-persistence,
+.Gall.dark-descent        { background-position: -120px 0px; }
+.Gall.double-back,
+.Gall.rising-dread,
+.Gall.twilight-nova       { background-position: -150px 0px; }
+.Gall.edge-of-madness,
+.Gall.giant-scorcher      { background-position: -180px 0px; }
+.Gall.shadowflare,
+.Gall.double-trouble      { background-position: -210px 0px; }
+.Gall.shadow-bolt-volley,
+.Gall.shadowfury          { background-position: -240px 0px; }
+.Gall.twisting-nether,
+.Gall.the-nether-calls    { background-position: -270px 0px; }
+.Gall.speed-of-twilight   { background-position: -300px 0px; }
+.Gall.dread-shield        { background-position: -330px 0px; }
+.Gall.psychotic-break     { background-position: -360px 0px; }
 
 //Gazlowe
-.extra-tnt,
-.ark-reaktor,
-.x-tra-large-bombs,
-.kwik-release-charge,
-.scrap-o-matic-smelter,
-.reduce-reuse-recycle,
-.break-it-down,
-.clockwerk-steam-fists,
-.rock-it-turret-xl,
-.turret-storage,
-.superior-schematics,
-.engine-gunk,
-.hyperfocus-coils,
-.ez-pz-dimensional-ripper,
-.goblin-fusion,
-.firin-mah-lazorz,
-.robo-goblin,
-.mecha-lord,
-.grav-o-bomb-3000,
-.miniature-black-hole,
-.it-s-raining-scrap { background: url(../img/talents/gazlowe.png); }
+.Gazlowe.extra-tnt,
+.Gazlowe.ark-reaktor,
+.Gazlowe.xtra-large-bombs,
+.Gazlowe.kwik-release-charge,
+.Gazlowe.scrapomatic-smelter,
+.Gazlowe.reduce-reuse-recycle,
+.Gazlowe.break-it-down,
+.Gazlowe.clockwerk-steam-fists,
+.Gazlowe.rockit-turret-xl,
+.Gazlowe.turret-storage,
+.Gazlowe.superior-schematics,
+.Gazlowe.engine-gunk,
+.Gazlowe.hyperfocus-coils,
+.Gazlowe.ezpz-dimensional-ripper,
+.Gazlowe.goblin-fusion,
+.Gazlowe.firin-mah-lazorz,
+.Gazlowe.robogoblin,
+.Gazlowe.mechalord,
+.Gazlowe.gravobomb-3000,
+.Gazlowe.miniature-black-hole,
+.Gazlowe.its-raining-scrap { background: url(../img/talents/gazlowe.png); }
 
-.extra-tnt,
-.ark-reaktor,
-.x-tra-large-bombs,
-.kwik-release-charge       { background-position:    0px 0px; }
-.scrap-o-matic-smelter,
-.reduce-reuse-recycle      { background-position:  -30px 0px; }
-.break-it-down             { background-position:  -60px 0px; }
-.clockwerk-steam-fists,
-.rock-it-turret-xl,
-.turret-storage
-.superior-schematics       { background-position:  -90px 0px; }
-.engine-gunk               { background-position: -120px 0px; }
-.hyperfocus-coils,
-.ez-pz-dimensional-ripper,
-.goblin-fusion,
-.firin-mah-lazorz          { background-position: -150px 0px; }
-.robo-goblin,
-.mecha-lord                { background-position: -180px 0px; }
-.grav-o-bomb-3000,
-.miniature-black-hole      { background-position: -210px 0px; }
-.it-s-raining-scrap        { background-position: -240px 0px; }
+.Gazlowe.extra-tnt,
+.Gazlowe.ark-reaktor,
+.Gazlowe.xtra-large-bombs,
+.Gazlowe.kwik-release-charge       { background-position:    0px 0px; }
+.Gazlowe.scrapomatic-smelter,
+.Gazlowe.reduce-reuse-recycle      { background-position:  -30px 0px; }
+.Gazlowe.break-it-down             { background-position:  -60px 0px; }
+.Gazlowe.clockwerk-steam-fists,
+.Gazlowe.rockit-turret-xl,
+.Gazlowe.turret-storage,
+.Gazlowe.superior-schematics       { background-position:  -90px 0px; }
+.Gazlowe.engine-gunk               { background-position: -120px 0px; }
+.Gazlowe.hyperfocus-coils,
+.Gazlowe.ezpz-dimensional-ripper,
+.Gazlowe.goblin-fusion,
+.Gazlowe.firin-mah-lazorz          { background-position: -150px 0px; }
+.Gazlowe.robogoblin,
+.Gazlowe.mechalord                { background-position: -180px 0px; }
+.Gazlowe.gravobomb-3000,
+.Gazlowe.miniature-black-hole      { background-position: -210px 0px; }
+.Gazlowe.its-raining-scrap        { background-position: -240px 0px; }
 
 //Greymane
 .wolfheart,

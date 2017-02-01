@@ -82,7 +82,7 @@
 .envenomed-spines,
 .untouchable,
 .leeching-rounds,
-.timewalker-s-pursuit,
+.Chromie.timewalkers-pursuit,
 .bronze-talons,
 .diabolical-momentum,
 .blessed-momentum,
@@ -122,7 +122,7 @@
 .nordic-attack-squad,                                           //The Lost Vikings
 .manticore,                                                     //Valla
 .untouchable,                                                   //Tracer
-.bronze-talons,                                                 //Chromie
+.Chromie.bronze-talons,
 .serrated-spines,                                               //Zagara
 .give-em-the-axe,                                               //Muradin
 .manticore,                                                     //Valla
@@ -135,7 +135,7 @@
 .relentless              { background-position:    -60px 0px; }
 .stoneskin               { background-position:    -90px 0px; }
 .viking-bribery,                                                //The Lost Vikings
-.pixie-charm,                                                   //Brightwing
+.Brightwing.pixie-charm,
 .wingman,                                                       //Falstad
 .covert-mission,                                                //Nova
 .bribe                   { background-position:   -120px 0px; }
@@ -146,7 +146,7 @@
 .storm-shield            { background-position:   -270px 0px; }
 .rewind                  { background-position:   -300px 0px; }
 .ossein-renewal,                                                //Leoric
-.refreshing-elixir,                                             //Chen
+.Chen.refreshing-elixir,
 .amplified-healing       { background-position:   -330px 0px; }
 .calldown-mule           { background-position:   -360px 0px; }
 .hunter-gatherer,                                               //Rexxar
@@ -155,7 +155,7 @@
 .mercenary-lord          { background-position:   -420px 0px; }
 .imposing-presence,
 .primal-intimidation     { background-position:   -450px 0px; } //Rexxar
-.sin-for-sin,                                                   //Azmodan
+.Azmodan.sin-for-sin,
 .blood-for-blood         { background-position:   -480px 0px; }
 .hardened-shield,
 .hardened-skin           { background-position:   -510px 0px; } //Rexxar
@@ -186,7 +186,7 @@
 .arcane-power            { background-position:   -780px 0px; }
 .healing-ward            { background-position:   -810px 0px; }
 .protective-shield       { background-position:   -840px 0px; }
-.timewalker-s-pursuit,                                          //Chromie
+.Chromie.timewalkers-pursuit,
 .clairvoyance            { background-position:   -870px 0px; }
 .shrink-ray              { background-position:   -900px 0px; }
 .scouting-drone          { background-position:   -930px 0px; }
@@ -215,579 +215,579 @@
 .cleaver                 { background-position:  -1290px 0px; } //Butcher
 
 //Abathur
-.pressurized-glands,
-.envenomed-spikes,
-.soma-transference,
-.survival-instincts,
-.locust-brood,
-.assault-strain,
-.regenerative-microbes,
-.adrenaline-boost,
-.networked-carapace,
-.sustained-carapace,
-.envenomed-nest,
-.vile-nest,
-.prolific-dispersal,
-.ballistospores,
-.adrenal-overload,
-.hivemind,
-.needlespine,
-.spatial-efficiency,
-.ultimate-evolution,
-.evolutionary-link,
-.evolve-monstrosity,
-.evolution-complete,
-.bombard-strain,
-.volatile-mutation,
-.locust-nest { background: url(../img/talents/abathur.png); }
+.Abathur.pressurized-glands,
+.Abathur.envenomed-spikes,
+.Abathur.soma-transference,
+.Abathur.survival-instincts,
+.Abathur.locust-brood,
+.Abathur.assault-strain,
+.Abathur.regenerative-microbes,
+.Abathur.adrenaline-boost,
+.Abathur.networked-carapace,
+.Abathur.sustained-carapace,
+.Abathur.envenomed-nest,
+.Abathur.vile-nest,
+.Abathur.prolific-dispersal,
+.Abathur.ballistospores,
+.Abathur.adrenal-overload,
+.Abathur.hivemind,
+.Abathur.needlespine,
+.Abathur.spatial-efficiency,
+.Abathur.ultimate-evolution,
+.Abathur.evolutionary-link,
+.Abathur.evolve-monstrosity,
+.Abathur.evolution-complete,
+.Abathur.bombard-strain,
+.Abathur.volatile-mutation,
+.Abathur.locust-nest { background: url(../img/talents/abathur.png); }
 
-.pressurized-glands,
-.envenomed-spikes,
-.soma-transference     { background-position:    0px 0px; }
-.survival-instincts,
-.locust-brood,
-.assault-strain        { background-position:  -30px 0px; }
-.regenerative-microbes,
-.adrenaline-boost,
-.networked-carapace,
-.sustained-carapace    { background-position:  -60px 0px; }
-.envenomed-nest,
-.vile-nest,
-.prolific-dispersal    { background-position:  -90px 0px; }
-.ballistospores        { background-position: -120px 0px; }
-.adrenal-overload,
-.hivemind              { background-position: -150px 0px; }
-.needlespine,
-.spatial-efficiency    { background-position: -180px 0px; }
-.ultimate-evolution,
-.evolutionary-link     { background-position: -210px 0px; }
-.evolve-monstrosity,
-.evolution-complete    { background-position: -240px 0px; }
-.bombard-strain        { background-position: -270px 0px; }
-.volatile-mutation     { background-position: -300px 0px; }
-.locust-nest           { background-position: -330px 0px; }
+.Abathur.pressurized-glands,
+.Abathur.envenomed-spikes,
+.Abathur.soma-transference     { background-position:    0px 0px; }
+.Abathur.survival-instincts,
+.Abathur.locust-brood,
+.Abathur.assault-strain        { background-position:  -30px 0px; }
+.Abathur.regenerative-microbes,
+.Abathur.adrenaline-boost,
+.Abathur.networked-carapace,
+.Abathur.sustained-carapace    { background-position:  -60px 0px; }
+.Abathur.envenomed-nest,
+.Abathur.vile-nest,
+.Abathur.prolific-dispersal    { background-position:  -90px 0px; }
+.Abathur.ballistospores        { background-position: -120px 0px; }
+.Abathur.adrenal-overload,
+.Abathur.hivemind              { background-position: -150px 0px; }
+.Abathur.needlespine,
+.Abathur.spatial-efficiency    { background-position: -180px 0px; }
+.Abathur.ultimate-evolution,
+.Abathur.evolutionary-link     { background-position: -210px 0px; }
+.Abathur.evolve-monstrosity,
+.Abathur.evolution-complete    { background-position: -240px 0px; }
+.Abathur.bombard-strain        { background-position: -270px 0px; }
+.Abathur.volatile-mutation     { background-position: -300px 0px; }
+.Abathur.locust-nest           { background-position: -330px 0px; }
 
 //Alarak
-.without-effort,
-.psychokinesis,
-.quick-mind,
-.applied-force,
-.hindered-motion,
-.projected-force,
-.power-conduit,
-.extended-lightning,
-.endless-energy,
-.sustaining-power,
-.wide-lightning,
-.thunderstruck,
-.negatively-charged,
-.double-cross,
-.chaos-reigns,
-.dissonance,
-.reckless-strike,
-.cycle-of-discord,
-.deadly-charge,
-.counter-strike,
-.pure-malice,
-.last-laugh,
-.hasty-bargain,
-.deadly-charge-lvl-20,
-.counter-strike-lvl-20 { background: url(../img/talents/alarak.png); }
+.Alarak.without-effort,
+.Alarak.psychokinesis,
+.Alarak.quick-mind,
+.Alarak.applied-force,
+.Alarak.hindered-motion,
+.Alarak.projected-force,
+.Alarak.power-conduit,
+.Alarak.extended-lightning,
+.Alarak.endless-energy,
+.Alarak.sustaining-power,
+.Alarak.wide-lightning,
+.Alarak.thunderstruck,
+.Alarak.negatively-charged,
+.Alarak.double-cross,
+.Alarak.chaos-reigns,
+.Alarak.dissonance,
+.Alarak.reckless-strike,
+.Alarak.cycle-of-discord,
+.Alarak.deadly-charge,
+.Alarak.counterstrike,
+.Alarak.pure-malice,
+.Alarak.last-laugh,
+.Alarak.hasty-bargain,
+.Alarak.deadly-charge-lvl-20,
+.Alarak.counterstrike-lvl-20 { background: url(../img/talents/alarak.png); }
 
-.without-effort,
-.psychokinesis,
-.quick-mind            { background-position:    0px 0px; }
-.applied-force,
-.hindered-motion,
-.projected-force       { background-position:  -30px 0px; }
-.power-conduit,
-.extended-lightning,
-.endless-energy,
-.sustaining-power      { background-position:  -60px 0px; }
-.wide-lightning,
-.thunderstruck,
-.negatively-charged    { background-position:  -90px 0px; }
-.double-cross,
-.chaos-reigns,
-.dissonance            { background-position: -120px 0px; }
-.reckless-strike       { background-position: -150px 0px; }
-.cycle-of-discord      { background-position: -180px 0px; }
-.deadly-charge,
-.deadly-charge-lvl-20  { background-position: -210px 0px; }
-.counter-strike,
-.counter-strike-lvl-20 { background-position: -240px 0px; }
-.pure-malice           { background-position: -270px 0px; }
-.last-laugh            { background-position: -300px 0px; }
-.hasty-bargain         { background-position: -330px 0px; }
+.Alarak.without-effort,
+.Alarak.psychokinesis,
+.Alarak.quick-mind            { background-position:    0px 0px; }
+.Alarak.applied-force,
+.Alarak.hindered-motion,
+.Alarak.projected-force       { background-position:  -30px 0px; }
+.Alarak.power-conduit,
+.Alarak.extended-lightning,
+.Alarak.endless-energy,
+.Alarak.sustaining-power      { background-position:  -60px 0px; }
+.Alarak.wide-lightning,
+.Alarak.thunderstruck,
+.Alarak.negatively-charged    { background-position:  -90px 0px; }
+.Alarak.double-cross,
+.Alarak.chaos-reigns,
+.Alarak.dissonance            { background-position: -120px 0px; }
+.Alarak.reckless-strike       { background-position: -150px 0px; }
+.Alarak.cycle-of-discord      { background-position: -180px 0px; }
+.Alarak.deadly-charge,
+.Alarak.deadly-charge-lvl-20  { background-position: -210px 0px; }
+.Alarak.counterstrike,
+.Alarak.counterstrike-lvl-20  { background-position: -240px 0px; }
+.Alarak.pure-malice           { background-position: -270px 0px; }
+.Alarak.last-laugh            { background-position: -300px 0px; }
+.Alarak.hasty-bargain         { background-position: -330px 0px; }
 
 //Anub'arak
-.extended-spikes,
-.bed-of-barbs,
-.persistent-carapace,
-.shed-exoskeleton,
-.chitinous-plating,
-.assault-scarab,
-.legion-of-beetles,
-.leeching-scarabs,
-.beetle-juiced,
-.underking,
-.locust-needles,
-.urticating-spines,
-.symbiotic-armor,
-.locust-swarm,
-.cocoon,
-.cryptweave,
-.epicenter,
-.hive-master { background: url(../img/talents/anubarak.png); }
+.Anubarak.extended-spikes,
+.Anubarak.bed-of-barbs,
+.Anubarak.persistent-carapace,
+.Anubarak.shed-exoskeleton,
+.Anubarak.chitinous-plating,
+.Anubarak.assault-scarab,
+.Anubarak.legion-of-beetles,
+.Anubarak.leeching-scarabs,
+.Anubarak.beetle-juiced,
+.Anubarak.underking,
+.Anubarak.locust-needles,
+.Anubarak.urticating-spines,
+.Anubarak.symbiotic-armor,
+.Anubarak.locust-swarm,
+.Anubarak.cocoon,
+.Anubarak.cryptweave,
+.Anubarak.epicenter,
+.Anubarak.hive-master { background: url(../img/talents/anubarak.png); }
 
-.extended-spikes,
-.bed-of-barbs        { background-position:    0px 0px; }
-.persistent-carapace,
-.shed-exoskeleton,
-.urticating-spines   { background-position:  -30px 0px; }
-.assault-scarab,
-.legion-of-beetles,
-.leeching-scarabs,
-.beetle-juiced       { background-position:  -60px 0px; }
-.underking,
-.epicenter           { background-position:  -90px 0px; }
-.locust-needles      { background-position: -120px 0px; }
-.chitinous-plating,
-.symbiotic-armor     { background-position: -150px 0px; }
-.locust-swarm,
-.hive-master         { background-position: -180px 0px; }
-.cocoon,
-.cryptweave          { background-position: -210px 0px; }
+.Anubarak.extended-spikes,
+.Anubarak.bed-of-barbs        { background-position:    0px 0px; }
+.Anubarak.persistent-carapace,
+.Anubarak.shed-exoskeleton,
+.Anubarak.urticating-spines   { background-position:  -30px 0px; }
+.Anubarak.assault-scarab,
+.Anubarak.legion-of-beetles,
+.Anubarak.leeching-scarabs,
+.Anubarak.beetle-juiced       { background-position:  -60px 0px; }
+.Anubarak.underking,
+.Anubarak.epicenter           { background-position:  -90px 0px; }
+.Anubarak.locust-needles      { background-position: -120px 0px; }
+.Anubarak.chitinous-plating,
+.Anubarak.symbiotic-armor     { background-position: -150px 0px; }
+.Anubarak.locust-swarm,
+.Anubarak.hive-master         { background-position: -180px 0px; }
+.Anubarak.cocoon,
+.Anubarak.cryptweave          { background-position: -210px 0px; }
 
 //Artanis
-.reactive-parry,
-.triple-strike,
-.zealot-charge,
-.amateur-opponent,
-.titan-killer,
-.shield-battery,
-.phase-bulwark,
-.shield-surge,
-.force-of-will,
-.lethal-alacrity,
-.solarite-reaper,
-.chrono-surge,
-.warp-sickness,
-.graviton-vortex,
-.templar-s-zeal,
-.psionic-synergy,
-.suppression-pulse,
-.orbital-bombardment,
-.purifier-beam,
-.target-purified,
-.psionic-wound,
-.plasma-burn { background: url(../img/talents/artanis.png); }
+.Artanis.reactive-parry,
+.Artanis.triple-strike,
+.Artanis.zealot-charge,
+.Artanis.amateur-opponent,
+.Artanis.titan-killer,
+.Artanis.shield-battery,
+.Artanis.phase-bulwark,
+.Artanis.shield-surge,
+.Artanis.force-of-will,
+.Artanis.lethal-alacrity,
+.Artanis.solarite-reaper,
+.Artanis.chrono-surge,
+.Artanis.warp-sickness,
+.Artanis.graviton-vortex,
+.Artanis.templars-zeal,
+.Artanis.psionic-synergy,
+.Artanis.suppression-pulse,
+.Artanis.orbital-bombardment,
+.Artanis.purifier-beam,
+.Artanis.target-purified,
+.Artanis.psionic-wound,
+.Artanis.plasma-burn { background: url(../img/talents/artanis.png); }
 
-.reactive-parry,
-.triple-strike,
-.zealot-charge       { background-position:    0px 0px; }
-.amateur-opponent,
-.titan-killer        { background-position:  -30px 0px; }
-.shield-battery,
-.phase-bulwark,
-.plasma-burn,
-.force-of-will      { background-position:  -60px 0px; }
-.lethal-alacrity,
-.psionic-synergy,
-.solarite-reaper     { background-position:  -90px 0px; }
-.warp-sickness,
-.graviton-vortex     { background-position: -120px 0px; }
-.templar-s-zeal,     { background-position: -150px 0px; }
-.suppression-pulse,
-.orbital-bombardment { background-position: -180px 0px; }
-.purifier-beam,
-.target-purified     { background-position: -210px 0px; }
-.psionic-wound       { background-position: -240px 0px; }
-.shield-surge        { background-position: -270px 0px; }
-.chrono-surge        { background-position: -300px 0px; }
+.Artanis.reactive-parry,
+.Artanis.triple-strike,
+.Artanis.zealot-charge       { background-position:    0px 0px; }
+.Artanis.amateur-opponent,
+.Artanis.titan-killer        { background-position:  -30px 0px; }
+.Artanis.shield-battery,
+.Artanis.phase-bulwark,
+.Artanis.plasma-burn,
+.Artanis.force-of-will      { background-position:  -60px 0px; }
+.Artanis.lethal-alacrity,
+.Artanis.psionic-synergy,
+.Artanis.solarite-reaper     { background-position:  -90px 0px; }
+.Artanis.warp-sickness,
+.Artanis.graviton-vortex     { background-position: -120px 0px; }
+.Artanis.templars-zeal,     { background-position: -150px 0px; }
+.Artanis.suppression-pulse,
+.Artanis.orbital-bombardment { background-position: -180px 0px; }
+.Artanis.purifier-beam,
+.Artanis.target-purified     { background-position: -210px 0px; }
+.Artanis.psionic-wound       { background-position: -240px 0px; }
+.Artanis.shield-surge        { background-position: -270px 0px; }
+.Artanis.chrono-surge        { background-position: -300px 0px; }
 
 //Arthas
-.eternal-hunger,
-.frostmourne-feeds,
-.frost-presence,
-.trail-of-frost,
-.frozen-wastes,
-.biting-cold,
-.frigid-winds,
-.remorseless-winter,
-.deathlord,
-.immortal-coil,
-.embrace-death,
-.rune-tap,
-.icebound-fortitude,
-.army-of-the-dead,
-.legion-of-northrend,
-.summon-sindragosa,
-.absolute-zero,
-.frost-strike,
-.death-s-advance,
-.anti-magic-shell { background: url(../img/talents/arthas.png); }
+.Arthas.eternal-hunger,
+.Arthas.frostmourne-feeds,
+.Arthas.frost-presence,
+.Arthas.trail-of-frost,
+.Arthas.frozen-wastes,
+.Arthas.biting-cold,
+.Arthas.frigid-winds,
+.Arthas.remorseless-winter,
+.Arthas.deathlord,
+.Arthas.immortal-coil,
+.Arthas.embrace-death,
+.Arthas.rune-tap,
+.Arthas.icebound-fortitude,
+.Arthas.army-of-the-dead,
+.Arthas.legion-of-northrend,
+.Arthas.summon-sindragosa,
+.Arthas.absolute-zero,
+.Arthas.frost-strike,
+.Arthas.deaths-advance,
+.Arthas.antimagic-shell { background: url(../img/talents/arthas.png); }
 
-.eternal-hunger,
-.frostmourne-feeds   { background-position:    0px 0px; }
-.frost-presence,
-.trail-of-frost      { background-position:  -30px 0px; }
-.frozen-wastes,
-.frigid-winds,
-.remorseless-winter  { background-position:  -60px 0px; }
-.deathlord,
-.immortal-coil,
-.embrace-death       { background-position:  -90px 0px; }
-.rune-tap            { background-position: -120px 0px; }
-.icebound-fortitude  { background-position: -150px 0px; }
-.army-of-the-dead,
-.legion-of-northrend { background-position: -180px 0px; }
-.summon-sindragosa,
-.absolute-zero       { background-position: -210px 0px; }
-.frost-strike        { background-position: -240px 0px; }
-.death-s-advance     { background-position: -270px 0px; }
-.anti-magic-shell    { background-position: -300px 0px; }
-.biting-cold         { background-position: -330px 0px; }
+.Arthas.eternal-hunger,
+.Arthas.frostmourne-feeds   { background-position:    0px 0px; }
+.Arthas.frost-presence,
+.Arthas.trail-of-frost      { background-position:  -30px 0px; }
+.Arthas.frozen-wastes,
+.Arthas.frigid-winds,
+.Arthas.remorseless-winter  { background-position:  -60px 0px; }
+.Arthas.deathlord,
+.Arthas.immortal-coil,
+.Arthas.embrace-death       { background-position:  -90px 0px; }
+.Arthas.rune-tap            { background-position: -120px 0px; }
+.Arthas.icebound-fortitude  { background-position: -150px 0px; }
+.Arthas.army-of-the-dead,
+.Arthas.legion-of-northrend { background-position: -180px 0px; }
+.Arthas.summon-sindragosa,
+.Arthas.absolute-zero       { background-position: -210px 0px; }
+.Arthas.frost-strike        { background-position: -240px 0px; }
+.Arthas.deaths-advance     { background-position: -270px 0px; }
+.Arthas.antimagic-shell    { background-position: -300px 0px; }
+.Arthas.biting-cold         { background-position: -330px 0px; }
 
 //Auriel
-.swift-sweep,
-.majestic-span,
-.blinding-flash,
-.increasing-clarity,
-.converging-force,
-.righteous-assault,
-.searing-light,
-.bursting-light,
-.reservoir-of-hope,
-.heavy-burden,
-.piercing-lash,
-.repeated-offense,
-.repelling-strike,
-.glimmer-of-hope,
-.energized-cord,
-.empathic-link,
-.will-of-heaven,
-.resurrect,
-.light-speed,
-.crystal-aegis,
-.diamond-resolve,
-.wrath-of-heaven,
-.angelic-flight,
-.shield-of-hope { background: url(../img/talents/auriel.png); }
+.Auriel.swift-sweep,
+.Auriel.majestic-span,
+.Auriel.blinding-flash,
+.Auriel.increasing-clarity,
+.Auriel.converging-force,
+.Auriel.righteous-assault,
+.Auriel.searing-light,
+.Auriel.bursting-light,
+.Auriel.reservoir-of-hope,
+.Auriel.heavy-burden,
+.Auriel.piercing-lash,
+.Auriel.repeated-offense,
+.Auriel.repelling-strike,
+.Auriel.glimmer-of-hope,
+.Auriel.energized-cord,
+.Auriel.empathic-link,
+.Auriel.will-of-heaven,
+.Auriel.resurrect,
+.Auriel.light-speed,
+.Auriel.crystal-aegis,
+.Auriel.diamond-resolve,
+.Auriel.wrath-of-heaven,
+.Auriel.angelic-flight,
+.Auriel.shield-of-hope { background: url(../img/talents/auriel.png); }
 
-.swift-sweep,
-.majestic-span,
-.blinding-flash      { background-position:    0px 0px; }
-.increasing-clarity,
-.converging-force    { background-position:  -30px 0px; }
-.righteous-assault   { background-position:  -60px 0px; }
-.searing-light,
-.bursting-light,
-.reservoir-of-hope   { background-position: -90px 0px; }
-.heavy-burden,
-.piercing-lash       { background-position: -120px 0px; }
-.repeated-offense,
-.repelling-strike    { background-position: -150px 0px; }
-.glimmer-of-hope     { background-position: -180px 0px; }
-/*                   { background-position: -210px 0px; }*/
-.empathic-link,
-.will-of-heaven      { background-position: -240px 0px; }
-.resurrect,
-.light-speed         { background-position: -270px 0px; }
-.crystal-aegis,
-.diamond-resolve     { background-position: -300px 0px; }
-.energized-cord,
-.wrath-of-heaven     { background-position: -330px 0px; }
-.angelic-flight      { background-position: -360px 0px; }
-.shield-of-hope      { background-position: -390px 0px; }
+.Auriel.swift-sweep,
+.Auriel.majestic-span,
+.Auriel.blinding-flash      { background-position:    0px 0px; }
+.Auriel.increasing-clarity,
+.Auriel.converging-force    { background-position:  -30px 0px; }
+.Auriel.righteous-assault   { background-position:  -60px 0px; }
+.Auriel.searing-light,
+.Auriel.bursting-light,
+.Auriel.reservoir-of-hope   { background-position: -90px 0px; }
+.Auriel.heavy-burden,
+.Auriel.piercing-lash       { background-position: -120px 0px; }
+.Auriel.repeated-offense,
+.Auriel.repelling-strike    { background-position: -150px 0px; }
+.Auriel.glimmer-of-hope     { background-position: -180px 0px; }
+/*         .Cho                 { background-position: -210px 0px; }*/
+.Auriel.empathic-link,
+.Auriel.will-of-heaven      { background-position: -240px 0px; }
+.Auriel.resurrect,
+.Auriel.light-speed         { background-position: -270px 0px; }
+.Auriel.crystal-aegis,
+.Auriel.diamond-resolve     { background-position: -300px 0px; }
+.Auriel.energized-cord,
+.Auriel.wrath-of-heaven     { background-position: -330px 0px; }
+.Auriel.angelic-flight      { background-position: -360px 0px; }
+.Auriel.shield-of-hope      { background-position: -390px 0px; }
 
 //Azmodan
-.taste-for-blood,
-.infernal-globe,
-.hedonism,
-.battleborn,
-.sieging-wrath,
-.master-of-destruction,
-.gluttony,
-.infused-power,
-.march-of-sin,
-.army-of-hell,
-.hellforged-armor,
-.sin-s-grasp,
-.bound-minion,
-.demonic-smite,
-.forced-recruitment,
-.gluttonous-ward,
-.demonic-invasion,
-.perishing-flame,
-.black-pool,
-.fifth-circle,
-.hellish-hirelings { background: url(../img/talents/azmodan.png); }
+.Azmodan.taste-for-blood,
+.Azmodan.infernal-globe,
+.Azmodan.hedonism,
+.Azmodan.battleborn,
+.Azmodan.sieging-wrath,
+.Azmodan.master-of-destruction,
+.Azmodan.gluttony,
+.Azmodan.infused-power,
+.Azmodan.march-of-sin,
+.Azmodan.army-of-hell,
+.Azmodan.hellforged-armor,
+.Azmodan.sins-grasp,
+.Azmodan.bound-minion,
+.Azmodan.demonic-smite,
+.Azmodan.forced-recruitment,
+.Azmodan.gluttonous-ward,
+.Azmodan.demonic-invasion,
+.Azmodan.perishing-flame,
+.Azmodan.black-pool,
+.Azmodan.fifth-circle,
+.Azmodan.hellish-hirelings { background: url(../img/talents/azmodan.png); }
 
-.taste-for-blood,
-.infernal-globe,
-.hedonism,
-.battleborn             { background-position:    0px 0px; }
-.sieging-wrath          { background-position:  -30px 0px; }
-.master-of-destruction,
-.gluttony,
-.infused-power,
-.march-of-sin           { background-position:  -60px 0px; }
-.army-of-hell,
-.hellforged-armor       { background-position:  -90px 0px; }
-.sin-s-grasp            { background-position: -120px 0px; }
-.bound-minion,
-.demonic-smite,
-.hellish-hirelings,
-.forced-recruitment     { background-position: -150px 0px; }
-.gluttonous-ward        { background-position: -180px 0px; }
-.demonic-invasion,
-.perishing-flame        { background-position: -210px 0px; }
-.black-pool,
-.fifth-circle           { background-position: -240px 0px; }
+.Azmodan.taste-for-blood,
+.Azmodan.infernal-globe,
+.Azmodan.hedonism,
+.Azmodan.battleborn             { background-position:    0px 0px; }
+.Azmodan.sieging-wrath          { background-position:  -30px 0px; }
+.Azmodan.master-of-destruction,
+.Azmodan.gluttony,
+.Azmodan.infused-power,
+.Azmodan.march-of-sin           { background-position:  -60px 0px; }
+.Azmodan.army-of-hell,
+.Azmodan.hellforged-armor       { background-position:  -90px 0px; }
+.Azmodan.sins-grasp            { background-position: -120px 0px; }
+.Azmodan.bound-minion,
+.Azmodan.demonic-smite,
+.Azmodan.hellish-hirelings,
+.Azmodan.forced-recruitment     { background-position: -150px 0px; }
+.Azmodan.gluttonous-ward        { background-position: -180px 0px; }
+.Azmodan.demonic-invasion,
+.Azmodan.perishing-flame        { background-position: -210px 0px; }
+.Azmodan.black-pool,
+.Azmodan.fifth-circle           { background-position: -240px 0px; }
 
 //Brightwing
-.unfurling-spray,
-.mistified,
-.revitalizing-mist,
-.hyper-shift,
-.peekaboo,
-.phase-shield,
-.manic-pixie,
-.pixie-boost,
-.bouncy-dust,
-.arcane-barrage,
-.dream-shot,
-.sticky-flare,
-.unstable-anomaly,
-.greater-polymorph,
-.blink-heal,
-.double-wyrmhole,
-.emerald-wind,
-.continuous-winds,
-.shield-dust,
-.critterize { background: url(../img/talents/brightwing.png); }
+.Brightwing.unfurling-spray,
+.Brightwing.mistified,
+.Brightwing.revitalizing-mist,
+.Brightwing.hyper-shift,
+.Brightwing.peekaboo,
+.Brightwing.phase-shield,
+.Brightwing.manic-pixie,
+.Brightwing.pixie-boost,
+.Brightwing.bouncy-dust,
+.Brightwing.arcane-barrage,
+.Brightwing.dream-shot,
+.Brightwing.sticky-flare,
+.Brightwing.unstable-anomaly,
+.Brightwing.greater-polymorph,
+.Brightwing.blink-heal,
+.Brightwing.double-wyrmhole,
+.Brightwing.emerald-wind,
+.Brightwing.continuous-winds,
+.Brightwing.shield-dust,
+.Brightwing.critterize { background: url(../img/talents/brightwing.png); }
 
-.unfurling-spray,
-.mistified,
-.revitalizing-mist { background-position:    0px 0px; }
-.hyper-shift,
-.peekaboo,
-.phase-shield      { background-position:  -30px 0px; }
-.manic-pixie,
-.pixie-boost,
-.bouncy-dust       { background-position:  -60px 0px; }
-.arcane-barrage,
-.dream-shot,
-.sticky-flare      { background-position:  -90px 0px; }
-.unstable-anomaly,
-.greater-polymorph { background-position: -120px 0px; }
-.blink-heal,
-.double-wyrmhole   { background-position: -150px 0px; }
-.emerald-wind,
-.continuous-winds  { background-position: -180px 0px; }
-.shield-dust       { background-position: -210px 0px; }
-.critterize        { background-position: -240px 0px; }
+.Brightwing.unfurling-spray,
+.Brightwing.mistified,
+.Brightwing.revitalizing-mist { background-position:    0px 0px; }
+.Brightwing.hyper-shift,
+.Brightwing.peekaboo,
+.Brightwing.phase-shield      { background-position:  -30px 0px; }
+.Brightwing.manic-pixie,
+.Brightwing.pixie-boost,
+.Brightwing.bouncy-dust       { background-position:  -60px 0px; }
+.Brightwing.arcane-barrage,
+.Brightwing.dream-shot,
+.Brightwing.sticky-flare      { background-position:  -90px 0px; }
+.Brightwing.unstable-anomaly,
+.Brightwing.greater-polymorph { background-position: -120px 0px; }
+.Brightwing.blink-heal,
+.Brightwing.double-wyrmhole   { background-position: -150px 0px; }
+.Brightwing.emerald-wind,
+.Brightwing.continuous-winds  { background-position: -180px 0px; }
+.Brightwing.shield-dust       { background-position: -210px 0px; }
+.Brightwing.critterize        { background-position: -240px 0px; }
 
 //Chen
-.keg-toss,
-.full-keg,
-.a-touch-of-honey,
-.grounding-brew,
-.combat-stance,
-.enough-to-share,
-.bottomless-mug,
-.consuming-flame,
-.deep-breath,
-.ring-of-fire,
-.swift-reflexes,
-.deadly-strike,
-.brew-strike,
-.pressure-point,
-.brewmaster-s-balance,
-.bolder-flavor,
-.wandering-keg,
-.untapped-potential,
-.storm-earth-fire,
-.elemental-conduit,
-.combination-attack,
-.accumulating-flame,
-.freshest-ingredients,
-.withering-flames,
-.flying-leap,
-.another-round,
-.purifying-brew,
-.elusive-brawler,
-.stormstout-secret-recipe { background: url(../img/talents/chen.png); }
+.Chen.keg-toss,
+.Chen.full-keg,
+.Chen.a-touch-of-honey,
+.Chen.grounding-brew,
+.Chen.combat-stance,
+.Chen.enough-to-share,
+.Chen.bottomless-mug,
+.Chen.consuming-flame,
+.Chen.deep-breath,
+.Chen.ring-of-fire,
+.Chen.swift-reflexes,
+.Chen.deadly-strike,
+.Chen.brew-strike,
+.Chen.pressure-point,
+.Chen.brewmasters-balance,
+.Chen.bolder-flavor,
+.Chen.wandering-keg,
+.Chen.untapped-potential,
+.Chen.storm-earth-fire,
+.Chen.elemental-conduit,
+.Chen.combination-attack,
+.Chen.accumulating-flame,
+.Chen.freshest-ingredients,
+.Chen.withering-flames,
+.Chen.flying-leap,
+.Chen.another-round,
+.Chen.purifying-brew,
+.Chen.elusive-brawler,
+.Chen.stormstout-secret-recipe { background: url(../img/talents/chen.png); }
 
-.keg-toss,
-.full-keg,
-.another-round,
-.a-touch-of-honey      { background-position:    0px 0px; }
-.combat-stance,
-.enough-to-share,
-.freshest-ingredients,
-.brewmaster-s-balance,
-.bottomless-mug        { background-position:  -30px 0px; }
-.consuming-flame,
-.deep-breath,
-.accumulating-flame,
-.withering-flames,
-.ring-of-fire          { background-position:  -60px 0px; }
-.swift-reflexes        { background-position:  -90px 0px; }
-.deadly-strike,
-.brew-strike,
-.flying-leap,
-.pressure-point        { background-position: -120px 0px; }
-.grounding-brew,
-.purifying-brew,
-.bolder-flavor         { background-position: -150px 0px; }
-.wandering-keg,
-.untapped-potential    { background-position: -180px 0px; }
-.storm-earth-fire,
-.elemental-conduit     { background-position: -210px 0px; }
-.combination-attack    { background-position: -240px 0px; }
-.elusive-brawler       { background-position: -270px 0px; }
-.stormstout-secret-recipe { background-position: -300px 0px; }
+.Chen.keg-toss,
+.Chen.full-keg,
+.Chen.another-round,
+.Chen.a-touch-of-honey      { background-position:    0px 0px; }
+.Chen.combat-stance,
+.Chen.enough-to-share,
+.Chen.freshest-ingredients,
+.Chen.brewmasters-balance,
+.Chen.bottomless-mug        { background-position:  -30px 0px; }
+.Chen.consuming-flame,
+.Chen.deep-breath,
+.Chen.accumulating-flame,
+.Chen.withering-flames,
+.Chen.ring-of-fire          { background-position:  -60px 0px; }
+.Chen.swift-reflexes        { background-position:  -90px 0px; }
+.Chen.deadly-strike,
+.Chen.brew-strike,
+.Chen.flying-leap,
+.Chen.pressure-point        { background-position: -120px 0px; }
+.Chen.grounding-brew,
+.Chen.purifying-brew,
+.Chen.bolder-flavor         { background-position: -150px 0px; }
+.Chen.wandering-keg,
+.Chen.untapped-potential    { background-position: -180px 0px; }
+.Chen.storm-earth-fire,
+.Chen.elemental-conduit     { background-position: -210px 0px; }
+.Chen.combination-attack    { background-position: -240px 0px; }
+.Chen.elusive-brawler       { background-position: -270px 0px; }
+.Chen.stormstout-secret-recipe { background-position: -300px 0px; }
 
 //Cho
-.surging-dash,
-.power-surge,
-.surge-of-stamina,
-.frenzied-fists,
-.blazing-bulwark,
-.seared-flesh,
-.fire-eater,
-.twilight-veil,
-.fuel-for-the-flame,
-.runed-gauntlet,
-.runic-feedback,
-.rollback,
-.i-am-hurrying,
-.the-will-of-gall,
-.hammer-of-twilight,
-.c-thun-s-gift,
-.upheaval,
-.favor-of-the-old-gods,
-.molten-block,
-.crippling-blow { background: url(../img/talents/cho.png); }
+.Cho.surging-dash,
+.Cho.power-surge,
+.Cho.surge-of-stamina,
+.Cho.frenzied-fists,
+.Cho.blazing-bulwark,
+.Cho.seared-flesh,
+.Cho.fire-eater,
+.Cho.twilight-veil,
+.Cho.fuel-for-the-flame,
+.Cho.runed-gauntlet,
+.Cho.runic-feedback,
+.Cho.rollback,
+.Cho.i-am-hurrying,
+.Cho.the-will-of-gall,
+.Cho.hammer-of-twilight,
+.Cho.cthuns-gift,
+.Cho.upheaval,
+.Cho.favor-of-the-old-gods,
+.Cho.molten-block,
+.Cho.crippling-blow { background: url(../img/talents/cho.png); }
 
-.surging-dash,
-.power-surge,
-.surge-of-stamina,
-.frenzied-fists        { background-position:    0px 0px; }
-.blazing-bulwark,
-.fire-eater,
-.twilight-veil         { background-position:  -30px 0px; }
-.fuel-for-the-flame    { background-position:  -60px 0px; }
-.runed-gauntlet,
-.runic-feedback        { background-position:  -90px 0px; }
-.rollback              { background-position: -120px 0px; }
-.seared-flesh,
-.i-am-hurrying,
-.the-will-of-gall      { background-position: -150px 0px; }
-.hammer-of-twilight,
-.c-thun-s-gift         { background-position: -180px 0px; }
-.upheaval,
-.favor-of-the-old-gods { background-position: -210px 0px; }
-.molten-block          { background-position: -240px 0px; }
-.crippling-blow        { background-position: -270px 0px; }
+.Cho.surging-dash,
+.Cho.power-surge,
+.Cho.surge-of-stamina,
+.Cho.frenzied-fists        { background-position:    0px 0px; }
+.Cho.blazing-bulwark,
+.Cho.fire-eater,
+.Cho.twilight-veil         { background-position:  -30px 0px; }
+.Cho.fuel-for-the-flame    { background-position:  -60px 0px; }
+.Cho.runed-gauntlet,
+.Cho.runic-feedback        { background-position:  -90px 0px; }
+.Cho.rollback              { background-position: -120px 0px; }
+.Cho.seared-flesh,
+.Cho.i-am-hurrying,
+.Cho.the-will-of-gall      { background-position: -150px 0px; }
+.Cho.hammer-of-twilight,
+.Cho.cthuns-gift         { background-position: -180px 0px; }
+.Cho.upheaval,
+.Cho.favor-of-the-old-gods { background-position: -210px 0px; }
+.Cho.molten-block          { background-position: -240px 0px; }
+.Cho.crippling-blow        { background-position: -270px 0px; }
 
 //Chromie
-.compounding-aether,
-.piercing-sands,
-.shifting-sands,
-.past-and-future-me,
-.deep-breathing,
-.enveloping-assault,
-.mobius-loop,
-.dragon-s-eye,
-.chrono-sickness,
-.andorhal-anomaly,
-.slowing-sands,
-.pocket-of-time,
-.temporal-loop,
-.loophole,
-.bye-bye,
-.reaching-through-time,
-.time-out,
-.fast-forward,
-.quantum-overdrive { background: url(../img/talents/chromie.png); }
+.Chromie.compounding-aether,
+.Chromie.piercing-sands,
+.Chromie.shifting-sands,
+.Chromie.past-and-future-me,
+.Chromie.deep-breathing,
+.Chromie.enveloping-assault,
+.Chromie.mobius-loop,
+.Chromie.dragons-eye,
+.Chromie.chrono-sickness,
+.Chromie.andorhal-anomaly,
+.Chromie.slowing-sands,
+.Chromie.pocket-of-time,
+.Chromie.temporal-loop,
+.Chromie.loophole,
+.Chromie.bye-bye,
+.Chromie.reaching-through-time,
+.Chromie.time-out,
+.Chromie.fast-forward,
+.Chromie.quantum-overdrive { background: url(../img/talents/chromie.png); }
 
-.compounding-aether,
-.piercing-sands,
-.shifting-sands,
-.past-and-future-me    { background-position:    0px 0px; }
-.deep-breathing,
-.enveloping-assault,
-.mobius-loop           { background-position:  -30px 0px; }
-.dragon-s-eye          { background-position:  -60px 0px; }
-.chrono-sickness,
-.andorhal-anomaly      { background-position:  -90px 0px; }
-.slowing-sands,
-.pocket-of-time        { background-position: -120px 0px; }
-.temporal-loop,
-.loophole              { background-position: -150px 0px; }
-.bye-bye               { background-position: -180px 0px; }
-.reaching-through-time { background-position: -210px 0px; }
-.time-out              { background-position: -240px 0px; }
-.fast-forward          { background-position: -270px 0px; }
-.quantum-overdrive     { background-position: -300px 0px; }
+.Chromie.compounding-aether,
+.Chromie.piercing-sands,
+.Chromie.shifting-sands,
+.Chromie.past-and-future-me    { background-position:    0px 0px; }
+.Chromie.deep-breathing,
+.Chromie.enveloping-assault,
+.Chromie.mobius-loop           { background-position:  -30px 0px; }
+.Chromie.dragons-eye          { background-position:  -60px 0px; }
+.Chromie.chrono-sickness,
+.Chromie.andorhal-anomaly      { background-position:  -90px 0px; }
+.Chromie.slowing-sands,
+.Chromie.pocket-of-time        { background-position: -120px 0px; }
+.Chromie.temporal-loop,
+.Chromie.loophole              { background-position: -150px 0px; }
+.Chromie.bye-bye               { background-position: -180px 0px; }
+.Chromie.reaching-through-time { background-position: -210px 0px; }
+.Chromie.time-out              { background-position: -240px 0px; }
+.Chromie.fast-forward          { background-position: -270px 0px; }
+.Chromie.quantum-overdrive     { background-position: -300px 0px; }
 
 //Dehaka
-.enduring-swarm,
-.symbiosis,
-.whirling-dervish,
-.primal-aggression,
-.enhanced-agility,
-.one-who-collects,
-.essence-devourer,
-.tissue-regeneration,
-.hero-stalker,
-.lurker-strain,
-.rapid-regeneration,
-.numbing-eruption,
-.feeding-frenzy,
-.paralyzing-enzymes,
-.constriction,
-.elongated-tongue,
-.isolation,
-.contagion,
-.adaptation,
-.change-is-survival,
-.swift-pursuit,
-.apex-predator,
-.ferocious-stalker,
-.primal-swarm,
-.tunneling-claws,
-.essence-claws { background: url(../img/talents/dehaka.png); }
+.Dehaka.enduring-swarm,
+.Dehaka.symbiosis,
+.Dehaka.whirling-dervish,
+.Dehaka.primal-aggression,
+.Dehaka.enhanced-agility,
+.Dehaka.onewhocollects,
+.Dehaka.essence-devourer,
+.Dehaka.tissue-regeneration,
+.Dehaka.hero-stalker,
+.Dehaka.lurker-strain,
+.Dehaka.rapid-regeneration,
+.Dehaka.numbing-eruption,
+.Dehaka.feeding-frenzy,
+.Dehaka.paralyzing-enzymes,
+.Dehaka.constriction,
+.Dehaka.elongated-tongue,
+.Dehaka.isolation,
+.Dehaka.contagion,
+.Dehaka.adaptation,
+.Dehaka.change-is-survival,
+.Dehaka.swift-pursuit,
+.Dehaka.apex-predator,
+.Dehaka.ferocious-stalker,
+.Dehaka.primal-swarm,
+.Dehaka.tunneling-claws,
+.Dehaka.essence-claws { background: url(../img/talents/dehaka.png); }
 
-.enduring-swarm,
-.symbiosis,
-.primal-swarm,
-.whirling-dervish     { background-position:    0px 0px; }
-.primal-aggression    { background-position:  -30px 0px; }
-.one-who-collects,
-.tissue-regeneration,
-.essence-claws,
-.essence-devourer     { background-position:  -60px 0px; }
-.hero-stalker         { background-position:  -90px 0px; }
-.lurker-strain,
-.tunneling-claws,
-.rapid-regeneration   { background-position: -120px 0px; }
-.numbing-eruption     { background-position: -150px 0px; }
-.feeding-frenzy,
-.paralyzing-enzymes   { background-position: -180px 0px; }
-.constriction,
-.elongated-tongue     { background-position: -210px 0px; }
-.isolation,
-.contagion            { background-position: -240px 0px; }
-.adaptation,
-.change-is-survival   { background-position: -270px 0px; }
-.swift-pursuit,
-.enhanced-agility,
-.apex-predator        { background-position: -300px 0px; }
-.ferocious-stalker    { background-position: -330px 0px; }
+.Dehaka.enduring-swarm,
+.Dehaka.symbiosis,
+.Dehaka.primal-swarm,
+.Dehaka.whirling-dervish     { background-position:    0px 0px; }
+.Dehaka.primal-aggression    { background-position:  -30px 0px; }
+.Dehaka.onewhocollects,
+.Dehaka.tissue-regeneration,
+.Dehaka.essence-claws,
+.Dehaka.essence-devourer     { background-position:  -60px 0px; }
+.Dehaka.hero-stalker         { background-position:  -90px 0px; }
+.Dehaka.lurker-strain,
+.Dehaka.tunneling-claws,
+.Dehaka.rapid-regeneration   { background-position: -120px 0px; }
+.Dehaka.numbing-eruption     { background-position: -150px 0px; }
+.Dehaka.feeding-frenzy,
+.Dehaka.paralyzing-enzymes   { background-position: -180px 0px; }
+.Dehaka.constriction,
+.Dehaka.elongated-tongue     { background-position: -210px 0px; }
+.Dehaka.isolation,
+.Dehaka.contagion            { background-position: -240px 0px; }
+.Dehaka.adaptation,
+.Dehaka.change-is-survival   { background-position: -270px 0px; }
+.Dehaka.swift-pursuit,
+.Dehaka.enhanced-agility,
+.Dehaka.apex-predator        { background-position: -300px 0px; }
+.Dehaka.ferocious-stalker    { background-position: -330px 0px; }
 
 //Diablo
 .soul-feast,
@@ -1282,7 +1282,7 @@
 //Kerrigan
 .siphoning-impact,
 .clean-kill,
-.adaptation,
+.Kerrigan.adaptation,
 .eviscerate,
 .sharpened-blades,
 .impaling-swarm,
@@ -1303,7 +1303,7 @@
 
 .siphoning-impact,
 .clean-kill,
-.adaptation,
+.Kerrigan.adaptation,
 .eviscerate            { background-position:    0px 0px; }
 .sharpened-blades,
 .impaling-swarm,

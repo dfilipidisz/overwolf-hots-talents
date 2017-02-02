@@ -42,7 +42,7 @@
 .first-aid,
 .overdrive,
 .sprint,
-.conjurer-s-pursuit,
+.conjurers-pursuit,
 .envenom,
 .arcane-power,
 .healing-ward,
@@ -90,7 +90,7 @@
 .angelic-momentum,
 .lunar-momentum,
 .swarm-momentum,
-.iron-forged-momentum,
+.Muradin.ironforged-momentum,
 .dampen-magic,
 .hammer-gains,
 .spectral-leech,
@@ -105,7 +105,7 @@
 .pixie-charm,
 .wingman,
 .reinforce,
-.kharazim-sixth-sense,
+.Kharazim.sixth-sense,
 .covert-mission,
 .flea-bag,
 .cleaver,
@@ -116,7 +116,8 @@
 .Diablo.speed-demon,
 .Diablo.fearful-presence,
 .Diablo.hellgate,
-.ETC.hammeron, { background: url(../img/talents/general.png); }
+.ETC.hammeron,
+.fish-tank, { background: url(../img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -136,7 +137,7 @@
 .spell-shield            { background-position:    -30px 0px; }
 .Diablo.speed-demon,
 .relentless-soldier,                                            //Tychus
-.kharazim-sixth-sense,                                          //Kharazim
+.Kharazim.sixth-sense,                                          //Kharazim
 .flea-bag,                                                      //Stitches
 .relentless              { background-position:    -60px 0px; }
 .stoneskin               { background-position:    -90px 0px; }
@@ -175,7 +176,7 @@
 .angelic-momentum,                                              //Tyrael
 .lunar-momentum,                                                //Tyrande
 .swarm-momentum,                                                //Zagara
-.iron-forged-momentum,                                          //Muradin
+.Muradin.ironforged-momentum,
 .battle-momentum         { background-position:   -570px 0px; }
 .war-paint,                                                     //Sonya
 .vigorous-strike,                                               //Tyrael
@@ -188,7 +189,7 @@
 .sprint                  { background-position:   -690px 0px; }
 .survivalist-training,                                          //Rexxar
 .mana-addict,                                                   //Kael'thas
-.conjurer-s-pursuit      { background-position:   -720px 0px; }
+.conjurers-pursuit       { background-position:   -720px 0px; }
 .envenom                 { background-position:   -750px 0px; }
 .arcane-dynamo,                                                 //Kael'thas
 .arcane-power            { background-position:   -780px 0px; }
@@ -215,6 +216,7 @@
 .searing-attacks         { background-position:  -1140px 0px; }
 .grizzled-bear,                                                 //Rexxar
 .reinforce,                                                     //Johanna
+.fish-tank,
 .block                   { background-position:  -1170px 0px; }
 .wildfire-bear,                                                 //Rexxar
 .burning-rage            { background-position:  -1200px 0px; }
@@ -1045,7 +1047,7 @@
 .eyes-in-the-dark,
 .quicksilver-bullets,
 .relentless-predator,
-.hunter-s-blunderbuss,
+.hunters-blunderbuss,
 .wizened-duelist,
 .alpha-killer,
 .tooth-and-claw,
@@ -1072,7 +1074,7 @@
 .eyes-in-the-dark     { background-position: -150px 0px; }
 .quicksilver-bullets,
 .relentless-predator,
-.hunter-s-blunderbuss { background-position: -180px 0px; }
+.hunters-blunderbuss { background-position: -180px 0px; }
 .wizened-duelist,
 .alpha-killer,
 .tooth-and-claw       { background-position: -210px 0px; }
@@ -1143,13 +1145,13 @@
 .marked-for-death,
 .friend-or-foe,
 .thirsting-blade,
-.hunter-s-onslaught,
+.hunters-onslaught,
 .metamorphosis,
 .demonic-form,
 .the-hunt,
 .nowhere-to-hide,
 .elusive-strike,
-.sixth-sense,
+.Illidan.sixth-sense,
 .fiery-brand,
 .blades-of-azzinoth { background: url(../img/talents/illidan.png); }
 
@@ -1163,18 +1165,18 @@
 .marked-for-death   { background-position:  -90px 0px; }
 .friend-or-foe      { background-position: -120px 0px; }
 .thirsting-blade    { background-position: -150px 0px; }
-.hunter-s-onslaught { background-position: -180px 0px; }
+.hunters-onslaught { background-position: -180px 0px; }
 .metamorphosis,
 .demonic-form       { background-position: -210px 0px; }
 .the-hunt,
 .nowhere-to-hide    { background-position: -240px 0px; }
 .elusive-strike     { background-position: -270px 0px; }
-.sixth-sense        { background-position: -300px 0px; }
+.Illidan.sixth-sense        { background-position: -300px 0px; }
 .fiery-brand        { background-position: -330px 0px; }
 .blades-of-azzinoth { background-position: -360px 0px; }
 
 //Jaina
-.winter-s-reach,
+.winters-reach,
 .frost-shards,
 .ice-lance,
 .lingering-chill,
@@ -1196,7 +1198,7 @@
 .icy-veins,
 .numbing-blast { background: url(../img/talents/jaina.png); }
 
-.winter-s-reach,
+.winters-reach,
 .frost-shards,
 .ice-lance               { background-position:    0px 0px; }
 .lingering-chill,
@@ -1233,7 +1235,7 @@
 .sins-exposed,
 .holy-renewal,
 .falling-sword,
-.heaven-s-fury,
+.heavens-fury,
 .blessed-shield,
 .radiating-faith,
 .indestructible { background: url(../img/talents/johanna.png); }
@@ -1252,7 +1254,7 @@
 .sins-exposed,
 .holy-renewal            { background-position: -150px 0px; }
 .falling-sword,
-.heaven-s-fury           { background-position: -180px 0px; }
+.heavens-fury           { background-position: -180px 0px; }
 .blessed-shield,
 .radiating-faith         { background-position: -210px 0px; }
 .indestructible          { background-position: -240px 0px; }
@@ -1273,7 +1275,7 @@
 .pyroblast,
 .presence-of-mind,
 .pyromaniac,
-.sun-king-s-fury,
+.sun-kings-fury,
 .master-of-flames,
 .backdraft,
 .fission-bomb,
@@ -1295,7 +1297,7 @@
 .pyroblast,
 .presence-of-mind     { background-position: -150px 0px; }
 .pyromaniac,
-.sun-king-s-fury,
+.sun-kings-fury,
 .master-of-flames     { background-position: -180px 0px; }
 .backdraft            { background-position: -210px 0px; }
 .fission-bomb         { background-position: -240px 0px; }
@@ -1319,7 +1321,7 @@
 .summon-ultralisk,
 .torrasque,
 .double-strike,
-.queen-s-rush,
+.queens-rush,
 .essence-for-essence  { background: url(../img/talents/kerrigan.png); }
 
 .siphoning-impact,
@@ -1339,8 +1341,8 @@
 .omegastorm            { background-position: -150px 0px; }
 .summon-ultralisk,
 .torrasque             { background-position: -180px 0px; }
-.NOT_EXISTS_KERRIGAN   { background-position: -210px 0px; }
-.queen-s-rush          { background-position: -240px 0px; }
+//                     { background-position: -210px 0px; }
+.queens-rush           { background-position: -240px 0px; }
 .essence-for-essence   { background-position: -270px 0px; }
 .double-strike         { background-position: -300px 0px; }
 
@@ -1359,29 +1361,41 @@
 .soothing-breeze,
 .divine-palm,
 .peaceful-repose,
-.seven-sided-strike,
+.sevensided-strike,
 .transgression,
 .circle-of-life,
-.epiphany { background: url(../img/talents/kharazim.png); }
+.epiphany,
+.cleansing-touch,
+.heavenly-zeal,
+.spirit-ally,
+.earth-ally,
+.air-ally,
+.dash-of-light { background: url(../img/talents/kharazim.png); }
 
 .transcendence             { background-position:    0px 0px; }
 .iron-fists                { background-position:  -30px 0px; }
 .insight                   { background-position:  -60px 0px; }
 .foresight,
-.way-of-the-hundred-fists,
 .quicksilver,
+.cleansing-touch,
 .blinding-speed            { background-position:  -90px 0px; }
 .overtake,
 .fists-of-fury,
 .blazing-fists             { background-position: -120px 0px; }
 .echo-of-heaven,
+.heavenly-zeal,
 .soothing-breeze           { background-position: -150px 0px; }
 .divine-palm,
 .peaceful-repose           { background-position: -180px 0px; }
-.seven-sided-strike,
+.sevensided-strike,
 .transgression             { background-position: -210px 0px; }
+.dash-of-light,
 .circle-of-life            { background-position: -240px 0px; }
 .epiphany                  { background-position: -270px 0px; }
+.spirit-ally               { background-position: -300px 0px; }
+.earth-ally                { background-position: -330px 0px; }
+.air-ally                  { background-position: -360px 0px; }
+.way-of-the-hundred-fists  { background-position: -390px 0px; }
 
 //Leoric
 .mana-thirst,
@@ -1411,7 +1425,8 @@
 .willing-vessel,
 .crushing-hope,
 .unyielding-despair       { background-position:  -30px 0px; }
-.reanimation              { background-position:  -60px 0px; }
+//                        { background-position:  -60px 0px; }
+.reanimation,
 .fealty-unto-death        { background-position:  -90px 0px; }
 .hardened-bones,
 .lingering-apparition     { background-position: -120px 0px; }
@@ -1440,8 +1455,8 @@
 .shake-it-off,
 .the-good-stuff,
 .herbal-cleanse,
-.jug-of-1-000-cups,
-.jug-of-1-000-000-cups,
+.jug-of-1000-cups,
+.jug-of-1000000-cups,
 .water-dragon,
 .double-dragon,
 .elusive-feet,
@@ -1463,8 +1478,8 @@
 .shake-it-off          { background-position: -120px 0px; }
 .the-good-stuff,
 .herbal-cleanse        { background-position: -150px 0px; }
-.jug-of-1-000-cups,
-.jug-of-1-000-000-cups { background-position: -180px 0px; }
+.jug-of-1000-cups,
+.jug-of-1000000-cups { background-position: -180px 0px; }
 .water-dragon,
 .double-dragon         { background-position: -210px 0px; }
 .elusive-feet,
@@ -1484,7 +1499,7 @@
 .diamond-skin,
 .triumvirate,
 .dominance,
-.zei-s-vengeance,
+.zeis-vengeance,
 .arcane-orbit,
 .disintegrate,
 .temporal-flux,
@@ -1493,7 +1508,7 @@
 .cannoneer,
 .glass-cannon,
 .mirrorball,
-.tal-rasha-s-elements,
+.tal-rashas-elements,
 .archon-pure-power { background: url(../img/talents/liming.png); }
 
 .astral-presence      { background-position:    0px 0px; }
@@ -1506,9 +1521,10 @@
 .calamity,
 .illusionist,
 .diamond-skin         { background-position:  -90px 0px; }
-.triumvirate          { background-position: -120px 0px; }
+//                    { background-position: -120px 0px; }
 .dominance            { background-position: -150px 0px; }
-.zei-s-vengeance,
+.zeis-vengeance,
+.triumvirate,
 .arcane-orbit         { background-position: -180px 0px; }
 .disintegrate,
 .temporal-flux        { background-position: -210px 0px; }
@@ -1517,7 +1533,7 @@
 .cannoneer            { background-position: -270px 0px; }
 .glass-cannon         { background-position: -300px 0px; }
 .mirrorball           { background-position: -330px 0px; }
-.tal-rasha-s-elements { background-position: -360px 0px; }
+.tal-rashas-elements { background-position: -360px 0px; }
 .archon-pure-power    { background-position: -390px 0px; }
 
 //Lt. Morales
@@ -1541,7 +1557,7 @@
 .medbay,
 .couples-therapy,
 .preventative-care,
-.caduceus-reactor-2-0 { background: url(../img/talents/ltmorales.png); }
+.caduceus-reactor-20 { background: url(../img/talents/ltmorales.png); }
 
 .prolonged-safeguard,
 .inoculation          { background-position:    0px 0px; }
@@ -1563,7 +1579,7 @@
 .medbay               { background-position: -240px 0px; }
 .couples-therapy      { background-position: -270px 0px; }
 .preventative-care    { background-position: -300px 0px; }
-.caduceus-reactor-2-0 { background-position: -330px 0px; }
+.caduceus-reactor-20 { background-position: -330px 0px; }
 
 //Lunara
 .blossom-swell,
@@ -1573,7 +1589,7 @@
 .photosynthesis,
 .invigorating-spores,
 .natural-perspective,
-.nature-s-culling,
+.natures-culling,
 .unfair-advantage,
 .cruel-spores,
 .wild-vigor,
@@ -1584,7 +1600,7 @@
 .dividing-wisp,
 .siphoning-toxin,
 .thornwood-vine,
-.forest-s-wrath,
+.forests-wrath,
 .leaping-strike,
 .boundless-stride,
 .greater-spell-shield,
@@ -1599,7 +1615,7 @@
 .photosynthesis,
 .invigorating-spores  { background-position:  -30px 0px; }
 .natural-perspective,
-.nature-s-culling,
+.natures-culling,
 .unfair-advantage     { background-position:  -60px 0px; }
 .cruel-spores,
 .wild-vigor,
@@ -1610,7 +1626,7 @@
 .dividing-wisp        { background-position: -210px 0px; }
 .siphoning-toxin      { background-position: -240px 0px; }
 .thornwood-vine,
-.forest-s-wrath       { background-position: -270px 0px; }
+.forests-wrath       { background-position: -270px 0px; }
 .leaping-strike,
 .boundless-stride     { background-position: -300px 0px; }
 .greater-spell-shield { background-position: -330px 0px; }
@@ -1623,13 +1639,13 @@
 .rampant-growth,
 .enduring-growth,
 .life-seed,
-.shan-do-s-clarity,
+.shandos-clarity,
 .versatile,
 .moonburn,
 .full-moonfire,
 .hindering-moonfire,
 .lunar-shower,
-.elune-s-grace,
+.elunes-grace,
 .vengeful-roots,
 .strangling-vines,
 .tenacious-roots,
@@ -1642,12 +1658,12 @@
 .rampant-growth,
 .enduring-growth,
 .life-seed           { background-position:    0px 0px; }
-.shan-do-s-clarity,
+.shandos-clarity,
 .versatile           { background-position:  -30px 0px; }
 .moonburn,
 .full-moonfire,
 .hindering-moonfire  { background-position:  -60px 0px; }
-.elune-s-grace       { background-position:  -90px 0px; }
+.elunes-grace       { background-position:  -90px 0px; }
 .vengeful-roots,
 .strangling-vines,
 .tenacious-roots     { background-position: -120px 0px; }
@@ -1667,11 +1683,11 @@
 .quickening,
 .portal-mastery,
 .astral-projection,
-.raven-s-intellect,
-.bird-s-eye-view,
+.ravens-intellect,
+.birds-eye-view,
 .winds-of-celerity,
 .dust-of-appearance,
-.the-master-s-touch,
+.the-masters-touch,
 .arcane-explosion,
 .circle-of-protection,
 .poly-bomb,
@@ -1691,11 +1707,11 @@
 .quickening           { background-position:  -30px 0px; }
 .portal-mastery,
 .astral-projection    { background-position:  -60px 0px; }
-.raven-s-intellect,
-.bird-s-eye-view,
+.ravens-intellect,
+.birds-eye-view,
 .winds-of-celerity    { background-position:  -90px 0px; }
 .dust-of-appearance   { background-position: -120px 0px; }
-.the-master-s-touch   { background-position: -150px 0px; }
+.the-masters-touch   { background-position: -150px 0px; }
 .arcane-explosion,
 .circle-of-protection { background-position: -180px 0px; }
 .poly-bomb,
@@ -1750,7 +1766,6 @@
 .thunder-burn      { background-position: -300px 0px; }
 
 //Murky
-.fishtank,
 .bubble-breeze,
 .bubble-machine,
 .rejuvenating-bubble,
@@ -1767,11 +1782,11 @@
 .living-the-dream,
 .hindering-slime,
 .march-of-the-murlocs,
-.never-ending-murlocs,
-.octo-grab,
-.and-a-shark-too { background: url(../img/talents/murky.png); }
+.neverending-murlocs,
+.octograb,
+.-and-a-shark-too { background: url(../img/talents/murky.png); }
 
-.fishtank              { background-position:    0px 0px; }
+//                     { background-position:    0px 0px; }
 .bubble-breeze,
 .bubble-machine,
 .rejuvenating-bubble   { background-position:  -30px 0px; }
@@ -1788,9 +1803,9 @@
 .living-the-dream      { background-position: -150px 0px; }
 .hindering-slime       { background-position: -180px 0px; }
 .march-of-the-murlocs,
-.never-ending-murlocs  { background-position: -210px 0px; }
-.octo-grab,
-.and-a-shark-too       { background-position: -240px 0px; }
+.neverending-murlocs  { background-position: -210px 0px; }
+.octograb,
+.-and-a-shark-too       { background-position: -240px 0px; }
 
 //Nazeebo
 .blood-ritual,
@@ -1808,24 +1823,46 @@
 .humongoid,
 .ravenous-spirit,
 .annihilating-spirit,
-.thing-of-the-deep { background: url(../img/talents/nazeebo.png); }
+.thing-of-the-deep,
+.widowmakers,
+.pandemic,
+.big-voodoo,
+.hexed-crawlers,
+.spirit-of-arachyr,
+.guardian-toads,
+.superstition,
+.spider-colony,
+.ring-of-poison,
+.vile-infection,
+.soul-harvest { background: url(../img/talents/nazeebo.png); }
 
-.blood-ritual,
+.big-voodoo,
+.vile-infection,
 .specialized-toxin   { background-position:    0px 0px; }
+.blood-ritual,
 .death-ritual        { background-position:  -30px 0px; }
 .spider-cluster,
+.widowmakers,
+.hexed-crawlers,
+.spirit-of-arachyr,
+.spider-colony,
 .leaping-spiders     { background-position:  -60px 0px; }
 .gidbinn             { background-position:  -90px 0px; }
 .fresh-corpses,
+.ring-of-poison,
 .dead-rush           { background-position: -120px 0px; }
 .toad-affinity,
 .toads-of-hugeness,
+.pandemic,
+.guardian-toads,
 .infested-toads      { background-position: -150px 0px; }
 .gargantuan,
 .humongoid           { background-position: -180px 0px; }
 .ravenous-spirit,
 .annihilating-spirit { background-position: -210px 0px; }
 .thing-of-the-deep   { background-position: -240px 0px; }
+.superstition        { background-position: -270px 0px; }
+.soul-harvest        { background-position: -300px 0px; }
 
 //Nova
 .tactical-espionage,
@@ -1840,7 +1877,7 @@
 .rapid-projection,
 .holo-stability,
 .one-in-the-chamber,
-.anti-armor-shells,
+.antiarmor-shells,
 .snipe-master,
 .psionic-efficiency,
 .perfect-shot,
@@ -1848,11 +1885,13 @@
 .fast-reload,
 .precision-strike,
 .precision-barrage,
-.explosive-round { background: url(../img/talents/nova.png); }
+.explosive-round,
+.advanced-cloaking { background: url(../img/talents/nova.png); }
 
 .tactical-espionage,
+.advanced-cloaking,
 .ghost-protocol      { background-position:    0px 0px; }
-.advanced-cloaking   { background-position:  -30px 0px; }
+//                   { background-position:  -30px 0px; }
 .longshot,
 .double-tap,
 .crippling-shot      { background-position:  -60px 0px; }
@@ -1862,7 +1901,7 @@
 .rapid-projection    { background-position: -150px 0px; }
 .holo-stability      { background-position: -180px 0px; }
 .one-in-the-chamber  { background-position: -210px 0px; }
-.anti-armor-shells   { background-position: -240px 0px; }
+.antiarmor-shells   { background-position: -240px 0px; }
 .snipe-master,
 .psionic-efficiency,
 .perfect-shot        { background-position: -270px 0px; }
@@ -1871,6 +1910,9 @@
 .precision-strike,
 .precision-barrage   { background-position: -330px 0px; }
 .explosive-round     { background-position: -360px 0px; }
+
+//Ragnaros
+
 
 //Raynor
 .give-me-more,

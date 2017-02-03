@@ -59,8 +59,8 @@
 .searing-attacks,
 .block,
 .burning-rage,
-.grizzled-bear,
-.hunter-gatherer,
+.grizzled-fortitude,
+.Rexxar.huntergatherer,
 .survivalist-training,
 .throwing-axes,
 .wildfire-bear,
@@ -157,7 +157,7 @@
 .Chen.refreshing-elixir,
 .amplified-healing       { background-position:   -330px 0px; }
 .calldown-mule           { background-position:   -360px 0px; }
-.hunter-gatherer,                                               //Rexxar
+.Rexxar.huntergatherer,
 .hungry-for-more,                                               //Stitches
 .regeneration-master     { background-position:   -390px 0px; }
 .mercenary-lord          { background-position:   -420px 0px; }
@@ -214,7 +214,7 @@
 .distortion-beam,                                               //Tassadar
 .nexus-blades            { background-position:  -1110px 0px; }
 .searing-attacks         { background-position:  -1140px 0px; }
-.grizzled-bear,                                                 //Rexxar
+.grizzled-fortitude,
 .reinforce,                                                     //Johanna
 .fish-tank,
 .block                   { background-position:  -1170px 0px; }
@@ -1912,7 +1912,49 @@
 .explosive-round     { background-position: -360px 0px; }
 
 //Ragnaros
+.sulfuras-hungers,
+.hand-of-ragnaros,
+.cauterize-wounds,
+.Ragnaros.giant-scorcher,
+.shifting-meteor,
+.fire-ward,
+.molten-power,
+.meteor-bomb,
+.engulfing-flame,
+.slow-burn,
+.superheated,
+.tempered-flame,
+.blast-echo,
+.catching-fire,
+.sulfuras-smash,
+.flames-of-sulfuron,
+.lava-wave,
+.lava-surge,
+.resilient-flame,
+.heroic-difficulty,
+.submerge { background: url(../img/talents/ragnaros.png); }
 
+.sulfuras-hungers,
+.hand-of-ragnaros,
+.cauterize-wounds,
+.Ragnaros.giant-scorcher { background-position:    0px 0px; }
+.shifting-meteor,
+.fire-ward,
+.molten-power,
+.meteor-bomb             { background-position:  -30px 0px; }
+.engulfing-flame,
+.slow-burn,
+.superheated,
+.tempered-flame,
+.blast-echo              { background-position:  -60px 0px; }
+.catching-fire           { background-position:  -90px 0px; }
+.sulfuras-smash,
+.flames-of-sulfuron      { background-position: -120px 0px; }
+.lava-wave,
+.lava-surge              { background-position: -150px 0px; }
+.resilient-flame         { background-position: -180px 0px; }
+.heroic-difficulty       { background-position: -210px 0px; }
+.submerge                { background-position: -240px 0px; }
 
 //Raynor
 .give-me-more,
@@ -1920,14 +1962,14 @@
 .raiders-recruitment,
 .confident-aim,
 .hamstring-shot,
-.double-barreled,
+.doublebarreled,
 .cluster-round,
 .revolution-overdrive,
 .steel-resolve,
 .puttin-on-a-clinic,
 .hyperion,
 .scorched-earth,
-.raynor-s-raiders,
+.raynors-raiders,
 .dusk-wings,
 .relentless-leader,
 .bullseye,
@@ -1938,14 +1980,14 @@
 .raiders-recruitment   { background-position:  -30px 0px; }
 .confident-aim,
 .hamstring-shot,
-.double-barreled,
+.doublebarreled,
 .cluster-round         { background-position:  -60px 0px; }
 .revolution-overdrive,
 .steel-resolve         { background-position:  -90px 0px; }
 .puttin-on-a-clinic    { background-position: -120px 0px; }
 .hyperion,
 .scorched-earth        { background-position: -150px 0px; }
-.raynor-s-raiders,
+.raynors-raiders,
 .dusk-wings            { background-position: -180px 0px; }
 .relentless-leader     { background-position: -210px 0px; }
 .bullseye              { background-position: -240px 0px; }
@@ -1963,14 +2005,14 @@
 .blood-and-thunder,
 .hunger-of-the-wolf,
 .lightning-bond,
-.spiritwalker-s-grace,
+.spiritwalkers-grace,
 .tidal-waves,
 .farsight,
 .totemic-projection,
 .ancestral-healing,
-.farseer-s-blessing,
+.farseers-blessing,
 .bloodlust,
-.gladiator-s-war-shout,
+.gladiators-war-shout,
 .earthliving-enchant,
 .healing-totem { background: url(../img/talents/rehgar.png); }
 
@@ -1986,13 +2028,13 @@
 .blood-and-thunder,
 .hunger-of-the-wolf    { background-position:  -60px 0px; }
 .lightning-bond        { background-position:  -90px 0px; }
-.spiritwalker-s-grace,
+.spiritwalkers-grace,
 .tidal-waves           { background-position: -120px 0px; }
 .farsight              { background-position: -150px 0px; }
 .ancestral-healing,
-.farseer-s-blessing    { background-position: -180px 0px; }
+.farseers-blessing     { background-position: -180px 0px; }
 .bloodlust,
-.gladiator-s-war-shout { background-position: -210px 0px; }
+.gladiators-war-shout  { background-position: -210px 0px; }
 .earthliving-enchant   { background-position: -240px 0px; }
 .healing-totem         { background-position: -270px 0px; }
 
@@ -2014,16 +2056,19 @@
 .unleash-the-boars,
 .kill-command,
 .feign-death,
-.barkskin { background: url(../img/talents/rexxar.png); }
+.barkskin,
+.animal-husbandry,
+.dire-beast { background: url(../img/talents/rexxar.png); }
 
 .flare                { background-position:    0px 0px; }
 .hungry-bear,
+.easy-prey,
 .thrill-of-the-hunt   { background-position:  -30px 0px; }
 .crippling-talons,
 .bird-of-prey,
 .aspect-of-the-hawk   { background-position:  -60px 0px; }
 .taking-flight        { background-position:  -90px 0px; }
-.easy-prey            { background-position: -120px 0px; }
+//            { background-position: -120px 0px; }
 .blood-of-the-rhino,
 .critical-care        { background-position: -150px 0px; }
 .aspect-of-the-beast,
@@ -2033,7 +2078,54 @@
 .unleash-the-boars,
 .kill-command         { background-position: -240px 0px; }
 .feign-death          { background-position: -270px 0px; }
-.barkskin             { background-position: -300px 0px; }
+.barkskin,
+.dire-beast,          { background-position: -300px 0px; }
+.animal-husbandry     { background-position: -300px 0px; }
+
+//Samuro
+.way-of-illusion,
+.mirage,
+.mirrored-steel,
+.way-of-the-blade,
+.burning-blade,
+.merciless-strikes,
+.way-of-the-wind,
+.one-with-the-wind,
+.kawarimi,
+.harsh-winds,
+.wind-strider,
+.deflection,
+.press-the-attack,
+.blademasters-pursuit,
+.phantom-pain,
+.crushing-blows,
+.bladestorm,
+.dance-of-death,
+.illusion-master,
+.three-blade-style,
+.shukuchi { background: url(../img/talents/samuro.png); }
+
+.way-of-illusion,
+.mirage,
+.mirrored-steel       { background-position:    0px 0px; }
+.way-of-the-blade,
+.burning-blade,
+.merciless-strikes    { background-position:  -30px 0px; }
+.way-of-the-wind,
+.one-with-the-wind,
+.kawarimi,
+.harsh-winds,
+.wind-strider         { background-position:  -60px 0px; }
+.deflection,
+.press-the-attack,
+.blademasters-pursuit { background-position:  -90px 0px; }
+.phantom-pain         { background-position: -120px 0px; }
+.crushing-blows       { background-position: -150px 0px; }
+.bladestorm,
+.dance-of-death       { background-position: -180px 0px; }
+.illusion-master,
+.three-blade-style    { background-position: -210px 0px; }
+.shukuchi             { background-position: -240px 0px; }
 
 //Sgt. Hammer
 .advanced-artillery,
@@ -2048,7 +2140,7 @@
 .slowing-mines,
 .bullhead-mines,
 .mine-field,
-.hyper-cooling-engines,
+.hypercooling-engines,
 .blunt-force-gun,
 .orbital-bfg,
 .napalm-strike,
@@ -2066,7 +2158,7 @@
 .slowing-mines,
 .bullhead-mines,
 .mine-field            { background-position: -120px 0px; }
-.hyper-cooling-engines { background-position: -150px 0px; }
+.hypercooling-engines { background-position: -150px 0px; }
 .blunt-force-gun,
 .orbital-bfg           { background-position: -180px 0px; }
 .napalm-strike,
@@ -2168,9 +2260,10 @@
 .wailing-arrow,
 .deafening-blast,
 .mind-control,
-.dark-lady-s-call,
+.dark-ladys-call,
 .windrunner,
-.will-of-the-forsaken { background: url(../img/talents/sylvanas.png); }
+.will-of-the-forsaken,
+.dreadful-wake { background: url(../img/talents/sylvanas.png); }
 
 .overflowing-quiver,
 .withering-barrage,
@@ -2188,7 +2281,8 @@
 .wailing-arrow,
 .deafening-blast         { background-position: -180px 0px; }
 .mind-control,
-.dark-lady-s-call        { background-position: -210px 0px; }
+.dark-ladys-call        { background-position: -210px 0px; }
+.dreadful-wake,
 .windrunner              { background-position: -240px 0px; }
 .will-of-the-forsaken    { background-position: -270px 0px; }
 

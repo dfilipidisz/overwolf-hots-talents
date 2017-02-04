@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "webpack": "node node_modules/webpack/bin/webpack.js"
+    "build": "node node_modules/webpack/bin/webpack.js"
   },
   "dependencies": {
     "bootstrap": "3.3.7",

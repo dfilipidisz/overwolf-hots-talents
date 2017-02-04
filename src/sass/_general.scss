@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/OpenSans-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansbold';
+  src: url('../fonts/OpenSans-Bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   overflow: hidden;
   height: 100%;
@@ -7,7 +21,7 @@ html {
 body {
   background-color: transparent;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'open_sansregular', sans-serif;
   color: white;
 
   @include noselect;

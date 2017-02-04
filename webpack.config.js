@@ -85,7 +85,10 @@ module.exports = {
     },
     {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('css-loader?minimize=true!sass-loader')
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: 'css-loader?minimize=true!sass-loader'
+      })
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,

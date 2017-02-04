@@ -117,7 +117,21 @@
 .Diablo.fearful-presence,
 .Diablo.hellgate,
 .ETC.hammeron,
-.fish-tank, { background: url(../img/talents/general.png); }
+.fish-tank,
+.templars-will,
+.khaydarin-resonance,
+.nullification,
+.prismatic-link,
+.Tassadar.shield-battery,
+.blood-frenzy,
+.grim-task,
+.combo-slash,
+.mending-strikes,
+.master-warpblade,
+.vigor,
+.combat-readiness,
+.you-want-axe,
+.let-the-killing-begin { background: url(../img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -133,6 +147,8 @@
 .manticore,                                                     //Valla
 .sizzlin-attacks,
 .ETC.hammeron,
+.combo-slash,                                                   //Zeratul
+.master-warpblade,                                              //Zeratul
 .focused-attack          { background-position:      0px 0px; }
 .spell-shield            { background-position:    -30px 0px; }
 .Diablo.speed-demon,
@@ -151,6 +167,7 @@
 .cleanse                 { background-position:   -180px 0px; }
 .ice-block               { background-position:   -210px 0px; }
 .hardened-focus          { background-position:   -240px 0px; }
+.Tassadar.shield-battery,
 .storm-shield            { background-position:   -270px 0px; }
 .rewind                  { background-position:   -300px 0px; }
 .ossein-renewal,                                                //Leoric
@@ -168,6 +185,7 @@
 .blood-for-blood         { background-position:   -480px 0px; }
 .hardened-shield,
 .hardened-skin           { background-position:   -510px 0px; } //Rexxar
+.you-want-axe,
 .seasoned-marksman       { background-position:   -540px 0px; }
 .impatience-is-a-virtue,                                        //The Lost Vikings
 .Diablo.diabolical-momentum,
@@ -183,12 +201,15 @@
 .leeching-rounds,                                               //Tracer
 .hammer-gains,                                                  //Falstad
 .spectral-leech,                                                //Leoric
+.mending-strikes,                                               //Zeratul
 .vigorous-assault        { background-position:   -600px 0px; }
 .first-aid               { background-position:   -630px 0px; }
 .overdrive               { background-position:   -660px 0px; }
 .sprint                  { background-position:   -690px 0px; }
 .survivalist-training,                                          //Rexxar
 .mana-addict,                                                   //Kael'thas
+.khaydarin-resonance,                                           //Tassadar
+.vigor,                                                         //Valeera
 .conjurers-pursuit       { background-position:   -720px 0px; }
 .envenom                 { background-position:   -750px 0px; }
 .arcane-dynamo,                                                 //Kael'thas
@@ -197,12 +218,16 @@
 .protective-shield       { background-position:   -840px 0px; }
 .Chromie.timewalkers-pursuit,
 .clairvoyance            { background-position:   -870px 0px; }
+.nullification,                                                 //Tassadar
 .shrink-ray              { background-position:   -900px 0px; }
 .scouting-drone          { background-position:   -930px 0px; }
 .demolitionist           { background-position:   -960px 0px; }
+.grim-task,                                                     //Zeratul
 .gathering-power         { background-position:   -990px 0px; }
 .promote                 { background-position:  -1020px 0px; }
 .master-assassin,                                               //Tychus
+.blood-frenzy,                                                  //Butcher
+.let-the-killing-begin,
 .berserk                 { background-position:  -1050px 0px; }
 .maelstrom-shells,                                              //Sgt. Hammer
 .throwing-axes,                                                 //Rexxar
@@ -217,12 +242,15 @@
 .grizzled-fortitude,
 .reinforce,                                                     //Johanna
 .fish-tank,
+.combat-readiness,                                               //Valeera
 .block                   { background-position:  -1170px 0px; }
 .wildfire-bear,                                                 //Rexxar
 .burning-rage            { background-position:  -1200px 0px; }
 .dampen-magic            { background-position:  -1230px 0px; }
 .arcane-brilliance       { background-position:  -1260px 0px; } //Medivh
+.prismatic-link,                                                //Tassadar
 .cleaver                 { background-position:  -1290px 0px; } //Butcher
+.templars-will           { background-position:  -1320px 0px; } //Tassadar
 
 //Abathur
 .Abathur.pressurized-glands,
@@ -2290,11 +2318,11 @@
 .overload,
 .static-charge,
 .resonation,
-.psi-infusion,
+.psiinfusion,
 .second-strike,
 .reinforce-structure,
 .leeching-plasma,
-.khala-s-embrace,
+.khalas-embrace,
 .evasive-shielding,
 .mental-acuity,
 .scryer,
@@ -2304,18 +2332,30 @@
 .archon,
 .twilight-archon,
 .force-wall,
-.force-barrier { background: url(../img/talents/tassadar.png); }
+.force-barrier,
+.khalas-celerity,
+.khalas-light,
+.psionic-projection,
+.aduns-wisdom,
+.phase-disruption,
+.psionic-echo,
+.focused-beam { background: url(../img/talents/tassadar.png); }
 
 .overload,
 .static-charge,
+.phase-disruption,
 .resonation           { background-position:    0px 0px; }
-.psi-infusion,
+.psiinfusion,
+.psionic-echo,
 .second-strike        { background-position:  -30px 0px; }
 .reinforce-structure,
 .leeching-plasma,
-.khala-s-embrace,
+.khalas-celerity,
+.psionic-projection,
 .evasive-shielding    { background-position:  -60px 0px; }
 .mental-acuity,
+.aduns-wisdom,
+.focused-beam,
 .scryer               { background-position:  -90px 0px; }
 .deep-shift,
 .prescience,
@@ -2324,6 +2364,8 @@
 .twilight-archon      { background-position: -150px 0px; }
 .force-wall,
 .force-barrier        { background-position: -180px 0px; }
+.khalas-embrace       { background-position: -210px 0px; }
+.khalas-light         { background-position: -240px 0px; }
 
 //The Butcher
 .invigoration,
@@ -2334,7 +2376,6 @@
 .cheap-shot,
 .victuals,
 .abattoir,
-.blood-frenzy,
 .unrelenting-pursuit,
 .final-assault,
 .savage-charge,
@@ -2354,8 +2395,7 @@
 .chop-meat,
 .cheap-shot             { background-position:  -30px 0px; }
 .victuals,
-.abattoir,
-.blood-frenzy           { background-position:  -60px 0px; }
+.abattoir               { background-position:  -60px 0px; }
 .unrelenting-pursuit,
 .final-assault,
 .meat-shield,
@@ -2375,9 +2415,9 @@
 .spy-games,
 .erik-the-swift,
 .explosive-attacks,
-.pain-don-t-hurt,
+.pain-dont-hurt,
 .baleog-the-fierce,
-.it-s-a-sabotage,
+.its-a-sabotage,
 .spin-to-win,
 .norse-force,
 .longboat-raid,
@@ -2394,9 +2434,9 @@
 .spy-games,
 .erik-the-swift         { background-position:  -30px 0px; }
 .explosive-attacks,
-.pain-don-t-hurt,
+.pain-dont-hurt,
 .baleog-the-fierce      { background-position:  -60px 0px; }
-.it-s-a-sabotage        { background-position:  -90px 0px; }
+.its-a-sabotage        { background-position:  -90px 0px; }
 .spin-to-win            { background-position: -120px 0px; }
 .norse-force            { background-position: -150px 0px; }
 .longboat-raid,
@@ -2416,7 +2456,7 @@
 .stone-wolves,
 .restless-wolves,
 .mana-tide,
-.frostwolf-s-grace,
+.frostwolfs-grace,
 .wind-shear,
 .grace-of-air,
 .tempest-fury,
@@ -2434,7 +2474,7 @@
 .stone-wolves,
 .restless-wolves     { background-position:  -30px 0px; }
 .mana-tide,
-.frostwolf-s-grace   { background-position:  -60px 0px; }
+.frostwolfs-grace   { background-position:  -60px 0px; }
 .wind-shear,
 .grace-of-air,
 .tempest-fury        { background-position:  -90px 0px; }
@@ -2505,14 +2545,15 @@
 .spray-n-pray,
 .lead-rain,
 .armor-piercing-rounds,
-.that-s-the-stuff { background: url(../img/talents/tychus.png); }
+.thats-the-stuff { background: url(../img/talents/tychus.png); }
 
 .shrug-it-off,
+.press-the-advantage,
 .bob-and-weave         { background-position:    0px 0px; }
-.press-the-advantage   { background-position:  -30px 0px; }
-.dash                  { background-position:  -60px 0px; }
+.dash                  { background-position:  -30px 0px; }
+//                     { background-position:  -60px 0px; }
 .combat-tactician      { background-position:  -90px 0px; }
-.that-s-the-stuff,
+.thats-the-stuff,
 .in-the-rhythm,        { background-position: -120px 0px; }
 .fully-loaded          { background-position: -150px 0px; }
 .the-bigger-they-are   { background-position: -180px 0px; }
@@ -2532,7 +2573,7 @@
 .protection-in-death,
 .even-in-death,
 .horadric-reforging,
-.angel-s-grace,
+.angels-grace,
 .blade-of-justice,
 .purge-evil,
 .retribution,
@@ -2551,7 +2592,7 @@
 
 .protection-in-death  { background-position:    0px 0px; }
 .horadric-reforging,
-.angel-s-grace,
+.angels-grace,
 .blade-of-justice     { background-position:  -30px 0px; }
 .purge-evil,
 .retribution,
@@ -2573,7 +2614,7 @@
 .celestial-attunement,
 .quickening-blessing,
 .overflowing-light,
-.ranger-s-mark,
+.rangers-mark,
 .huntress-fury,
 .mark-of-mending,
 .empower,
@@ -2583,7 +2624,7 @@
 .lunar-blaze,
 .shooting-star,
 .shadowstalk,
-.hunter-s-swiftness,
+.hunters-swiftness,
 .starfall,
 .celestial-wrath,
 .trueshot-aura { background: url(../img/talents/tyrande.png); }
@@ -2591,7 +2632,7 @@
 .celestial-attunement,
 .quickening-blessing,
 .overflowing-light     { background-position:    0px 0px; }
-.ranger-s-mark,
+.rangers-mark,
 .huntress-fury,
 .mark-of-mending       { background-position:  -30px 0px; }
 .empower,
@@ -2601,7 +2642,7 @@
 .lunar-blaze,
 .shooting-star         { background-position: -120px 0px; }
 .shadowstalk,
-.hunter-s-swiftness    { background-position: -150px 0px; }
+.hunters-swiftness    { background-position: -150px 0px; }
 .starfall,
 .celestial-wrath       { background-position: -180px 0px; }
 .trueshot-aura         { background-position: -210px 0px; }
@@ -2645,6 +2686,57 @@
 .redemption                 { background-position: -270px 0px; }
 .beacon-of-light            { background-position: -300px 0px; }
 
+//Valeera
+.subtlety,
+.initiative,
+.elusiveness,
+.nightslayer,
+.crippling-poison,
+.relentless-strikes,
+.mutilate,
+.seal-fate,
+.hemorrhage,
+.strangle,
+.rupture,
+.wound-poison,
+.fatal-finesse,
+.slice-and-dice,
+.expose-armor,
+.assassinate,
+.death-from-above,
+.smoke-bomb,
+.adrenaline-rush,
+.cloak-of-shadows,
+.enveloping-shadows,
+.blind,
+.thistle-tea,
+.cold-blood  { background: url(../img/talents/valeera.png); }
+
+.subtlety,
+.initiative,
+.elusiveness,
+.nightslayer         { background-position:    0px 0px; }
+.crippling-poison    { background-position:  -30px 0px; }
+.relentless-strikes,
+.mutilate,
+.seal-fate           { background-position:  -60px 0px; }
+.hemorrhage,
+.strangle,
+.rupture             { background-position:  -90px 0px; }
+.wound-poison        { background-position: -120px 0px; }
+.fatal-finesse       { background-position: -150px 0px; }
+.slice-and-dice,
+.expose-armor        { background-position: -180px 0px; }
+.assassinate,
+.death-from-above    { background-position: -210px 0px; }
+.smoke-bomb,
+.adrenaline-rush     { background-position: -240px 0px; }
+.cloak-of-shadows,
+.enveloping-shadows  { background-position: -270px 0px; }
+.blind               { background-position: -300px 0px; }
+.thistle-tea         { background-position: -330px 0px; }
+.cold-blood          { background-position: -360px 0px; }
+
 //Valla
 .cost-effective-materials,
 .puncturing-arrow,
@@ -2667,7 +2759,8 @@
 .creed-of-the-hunter,
 .death-dealer,
 .gloom,
-.seething-hatred  { background: url(../img/talents/valla.png); }
+.seething-hatred,
+.death-siphon  { background: url(../img/talents/valla.png); }
 
 .cost-effective-materials,
 .puncturing-arrow,
@@ -2688,26 +2781,73 @@
 .tumble                    { background-position: -120px 0px; }
 .repeating-arrow           { background-position: -150px 0px; }
 .strafe,
-.vengeance                 { background-position: -180px 0px; }
+.death-siphon              { background-position: -180px 0px; }
 .rain-of-vengeance,
 .storm-of-vengeance        { background-position: -210px 0px; }
+
+//Varian
+.lions-maw,
+.overpower,
+.shield-wall,
+.live-by-the-sword,
+.high-kings-quest,
+.warbringer,
+.juggernaut,
+.second-wind,
+.victory-rush,
+.taunt,
+.vigilance,
+.colossus-smash,
+.master-at-arms,
+.twin-blades-of-fury,
+.frenzy,
+.banner-of-stormwind,
+.banner-of-ironforge,
+.banner-of-dalaran,
+.mortal-strike,
+.shattering-throw,
+.glory-to-the-alliance,
+.demoralizing-shout { background: url(../img/talents/varian.png); }
+
+.lions-maw             { background-position:    0px 0px; }
+.overpower,
+.shield-wall,
+.live-by-the-sword     { background-position:  -30px 0px; }
+.high-kings-quest      { background-position:  -60px 0px; }
+.warbringer,
+.juggernaut            { background-position:  -90px 0px; }
+.second-wind           { background-position: -120px 0px; }
+.victory-rush          { background-position: -150px 0px; }
+.taunt,
+.vigilance             { background-position: -180px 0px; }
+.colossus-smash,
+.master-at-arms        { background-position: -210px 0px; }
+.twin-blades-of-fury,
+.frenzy                { background-position: -240px 0px; }
+.banner-of-stormwind   { background-position: -270px 0px; }
+.banner-of-ironforge   { background-position: -300px 0px; }
+.banner-of-dalaran     { background-position: -330px 0px; }
+.mortal-strike         { background-position: -360px 0px; }
+.shattering-throw      { background-position: -390px 0px; }
+.glory-to-the-alliance { background-position: -420px 0px; }
+.demoralizing-shout    { background-position: -450px 0px; }
 
 //Xul
 .backlash,
 .shackler,
 .shade,
-.death-s-reach,
+.deaths-reach,
 .decrepify,
 .flowing-wounds,
 .mortal-wound,
 .jailors,
 .amplify-damage,
-.trag-oul-s-essence,
-.rathma-s-blessing,
+.tragouls-essence,
+.rathmas-blessing,
 .corpse-explosion,
 .skeleton-mastery,
 .harvest-vitality,
-.giant-s-curse,
+.giants-curse,
 .weaken,
 .poison-nova,
 .call-of-the-grave,
@@ -2718,18 +2858,18 @@
 .backlash            { background-position:    0px 0px; }
 .shackler            { background-position:  -30px 0px; }
 .shade               { background-position:  -60px 0px; }
-.death-s-reach,
+.deaths-reach,
 .decrepify,
 .flowing-wounds,
 .mortal-wound        { background-position:  -90px 0px; }
 .jailors,
 .amplify-damage      { background-position: -120px 0px; }
-.trag-oul-s-essence,
-.rathma-s-blessing,
+.tragouls-essence,
+.rathmas-blessing,
 .corpse-explosion,
 .skeleton-mastery    { background-position: -150px 0px; }
 .harvest-vitality,
-.giant-s-curse       { background-position: -180px 0px; }
+.giants-curse        { background-position: -180px 0px; }
 .weaken              { background-position: -210px 0px; }
 .poison-nova,
 .call-of-the-grave   { background-position: -240px 0px; }
@@ -2851,7 +2991,6 @@
 .rending-cleave,
 .rapid-displacement,
 .wormhole,
-.master-warp-blade,
 .assassin-s-blade,
 .sustained-anomaly,
 .shadow-spike,
@@ -2860,20 +2999,69 @@
 .nerazim-fury,
 .void-prison,
 .protective-prison,
-.vorpal-blade { background: url(../img/talents/zeratul.png); }
+.vorpal-blade,
+.shadow-hunter,
+.seeker-in-the-dark,
+.slip-into-shadow,
+.shroud-of-adun,
+.sentenced-to-death,
+.gift-of-the-xelnaga { background: url(../img/talents/zeratul.png); }
 
 .greater-cleave,
 .void-slash,
 .rending-cleave      { background-position:    0px 0px; }
 .rapid-displacement,
+.shadow-hunter,
 .wormhole            { background-position:  -30px 0px; }
-.master-warp-blade,
+.shroud-of-adun,
 .assassin-s-blade    { background-position:  -60px 0px; }
 .sustained-anomaly,
 .shadow-spike,
+.seeker-in-the-dark,
+.sentenced-to-death,
 .double-bombs        { background-position:  -90px 0px; }
 .vorpal-blade        { background-position: -120px 0px; }
 .shadow-assault,
 .nerazim-fury        { background-position: -150px 0px; }
 .void-prison,
-.protective-prison   { background-position: -180px 0px; }
+.gift-of-the-xelnaga { background-position: -180px 0px; }
+.slip-into-shadow    { background-position: -210px 0px; }
+
+//Zul'jin
+.boneslicer,
+.vicious-assault,
+.eye-of-zuljin,
+.arcanite-axes,
+.wrong-place-wrong-time,
+.swirling-death,
+.trolls-blood,
+.forest-medicine,
+.headhunter,
+.recklessness,
+.ferocity,
+.tazdingo,
+.amani-resilience,
+.guillotine,
+.buzzsaw,
+.voodoo-shuffle,
+.lacerate,
+.ensnare { background: url(../img/talents/zuljin.png); }
+
+.boneslicer,
+.vicious-assault,
+.eye-of-zuljin           { background-position:    0px 0px; }
+.arcanite-axes,
+.wrong-place-wrong-time,
+.swirling-death          { background-position:  -30px 0px; }
+.trolls-blood,
+.forest-medicine         { background-position:  -60px 0px; }
+.headhunter              { background-position:  -90px 0px; }
+.recklessness,
+.ferocity                { background-position: -120px 0px; }
+.tazdingo,
+.amani-resilience        { background-position: -150px 0px; }
+.guillotine,
+.buzzsaw                 { background-position: -180px 0px; }
+.voodoo-shuffle          { background-position: -210px 0px; }
+.lacerate                { background-position: -240px 0px; }
+.ensnare                 { background-position: -270px 0px; }

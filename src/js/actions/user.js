@@ -3,7 +3,7 @@ import * as constants from '../constants';
 const _gotUser = function (username) {
   return {
     type: constants.GOT_USER,
-    username
+    username,
   };
 };
 

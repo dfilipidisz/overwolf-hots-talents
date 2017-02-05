@@ -1,6 +1,15 @@
-export navigation from './navigation';
-export talents from './talents';
-export notifications from './notifications';
-export user from './user';
-export settings from './settings';
-export led from './led';
+import navigation from './navigation';
+import talents from './talents';
+import notifications from './notifications';
+import user from './user';
+import settings from './settings';
+import led from './led';
+
+export {
+  navigation,
+  talents,
+  notifications,
+  user,
+  settings,
+  led,
+};

@@ -2,7 +2,7 @@ import * as constants from '../constants';
 
 const _toggleAutoClose = function () {
   return {
-    type: constants.SETTING_TOGGLE_AUTO_CLOSE
+    type: constants.SETTING_TOGGLE_AUTO_CLOSE,
   };
 };
 

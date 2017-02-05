@@ -1,13 +1,12 @@
-const React = require('react');
+import React from 'react';
 import { connect } from 'react-redux';
 import { TALENTS_PAGES } from '../constants';
-const SelectHero = require('./SelectHero');
-const TalentTables = require('./TalentTables');
-const Notifications = require('./Notifications');
+import SelectHero from './SelectHero';
+import TalentTables from './TalentTables';
+import Notifications from './Notifications';
 
 class WinrateTalents extends React.Component {
-  render () {
-
+  render() {
     if (this.props.isFetching) {
       return (
         <section className='loading'>
@@ -27,8 +26,7 @@ class WinrateTalents extends React.Component {
 }
 
 class PopularTalents extends React.Component {
-  render () {
-
+  render() {
     if (this.props.isFetching) {
       return (
         <section className='loading'>
@@ -50,29 +48,23 @@ class PopularTalents extends React.Component {
 class PageTalents extends React.Component {
 
   render() {
-
-    let { page, isFetching } = this.props;
+    const { page, isFetching } = this.props;
 
     if (page === TALENTS_PAGES.POPULARITY) {
       return (
-        <PopularTalents isFetching={isFetching} />
+        <PopularTalents isFetching={ isFetching } />
       );
-    }
-    else if (page === TALENTS_PAGES.WINRATE) {
+    } else if (page === TALENTS_PAGES.WINRATE) {
       return (
-        <WinrateTalents isFetching={isFetching} />
+        <WinrateTalents isFetching={ isFetching } />
       );
     }
-    else {
-      return (
-        <section />
-      );
-    }
-
+    return (
+      <section />
+    );
   }
-};
+}
 
 module.exports = connect(
-  state => ({ page: state.talents.page, isFetching: state.talents.isFetching }),
-  null
+  state => ({ page: state.talents.page, isFetching: state.talents.isFetching })
 )(PageTalents);

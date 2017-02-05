@@ -5,8 +5,11 @@ import { minimizeApp } from '../actions/navigation';
 
 export const HideApp = WrappedComponent => {
   class AppHider extends React.Component {
-    constructor (props) {
-      super(props);
+
+    constructor() {
+      super();
+
+      this.hoverOut = this.hoverOut.bind(this);
     }
 
     hoverOut() {
@@ -18,21 +21,20 @@ export const HideApp = WrappedComponent => {
     render() {
       if (this.props.page !== PAGES.MINIMIZED) {
         return (
-          <div onMouseLeave={ this.hoverOut.bind(this)} style={{position: 'relative'}} >
-            <WrappedComponent {...this.props} />
+          <div onMouseLeave={ this.hoverOut } style={ { position: 'relative' } } >
+            <WrappedComponent { ...this.props } />
           </div>
         );
       }
-      else {
-        return <WrappedComponent {...this.props} />;
-      }
+
+      return <WrappedComponent { ...this.props } />;
     }
   }
 
   AppHider.propTypes = {
-    navigateTo: React.PropTypes.func.isRequired,
     page: React.PropTypes.string.isRequired,
-    autoClose: React.PropTypes.bool.isRequired
+    autoClose: React.PropTypes.bool.isRequired,
+    minimizeApp: React.PropTypes.func,
   };
 
   return connect(

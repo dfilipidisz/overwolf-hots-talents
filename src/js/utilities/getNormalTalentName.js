@@ -1,15 +1,15 @@
-const getSimpleTalentName = require('./getSimpleTalentName');
+import getSimpleTalentName from './getSimpleTalentName';
 
-module.exports = function(talent, data) {
-  let lvls = ['1', '4', '7', '10', '13', '16', '20'];
-  
+export default (talent, data) => {
+  const lvls = ['1', '4', '7', '10', '13', '16', '20'];
+
   for (let i = 0; i < lvls.length; i++) {
-    for (let j = 0; j < data['lvl' + lvls[i]].length; j++) {
-      if (getSimpleTalentName(data['lvl' + lvls[i]][j].title) === talent ) {
-        return data['lvl' + lvls[i]][j].title;
+    for (let j = 0; j < data[`lvl${lvls[i]}`].length; j++) {
+      if (getSimpleTalentName(data[`lvl${lvls[i]}`][j].title) === talent) {
+        return data[`lvl${lvls[i]}`][j].title;
       }
     }
   }
-  
+
   return talent;
-}
+};

@@ -1,11 +1,10 @@
-const React = require('react');
+import React from 'react';
 import { TALENTS_PAGES } from '../constants';
 
-module.exports = class SecondaryToolbar extends React.Component {
+export default class SecondaryToolbar extends React.Component {
 
   render() {
-
-    let { page, navigateTo } = this.props;
+    const { page, navigateTo } = this.props;
 
     return (
       <div id='secondary-toolbar'>

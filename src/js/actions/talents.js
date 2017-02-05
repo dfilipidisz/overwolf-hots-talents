@@ -3,28 +3,28 @@ import { TALENTS_NAVIGATE_TO, TALENTS_START_FETCH, TALENTS_SUCCESSFUL_FETCH, TAL
 export function talentsNavigateTo(page) {
   return {
     type: TALENTS_NAVIGATE_TO,
-    page: page
-  }
+    page,
+  };
 }
 
 export function talentsChooseHero(hero) {
   return {
     type: TALENTS_CHOOSE_HERO,
-    hero: hero
-  }
+    hero,
+  };
 }
 
 export function openTalentLevel(lvlIndex) {
   return {
     type: TALENTS_OPEN_TALENT_LEVEL,
-    lvlIndex: lvlIndex
-  }
+    lvlIndex,
+  };
 }
 export function closeTalentLevel(lvlIndex) {
   return {
     type: TALENTS_CLOSE_TALENT_LEVEL,
-    lvlIndex: lvlIndex
-  }
+    lvlIndex,
+  };
 }
 
 function checkStatus(response) {
@@ -32,21 +32,21 @@ function checkStatus(response) {
     return response;
   }
 
-  let error = new Error(response.statusText);
+  const error = new Error(response.statusText);
   error.response = response;
   throw error;
 }
 
 function talentFetch() {
   return {
-    type: TALENTS_START_FETCH
+    type: TALENTS_START_FETCH,
   };
 }
 
 function talentDataArrived(payload) {
   return {
     type: TALENTS_SUCCESSFUL_FETCH,
-    data: payload
+    data: payload,
   };
 }
 
@@ -54,22 +54,22 @@ export function fetchTalentData() {
   return function (dispatch) {
     dispatch(talentFetch());
 
-    let fetchInit = {
+    const fetchInit = {
       method: 'GET',
       headers: {
-        //Accept: 'application/json',
-        //'Content-Type': 'application/json'
-      }
+        // Accept: 'application/json',
+        // 'Content-Type': 'application/json'
+      },
     };
 
-    return fetch('http://hots-tool.ddns.net/public/data.json', fetchInit)
+    return fetch('http://hots-tool.ddns.net/public/data_v2.json', fetchInit)
       .then(checkStatus)
-      .then(response => response.json())  //parse json
+      .then(response => response.json())  // parse json
       .then((res) => {
         dispatch(talentDataArrived(res));
       })
       .catch((error) => {
-        console.log('Network error: ' + error);
+        console.log(`Network error: ${error}`);
       });
   };
 }

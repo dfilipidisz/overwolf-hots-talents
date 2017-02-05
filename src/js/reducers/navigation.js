@@ -2,24 +2,22 @@ import { NAVIGATE_TO, MINIMIZE_APP, MAXIMIZE_APP, PAGES } from '../constants';
 
 const initialState = {
   page: PAGES.MINIMIZED,
-  lastOpenPage: PAGES.TALENTS
-}
+  lastOpenPage: PAGES.TALENTS,
+};
 
 export default function update(state = initialState, action) {
-  if(action.type === NAVIGATE_TO) {
+  if (action.type === NAVIGATE_TO) {
     return Object.assign({}, state, {
       page: action.page,
-      lastOpenPage: action.page
+      lastOpenPage: action.page,
     });
-  }
-  else if (action.type === MINIMIZE_APP) {
+  } else if (action.type === MINIMIZE_APP) {
     return Object.assign({}, state, {
-      page: PAGES.MINIMIZED
+      page: PAGES.MINIMIZED,
     });
-  }
-  else if (action.type === MAXIMIZE_APP) {
+  } else if (action.type === MAXIMIZE_APP) {
     return Object.assign({}, state, {
-      page: state.lastOpenPage
+      page: state.lastOpenPage,
     });
   }
   return state;

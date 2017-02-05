@@ -1,23 +1,17 @@
-const React = require('react');
+import React from 'react';
 import { PAGES } from '../constants';
 import { dragWindow } from '../utility';
 
-export let OWMove = ComposedComponent => class extends React.Component {
-
-  constructor() {
-    super();
-  }
-
+export const OWMove = ComposedComponent => class extends React.Component {
   render() {
     if (this.props.page !== PAGES.MINIMIZED) {
-      return <ComposedComponent {...this.props} />;
+      return <ComposedComponent { ...this.props } />;
     }
-    else {
-      return (
-        <div className='ow-move-container' onMouseDown={dragWindow}>
-          <ComposedComponent {...this.props} />
-        </div>
-      );
-    }
+
+    return (
+      <div className='ow-move-container' onMouseDown={ dragWindow }>
+        <ComposedComponent { ...this.props } />
+      </div>
+    );
   }
 };

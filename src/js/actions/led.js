@@ -2,7 +2,13 @@ import * as constants from '../constants';
 
 const _initLed = function () {
   return {
-    type: constants.INIT_LED
+    type: constants.INIT_LED,
+  };
+};
+
+const _ledDeviceError = function () {
+  return {
+    type: constants.LED_DEVICE_ERROR,
   };
 };
 
@@ -17,8 +23,7 @@ export const initLed = function () {
           setTimeout(() => {
             dispatch(_initLed());
           }, 1000);
-        }
-        else {
+        } else {
           dispatch(_ledDeviceError());
         }
       });
@@ -28,19 +33,13 @@ export const initLed = function () {
 
 const _toggleLedPower = function () {
   return {
-    type: constants.TOGGLE_LED_POWER
+    type: constants.TOGGLE_LED_POWER,
   };
 };
 
 export const toggleLedPower = function () {
   return function (dispatch) {
     dispatch(_toggleLedPower());
-  };
-};
-
-const _ledDeviceError = function () {
-  return {
-    type: constants.LED_DEVICE_ERROR
   };
 };
 
@@ -54,7 +53,7 @@ const _ledChangeKey = function (command, key) {
   return {
     type: constants.LED_CHANGE_KEY,
     command,
-    key
+    key,
   };
 };
 
@@ -68,7 +67,7 @@ const _ledChangeColor = function (command, color) {
   return {
     type: constants.LED_CHANGE_COLOR,
     command,
-    color
+    color,
   };
 };
 
@@ -80,7 +79,7 @@ export const ledChangeColor = function (command, color) {
 
 const _resetLayout = function () {
   return {
-    type: constants.RESET_LAYOUT
+    type: constants.RESET_LAYOUT,
   };
 };
 

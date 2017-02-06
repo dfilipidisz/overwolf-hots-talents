@@ -1,3 +1,14 @@
+**v4.0.0** - 2017.02.06
+
+* Change build process to use Webpack
+* Minor inner change to talent data structure
+* Updated talent images
+* Load font locally
+* Add Yarn lockfile
+* Add linting
+* Performance improvements
+* Changed window resizing behavior
+
 **v3.4.0** - 2017.01.30
 
 * Added missed heroes

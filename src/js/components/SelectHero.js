@@ -66,18 +66,25 @@ const HeroValue = React.createClass({
 
 class SelectHero extends React.Component {
 
+  constructor() {
+    super();
+
+    this.changedHero = this.changedHero.bind(this);
+  }
+
   changedHero(value) {
     if (value === null) {
       this.props.talentsChooseHero(null);
     } else {
       this.props.talentsChooseHero(value.value);
     }
+    this.props.updateSize();
   }
 
   render() {
     return (
       <Select
-        onChange={ this.changedHero.bind(this) }
+        onChange={ this.changedHero }
         optionComponent={ HeroOption }
         options={ HEROES }
         placeholder={ <span>Select a Hero</span> }

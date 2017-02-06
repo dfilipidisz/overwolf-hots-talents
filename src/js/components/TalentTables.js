@@ -26,6 +26,7 @@ class TalentTables extends React.Component {
       case 16: this.props.openTalentLevel(5); break;
       case 20: this.props.openTalentLevel(6); break;
     }
+    this.props.updateSize();
   }
 
   closeTalentRow(lvl) {
@@ -38,6 +39,7 @@ class TalentTables extends React.Component {
       case 16: this.props.closeTalentLevel(5); break;
       case 20: this.props.closeTalentLevel(6); break;
     }
+    this.props.updateSize();
   }
 
   makeTableForLevel(lvl, data, type, isClosed) {
@@ -114,6 +116,10 @@ class TalentTables extends React.Component {
 }
 
 module.exports = connect(
-  state => ({ data: state.talents.data, selectedHero: state.talents.selectedHero, talentsClosed: state.talents.talentsClosed }),
+  state => ({
+    data: state.talents.data,
+    selectedHero: state.talents.selectedHero,
+    talentsClosed: state.talents.talentsClosed,
+  }),
   { openTalentLevel, closeTalentLevel }
 )(TalentTables);

@@ -6,28 +6,54 @@ import { dragWindow } from '../utility';
 
 class Toolbar extends React.Component {
 
+  constructor() {
+    super();
+
+    this.openTalents = this.openTalents.bind(this);
+    this.openFeedback = this.openFeedback.bind(this);
+    this.openAbout = this.openAbout.bind(this);
+    this.openSettings = this.openSettings.bind(this);
+    this.closeApp = this.closeApp.bind(this);
+  }
+
   closeApp() {
-    overwolf.windows.getCurrentWindow((result) => {
-      if (result.status === 'success') {
-        overwolf.windows.close(result.window.id);
-      }
-    });
+    overwolf.windows.close(this.props.windowId);
+  }
+
+  openTalents() {
+    this.props.navigateTo(PAGES.TALENTS);
+    this.props.updateSize();
+  }
+
+  openFeedback() {
+    this.props.navigateTo(PAGES.FEEDBACK);
+    this.props.updateSize();
+  }
+
+  openAbout() {
+    this.props.navigateTo(PAGES.ABOUT);
+    this.props.updateSize();
+  }
+
+  openSettings() {
+    this.props.navigateTo(PAGES.SETTINGS);
+    this.props.updateSize();
   }
 
   render() {
-    const { page, sessionid, navigateTo, autoClose } = this.props;
+    const { page, autoClose } = this.props;
 
     return (
       <div id='toolbar' onMouseDown={ dragWindow } style={ { cursor: 'move' } }>
         <ul>
-          <li className={ page === PAGES.TALENTS ? 'active' : null } onClick={ () => { navigateTo(PAGES.TALENTS); } }>TALENTS</li>
-          <li className={ page === PAGES.FEEDBACK ? 'active' : null } onClick={ () => { navigateTo(PAGES.FEEDBACK); } }>FEEDBACK</li>
-          <li className={ page === PAGES.ABOUT ? 'active' : null } onClick={ () => { navigateTo(PAGES.ABOUT); } }>ABOUT</li>
+          <li className={ page === PAGES.TALENTS ? 'active' : null } onClick={ this.openTalents }>TALENTS</li>
+          <li className={ page === PAGES.FEEDBACK ? 'active' : null } onClick={ this.openFeedback }>FEEDBACK</li>
+          <li className={ page === PAGES.ABOUT ? 'active' : null } onClick={ this.openAbout }>ABOUT</li>
         </ul>
         <div className='app-ops'>
           <ul>
             <li onClick={ this.closeApp }><i className='fa fa-close' /></li>
-            <li className={ page === PAGES.SETTINGS ? 'active' : null } onClick={ () => { navigateTo(PAGES.SETTINGS); } }><i className='fa fa-cog' /></li>
+            <li className={ page === PAGES.SETTINGS ? 'active' : null } onClick={ this.openSettings }><i className='fa fa-cog' /></li>
             {!autoClose
               ? <li onClick={ this.props.minimizeApp }><i className='fa fa-minus' /></li>
               : null}
@@ -37,6 +63,15 @@ class Toolbar extends React.Component {
     );
   }
 }
+
+Toolbar.propTypes = {
+  navigateTo: React.PropTypes.func,
+  updateSize: React.PropTypes.func,
+  minimizeApp: React.PropTypes.func,
+  windowId: React.PropTypes.string,
+  page: React.PropTypes.string,
+  autoClose: React.PropTypes.bool,
+};
 
 export default connect(
   state => ({ page: state.navigation.page, autoClose: state.settings.autoClose }),

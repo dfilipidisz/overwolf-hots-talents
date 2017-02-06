@@ -26,7 +26,7 @@
         "transparent": true,
         "resizable": true,
         "size": {"width":470, "height":367},
-        "min_size": {"width":470, "height":367},
+        "min_size": {"width":470, "height":280},
         "max_size": {"width":2000, "height":2000}
       }
     }

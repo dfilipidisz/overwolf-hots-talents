@@ -52,5 +52,6 @@ module.exports = {
     "jsx-a11y/no-static-element-interactions": ["off"],
     "jsx-a11y/img-has-alt": ["off"],
     "react/require-default-props": ["off"],
+    "prefer-rest-params": ["off"]
   }
 };

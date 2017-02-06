@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { OWResize } from './OWResize';
+import OWResize from './OWResize';
 import { OWMove } from './OWMove';
 import { HideApp } from './HideApp';
 import Toolbar from './Toolbar';
@@ -14,6 +14,8 @@ import Footer from './Footer';
 import PageSettings from './PageSettings';
 import { getUser } from '../actions/user';
 import { initLed } from '../actions/led';
+import HOCWindowId from './HOCWindowId';
+import { debounce } from '../utility';
 
 const { navigateTo } = require('../actions/navigation');
 const { talentsNavigateTo } = require('../actions/talents');
@@ -23,7 +25,10 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
 
-    this.updateWindowSize = this._updateWindowSize.bind(this);
+    this.updateSize = this.updateSize.bind(this);
+    this.resizeHandler = this.resizeHandler.bind(this);
+
+    this.resizeTimeout = null;
   }
 
   componentDidMount() {
@@ -31,64 +36,59 @@ class Main extends React.Component {
       this.props.getUser();
     }
 
-    window.requestAnimationFrame(this.updateWindowSize);
-
     this.props.initLed();
+
+    window.addEventListener('resize', debounce(this.resizeHandler, 32), false);
   }
 
-  _updateWindowSize() {
-    overwolf.windows.getCurrentWindow((result) => {
-      if (result.status === 'success') {
+  resizeHandler() {
+    this.updateSize(window.innerWidth);
+  }
+
+  updateSize(paramWidth) {
+    if (this.contentArea) {
+      setTimeout(() => {
         overwolf.windows.changeSize(
-          result.window.id, result.window.width, document.body.clientHeight);
-      }
-    });
-    window.requestAnimationFrame(this.updateWindowSize);
+          this.props.windowId,
+          paramWidth || this.contentArea.clientWidth,
+          this.contentArea.clientHeight);
+      }, 100);
+    }
   }
 
   render() {
+    let pageContent;
+
     if (this.props.page === PAGES.MINIMIZED) {
       return (
         <PageMinimized />
       );
     } else if (this.props.page === PAGES.TALENTS) {
-      return (
-        <div id='app-border'>
-          <Toolbar />
-          <SecondaryToolbar
-            page={ this.props.talentsPage }
-            navigateTo={ this.props.talentsNavigateTo }
-          />
-          <PageTalents />
-          <Footer />
-        </div>
-      );
+      pageContent = [
+        <SecondaryToolbar
+          key='secondary-toolbar'
+          page={ this.props.talentsPage }
+          navigateTo={ this.props.talentsNavigateTo }
+        />,
+        <PageTalents key='talents-page' updateSize={ this.updateSize } />,
+      ];
     } else if (this.props.page === PAGES.FEEDBACK) {
-      return (
-        <div id='app-border'>
-          <Toolbar />
-          <PageFeedback />
-          <Footer />
-        </div>
-      );
+      pageContent = <PageFeedback />;
     } else if (this.props.page === PAGES.ABOUT) {
-      return (
-        <div id='app-border'>
-          <Toolbar />
-          <PageAbout navigateTo={ this.props.navigateTo } />
-          <Footer />
-        </div>
-      );
+      pageContent = <PageAbout navigateTo={ this.props.navigateTo } />;
     } else if (this.props.page === PAGES.SETTINGS) {
-      return (
-        <div id='app-border'>
-          <Toolbar />
-          <PageSettings />
-          <Footer />
-        </div>
-      );
+      pageContent = <PageSettings />;
+    } else {
+      return null;
     }
-    return null;
+
+    return (
+      <div id='root-inner' ref={ (el) => { this.contentArea = el; } }>
+        <Toolbar updateSize={ this.updateSize } windowId={ this.props.windowId } />
+        { pageContent }
+        <Footer />
+      </div>
+    );
   }
 }
 
@@ -100,6 +100,7 @@ Main.propTypes = {
   initLed: React.PropTypes.func,
   navigateTo: React.PropTypes.func,
   talentsNavigateTo: React.PropTypes.func,
+  windowId: React.PropTypes.string,
 };
 
 module.exports = connect(
@@ -109,4 +110,4 @@ module.exports = connect(
     username: state.user.username,
   }),
   { navigateTo, talentsNavigateTo, getUser, initLed }
-)(HideApp(OWMove(OWResize(Main))));
+)(HOCWindowId(HideApp(OWMove(OWResize(Main)))));

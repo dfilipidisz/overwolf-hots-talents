@@ -1,27 +1,42 @@
 import React from 'react';
 import { PAGES } from '../constants';
 
-export const OWResize = ComposedComponent => class extends React.Component {
+export default (WrappedComponent) => {
+  class OWResize extends React.Component {
+    constructor() {
+      super();
 
-  dragResize(side) {
-    overwolf.windows.getCurrentWindow((result) => {
-      if (result.status === 'success') {
-        overwolf.windows.dragResize(result.window.id, side);
-      }
-    });
-  }
-
-  render() {
-    if (this.props.page === PAGES.MINIMIZED) {
-      return <ComposedComponent { ...this.props } />;
+      this.resizeRight = this.resizeRight.bind(this);
+      this.resizeLeft = this.resizeLeft.bind(this);
     }
 
-    return (
-      <div className='ow-resize-container'>
-        <div className='ow-resize-left' onMouseDown={ this.dragResize.bind(this, 'Left') } />
-        <div className='ow-resize-right' onMouseDown={ this.dragResize.bind(this, 'Right') } />
-        <ComposedComponent { ...this.props } />
-      </div>
-    );
+    resizeRight() {
+      overwolf.windows.dragResize(this.props.windowId, 'Right');
+    }
+
+    resizeLeft() {
+      overwolf.windows.dragResize(this.props.windowId, 'Left');
+    }
+
+    render() {
+      if (this.props.page === PAGES.MINIMIZED) {
+        return <WrappedComponent { ...this.props } />;
+      }
+
+      return (
+        <div className='resize-overlay'>
+          <div className='resizer right' onMouseDown={ this.resizeRight } />
+          <div className='resizer left' onMouseDown={ this.resizeLeft } />
+          <WrappedComponent { ...this.props } />
+        </div>
+      );
+    }
   }
+
+  OWResize.propTypes = {
+    windowId: React.PropTypes.string,
+    page: React.PropTypes.string,
+  };
+
+  return OWResize;
 };

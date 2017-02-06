@@ -1,46 +1,27 @@
-$dragAreaWidth: 5px;
+$dragAreaWidth: 10px;
 
-.ow-resize-container {
+.resize-overlay {
+  width: 100%;
+  height: 100vh;
   position: relative;
-}
 
-.ow-resize-left {
-  width: $dragAreaWidth;
-  position: absolute;
-  cursor: w-resize;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 6500;
-}
+  .resizer {
+    position: fixed;
 
-.ow-resize-right {
-  width: $dragAreaWidth;
-  position: absolute;
-  cursor: e-resize;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 6500;
-}
+    &.right {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: $dragAreaWidth;
+      cursor: e-resize;
+    }
 
-.ow-resize-top {
-  height: $dragAreaWidth;
-  position: absolute;
-  cursor: n-resize;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 6500;
-}
-
-.ow-resize-bottom {
-  height: $dragAreaWidth;
-  position: absolute;
-  cursor: s-resize;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 6500;
-  background-color: black;
+    &.left {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: $dragAreaWidth;
+      cursor: w-resize;
+    }
+  }
 }

@@ -14,18 +14,47 @@ export function talentsChooseHero(hero) {
   };
 }
 
-export function openTalentLevel(lvlIndex) {
+const _openTalentLevel = (lvlIndex) => {
   return {
     type: TALENTS_OPEN_TALENT_LEVEL,
     lvlIndex,
   };
-}
-export function closeTalentLevel(lvlIndex) {
+};
+
+const _closeTalentLevel = (lvlIndex) => {
   return {
     type: TALENTS_CLOSE_TALENT_LEVEL,
     lvlIndex,
   };
-}
+};
+
+export const openTalentLevel = (lvl) => {
+  return (dispatch) => {
+    switch (lvl) {
+      case 1: dispatch(_openTalentLevel(0)); break;
+      case 4: dispatch(_openTalentLevel(1)); break;
+      case 7: dispatch(_openTalentLevel(2)); break;
+      case 10: dispatch(_openTalentLevel(3)); break;
+      case 13: dispatch(_openTalentLevel(4)); break;
+      case 16: dispatch(_openTalentLevel(5)); break;
+      case 20: dispatch(_openTalentLevel(6)); break;
+    }
+  };
+};
+
+export const closeTalentLevel = (lvl) => {
+  return (dispatch) => {
+    switch (lvl) {
+      case 1: dispatch(_closeTalentLevel(0)); break;
+      case 4: dispatch(_closeTalentLevel(1)); break;
+      case 7: dispatch(_closeTalentLevel(2)); break;
+      case 10: dispatch(_closeTalentLevel(3)); break;
+      case 13: dispatch(_closeTalentLevel(4)); break;
+      case 16: dispatch(_closeTalentLevel(5)); break;
+      case 20: dispatch(_closeTalentLevel(6)); break;
+    }
+  };
+};
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { openTalentLevel, closeTalentLevel } from '../actions/talents';
+import TalentTableRow from './TalentTableRow';
 
 function talentSortPopularityDesc(a, b) {
   if (parseInt(a.popularity, 10) < parseInt(b.popularity, 10)) { return 1; }
@@ -16,35 +16,9 @@ function talentSortWinrateDesc(a, b) {
 
 class TalentTables extends React.Component {
 
-  openTalentRow(lvl) {
-    switch (parseInt(lvl, 10)) {
-      case 1: this.props.openTalentLevel(0); break;
-      case 4: this.props.openTalentLevel(1); break;
-      case 7: this.props.openTalentLevel(2); break;
-      case 10: this.props.openTalentLevel(3); break;
-      case 13: this.props.openTalentLevel(4); break;
-      case 16: this.props.openTalentLevel(5); break;
-      case 20: this.props.openTalentLevel(6); break;
-    }
-    this.props.updateSize();
-  }
-
-  closeTalentRow(lvl) {
-    switch (parseInt(lvl, 10)) {
-      case 1: this.props.closeTalentLevel(0); break;
-      case 4: this.props.closeTalentLevel(1); break;
-      case 7: this.props.closeTalentLevel(2); break;
-      case 10: this.props.closeTalentLevel(3); break;
-      case 13: this.props.closeTalentLevel(4); break;
-      case 16: this.props.closeTalentLevel(5); break;
-      case 20: this.props.closeTalentLevel(6); break;
-    }
-    this.props.updateSize();
-  }
-
   makeTableForLevel(lvl, data, type, isClosed) {
-    let sorted,
-      rows = [];
+    let sorted;
+    let rows;
 
     if (data[`lvl${lvl}`] === null) {
       return null;
@@ -59,23 +33,32 @@ class TalentTables extends React.Component {
     }
 
     if (isClosed) {
-      rows.push(
-        <tr key={ lvl } onClick={ this.openTalentRow.bind(this, lvl) }>
-          <td className='level'>{lvl}</td>
-          <td className='pic'><div className={ `talent-pic ${sorted[0].id} ${this.props.selectedHero}` } /></td>
-          <td className='name'>{sorted[0].title}</td>
-          <td className='percent'>{sorted[0][type]}%</td>
-        </tr>
+      rows = (
+        <TalentTableRow
+          isClosed={ isClosed }
+          lvl={ lvl }
+          data={ sorted[0] }
+          type={ type }
+          hero={ this.props.selectedHero }
+          talentCount={ sorted.length }
+          updateSize={ this.props.updateSize }
+          isFirst
+        />
       );
     } else {
-      sorted.forEach((talent, talentIndex) => {
-        rows.push(
-          <tr key={ talent.title } onClick={ this.closeTalentRow.bind(this, lvl) }>
-            { talentIndex === 0 ? <td className='level' rowSpan={ sorted.length }>{lvl}</td> : null }
-            <td className='pic'><div className={ `talent-pic ${talent.id} ${this.props.selectedHero}` } /></td>
-            <td className='name'>{talent.title}</td>
-            <td className='percent'>{talent[type]}%</td>
-          </tr>
+      rows = sorted.map((talent, talentIndex) => {
+        return (
+          <TalentTableRow
+            key={ talent.title }
+            isClosed={ isClosed }
+            lvl={ lvl }
+            data={ talent }
+            type={ type }
+            hero={ this.props.selectedHero }
+            talentCount={ sorted.length }
+            updateSize={ this.props.updateSize }
+            isFirst={ talentIndex === 0 }
+          />
         );
       });
     }
@@ -115,11 +98,18 @@ class TalentTables extends React.Component {
   }
 }
 
+TalentTables.propTypes = {
+  selectedHero: React.PropTypes.string,
+  updateSize: React.PropTypes.func,
+  type: React.PropTypes.string,
+  data: React.PropTypes.object,
+  talentsClosed: React.PropTypes.array,
+};
+
 module.exports = connect(
   state => ({
     data: state.talents.data,
     selectedHero: state.talents.selectedHero,
     talentsClosed: state.talents.talentsClosed,
-  }),
-  { openTalentLevel, closeTalentLevel }
+  })
 )(TalentTables);

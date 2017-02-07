@@ -37,14 +37,6 @@ export const makeFetchInit = function (method = 'POST', headers = defaultHeaders
   };
 };
 
-export const dragWindow = function () {
-  overwolf.windows.getCurrentWindow((result) => {
-    if (result.status === 'success') {
-      overwolf.windows.dragMove(result.window.id);
-    }
-  });
-};
-
 // source: https://davidwalsh.name/javascript-debounce-function
 export const debounce = (func, wait, immediate) => {
   let timeout;

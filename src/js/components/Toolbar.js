@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { PAGES } from '../constants';
 import { navigateTo, minimizeApp } from '../actions/navigation';
-import { dragWindow } from '../utility';
 
 class Toolbar extends React.Component {
 
@@ -14,10 +13,15 @@ class Toolbar extends React.Component {
     this.openAbout = this.openAbout.bind(this);
     this.openSettings = this.openSettings.bind(this);
     this.closeApp = this.closeApp.bind(this);
+    this.dragWindow = this.dragWindow.bind(this);
   }
 
   closeApp() {
     overwolf.windows.close(this.props.windowId);
+  }
+
+  dragWindow() {
+    overwolf.windows.dragMove(this.props.windowId);
   }
 
   openTalents() {
@@ -44,7 +48,7 @@ class Toolbar extends React.Component {
     const { page, autoClose } = this.props;
 
     return (
-      <div id='toolbar' onMouseDown={ dragWindow } style={ { cursor: 'move' } }>
+      <div id='toolbar' onMouseDown={ this.dragWindow } >
         <ul>
           <li className={ page === PAGES.TALENTS ? 'active' : null } onClick={ this.openTalents }>TALENTS</li>
           <li className={ page === PAGES.FEEDBACK ? 'active' : null } onClick={ this.openFeedback }>FEEDBACK</li>

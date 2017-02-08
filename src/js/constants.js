@@ -20,6 +20,7 @@ export const TALENTS_CLOSE_TALENT_LEVEL = 'TALENTS_CLOSE_TALENT_LEVEL';
 export const TALENTS_PAGES = {
   POPULARITY: 'POPULARITY',
   WINRATE: 'WINRATE',
+  PROBUILDS: 'PROBUILDS',
 };
 
 export const SERVER_URL = 'http://hots-tool.ddns.net';

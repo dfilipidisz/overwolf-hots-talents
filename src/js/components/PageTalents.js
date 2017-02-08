@@ -4,6 +4,7 @@ import { TALENTS_PAGES } from '../constants';
 import SelectHero from './SelectHero';
 import TalentTables from './TalentTables';
 import Notifications from './Notifications';
+import ProBuilds from './ProBuilds';
 
 class PageTalents extends React.Component {
 
@@ -16,6 +17,10 @@ class PageTalents extends React.Component {
           <i className='fa fa-circle-o-notch fa-spin' />
         </section>
       );
+    }
+
+    if (page === TALENTS_PAGES.PROBUILDS) {
+      return <ProBuilds />;
     }
 
     let type = 'popularity';

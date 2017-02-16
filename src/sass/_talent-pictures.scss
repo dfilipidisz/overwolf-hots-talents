@@ -117,7 +117,6 @@
 .Diablo.fearful-presence,
 .Diablo.hellgate,
 .ETC.hammeron,
-.fish-tank,
 .templars-will,
 .khaydarin-resonance,
 .nullification,
@@ -131,7 +130,9 @@
 .vigor,
 .combat-readiness,
 .you-want-axe,
-.let-the-killing-begin { background: url(../img/talents/general.png); }
+.let-the-killing-begin,
+.a-fishy-deal,
+.time-to-krill { background: url(../img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -161,6 +162,7 @@
 .Brightwing.pixie-charm,
 .wingman,                                                       //Falstad
 .covert-mission,                                                //Nova
+.a-fishy-deal,                                                  //Murky
 .bribe                   { background-position:   -120px 0px; }
 .Diablo.hellgate,
 .bolt-of-the-storm       { background-position:   -150px 0px; }
@@ -237,11 +239,11 @@
 .tenderizer,                                                    //Stitches
 .frenzy-of-kalimdor,                                            //Rexxar
 .distortion-beam,                                               //Tassadar
+.time-to-krill,                                                 //Murky
 .nexus-blades            { background-position:  -1110px 0px; }
 .searing-attacks         { background-position:  -1140px 0px; }
 .grizzled-fortitude,
 .reinforce,                                                     //Johanna
-.fish-tank,
 .combat-readiness,                                               //Valeera
 .block                   { background-position:  -1170px 0px; }
 .wildfire-bear,                                                 //Rexxar
@@ -1662,6 +1664,57 @@
 .galloping-gait       { background-position: -390px 0px; }
 .abolish-magic        { background-position: -420px 0px; }
 
+//Lucio
+.we-move-together,
+.maximum-tempo,
+.sonic-amplifier,
+.rejuvenescncia,
+.bonus-track,
+.accelerando,
+.cant-stop-wont-stop,
+.slip,
+.hard-style,
+.subwoofer,
+.heliotropics,
+.off-the-wall,
+.chase-the-bass,
+.party-mix,
+.beat-mixing,
+.boombox,
+.sound-barrier,
+.bossa-nova,
+.reverse-amp,
+.nonstop-remix,
+.back-in-the-mix,
+.bring-it-together,
+.synaesthesia-auditiva,
+.up-the-frequency { background: url(../img/talents/lucio.png); }
+
+.we-move-together      { background-position:    0px 0px; }
+.maximum-tempo,
+.sonic-amplifier,
+.rejuvenescncia,
+.bonus-track           { background-position:  -30px 0px; }
+.accelerando,
+.cant-stop-wont-stop   { background-position:  -60px 0px; }
+.slip,
+.hard-style            { background-position:  -90px 0px; }
+.subwoofer,
+.heliotropics          { background-position: -120px 0px; }
+.off-the-wall          { background-position: -150px 0px; }
+.chase-the-bass        { background-position: -180px 0px; }
+.party-mix,
+.beat-mixing           { background-position: -210px 0px; }
+.boombox               { background-position: -240px 0px; }
+.sound-barrier,
+.bossa-nova            { background-position: -270px 0px; }
+.reverse-amp,
+.nonstop-remix         { background-position: -300px 0px; }
+.back-in-the-mix       { background-position: -330px 0px; }
+.bring-it-together,
+.synaesthesia-auditiva { background-position: -360px 0px; }
+.up-the-frequency      { background-position: -390px 0px; }
+
 //Malfurion
 .harmony,
 .rampant-growth,
@@ -1777,12 +1830,12 @@
 .piercing-bolt     { background-position:    0px 0px; }
 .perfect-storm     { background-position:  -30px 0px; }
 .reverberation,
-.healing-static    { background-position:  -60px 0px; }
+.thunder-strike    { background-position:  -60px 0px; }
 .third-wind,
 .stoneform         { background-position:  -90px 0px; }
 .thunder-burn,
 .crowd-control,
-.thunder-strike    { background-position: -120px 0px; }
+.healing-static    { background-position: -120px 0px; }
 .landing-momentum,
 .dwarf-launch      { background-position: -150px 0px; }
 .skullcracker      { background-position: -180px 0px; }
@@ -1812,28 +1865,50 @@
 .march-of-the-murlocs,
 .neverending-murlocs,
 .octograb,
-.-and-a-shark-too { background: url(../img/talents/murky.png); }
+.-and-a-shark-too,
+.fish-eye,
+.egg-hunt,
+.slime-time,
+.black-lagoon,
+.slippery-when-wet,
+.egg-shell,
+.fish-tank,
+.toxic-buildup,
+.fish-oil,
+.making-inky,
+.big-tuna-kahuna { background: url(../img/talents/murky.png); }
 
 //                     { background-position:    0px 0px; }
 .bubble-breeze,
 .bubble-machine,
-.rejuvenating-bubble   { background-position:  -30px 0px; }
+.rejuvenating-bubble,
+.slippery-when-wet   { background-position:  -30px 0px; }
 .assault-egg,
-.hidden-assault        { background-position:  -60px 0px; }
+.hidden-assault,
+.fish-eye,
+.egg-shell        { background-position:  -60px 0px; }
 .bigger-slime,
 .slime-advantage,
 .continuous-slime,
-.slimy-end             { background-position:  -90px 0px; }
+.slimy-end,
+.slime-time,
+.black-lagoon,
+.toxic-buildup,
+.making-inky             { background-position:  -90px 0px; }
 .tufferfish,
 .compressed-air,
-.wrath-of-cod,
-.slimy-pufferfish      { background-position: -120px 0px; }
+.slimy-pufferfish,
+.fish-oil      { background-position: -120px 0px; }
 .living-the-dream      { background-position: -150px 0px; }
 .hindering-slime       { background-position: -180px 0px; }
 .march-of-the-murlocs,
 .neverending-murlocs  { background-position: -210px 0px; }
 .octograb,
 .-and-a-shark-too       { background-position: -240px 0px; }
+.egg-hunt       { background-position: -270px 0px; }
+.fish-tank       { background-position: -300px 0px; }
+.wrath-of-cod       { background-position: -330px 0px; }
+.big-tuna-kahuna       { background-position: -360px 0px; }
 
 //Nazeebo
 .blood-ritual,

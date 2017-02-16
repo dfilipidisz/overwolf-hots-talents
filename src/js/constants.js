@@ -68,6 +68,7 @@ export const HEROES = [
   { value: 'Li-Ming', label: 'Li-Ming' },
   { value: 'LtMorales', label: 'Lt. Morales' },
   { value: 'Lunara', label: 'Lunara' },
+  { value: 'Lucio', label: 'Lúcio' },
   { value: 'Malfurion', label: 'Malfurion' },
   { value: 'Medivh', label: 'Medivh' },
   { value: 'Muradin', label: 'Muradin' },

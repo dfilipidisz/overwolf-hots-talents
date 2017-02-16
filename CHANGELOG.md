@@ -1,3 +1,9 @@
+**v4.1.0** - 2017.02.16
+
+* Add Lucio
+* Update talent images
+* Various optimizations
+
 **v4.0.0** - 2017.02.06
 
 * Change build process to use Webpack

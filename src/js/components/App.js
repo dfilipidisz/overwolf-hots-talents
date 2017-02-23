@@ -27,8 +27,6 @@ class Main extends React.Component {
 
     this.updateSize = this.updateSize.bind(this);
     this.resizeHandler = this.resizeHandler.bind(this);
-
-    this.resizeTimeout = null;
   }
 
   componentDidMount() {

@@ -19,10 +19,15 @@ const plugins = [
   }),
   new HtmlWebpackPlugin({
     template: path.join(sourcePath, 'views/index.html'),
-
     filename: 'index.html',
+    chunks: ['vendor', 'main'],
   }),
-  new ExtractTextPlugin('index.css'),
+  new HtmlWebpackPlugin({
+    template: path.join(sourcePath, 'views/gametimer.html'),
+    filename: 'gametimer.html',
+    chunks: ['vendor', 'gametimer'],
+  }),
+  new ExtractTextPlugin('[name].[contenthash].css'),
   new CopyWebpackPlugin([
     { from: 'CHANGELOG.md', to: '../../' },
     { from: 'src/other/manifest.json', to: '../' },
@@ -62,6 +67,7 @@ if (nodeEnv === 'production') {
 module.exports = {
   entry: {
     main: './src/js/boot.js',
+    gametimer: './src/js-gametimer/boot.js',
     vendor: [
       'react',
       'react-dom',
@@ -73,7 +79,7 @@ module.exports = {
   output: {
     path: buildPath,
     publicPath: '',
-    filename: '[name].js',
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [{
@@ -87,16 +93,16 @@ module.exports = {
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: 'css-loader?minimize=true!sass-loader'
-      })
+        use: 'css-loader?minimize=true!sass-loader',
+      }),
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
-      loaders: ['file-loader', 'image-webpack-loader']
+      loaders: ['file-loader', 'image-webpack-loader'],
     },
     {
       test: /\.(otf|eot|ttf|woff|woff2)$/i,
-      loaders: ['file-loader']
+      loaders: ['file-loader'],
     }],
   },
   plugins,

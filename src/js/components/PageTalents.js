@@ -7,6 +7,14 @@ import Notifications from './Notifications';
 
 class PageTalents extends React.Component {
 
+  openGameTimer() {
+    overwolf.windows.obtainDeclaredWindow('GameTimers', (result) => {
+      if (result.status === 'success') {
+        overwolf.windows.restore(result.window.id);
+      }
+    });
+  }
+
   render() {
     const { page, isFetching } = this.props;
 
@@ -29,6 +37,7 @@ class PageTalents extends React.Component {
     return (
       <section>
         <Notifications />
+        <button className='btn btn-primary btn-block open-gametimer' onClick={ this.openGameTimer }>Open Map Timings Helper</button>
         <SelectHero updateSize={ this.props.updateSize } />
         <TalentTables type={ type } updateSize={ this.props.updateSize } />
       </section>

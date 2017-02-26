@@ -37,7 +37,7 @@ class PageTalents extends React.Component {
     return (
       <section>
         <Notifications />
-        <button className='btn btn-primary btn-block open-gametimer' onClick={ this.openGameTimer }>Open Map Timings Helper</button>
+        {/*<button className='btn btn-primary btn-block open-gametimer' onClick={ this.openGameTimer }>Open Map Timings Helper</button>*/}
         <SelectHero updateSize={ this.props.updateSize } />
         <TalentTables type={ type } updateSize={ this.props.updateSize } />
       </section>

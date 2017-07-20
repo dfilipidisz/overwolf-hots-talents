@@ -1,22 +1,246 @@
 @import '~font-awesome/css/font-awesome.css';
 @import '~react-select/scss/default';
-@import '~bootstrap/dist/css/bootstrap.css';
 
-@import 'variables';
-@import 'mixins';
-@import 'overwrites';
-@import 'general';
-@import 'ow-resize';
-@import 'page-minimized';
-@import 'page-feedback';
+$primaryColor: #0a0a1a;
+$primaryTextColor: #c3c3c3;
+$mainWidth: 729px;
+
+@import 'filters';
+@import 'talent-stats';
+@import 'talent-type-chooser';
 @import 'hero-portraits';
-@import 'talent-table';
-@import 'toolbars';
-@import 'talent-pictures';
-@import 'alert';
-@import 'settings';
 
-.open-gametimer {
+.clearfix:after {
+  content:" ";
+  display:table;
+  clear:both;
+}
+
+//React-select overwrites
+
+.Select-control {
   border-radius: 0;
-  margin-bottom: 10px;
+}
+
+.has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label, .has-value.Select--single>.Select-control .Select-value .Select-value-label {
+  color: #fff;
+}
+
+body {
+  background-color: transparent;
+  user-select: none;
+  cursor: default;
+}
+
+.app-container {
+  position: relative;
+}
+
+.main-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $mainWidth;
+  height: 450px;
+  background-color: $primaryColor;
+  color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid lighten($primaryColor, 20%);
+  padding-top: 30px;
+}
+
+.bottom-widget {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  width: $mainWidth;
+  height: 90px;
+  background-color: purple;
+}
+
+.app-navbar {
+  $height: 30px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $mainWidth;
+  height: $height;
+  background-color: lighten($primaryColor, 15%);
+  box-shadow: 0 2px 14px 0px black;
+
+  display: flex;
+  justify-content: center;
+
+  cursor: move;
+
+  .right-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $height;
+    line-height: $height;
+
+    cursor: default;
+  }
+
+  .center-nav {
+    position: absolute;
+    height: $height;
+    line-height: $height;
+
+    cursor: default;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 30px;
+    background-image: url(../assets/img/InGameLogo.png);
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+  }
+
+  .selected-hero {
+    position: absolute;
+    top: 0;
+    left: 85px;
+    width: 50px;
+    height: 30px;
+    background-color: purple;
+
+    cursor: pointer;
+  }
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-right: 5px;
+
+  float: right;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($primaryColor, 0%);
+  }
+
+  i {
+    vertical-align: middle;
+    color: $primaryTextColor;
+    line-height: 20px;
+  }
+}
+
+.nav-item {
+  float: left;
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 27px;
+  color: $primaryTextColor;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+
+  padding: 0 10px;
+
+  &:hover,
+  &.active {
+    border-bottom: 3px solid #fff;
+    color: #fff;
+  }
+}
+
+.hero-selection {
+  height: 420px;
+  width: $mainWidth;
+  overflow: hidden;
+  position: relative;
+  color: $primaryTextColor;
+
+  .hero-filter {
+
+    .filter-box {
+      height: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .Select {
+        margin-left: 10px;
+        width: 100%;
+        text-align: left;
+
+        .Select-control {
+          background-color: lighten($primaryColor, 15%);
+          color: $primaryTextColor;
+          border-color: lighten($primaryColor, 20%);
+        }
+      }
+    }
+  }
+
+  .heroes-grid {
+    height: 336px;
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 12px;
+  line-height: 12px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 5px 0;
+
+  .line {
+    z-index: 40;
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: $primaryTextColor;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+  }
+
+  .title {
+    z-index: 50;
+    color: $primaryTextColor;
+    display: inline-block;
+    background-color: $primaryColor;
+    padding: 0 5px;
+  }
+}
+
+.page-heroes,
+.page-settings {
+  height: 420px;
+  padding-top: 10px;
+  width: $mainWidth;
+  overflow: hidden;
+  position: relative;
+  color: $primaryTextColor;
+}
+
+.page-settings {
+  padding: 15px;
+
+  label {
+    color: $primaryTextColor !important;
+  }
 }

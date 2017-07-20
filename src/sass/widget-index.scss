@@ -1,0 +1,178 @@
+@import '~font-awesome/css/font-awesome.css';
+
+$primaryColor: #0a0a1a;
+$primaryTextColor: #c3c3c3;
+$mainWidth: 729px;
+
+body {
+  background-color: transparent;
+}
+
+.mini-widget {
+  background-color: $primaryColor;
+
+  border-top: 1px solid lighten($primaryColor, 20%);
+  border-right: 1px solid lighten($primaryColor, 20%);
+  border-bottom: 1px solid lighten($primaryColor, 20%);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 30px;
+  height: 160px;
+
+  .main-toggle {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid lighten($primaryColor, 20%);
+
+    cursor: pointer;
+
+    &:hover i {
+      opacity: 1;
+    }
+
+    i {
+      display: block;
+      vertical-align: middle;
+      color: #fff;
+      opacity: 0.5;
+    }
+  }
+
+  .open-details {
+    width: 30px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    i {
+      display: block;
+      vertical-align: middle;
+      color: #fff;
+    }
+  }
+
+  .close-widget {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    border-top: 1px solid lighten($primaryColor, 20%);
+
+    cursor: pointer;
+
+    &:hover i {
+      opacity: 1;
+      color: red;
+    }
+
+    i {
+      display: block;
+      vertical-align: middle;
+      color: #fff;
+      opacity: 0.5;
+    }
+  }
+}
+
+.widget-details {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 230px;
+  height: 288px;
+
+  background-color: $primaryColor;
+
+  border-top: 1px solid lighten($primaryColor, 20%);
+  border-right: 1px solid lighten($primaryColor, 20%);
+  border-bottom: 1px solid lighten($primaryColor, 20%);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.widget-talents {
+  position: relative;
+
+  .talent-row {
+    $height: 35px;
+
+    position: relative;
+    width: 220px;
+    height: $height;
+
+    margin: 5px 0 5px 3px;
+
+    background-color: lighten($primaryColor, 10%);
+
+    .lvl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $height;
+      height: $height;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 25px;
+      //background-color: lighten($primaryColor, 5%);
+
+      span {
+        display: block;
+      }
+    }
+
+    .talent-holder {
+      width: calc(100% - #{$height});
+      height: $height;
+      margin-left: $height;
+      position: relative;
+      color: #fff;
+
+      .img-holder {
+        width: 30%;
+        float: left;
+        height: $height;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+
+      .text-holder {
+        width: 70%;
+        float: left;
+        height: $height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        p {
+          line-height: 11px;
+          font-size: 11px;
+          margin-bottom: 0;
+        }
+      }
+
+    }
+  }
+}

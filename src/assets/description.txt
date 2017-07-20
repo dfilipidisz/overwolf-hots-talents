@@ -1,0 +1,19 @@
+<h3>Nexus Builds</h3>
+Access detailed hero talent statistics in-game!
+
+Use our in-game widget to quickly access your selected build, without sacrificing valuable screen estate.
+
+Access up-to-date statistics on popular and highest winrate talent picks for every hero.
+
+Dont't forget we have some new features too, like you can hide the main window with a hotkey.
+
+Some of our upcoming features:
+  * (Next up!) Community, private and pro builds
+  * Historical statistics
+  * Better in-game integration
+  * Hero pick/ban rates, draft helper
+  * Map specific statistics
+
+If you have an idea of a feature you want to see, use the in-app Feedback function!
+
+Talent statistics data provided by <a href="http://www.hotslogs.com">www.hotslogs.com</a>

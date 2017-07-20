@@ -1,0 +1,34 @@
+.filter {
+  background: url('../assets/img/filters.png');
+  display: inline-block;
+  height: 33px;
+  width: 28px;
+  vertical-align: middle;
+  margin-right: 1px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.warrior           { background-position:    0px    0px; }
+.assassin          { background-position:  -28px    0px; }
+.support           { background-position:  -56px    0px; }
+.specialist        { background-position:  -84px    0px; }
+.multiclass        { background-position: -112px    0px; }
+.warrior.active    { background-position:    0px  -33px; }
+.assassin.active   { background-position:  -28px  -33px; }
+.support.active    { background-position:  -56px  -33px; }
+.specialist.active { background-position:  -84px  -33px; }
+.multiclass.active { background-position: -112px  -33px; }
+.warcraft          { background-position:    0px  -66px; }
+.starcraft         { background-position:  -28px  -66px; }
+.diablo            { background-position:  -56px  -66px; }
+.overwatch         { background-position:  -84px  -66px; }
+.classic           { background-position: -112px  -66px; }
+.warcraft.active   { background-position:    0px  -99px; }
+.starcraft.active  { background-position:  -28px  -99px; }
+.diablo.active     { background-position:  -56px  -99px; }
+.overwatch.active  { background-position:  -84px  -99px; }
+.classic.active    { background-position: -112px  -99px; }

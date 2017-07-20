@@ -1,3 +1,44 @@
+**v5.0.1** - 2017.07.20
+
+* Fixed active hotkey display
+* Add minimize/hide action to navbar
+* Update dependencies
+
+**v5.0.0** - 2017.07.14
+
+* Rewrite and redesign
+* Add Stukov
+* Add hotkey support
+* Add mini widget
+* Convert some images to webp
+
+**v4.1.6** - 2017.07.20
+
+* Add deprecation warning
+
+**v4.1.5** - 2017.06.14
+
+* Add Malthael
+
+**v4.1.4** - 2017.06.06
+
+* Add D.Va data
+* Updated dependencies
+* Updated hero portraits
+* Updated talent images
+
+**v4.1.3** - 2017.05.01
+
+* Add Genji data
+
+**v4.1.2** - 2017.04.06
+
+* Add Cassia data
+
+**v4.1.1**
+
+* Add Probius data
+
 **v4.1.0** - 2017.02.16
 
 * Add Lucio

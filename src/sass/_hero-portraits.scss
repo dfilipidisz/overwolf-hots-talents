@@ -1,73 +1,173 @@
-.hero-portrait {
-  background: url('../img/hero-portraits.png');
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-  margin-right: 10px;
-  position: relative;
-  vertical-align: middle;
+.hero-pic {
+  background: url('../assets/img/heroes.webp');
+  background-position: 0px 0px;
+  cursor: pointer;
+
+  &.in-grid {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50px;
+    border: 2px solid lighten($primaryColor, 20%);
+
+    float: left;
+
+    margin-right: 8px;
+    margin-bottom: 4px;
+
+    &:nth-child(13),
+    &:nth-child(36),
+    &:nth-child(59) {
+      margin-left: 29px;
+    }
+
+    &:hover {
+      border-color: lighten($primaryColor, 30%);
+    }
+  }
+
+  &.header {
+    width: 50px;
+    height: 30px;
+
+    &.Abathur    { background-position:  -50px  -10px; }
+    &.Alarak     { background-position: -100px  -10px; }
+    &.Anubarak   { background-position: -150px  -10px; }
+    &.Artanis    { background-position: -200px  -10px; }
+    &.Arthas     { background-position:    0px  -60px; }
+    &.Auriel     { background-position:  -50px  -60px; }
+    &.Azmodan    { background-position: -100px  -60px; }
+    &.Brightwing { background-position: -150px  -60px; }
+    &.TheButcher { background-position: -200px  -60px; }
+    &.Cassia     { background-position:    0px -110px; }
+    &.Chen       { background-position:  -50px -110px; }
+    &.Cho        { background-position: -100px -110px; }
+    &.Gall       { background-position: -150px -110px; }
+    &.Chromie    { background-position: -200px -110px; }
+    &.Dehaka     { background-position:    0px -160px; }
+    &.Diablo     { background-position:  -50px -160px; }
+    &.DVa        { background-position: -100px -160px; }
+    &.ETC        { background-position: -150px -160px; }
+    &.Falstad    { background-position: -200px -160px; }
+    &.Gazlowe    { background-position:    0px -210px; }
+    &.Genji      { background-position:  -50px -210px; }
+    &.Greymane   { background-position: -100px -210px; }
+    &.Guldan     { background-position: -150px -210px; }
+    &.Illidan    { background-position: -200px -210px; }
+    &.Jaina      { background-position:    0px -260px; }
+    &.Johanna    { background-position:  -50px -260px; }
+    &.Kaelthas   { background-position: -100px -260px; }
+    &.Kerrigan   { background-position: -150px -260px; }
+    &.Kharazim   { background-position: -200px -260px; }
+    &.Leoric     { background-position:    0px -310px; }
+    &.LiLi       { background-position:  -50px -310px; }
+    &.Li-Ming     { background-position: -100px -310px; }
+    &.LtMorales  { background-position: -150px -310px; }
+    &.Lucio      { background-position: -200px -310px; }
+    &.Lunara     { background-position:    0px -360px; }
+    &.Malfurion  { background-position:  -50px -360px; }
+    &.Medivh     { background-position: -100px -360px; }
+    &.Muradin    { background-position: -150px -360px; }
+    &.Murky      { background-position: -200px -360px; }
+    &.Nazeebo    { background-position:    0px -410px; }
+    &.Nova       { background-position:  -50px -410px; }
+    &.Probius    { background-position: -100px -410px; }
+    &.Ragnaros   { background-position: -150px -410px; }
+    &.Raynor     { background-position: -200px -410px; }
+    &.Rehgar     { background-position:    0px -460px; }
+    &.Rexxar     { background-position:  -50px -460px; }
+    &.Samuro     { background-position: -100px -460px; }
+    &.SgtHammer  { background-position: -150px -460px; }
+    &.Sonya      { background-position: -200px -460px; }
+    &.Stitches   { background-position:    0px -510px; }
+    &.Sylvanas   { background-position:  -50px -510px; }
+    &.Tassadar   { background-position: -100px -510px; }
+    &.Thrall     { background-position: -150px -510px; }
+    &.TheLostVikings { background-position: -200px -510px; }
+    &.Tracer     { background-position:    0px -560px; }
+    &.Tychus     { background-position:  -50px -560px; }
+    &.Tyrael     { background-position: -100px -560px; }
+    &.Tyrande    { background-position: -150px -560px; }
+    &.Uther      { background-position: -200px -560px; }
+    &.Valeera    { background-position:    0px -610px; }
+    &.Valla      { background-position:  -50px -610px; }
+    &.Varian     { background-position: -100px -610px; }
+    &.Xul        { background-position: -150px -610px; }
+    &.Zagara     { background-position: -200px -610px; }
+    &.Zarya      { background-position:    0px -660px; }
+    &.Zeratul    { background-position:  -50px -660px; }
+    &.Zuljin     { background-position: -100px -660px; }
+    &.Malthael   { background-position: -150px -660px; }
+    &.Stukov     { background-position: -200px -660px; }
+  }
 }
 
-.Abathur        { background-position:    0px    0px; }
-.Anubarak       { background-position:  -25px    0px; }
-.Artanis        { background-position:  -50px    0px; }
-.Arthas         { background-position:  -75px    0px; }
-.Azmodan        { background-position: -100px    0px; }
-.Brightwing     { background-position: -125px    0px; }
-.Chen           { background-position: -150px    0px; }
-.Cho,
-.Gall           { background-position: -175px    0px; }
-.Diablo         { background-position: -200px    0px; }
-.ETC            { background-position: -225px    0px; }
-.Falstad        { background-position:    0px  -25px; }
-.Gazlowe        { background-position:  -25px  -25px; }
-.Greymane       { background-position:  -50px  -25px; }
-.Illidan        { background-position:  -75px  -25px; }
-.Jaina          { background-position: -100px  -25px; }
-.Johanna        { background-position: -125px  -25px; }
-.Kaelthas       { background-position: -150px  -25px; }
-.Kerrigan       { background-position: -175px  -25px; }
-.Kharazim       { background-position: -200px  -25px; }
-.Leoric         { background-position: -225px  -25px; }
-.LiLi           { background-position:    0px  -50px; }
-.Li-Ming        { background-position:  -25px  -50px; }
-.LtMorales      { background-position:  -50px  -50px; }
-.Lunara         { background-position:  -75px  -50px; }
-.Malfurion      { background-position: -100px  -50px; }
-.Muradin        { background-position: -125px  -50px; }
-.Murky          { background-position: -150px  -50px; }
-.Nazeebo        { background-position: -175px  -50px; }
-.Nova           { background-position: -200px  -50px; }
-.Raynor         { background-position: -225px  -50px; }
-.Rehgar         { background-position:    0px  -75px; }
-.Rexxar         { background-position:  -25px  -75px; }
-.SgtHammer      { background-position:  -50px  -75px; }
-.Sonya          { background-position:  -75px  -75px; }
-.Stitches       { background-position: -100px  -75px; }
-.Sylvanas       { background-position: -125px  -75px; }
-.Tassadar       { background-position: -150px  -75px; }
-.TheButcher     { background-position: -175px  -75px; }
-.TheLostVikings { background-position: -200px  -75px; }
-.Thrall         { background-position: -225px  -75px; }
-.Tychus         { background-position:    0px -100px; }
-.Tyrael         { background-position:  -25px -100px; }
-.Tyrande        { background-position:  -50px -100px; }
-.Uther          { background-position:  -75px -100px; }
-.Valla          { background-position: -100px -100px; }
-.Xul            { background-position: -125px -100px; }
-.Zagara         { background-position: -150px -100px; }
-.Zeratul        { background-position: -175px -100px; }
-.Dehaka         { background-position: -200px -100px; }
-.Tracer         { background-position: -225px -100px; }
-.Chromie        { background-position:    0px -125px; }
-.Medivh         { background-position:  -25px -125px; }
-.Guldan         { background-position:  -50px -125px; }
-.Auriel         { background-position:  -75px -125px; }
-.Alarak         { background-position: -100px -125px; }
-.Zarya          { background-position: -125px -125px; }
-.Samuro         { background-position: -150px -125px; }
-.Varian         { background-position: -175px -125px; }
-.Ragnaros       { background-position: -200px -125px; }
-.Zuljin         { background-position: -225px -125px; }
-.Valeera        { background-position:    0px -150px; }
-.Lucio          { background-position:  -25px -150px; }
+.Abathur    { background-position:  -50px    0px; }
+.Alarak     { background-position: -100px    0px; }
+.Anubarak   { background-position: -150px    0px; }
+.Artanis    { background-position: -200px    0px; }
+.Arthas     { background-position:    0px  -50px; }
+.Auriel     { background-position:  -50px  -50px; }
+.Azmodan    { background-position: -100px  -50px; }
+.Brightwing { background-position: -150px  -50px; }
+.TheButcher { background-position: -200px  -50px; }
+.Cassia     { background-position:    0px -100px; }
+.Chen       { background-position:  -50px -100px; }
+.Cho        { background-position: -100px -100px; }
+.Gall       { background-position: -150px -100px; }
+.Chromie    { background-position: -200px -100px; }
+.Dehaka     { background-position:    0px -150px; }
+.Diablo     { background-position:  -50px -150px; }
+.DVa        { background-position: -100px -150px; }
+.ETC        { background-position: -150px -150px; }
+.Falstad    { background-position: -200px -150px; }
+.Gazlowe    { background-position:    0px -200px; }
+.Genji      { background-position:  -50px -200px; }
+.Greymane   { background-position: -100px -200px; }
+.Guldan     { background-position: -150px -200px; }
+.Illidan    { background-position: -200px -200px; }
+.Jaina      { background-position:    0px -250px; }
+.Johanna    { background-position:  -50px -250px; }
+.Kaelthas   { background-position: -100px -250px; }
+.Kerrigan   { background-position: -150px -250px; }
+.Kharazim   { background-position: -200px -250px; }
+.Leoric     { background-position:    0px -300px; }
+.LiLi       { background-position:  -50px -300px; }
+.Li-Ming     { background-position: -100px -300px; }
+.LtMorales  { background-position: -150px -300px; }
+.Lucio      { background-position: -200px -300px; }
+.Lunara     { background-position:    0px -350px; }
+.Malfurion  { background-position:  -50px -350px; }
+.Medivh     { background-position: -100px -350px; }
+.Muradin    { background-position: -150px -350px; }
+.Murky      { background-position: -200px -350px; }
+.Nazeebo    { background-position:    0px -400px; }
+.Nova       { background-position:  -50px -400px; }
+.Probius    { background-position: -100px -400px; }
+.Ragnaros   { background-position: -150px -400px; }
+.Raynor     { background-position: -200px -400px; }
+.Rehgar     { background-position:    0px -450px; }
+.Rexxar     { background-position:  -50px -450px; }
+.Samuro     { background-position: -100px -450px; }
+.SgtHammer  { background-position: -150px -450px; }
+.Sonya      { background-position: -200px -450px; }
+.Stitches   { background-position:    0px -500px; }
+.Sylvanas   { background-position:  -50px -500px; }
+.Tassadar   { background-position: -100px -500px; }
+.Thrall     { background-position: -150px -500px; }
+.TheLostVikings { background-position: -200px -500px; }
+.Tracer     { background-position:    0px -550px; }
+.Tychus     { background-position:  -50px -550px; }
+.Tyrael     { background-position: -100px -550px; }
+.Tyrande    { background-position: -150px -550px; }
+.Uther      { background-position: -200px -550px; }
+.Valeera    { background-position:    0px -600px; }
+.Valla      { background-position:  -50px -600px; }
+.Varian     { background-position: -100px -600px; }
+.Xul        { background-position: -150px -600px; }
+.Zagara     { background-position: -200px -600px; }
+.Zarya      { background-position:    0px -650px; }
+.Zeratul    { background-position:  -50px -650px; }
+.Zuljin     { background-position: -100px -650px; }
+.Malthael   { background-position: -150px -650px; }
+.Stukov     { background-position: -200px -650px; }

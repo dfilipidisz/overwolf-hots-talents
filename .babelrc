@@ -4,13 +4,17 @@
       [
         "env", {
           "targets": {
-            "chrome": 56
+            "chrome": 59
           },
           "debug": true,
           "useBuiltIns": true,
+          "modules": false,
           "exclude": [
             "es7.string.pad-start",
-            "es7.string.pad-end"
+            "es7.string.pad-end",
+            "web.timers",
+            "web.immediate",
+            "web.dom.iterable"
           ]
         }
       ]

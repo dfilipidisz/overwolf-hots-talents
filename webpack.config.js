@@ -58,6 +58,7 @@ const plugins = [
 ];
 
 if (nodeEnv === 'production') {
+  plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
   plugins.push(new BabiliPlugin());
 }
 

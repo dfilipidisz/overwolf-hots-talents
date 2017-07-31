@@ -57,7 +57,7 @@ export const HEROES = [
   { value: 'Kaelthas', label: 'Kael\'thas', role: 'assassin', franchise: 'warcraft' },
   { value: 'Kerrigan', label: 'Kerrigan', role: 'assassin', franchise: 'starcraft' },
   { value: 'Kharazim', label: 'Kharazim', role: 'support', franchise: 'diablo' },
-  { value: 'Leoric', label: 'Leoric', role: 'warrior', franchise: 'warcraft' },
+  { value: 'Leoric', label: 'Leoric', role: 'warrior', franchise: 'diablo' },
   { value: 'LiLi', label: 'Li Li', role: 'support', franchise: 'warcraft' },
   { value: 'Li-Ming', label: 'Li-Ming', role: 'assassin', franchise: 'diablo' },
   { value: 'LtMorales', label: 'Lt. Morales', role: 'support', franchise: 'starcraft' },

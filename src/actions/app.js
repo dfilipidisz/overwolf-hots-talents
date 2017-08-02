@@ -10,6 +10,7 @@ import {
   APP_MINIMIZE_MAIN,
 } from '../constants';
 import { initFetch, checkResponse } from '../utility';
+import Logger from '../logger';
 
 
 export const updateWindowid = (id) => {
@@ -32,6 +33,7 @@ export const openPage = (id) => {
 
 export const selectHero = (event) => {
   return function (dispatch) {
+    Logger.log('selectHero', { hero: event.target.dataset.hero });
     return dispatch({ type: APP_SELECT_HERO, hero: event.target.dataset.hero });
   };
 };

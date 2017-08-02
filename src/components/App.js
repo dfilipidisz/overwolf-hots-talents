@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Logger from '../logger';
 import { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain } from '../actions/app';
 import Navbar from './Navbar';
 import PageHome from './PageHome';
@@ -15,6 +16,20 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    // Start logging
+    Logger.startSession();
+
+    // Error event listener, log
+    window.addEventListener("error", (err) => {
+      Logger.log('error', err);
+      return false;
+    })
+
+    // Guess session length
+    this.hearthbeatInterval = setInterval(() => {
+      Logger.log('hearthbeat');
+    }, 300000);
+
     // Get data
     this.props.getTalentData();
 
@@ -56,6 +71,7 @@ class App extends React.Component {
 
   componentWillUnmount() {
     overwolf.windows.onMessageReceived.removeListener(this.receiveMessage);
+    clearInterval(this.hearthbeatInterval);
   }
 
   receiveMessage(payload) {

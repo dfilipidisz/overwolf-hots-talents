@@ -79,7 +79,7 @@ export const HEROES = [
   { value: 'SgtHammer', label: 'Sgt. Hammer', role: 'specialist', franchise: 'starcraft' },
   { value: 'Sonya', label: 'Sonya', role: 'warrior', franchise: 'diablo' },
   { value: 'Stitches', label: 'Stitches', role: 'warrior', franchise: 'warcraft' },
-  { value: 'Stukov', label: 'Stukov', role: 'specialist', franchise: 'starcraft' },
+  { value: 'Stukov', label: 'Stukov', role: 'support', franchise: 'starcraft' },
   { value: 'Sylvanas', label: 'Sylvanas', role: 'specialist', franchise: 'warcraft' },
   { value: 'Tassadar', label: 'Tassadar', role: 'support', franchise: 'starcraft' },
   { value: 'TheButcher', label: 'The Butcher', role: 'assassin', franchise: 'diablo' },

@@ -17,8 +17,7 @@
     "start_window": "MainWindow",
     "externally_connectable": {
       "matches": [
-        "http://hots-tool.ddns.net/*",
-        "https://www.google-analytics.com/*"
+        "http://hots-tool.ddns.net/*"
       ]
     },
     "windows": {

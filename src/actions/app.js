@@ -27,6 +27,7 @@ export const updateWidgetWindowid = (id) => {
 
 export const openPage = (id) => {
   return function (dispatch) {
+    Logger.log('openPage', { page: id });
     return dispatch({ type: APP_OPEN_PAGE, id });
   };
 };

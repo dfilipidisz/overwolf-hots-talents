@@ -44,7 +44,7 @@ const HeroGrid = ({ filterFranchises, filterRoles, query, selectHero }) => {
         return (
           <AppPopup
             position='bottom center'
-            title={hero.value}
+            title={hero.label}
             key={hero.value}
           >
             <div className={`hero-pic in-grid ${hero.value}`} data-hero={hero.value} onClick={selectHero} />

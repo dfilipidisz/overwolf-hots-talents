@@ -20,8 +20,8 @@ class App extends React.Component {
     Logger.startSession();
 
     // Error event listener, log
-    window.addEventListener("error", (err) => {
-      Logger.log('error', err);
+    window.addEventListener("error", (e) => {
+      Logger.log('error', {error: e.error.stack});
       return false;
     })
 

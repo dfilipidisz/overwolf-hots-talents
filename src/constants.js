@@ -47,6 +47,7 @@ export const HEROES = [
   { value: 'ETC', label: 'E.T.C.', role: 'warrior', franchise: 'warcraft' },
   { value: 'Falstad', label: 'Falstad', role: 'assassin', franchise: 'warcraft' },
   { value: 'Gall', label: 'Gall', role: 'assassin', franchise: 'warcraft' },
+  { value: 'Garrosh', label: 'Garrosh', role: 'warrior', franchise: 'warcraft' },
   { value: 'Gazlowe', label: 'Gazlowe', role: 'specialist', franchise: 'warcraft' },
   { value: 'Genji', label: 'Genji', role: 'assassin', franchise: 'overwatch' },
   { value: 'Greymane', label: 'Greymane', role: 'assassin', franchise: 'warcraft' },

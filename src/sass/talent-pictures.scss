@@ -157,7 +157,8 @@
 .iceblade-arrows,
 .hand-of-protection,
 .thirst-for-battle,
-.oppressor { background: url(../assets/img/talents/general.png); }
+.oppressor,
+.blistering-attacks { background: url(../assets/img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -179,6 +180,7 @@
 .acid-drenched-mandibles,                                       //Anub
 .seared-flesh,                                                  //Cho
 .darnassian-archery,                                            //Tyrande
+.blistering-attacks,                                            //Ragnaros
 .focused-attack          { background-position:      0px 0px; }
 .spirit-shield,                                                 //Thrall
 .spell-shield            { background-position:    -30px 0px; }
@@ -1289,7 +1291,7 @@
 .xstrike,
 .living-weapon,
 .steady-blade,
-.zanshin { background: url(../assets/img/talents/genji.png); }
+.zanshin { background: url(../assets/img/talents/genji.webp); }
 
 .swift-as-the-wind,
 .strike-at-the-heart,
@@ -2375,7 +2377,6 @@
 .meteor-bomb,
 .engulfing-flame,
 .slow-burn,
-.superheated,
 .tempered-flame,
 .blast-echo,
 .catching-fire,
@@ -2385,7 +2386,7 @@
 .lava-surge,
 .resilient-flame,
 .heroic-difficulty,
-.submerge { background: url(../assets/img/talents/ragnaros.png); }
+.submerge { background: url(../assets/img/talents/ragnaros.webp); }
 
 .sulfuras-hungers,
 .hand-of-ragnaros,
@@ -2397,7 +2398,6 @@
 .meteor-bomb             { background-position:  -30px 0px; }
 .engulfing-flame,
 .slow-burn,
-.superheated,
 .tempered-flame,
 .blast-echo              { background-position:  -60px 0px; }
 .catching-fire           { background-position:  -90px 0px; }
@@ -2853,7 +2853,6 @@
 .chop-meat,
 .cheap-shot,
 .victuals,
-.abattoir,
 .unrelenting-pursuit,
 .final-assault,
 .savage-charge,
@@ -2864,7 +2863,7 @@
 .lamb-to-the-slaughter,
 .slaughterhouse,
 .enraged,
-.meat-shield { background: url(../assets/img/talents/thebutcher.png); }
+.meat-shield { background: url(../assets/img/talents/thebutcher.webp); }
 
 .invigoration,
 .flail-axe,
@@ -2872,8 +2871,7 @@
 .crippling-slam         { background-position:    0px 0px; }
 .chop-meat,
 .cheap-shot             { background-position:  -30px 0px; }
-.victuals,
-.abattoir               { background-position:  -60px 0px; }
+.victuals               { background-position:  -60px 0px; }
 .unrelenting-pursuit,
 .final-assault,
 .meat-shield,

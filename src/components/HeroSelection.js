@@ -83,6 +83,9 @@ class HeroSelection extends React.Component {
         <div className='heroes-grid'>
           <Scrollbars
             style={{ height: '100%' }}
+            renderThumbVertical={({ style, ...props }) =>
+              <div {...props} style={{ ...style, backgroundColor: '#1f1f51', borderRadius: '2px' }}/>
+            }
           >
             <HeroGrid
               filterFranchises={filterFranchises}

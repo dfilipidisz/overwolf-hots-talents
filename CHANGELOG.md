@@ -1,3 +1,15 @@
+**v5.1.0** - 2017.08.10
+
+* Added: Garrosh
+* Added: Settings for in-game widget: opacity, open/closing behavior
+* Changed: Updated talent images
+* Fix: Leoric was in wrong franchise
+* Fix: Stukov was in wrong role
+* Fix: Display label instead of id in hero grid popup
+* Internal: Add basic analytics
+* Internal: Various improvements for widget and hero grid
+* Internal: Revamped settings page
+
 **v5.0.1** - 2017.07.20
 
 * Fixed active hotkey display

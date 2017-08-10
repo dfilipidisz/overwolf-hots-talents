@@ -26,6 +26,32 @@ $mainWidth: 729px;
   color: #fff;
 }
 
+// semantic-ui overwrites
+
+.ui.menu .item,
+.ui.secondary.pointing.menu .active.item {
+  color: #fff;
+}
+
+.ui.secondary.pointing.menu .active.item:hover {
+  border-color: #c5c5c5;
+  color: rgba(255,255,255,.8);
+}
+
+.ui.secondary.pointing.menu a.item:hover {
+  color: rgba(255,255,255,.8);
+}
+
+.ui.secondary.pointing.menu .active.item {
+  border-color: #ffffff;
+}
+
+.ui.secondary.pointing.menu {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-color: transparent;
   user-select: none;

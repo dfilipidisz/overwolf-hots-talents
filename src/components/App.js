@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Logger from '../logger';
-import { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain } from '../actions/app';
+import { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain, getSavedSettings } from '../actions/app';
 import Navbar from './Navbar';
 import PageHome from './PageHome';
 import PageHeroes from './PageHeroes';
@@ -46,12 +46,17 @@ class App extends React.Component {
           overwolf.windows.restore(wresult.window.id, (f) => {
             if (f.status === 'success') {
               setTimeout(() => {
-                overwolf.windows.sendMessage(wresult.window.id, 'init-data', { mainWindowId: result.window.id }, () => {});
+                overwolf.windows.sendMessage(wresult.window.id, 'init-data', {
+                  mainWindowId: result.window.id,
+                  settings: this.props.widgetSettings,
+                }, () => {});
                 overwolf.windows.sendMessage(wresult.window.id, 'hide-yourself', null, () => {});
               }, 200);
             }
           });
           this.props.updateWidgetWindowid(wresult.window.id);
+          // Get saved settings now that we have windows
+          this.props.getSavedSettings();
         });
 
         // Register hotkey callback
@@ -130,6 +135,7 @@ export default connect(
     page: state.app.page,
     mainWindowVisible: state.app.mainWindowVisible,
     widgetWindowid: state.app.widgetWindowid,
+    widgetSettings: state.app.widgetSettings,
   }),
-  { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain }
+  { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain, getSavedSettings }
 )(App);

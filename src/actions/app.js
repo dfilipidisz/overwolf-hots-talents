@@ -1,3 +1,4 @@
+import localforage from 'localforage';
 import {
   APP_UPDATE_WINDOWID,
   APP_UPDATE_WIDGET_WINDOWID,
@@ -8,10 +9,11 @@ import {
   APP_TOGGLE_MAIN_WINDOW,
   APP_WIDGET_OPEN_MAIN,
   APP_MINIMIZE_MAIN,
+  APP_WIDGET_UPDATE_OPT,
+  APP_UPDATE_SETTINGS,
 } from '../constants';
 import { initFetch, checkResponse } from '../utility';
 import Logger from '../logger';
-
 
 export const updateWindowid = (id) => {
   return function (dispatch) {
@@ -81,5 +83,31 @@ export const widgetOpenMain = () => {
 export const minimizeMainWindow = () => {
   return function (dispatch) {
     return dispatch({ type: APP_MINIMIZE_MAIN });
+  };
+};
+
+export const changeWidgetOpt = (key, value) => {
+  return function (dispatch, getState) {
+    dispatch({ type: APP_WIDGET_UPDATE_OPT, key, value });
+
+    const { app } = getState();
+
+    overwolf.windows.sendMessage(app.widgetWindowid, 'update-settings', app.widgetSettings, () => {});
+
+    localforage.setItem('widgetSettings', app.widgetSettings);
+  };
+};
+
+export const getSavedSettings = () => {
+  return function (dispatch, getState) {
+    const {app} = getState();
+
+    localforage.getItem('widgetSettings').then((value) => {
+      if (value) {
+        overwolf.windows.sendMessage(app.widgetWindowid, 'update-settings', value, () => {});
+        return dispatch({ type: APP_UPDATE_SETTINGS, value });
+      }
+      localforage.setItem('widgetSettings', app.widgetSettings);
+    })
   };
 };

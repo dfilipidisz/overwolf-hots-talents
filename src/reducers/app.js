@@ -8,6 +8,8 @@ import {
   APP_TOGGLE_MAIN_WINDOW,
   APP_WIDGET_OPEN_MAIN,
   APP_MINIMIZE_MAIN,
+  APP_WIDGET_UPDATE_OPT,
+  APP_UPDATE_SETTINGS,
 } from '../constants';
 
 const initialState = {
@@ -21,6 +23,11 @@ const initialState = {
   forceSelection: false,
   heroTalentFilter: 'popularity',
   mainWindowVisible: true,
+  widgetSettings: {
+    opacity: 1,
+    openOn: 'hover', // click, hover
+    closeOn: 'hover', // click, hover
+  }
 };
 
 export default function (state = initialState, action) {
@@ -68,6 +75,16 @@ export default function (state = initialState, action) {
   } else if (action.type === APP_MINIMIZE_MAIN) {
     return Object.assign({}, state, {
       mainWindowVisible: false,
+    });
+  } else if (action.type === APP_WIDGET_UPDATE_OPT) {
+    return Object.assign({}, state, {
+      widgetSettings: Object.assign({}, state.widgetSettings, {
+        [action.key]: action.value
+      })
+    });
+  } else if (action.type === APP_UPDATE_SETTINGS) {
+    return Object.assign({}, state, {
+      widgetSettings: action.value,
     });
   }
   return state;

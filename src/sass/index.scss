@@ -9,6 +9,7 @@ $mainWidth: 729px;
 @import 'talent-stats';
 @import 'talent-type-chooser';
 @import 'hero-portraits';
+@import 'mixins';
 
 .clearfix:after {
   content:" ";
@@ -57,8 +58,8 @@ $mainWidth: 729px;
 }
 
 body {
+  @include noTextSelection();
   background-color: transparent;
-  user-select: none;
   cursor: default;
 }
 

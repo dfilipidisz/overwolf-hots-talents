@@ -1,3 +1,10 @@
+**v5.2.0** - 2017.09.06
+
+* Added: Kel'Thuzad
+* Added: Local custom build creation
+* Changed: Updated talent images
+* Changed: Various small UI improvements
+
 **v5.1.0** - 2017.08.10
 
 * Added: Garrosh

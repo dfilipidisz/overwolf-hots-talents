@@ -42,7 +42,6 @@ class NewBuildTalentChooser extends React.Component {
 class CreateNewBuild extends React.Component {
   render() {
     const { newBuild } = this.props;
-    console.log(newBuild.talents);
     return (
       <div className='page-builds'>
         <Form>

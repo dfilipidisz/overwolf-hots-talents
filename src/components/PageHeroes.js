@@ -55,7 +55,7 @@ class PageHeroes extends React.Component {
 
   openBuild() {
     overwolf.windows.sendMessage(this.props.widgetWindowid, 'show-yourself', null, () => {});
-    overwolf.windows.sendMessage(this.props.widgetWindowid, 'open-build', this.composeBuild(), (e) => {console.log('send', e);});
+    overwolf.windows.sendMessage(this.props.widgetWindowid, 'open-build', this.composeBuild(), () => {});
   }
 
   openStatDetails(lvl) {

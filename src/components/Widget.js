@@ -147,8 +147,6 @@ class Widget extends React.Component {
   }
 
   receiveMessage(payload) {
-    console.log(payload);
-
     switch (payload.id) {
       case 'init-data':
         this.setState({

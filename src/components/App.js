@@ -42,7 +42,6 @@ class App extends React.Component {
 
         // Open widget window
         overwolf.windows.obtainDeclaredWindow('WidgetWindow', (wresult) => {
-          //console.log(wresult);
           overwolf.windows.restore(wresult.window.id, (f) => {
             if (f.status === 'success') {
               setTimeout(() => {

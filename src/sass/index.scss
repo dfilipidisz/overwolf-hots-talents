@@ -1,3 +1,5 @@
+@import '~bulma/sass/utilities/variables';
+@import '~bulma/sass/components/dropdown';
 @import '~font-awesome/css/font-awesome.css';
 @import '~react-select/scss/default';
 
@@ -5,11 +7,13 @@ $primaryColor: #0a0a1a;
 $primaryTextColor: #c3c3c3;
 $mainWidth: 729px;
 
+@import 'mixins';
 @import 'filters';
 @import 'talent-stats';
 @import 'talent-type-chooser';
+@import 'builds';
+@import 'new-build';
 @import 'hero-portraits';
-@import 'mixins';
 
 .clearfix:after {
   content:" ";
@@ -259,7 +263,8 @@ body {
 }
 
 .page-heroes,
-.page-settings {
+.page-settings,
+.page-builds {
   height: 420px;
   padding-top: 10px;
   width: $mainWidth;
@@ -268,7 +273,8 @@ body {
   color: $primaryTextColor;
 }
 
-.page-settings {
+.page-settings,
+.page-builds {
   padding: 15px;
 
   label {

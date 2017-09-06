@@ -1,0 +1,100 @@
+.new-build-save {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 50%;
+
+  padding: 0 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-build-cancel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 50%;
+
+  padding: 0 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-build-talent-chooser {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); // column width
+  grid-template-rows: 70px; // row height
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: stretch; // cells fill their space
+  align-items: stretch;
+  justify-content: stretch; // stretch the whole grid
+
+  .dropdown .dropdown-trigger {
+    width: 100%;
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      padding-top: 0;
+
+      .dropdown-content {
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 210px; // To prevent wrapping of long talent names
+
+        .dropdown-item {
+          &:hover {
+            cursor: pointer;
+            background-color: darken(#fff, 5%);
+          }
+
+          .talent-pic,
+          .title {
+            float: left;
+          }
+
+          .title {
+            padding-left: 5px;
+            height: 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+
+  .talent-block {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: lighten($primaryColor, 15%);
+
+    span {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: lighten($primaryColor, 20%);
+      cursor: pointer;
+    }
+  }
+}

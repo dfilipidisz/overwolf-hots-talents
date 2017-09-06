@@ -162,7 +162,13 @@
 .hand-of-protection,
 .thirst-for-battle,
 .oppressor,
-.blistering-attacks { background: url(../assets/img/talents/general.png); }
+.blistering-attacks,
+.icefury-wand,
+.fingers-of-frost,
+.ice-blink,
+.caduceus-feedback,
+.mithril-mace,
+.shroud-of-the-dead-king { background: url(../assets/img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -172,7 +178,7 @@
 .nordic-attack-squad,                                           //The Lost Vikings
 .manticore,                                                     //Valla
 .untouchable,                                                   //Tracer
-.Chromie.bronze-talons,
+.bronze-talons,                                                 //Chromie
 .serrated-spines,                                               //Zagara
 .give-em-the-axe,                                               //Muradin
 .manticore,                                                     //Valla
@@ -185,6 +191,7 @@
 .seared-flesh,                                                  //Cho
 .darnassian-archery,                                            //Tyrande
 .blistering-attacks,                                            //Ragnaros
+.icefury-wand,                                                  //Jaina
 .focused-attack          { background-position:      0px 0px; }
 .spirit-shield,                                                 //Thrall
 .spell-shield            { background-position:    -30px 0px; }
@@ -203,6 +210,7 @@
 .Diablo.hellgate,
 .psionic-shift,                                                 //Kerrigan
 .wind-rush,                                                     //Thrall
+.ice-blink,                                                     //Jaina
 .bolt-of-the-storm       { background-position:   -150px 0px; }
 .hand-of-protection,                                            //Uther
 .cleanse                 { background-position:   -180px 0px; }
@@ -231,6 +239,7 @@
 .hardened-shield,
 .nullification-shield,                                          //Anub
 .twilight-veil,                                                 //Cho
+.shroud-of-the-dead-king,                                       //Leoric
 .hardened-skin           { background-position:   -510px 0px; } //Rexxar
 .you-want-axe,
 .seasoned-marksman       { background-position:   -540px 0px; }
@@ -262,6 +271,7 @@
 .mana-addict,                                                   //Kael'thas
 .khaydarin-resonance,                                           //Tassadar
 .vigor,                                                         //Valeera
+.fingers-of-frost,                                              //Jaina
 .conjurers-pursuit       { background-position:   -720px 0px; }
 .envenom                 { background-position:   -750px 0px; }
 .arcane-dynamo,                                                 //Kael'thas
@@ -281,6 +291,7 @@
 .blood-frenzy,                                                  //Butcher
 .let-the-killing-begin,
 .shooting-star,                                                 //Tyrande
+.mithril-mace,                                                  //Leoric
 .berserk                 { background-position:  -1050px 0px; }
 .maelstrom-shells,                                              //Sgt. Hammer
 .throwing-axes,                                                 //Rexxar
@@ -308,6 +319,7 @@
 .arcane-brilliance       { background-position:  -1260px 0px; } //Medivh
 .prismatic-link,                                                //Tassadar
 .cleaver                 { background-position:  -1290px 0px; } //Butcher
+.caduceus-feedback,                                             //Morales
 .templars-will           { background-position:  -1320px 0px; } //Tassadar
 
 //Abathur
@@ -835,45 +847,45 @@
 .hour-of-twilight      { background-position: -330px 0px; }
 
 //Chromie
-.Chromie.compounding-aether,
-.Chromie.piercing-sands,
-.Chromie.shifting-sands,
-.Chromie.past-and-future-me,
-.Chromie.deep-breathing,
-.Chromie.enveloping-assault,
-.Chromie.mobius-loop,
-.Chromie.dragons-eye,
-.Chromie.chrono-sickness,
-.Chromie.andorhal-anomaly,
-.Chromie.slowing-sands,
-.Chromie.pocket-of-time,
-.Chromie.temporal-loop,
-.Chromie.loophole,
-.Chromie.bye-bye,
-.Chromie.reaching-through-time,
-.Chromie.time-out,
-.Chromie.fast-forward,
-.Chromie.quantum-overdrive { background: url(../assets/img/talents/chromie.png); }
+.piercing-sands,
+.shifting-sands,
+.deep-breathing,
+.enveloping-assault,
+.mobius-loop,
+.dragons-eye,
+.chrono-sickness,
+.andorhal-anomaly,
+.slowing-sands,
+.pocket-of-time,
+.temporal-loop,
+.stuck-in-a-loop,
+.bye-bye,
+.time-out,
+.fast-forward,
+.quantum-overdrive,
+.mounting-sand,
+.timely-surprise,
+.here-and-there { background: url(../assets/img/talents/chromie.webp); }
 
-.Chromie.compounding-aether,
-.Chromie.piercing-sands,
-.Chromie.shifting-sands,
-.Chromie.past-and-future-me    { background-position:    0px 0px; }
-.Chromie.deep-breathing,
-.Chromie.enveloping-assault,
-.Chromie.mobius-loop           { background-position:  -30px 0px; }
-.Chromie.dragons-eye          { background-position:  -60px 0px; }
-.Chromie.chrono-sickness,
-.Chromie.andorhal-anomaly      { background-position:  -90px 0px; }
-.Chromie.slowing-sands,
-.Chromie.pocket-of-time        { background-position: -120px 0px; }
-.Chromie.temporal-loop,
-.Chromie.loophole              { background-position: -150px 0px; }
-.Chromie.bye-bye               { background-position: -180px 0px; }
-.Chromie.reaching-through-time { background-position: -210px 0px; }
-.Chromie.time-out              { background-position: -240px 0px; }
-.Chromie.fast-forward          { background-position: -270px 0px; }
-.Chromie.quantum-overdrive     { background-position: -300px 0px; }
+.piercing-sands,
+.shifting-sands,
+.mounting-sand         { background-position:    0px 0px; }
+.deep-breathing,
+.enveloping-assault,
+.mobius-loop           { background-position:  -30px 0px; }
+.dragons-eye           { background-position:  -60px 0px; }
+.chrono-sickness,
+.timely-surprise,
+.andorhal-anomaly      { background-position:  -90px 0px; }
+.slowing-sands,
+.pocket-of-time        { background-position: -120px 0px; }
+.temporal-loop,
+.stuck-in-a-loop       { background-position: -150px 0px; }
+.bye-bye               { background-position: -180px 0px; }
+.time-out              { background-position: -210px 0px; }
+.fast-forward          { background-position: -240px 0px; }
+.quantum-overdrive     { background-position: -270px 0px; }
+.here-and-there        { background-position: -300px 0px; }
 
 //Dva
 .rushdown,
@@ -1468,7 +1480,6 @@
 .frost-shards,
 .ice-lance,
 .lingering-chill,
-.frostbitten,
 .ice-barrier,
 .deep-chill,
 .snowstorm,
@@ -1482,31 +1493,28 @@
 .cold-snap,
 .summon-water-elemental,
 .wintermute,
-.improved-ice-block,
 .icy-veins,
-.numbing-blast { background: url(../assets/img/talents/jaina.png); }
+.numbing-blast { background: url(../assets/img/talents/jaina.webp); }
 
 .winters-reach,
 .frost-shards,
+.deep-chill,
 .ice-lance               { background-position:    0px 0px; }
 .lingering-chill,
-.frostbitten,
 .ice-barrier             { background-position:  -30px 0px; }
-.deep-chill              { background-position:  -60px 0px; }
 .snowstorm,
 .storm-front,
-.snow-crash              { background-position:  -90px 0px; }
-.arcane-intellect        { background-position: -120px 0px; }
+.snow-crash              { background-position:  -60px 0px; }
+.arcane-intellect        { background-position:  -90px 0px; }
 .ice-floes,
-.northern-exposure       { background-position: -150px 0px; }
-.frost-armor             { background-position: -180px 0px; }
+.northern-exposure       { background-position: -120px 0px; }
+.frost-armor             { background-position: -150px 0px; }
 .ring-of-frost,
-.cold-snap               { background-position: -210px 0px; }
+.cold-snap               { background-position: -180px 0px; }
 .summon-water-elemental,
-.wintermute              { background-position: -240px 0px; }
-.icy-veins               { background-position: -270px 0px; }
-.numbing-blast           { background-position: -300px 0px; }
-.improved-ice-block      { background-position: -330px 0px; }
+.wintermute              { background-position: -210px 0px; }
+.icy-veins               { background-position: -240px 0px; }
+.numbing-blast           { background-position: -270px 0px; }
 
 //Johanna
 .righteous-smash,
@@ -1589,6 +1597,52 @@
 .master-of-flames     { background-position: -180px 0px; }
 .backdraft            { background-position: -210px 0px; }
 .fission-bomb         { background-position: -240px 0px; }
+
+//Kel'thuzad
+.the-plaguelands,
+.accelerated-decay,
+.arcane-echoes,
+.blighted-frost,
+.icy-grasp,
+.hungering-cold,
+.barbed-chains,
+.strip-shields,
+.chains-of-ice,
+.phylactery-of-kelthuzad,
+.armor-of-the-archlich,
+.glacial-spike,
+.chilling-touch,
+.frost-blast,
+.deathchill,
+.shadow-fissure,
+.might-of-the-scourge,
+.chainlink,
+.power-of-icecrown,
+.shifting-malice,
+.the-damned-return  { background: url(../assets/img/talents/kelthuzad.webp); }
+
+.the-plaguelands,
+.accelerated-decay,
+.arcane-echoes           { background-position:    0px 0px; }
+.blighted-frost,
+.icy-grasp,
+.hungering-cold          { background-position:  -30px 0px; }
+.barbed-chains,
+.strip-shields,
+.chains-of-ice           { background-position:  -60px 0px; }
+.phylactery-of-kelthuzad { background-position:  -90px 0px; }
+.armor-of-the-archlich   { background-position: -120px 0px; }
+.glacial-spike           { background-position: -150px 0px; }
+.chilling-touch          { background-position: -180px 0px; }
+.frost-blast,
+.deathchill              { background-position: -210px 0px; }
+.shadow-fissure,
+.might-of-the-scourge     { background-position: -240px 0px; }
+.chainlink              { background-position: -270px 0px; }
+.power-of-icecrown       { background-position: -300px 0px; }
+.shifting-malice         { background-position: -330px 0px; }
+.the-damned-return       { background-position: -360px 0px; }
+
 
 //Kerrigan
 .siphoning-impact,
@@ -1686,17 +1740,13 @@
 .way-of-the-hundred-fists  { background-position: -390px 0px; }
 
 //Leoric
-.mana-thirst,
 .ghastly-reach,
-.renewed-swing,
 .hopelessness,
 .willing-vessel,
 .crushing-hope,
 .unyielding-despair,
-.reanimation,
 .fealty-unto-death,
 .hardened-bones,
-.lingering-apparition,
 .royal-focus,
 .paralyzing-rage,
 .consume-vitality,
@@ -1704,28 +1754,29 @@
 .buried-alive,
 .march-of-the-black-king,
 .death-march,
-.drain-momentum { background: url(../assets/img/talents/leoric.png); }
+.drain-momentum,
+.kneel-peasants,
+.omnious-wrath,
+.burning-despair { background: url(../assets/img/talents/leoric.webp); }
 
-.mana-thirst,
-.ghastly-reach,
-.renewed-swing            { background-position:    0px 0px; }
-.hopelessness,
+.ghastly-reach            { background-position:    0px 0px; }
 .willing-vessel,
 .crushing-hope,
+.burning-despair,
 .unyielding-despair       { background-position:  -30px 0px; }
-//                        { background-position:  -60px 0px; }
-.reanimation,
-.fealty-unto-death        { background-position:  -90px 0px; }
-.hardened-bones,
-.lingering-apparition     { background-position: -120px 0px; }
-.royal-focus              { background-position: -150px 0px; }
+.fealty-unto-death        { background-position:  -60px 0px; }
+.royal-focus,
+.omnious-wrath            { background-position:  -90px 0px; }
 .paralyzing-rage,
-.consume-vitality         { background-position: -180px 0px; }
+.consume-vitality         { background-position: -120px 0px; }
 .entomb,
-.buried-alive             { background-position: -210px 0px; }
+.buried-alive             { background-position: -150px 0px; }
 .march-of-the-black-king,
-.death-march              { background-position: -240px 0px; }
-.drain-momentum           { background-position: -270px 0px; }
+.death-march              { background-position: -180px 0px; }
+.hardened-bones,
+.drain-momentum           { background-position: -210px 0px; }
+.kneel-peasants           { background-position: -240px 0px; }
+.hopelessness             { background-position: -270px 0px; }
 
 //Li Li
 .pro-toss,
@@ -1828,46 +1879,50 @@
 .prolonged-safeguard,
 .inoculation,
 .trauma-trigger,
-.feedback-loop,
 .shield-sequencer,
-.bioshield,
 .irradiate,
-.intensive-care,
-.automated-block,
 .upgraded-ballistics,
 .clear,
 .system-shock,
-.infused-grenade,
 .second-opinion,
 .stim-drone,
-.transfusion,
+.hyperactivity,
 .medivac-dropship,
-.medbay,
-.couples-therapy,
-.preventative-care,
-.caduceus-reactor-20 { background: url(../assets/img/talents/ltmorales.png); }
+.safe-zone,
+.caduceus-reactor-20,
+.life-support,
+.cellular-reactor,
+.blast-shield,
+.physical-therapy,
+.vanadium-plating,
+.emp-grenade,
+.extended-care,
+.first-responder,
+.reinforcements { background: url(../assets/img/talents/ltmorales.webp); }
 
-.prolonged-safeguard,
+.life-support,
+.physical-therapy,
+.shield-sequencer,
 .inoculation          { background-position:    0px 0px; }
-.trauma-trigger       { background-position:  -30px 0px; }
-.feedback-loop,
-.shield-sequencer     { background-position:  -60px 0px; }
-.bioshield,
-.irradiate,
-.intensive-care       { background-position:  -90px 0px; }
-.automated-block      { background-position: -120px 0px; }
+.vanadium-plating     { background-position:  -30px 0px; }
+.prolonged-safeguard  { background-position:  -60px 0px; }
+.extended-care,
+.irradiate            { background-position:  -90px 0px; }
+.trauma-trigger       { background-position: -120px 0px; }
 .upgraded-ballistics,
 .clear,
-.system-shock         { background-position: -150px 0px; }
-.infused-grenade,
-.second-opinion       { background-position: -180px 0px; }
+.blast-shield,
+.emp-grenade          { background-position: -150px 0px; }
+.system-shock         { background-position: -180px 0px; }
 .stim-drone,
-.transfusion          { background-position: -210px 0px; }
+.hyperactivity        { background-position: -210px 0px; }
 .medivac-dropship,
-.medbay               { background-position: -240px 0px; }
-.couples-therapy      { background-position: -270px 0px; }
-.preventative-care    { background-position: -300px 0px; }
-.caduceus-reactor-20 { background-position: -330px 0px; }
+.safe-zone            { background-position: -240px 0px; }
+.first-responder      { background-position: -270px 0px; }
+.caduceus-reactor-20  { background-position: -300px 0px; }
+.cellular-reactor     { background-position: -330px 0px; }
+.second-opinion       { background-position: -360px 0px; }
+.reinforcements       { background-position: -390px 0px; }
 
 //Lunara
 .blossom-swell,

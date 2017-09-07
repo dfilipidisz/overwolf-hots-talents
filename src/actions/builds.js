@@ -6,15 +6,18 @@ import {
   BUILDS_LOADED,
   BUILDS_LOADING,
 } from '../constants';
+import Logger from '../logger';
 
 export const openNewBuild = (hero) => {
   return function (dispatch) {
+    Logger.log('openPage', { page: 'newBuild' });
     return dispatch({ type: BUILDS_CREATE_NEW, hero });
   };
 };
 
 export const closeNewBuild = () => {
   return function (dispatch) {
+    Logger.log('openPage', { page: 'builds' });
     return dispatch({ type: BUILDS_CLOSE_NEW });
   };
 };

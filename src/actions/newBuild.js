@@ -5,6 +5,7 @@ import {
   NEW_BUILD_ERROR,
   NEW_BUILD_SAVED,
 } from '../constants';
+import Logger from '../logger';
 
 const lvls = ['1', '4', '7', '10', '13', '16', '20'];
 
@@ -56,6 +57,7 @@ export const saveNewBuild = () => {
       return localforage.setItem('builds', builds);
     })
     .then((builds) => {
+      Logger.log('openPage', { page: 'builds' });
       return dispatch({ type: NEW_BUILD_SAVED, builds });
     })
     .catch((err) => {

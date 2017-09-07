@@ -1,3 +1,7 @@
+**v5.2.1** - 2017.09.07
+
+* Added: More log events
+
 **v5.2.0** - 2017.09.06
 
 * Added: Kel'Thuzad

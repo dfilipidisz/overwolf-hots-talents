@@ -1,3 +1,8 @@
+**v5.2.2** - 2017.09.10
+
+* Fix build loading from localstorage
+* Fix select query error
+
 **v5.2.1** - 2017.09.07
 
 * Added: More log events

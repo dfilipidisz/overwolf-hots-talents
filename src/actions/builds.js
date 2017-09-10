@@ -28,7 +28,8 @@ export const getBuilds = () => {
 
     localforage.getItem('builds')
     .then((builds) => {
-      return dispatch({ type: BUILDS_LOADED, builds });
+      // If no builds were saved ever, supply empty array
+      return dispatch({ type: BUILDS_LOADED, builds: builds || [] });
     })
     .catch((err) => {
       return dispatch({ type: BUILDS_ERROR, msg: "Couldn't load builds." });

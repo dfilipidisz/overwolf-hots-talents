@@ -74,7 +74,9 @@ class Analytics {
     // TODO: be smart about uploading and save locally in case of errors
     const opts = initFetch(payload);
 
-    fetch('http://hots-tool.ddns.net/api/log', opts);
+    if (!DEVELOPMENT) {
+      fetch('http://hots-tool.ddns.net/api/log', opts);
+    }
   }
 }
 

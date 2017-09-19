@@ -1,23 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, Input, Tab, Select } from 'semantic-ui-react';
+import { Tab } from 'semantic-ui-react';
 import { changeWidgetOpt } from '../actions/app';
-
-const openBehaviorOptions = [{
-  text: 'Open on Mouse Hover',
-  value: 'hover',
-}, {
-  text: 'Open on Mouse Click',
-  value: 'click',
-}];
-
-const closeBehaviorOptions = [{
-  text: 'Close on Mouse Leave',
-  value: 'hover',
-}, {
-  text: 'Close on Mouse Click',
-  value: 'click',
-}];
 
 class WidgetTab extends React.Component {
   constructor () {
@@ -26,39 +10,73 @@ class WidgetTab extends React.Component {
     this.changeOpacity = this.changeOpacity.bind(this);
     this.changeOpenBehav = this.changeOpenBehav.bind(this);
     this.changeCloseBehav = this.changeCloseBehav.bind(this);
+    this.changePlacement = this.changePlacement.bind(this);
   }
 
-  changeOpacity(e, data) {
-    this.props.changeWidgetOpt(data.name, parseFloat(data.value) / 100);
+  changeOpenBehav(e) {
+    this.props.changeWidgetOpt('openOn', e.target.value);
   }
 
-  changeOpenBehav(e, data) {
-    this.props.changeWidgetOpt(data.name, data.value);
+  changeCloseBehav(e) {
+    this.props.changeWidgetOpt('closeOn', e.target.value);
   }
 
-  changeCloseBehav(e, data) {
-    this.props.changeWidgetOpt(data.name, data.value);
+  changePlacement(e) {
+    this.props.changeWidgetOpt('placement', e.target.value);
+  }
+
+  changeOpacity(e) {
+    this.props.changeWidgetOpt('opacity', parseFloat(e.target.value) / 100);
   }
 
   render() {
     const { widgetSettings } = this.props;
     return (
       <Tab.Pane as='div'>
-        <Form>
-          <Form.Field>
-            <label>Widget Opacity</label>
-            <Input label={{ basic: true, content: '%' }}
-      labelPosition='right' value={Math.round(widgetSettings.opacity * 100)} name='opacity' onChange={this.changeOpacity} type="number" step="1" min="0" max="100" />
-          </Form.Field>
-          <Form.Field>
-            <label>Widget Open Behavior</label>
-            <Select name='openOn' value={widgetSettings.openOn} options={openBehaviorOptions} onChange={this.changeOpenBehav} />
-          </Form.Field>
-          <Form.Field>
-            <label>Widget Close Behavior</label>
-            <Select name='closeOn' value={widgetSettings.closeOn} options={closeBehaviorOptions} onChange={this.changeCloseBehav} />
-          </Form.Field>
-        </Form>
+        <div className="columns">
+          <div className="column">
+            <label>Opacity</label>
+            <div className="range-slider">
+              <input className="range-slider__range" type="range" value={Math.round(widgetSettings.opacity * 100)} min="0" max="100" step="1" onChange={this.changeOpacity} />
+              <span className="range-slider__value">{Math.round(widgetSettings.opacity * 100)}%</span>
+            </div>
+          </div>
+        </div>
+        <div className="columns is-mobile">
+          <div className="column is-half">
+            <label style={{ marginBottom: '10px', display: 'inline-block' }}>Open Behavior</label>
+            <div className="select is-fullwidth">
+              <select value={widgetSettings.openOn} onChange={this.changeOpenBehav}>
+                <option value="hover">Open on Mouse Hover</option>
+                <option value="click">Open on Mouse Click</option>
+              </select>
+            </div>
+          </div>
+          <div className="column is-half">
+            <label style={{ marginBottom: '10px', display: 'inline-block' }}>Close Behavior</label>
+            <div className="select is-fullwidth">
+              <select value={widgetSettings.closeOn} onChange={this.changeCloseBehav}>
+                <option value="hover">Close on Mouse Leave</option>
+                <option value="click">Close on Mouse Click</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="columns is-mobile">
+          <div className="column is-half">
+            <label style={{ marginBottom: '10px', display: 'inline-block' }}>Placement</label>
+            <div className="select is-fullwidth">
+              <select value={widgetSettings.placement} onChange={this.changePlacement}>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+              </select>
+            </div>
+          </div>
+          <div className="column is-half">
+            <label style={{ marginBottom: '10px', display: 'inline-block' }}>Position</label>
+
+          </div>
+        </div>
       </Tab.Pane>
     );
   }

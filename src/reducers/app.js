@@ -28,6 +28,7 @@ const initialState = {
     opacity: 1,
     openOn: 'hover', // click, hover
     closeOn: 'hover', // click, hover
+    placement: 'left', // left, right
   },
   adsSdkLoaded: false,
 };

@@ -93,9 +93,11 @@ export const changeWidgetOpt = (key, value) => {
 
     const { app } = getState();
 
-    overwolf.windows.sendMessage(app.widgetWindowid, 'update-settings', app.widgetSettings, () => {});
+    const settings = Object.assign({}, app.widgetSettings, { [key]: value });
 
-    localforage.setItem('widgetSettings', app.widgetSettings);
+    overwolf.windows.sendMessage(app.widgetWindowid, 'update-settings', settings, () => {});
+
+    localforage.setItem('widgetSettings', settings);
   };
 };
 

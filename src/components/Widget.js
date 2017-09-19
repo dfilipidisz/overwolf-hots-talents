@@ -1,10 +1,11 @@
 import React from 'react';
+import cn from 'classnames';
 import AppPopup from './AppPopup';
 import { Motion, spring } from 'react-motion';
 
 class MinimizedWidget extends React.Component {
   render () {
-    const { closeWidget, openMain, openDetails, isDetailsOpen, openOn } = this.props;
+    const { closeWidget, openMain, openDetails, isDetailsOpen, openOn, placement } = this.props;
 
     const toggleProps = {};
     if (openOn === 'hover') {
@@ -13,22 +14,29 @@ class MinimizedWidget extends React.Component {
       toggleProps.onClick = openDetails;
     }
 
+    const isRight = placement === 'right';
+    const mainClass = cn('mini-widget', { 'is-right': isRight });
+    const arrowClass = cn('fa', {
+      'fa-chevron-right': !isRight,
+      'fa-chevron-left': isRight,
+    });
+
     return (
-      <div className='mini-widget' style={{ display: isDetailsOpen ? 'none' : 'block'}}>
+      <div className={mainClass} style={{ display: isDetailsOpen ? 'none' : 'block'}}>
         <AppPopup
-          position='right center'
+          position={isRight ? 'left center' : 'right center'}
           title='Open Main Window'
         >
           <div className='main-toggle' onClick={openMain}><i className='fa fa-circle-o' /></div>
         </AppPopup>
         <AppPopup
-          position='right center'
+          position={isRight ? 'left center' : 'right center'}
           title='Show Build'
         >
-          <div className='open-details' {...toggleProps}><i className='fa fa-chevron-right' /></div>
+          <div className='open-details' {...toggleProps}><i className={arrowClass} /></div>
         </AppPopup>
         <AppPopup
-          position='right center'
+          position={isRight ? 'left center' : 'right center'}
           title='Close In-Game Widget'
         >
           <div className='close-widget' onClick={closeWidget}><i className='fa fa-remove' /></div>
@@ -65,7 +73,7 @@ class WidgetDetails extends React.Component {
   }
 
   render () {
-    const { open, build, opacity, closeOn } = this.props;
+    const { open, build, opacity, closeOn, placement } = this.props;
 
     const toggleProps = {};
     if (closeOn === 'hover') {
@@ -74,10 +82,14 @@ class WidgetDetails extends React.Component {
       toggleProps.onClick = this.callClose;
     }
 
+    const isRight = placement === 'right';
+    const mainClass = cn('widget-details', { 'is-right': isRight });
+    const slideValue = isRight ? 230  : -230;
+
     return (
-      <Motion style={ { x: spring(open ? 0 : -230) } }>
+      <Motion style={ { x: spring(open ? 0 : slideValue) } }>
         {({ x }) => (
-          <div className='widget-details' {...toggleProps} style={{transform: `translateX(${x}px)`, opacity, cursor: closeOn === 'click' ? 'pointer' : 'default'}}>
+          <div className={mainClass} {...toggleProps} style={{transform: `translateX(${x}px)`, opacity, cursor: closeOn === 'click' ? 'pointer' : 'default'}}>
             <div className='widget-talents'>
               {build && build.talents.map((level, i) => {
                 return (
@@ -122,6 +134,7 @@ class Widget extends React.Component {
       opacity: 1,
       openOn: 'hover',
       closeOn: 'hover',
+      placement: 'left',
     };
   }
 
@@ -154,7 +167,9 @@ class Widget extends React.Component {
           opacity: payload.content.settings.opacity,
           openOn: payload.content.settings.openOn,
           closeOn: payload.content.settings.closeOn,
+          placement: payload.content.settings.placement,
         });
+        overwolf.windows.changePosition(this.state.ownId, payload.content.settings.placement === 'left' ? 0 : window.screen.width - 240, 50);
         break;
       case 'show-yourself':
         this.setState({ isVisible: true });
@@ -166,7 +181,13 @@ class Widget extends React.Component {
         this.setState({ build: payload.content });
         break;
       case 'update-settings':
-        this.setState({ opacity: payload.content.opacity, openOn: payload.content.openOn, closeOn: payload.content.closeOn });
+        this.setState({
+          opacity: payload.content.opacity,
+          openOn: payload.content.openOn,
+          closeOn: payload.content.closeOn,
+          placement: payload.content.placement,
+        });
+        overwolf.windows.changePosition(this.state.ownId, payload.content.placement === 'left' ? 0 : window.screen.width - 240, 50);
         break;
     }
 
@@ -189,7 +210,7 @@ class Widget extends React.Component {
   }
 
   render () {
-    const { isVisible, isDetailsOpen, build, opacity, openOn, closeOn } = this.state;
+    const { isVisible, isDetailsOpen, build, opacity, openOn, closeOn, placement } = this.state;
 
     if (!isVisible) {
       return null;
@@ -197,8 +218,8 @@ class Widget extends React.Component {
 
     return (
       <div style={{backgroundColor: 'transparent', width: '240px', height: '300px', position: 'relative'}}>
-        <MinimizedWidget closeWidget={this.closeWidget} openMain={this.openMain} openDetails={this.openDetails} isDetailsOpen={isDetailsOpen} openOn={openOn} />
-        <WidgetDetails open={isDetailsOpen} closeDetails={this.closeDetails} build={build} opacity={opacity} closeOn={closeOn} />
+        <MinimizedWidget closeWidget={this.closeWidget} openMain={this.openMain} openDetails={this.openDetails} isDetailsOpen={isDetailsOpen} openOn={openOn} placement={placement} />
+        <WidgetDetails open={isDetailsOpen} closeDetails={this.closeDetails} build={build} opacity={opacity} closeOn={closeOn} placement={placement} />
       </div>
     );
   }

@@ -11,6 +11,7 @@ import {
   APP_MINIMIZE_MAIN,
   APP_WIDGET_UPDATE_OPT,
   APP_UPDATE_SETTINGS,
+  APP_ADS_SDK_LOADED,
 } from '../constants';
 import { initFetch, checkResponse } from '../utility';
 import Logger from '../logger';
@@ -109,5 +110,11 @@ export const getSavedSettings = () => {
       }
       localforage.setItem('widgetSettings', app.widgetSettings);
     })
+  };
+};
+
+export const adsSdkArrived = () => {
+  return function (dispatch) {
+    return dispatch({ type: APP_ADS_SDK_LOADED });
   };
 };

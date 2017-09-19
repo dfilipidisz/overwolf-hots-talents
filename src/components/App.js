@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Logger from '../logger';
-import { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain, getSavedSettings } from '../actions/app';
+import { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain, getSavedSettings, adsSdkArrived } from '../actions/app';
 import Navbar from './Navbar';
 import PageHome from './PageHome';
 import PageHeroes from './PageHeroes';
@@ -32,6 +32,22 @@ class App extends React.Component {
 
     // Get data
     this.props.getTalentData();
+
+    // Load Overwolf ads sdk
+    if (!this.props.adsSdkLoaded) {
+      const adScript = document.createElement("script");
+      adScript.setAttribute('type', 'application/javascript');
+      adScript.setAttribute('src', 'http://content.overwolf.com/libs/ads/1/owads.min.js');
+      adScript.onload = () => {
+        this.props.adsSdkArrived();
+        this.OWAD = new OwAd(this.bottomAdElement, {
+          size: {width: 728, height: 90}
+        });
+        this.OWAD.addEventListener('error', this.handleAdError);
+        this.OWAD.addEventListener('display_ad_loaded', this.handleAdDisplay);
+      };
+      document.body.appendChild(adScript);
+    }
 
     // Get main window's id
     overwolf.windows.getCurrentWindow((result) => {
@@ -73,9 +89,23 @@ class App extends React.Component {
     });
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.page !== this.props.page) {
+      this.OWAD.refreshAd();
+    }
+  }
+
   componentWillUnmount() {
     overwolf.windows.onMessageReceived.removeListener(this.receiveMessage);
     clearInterval(this.hearthbeatInterval);
+  }
+
+  handleAdError(e) {
+    Logger.log('aderror', {error: e});
+  }
+
+  handleAdDisplay() {
+    Logger.log('adimpression', {format: 'display'});
   }
 
   receiveMessage(payload) {
@@ -120,9 +150,7 @@ class App extends React.Component {
 
           {pageComp}
         </div>
-        {/*<div className='bottom-widget'>
-          hi
-        </div>*/}
+        <div className='bottom-widget' id="bottom-ad-widget" ref={(el) => {this.bottomAdElement = el;}} />
       </div>
     );
   }
@@ -135,6 +163,8 @@ export default connect(
     mainWindowVisible: state.app.mainWindowVisible,
     widgetWindowid: state.app.widgetWindowid,
     widgetSettings: state.app.widgetSettings,
+    adsSdkLoaded: state.app.adsSdkLoaded,
+    selectedHero: state.app.selectedHero,
   }),
-  { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain, getSavedSettings }
+  { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain, getSavedSettings, adsSdkArrived }
 )(App);

@@ -10,6 +10,7 @@ import {
   APP_MINIMIZE_MAIN,
   APP_WIDGET_UPDATE_OPT,
   APP_UPDATE_SETTINGS,
+  APP_ADS_SDK_LOADED,
 } from '../constants';
 
 const initialState = {
@@ -27,7 +28,8 @@ const initialState = {
     opacity: 1,
     openOn: 'hover', // click, hover
     closeOn: 'hover', // click, hover
-  }
+  },
+  adsSdkLoaded: false,
 };
 
 export default function (state = initialState, action) {
@@ -85,6 +87,10 @@ export default function (state = initialState, action) {
   } else if (action.type === APP_UPDATE_SETTINGS) {
     return Object.assign({}, state, {
       widgetSettings: action.value,
+    });
+  } else if (action.type === APP_ADS_SDK_LOADED) {
+    return Object.assign({}, state, {
+      adsSdkLoaded: true,
     });
   }
   return state;

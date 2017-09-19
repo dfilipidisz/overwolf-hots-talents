@@ -12,7 +12,13 @@
     "icon": "IconMouseOver.png",
     "icon_gray": "IconMouseNormal.png"
   },
-  "permissions": ["Profile", "Hotkeys"],
+  "permissions": [
+    "Profile",
+    "Hotkeys",
+    "Extensions",
+    "Streaming",
+    "GameInfo"
+  ],
   "data": {
     "start_window": "MainWindow",
     "externally_connectable": {
@@ -20,6 +26,12 @@
         "http://hots-tool.ddns.net/*"
       ]
     },
+    "protocol_override_domains": {
+      "googlesyndication": "http"
+    },
+    "block_top_window_navigation": true,
+    "popup_blocker": true,
+    "mute": true,
     "windows": {
       "MainWindow": {
         "file": "Files/index.html",

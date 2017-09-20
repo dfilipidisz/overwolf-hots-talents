@@ -29,6 +29,7 @@ const initialState = {
     openOn: 'hover', // click, hover
     closeOn: 'hover', // click, hover
     placement: 'left', // left, right
+    position: 0.06,
   },
   adsSdkLoaded: false,
 };

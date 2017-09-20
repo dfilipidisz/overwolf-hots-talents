@@ -135,6 +135,7 @@ class Widget extends React.Component {
       openOn: 'hover',
       closeOn: 'hover',
       placement: 'left',
+      position: 0.06,
     };
   }
 
@@ -168,8 +169,12 @@ class Widget extends React.Component {
           openOn: payload.content.settings.openOn,
           closeOn: payload.content.settings.closeOn,
           placement: payload.content.settings.placement,
+          position: payload.content.settings.position,
         });
-        overwolf.windows.changePosition(this.state.ownId, payload.content.settings.placement === 'left' ? 0 : window.screen.width - 240, 50);
+        overwolf.windows.changePosition(this.state.ownId,
+          payload.content.settings.placement === 'left' ? 0 : window.screen.width - 240,
+          Math.round((window.screen.height - 300) * payload.content.settings.position)
+        );
         break;
       case 'show-yourself':
         this.setState({ isVisible: true });
@@ -186,8 +191,12 @@ class Widget extends React.Component {
           openOn: payload.content.openOn,
           closeOn: payload.content.closeOn,
           placement: payload.content.placement,
+          position: payload.content.position,
         });
-        overwolf.windows.changePosition(this.state.ownId, payload.content.placement === 'left' ? 0 : window.screen.width - 240, 50);
+        overwolf.windows.changePosition(this.state.ownId,
+          payload.content.placement === 'left' ? 0 : window.screen.width - 240,
+          Math.round((window.screen.height - 300) * payload.content.position)
+        );
         break;
     }
 

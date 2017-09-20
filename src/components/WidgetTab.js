@@ -11,6 +11,7 @@ class WidgetTab extends React.Component {
     this.changeOpenBehav = this.changeOpenBehav.bind(this);
     this.changeCloseBehav = this.changeCloseBehav.bind(this);
     this.changePlacement = this.changePlacement.bind(this);
+    this.changePosition = this.changePosition.bind(this);
   }
 
   changeOpenBehav(e) {
@@ -25,12 +26,17 @@ class WidgetTab extends React.Component {
     this.props.changeWidgetOpt('placement', e.target.value);
   }
 
+  changePosition(e) {
+    this.props.changeWidgetOpt('position', parseFloat(e.target.value) / 100);
+  }
+
   changeOpacity(e) {
     this.props.changeWidgetOpt('opacity', parseFloat(e.target.value) / 100);
   }
 
   render() {
     const { widgetSettings } = this.props;
+    console.log(widgetSettings);
     return (
       <Tab.Pane as='div'>
         <div className="columns">
@@ -74,7 +80,10 @@ class WidgetTab extends React.Component {
           </div>
           <div className="column is-half">
             <label style={{ marginBottom: '10px', display: 'inline-block' }}>Position</label>
-
+            <div className="range-slider">
+              <input className="range-slider__range" type="range" value={Math.round(widgetSettings.position * 100)} min="0" max="100" step="1" onChange={this.changePosition} />
+              <span className="range-slider__value">{Math.round(widgetSettings.position * 100)}%</span>
+            </div>
           </div>
         </div>
       </Tab.Pane>

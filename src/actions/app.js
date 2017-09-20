@@ -107,6 +107,13 @@ export const getSavedSettings = () => {
 
     localforage.getItem('widgetSettings').then((value) => {
       if (value) {
+        // Ensure base values for new properties
+        if (typeof value.placement === 'undefined') {
+          value.placement = 'left';
+        }
+        if (typeof value.position === 'undefined') {
+          value.position = 0.06;
+        }
         overwolf.windows.sendMessage(app.widgetWindowid, 'update-settings', value, () => {});
         return dispatch({ type: APP_UPDATE_SETTINGS, value });
       }

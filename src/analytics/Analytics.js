@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Package from '../../package.json';
 // import localforage from 'localforage';
 import { initFetch, checkResponse } from '../utility';

@@ -7,10 +7,21 @@ import PageHome from './PageHome';
 import PageHeroes from './PageHeroes';
 import PageBuilds from './PageBuilds';
 import PageSettings from './PageSettings';
+import Overwolf from '../overwolf/Overwolf';
 
 class App extends React.Component {
-  constructor () {
+  static handleAdError(e) {
+    Logger.log('aderror', { error: e });
+  }
+
+  static handleAdDisplay() {
+    Logger.log('adimpression', { format: 'display' });
+  }
+
+  constructor() {
     super();
+    console.log(Overwolf);
+    Overwolf.Profile.getCurrentUser();
 
     this.receiveMessage = this.receiveMessage.bind(this);
   }
@@ -20,10 +31,10 @@ class App extends React.Component {
     Logger.startSession();
 
     // Error event listener, log
-    window.addEventListener("error", (e) => {
-      Logger.log('error', {error: e.error.stack});
+    window.addEventListener('error', (e) => {
+      Logger.log('error', { error: e.error.stack });
       return false;
-    })
+    });
 
     // Guess session length
     this.hearthbeatInterval = setInterval(() => {
@@ -35,13 +46,13 @@ class App extends React.Component {
 
     // Load Overwolf ads sdk
     if (!this.props.adsSdkLoaded) {
-      const adScript = document.createElement("script");
+      const adScript = document.createElement('script');
       adScript.setAttribute('type', 'application/javascript');
       adScript.setAttribute('src', 'http://content.overwolf.com/libs/ads/1/owads.min.js');
       adScript.onload = () => {
         this.props.adsSdkArrived();
         this.OWAD = new OwAd(this.bottomAdElement, {
-          size: {width: 728, height: 90}
+          size: { width: 728, height: 90 },
         });
         this.OWAD.addEventListener('error', this.handleAdError);
         this.OWAD.addEventListener('display_ad_loaded', this.handleAdDisplay);
@@ -51,7 +62,7 @@ class App extends React.Component {
 
     // Get main window's id
     overwolf.windows.getCurrentWindow((result) => {
-      if (result.status === "success") {
+      if (result.status === 'success') {
         // Ensure the correct window size
         overwolf.windows.changeSize(result.window.id, 729, 540);
         this.props.updateWindowid(result.window.id);
@@ -76,8 +87,8 @@ class App extends React.Component {
 
         // Register hotkey callback
         overwolf.settings.registerHotKey(
-          "toggle_main_window",
-          this.props.toggleMainWindow
+          'toggle_main_window',
+          this.props.toggleMainWindow,
         );
 
         // Register comm channel from widget
@@ -100,26 +111,19 @@ class App extends React.Component {
     clearInterval(this.hearthbeatInterval);
   }
 
-  handleAdError(e) {
-    Logger.log('aderror', {error: e});
-  }
-
-  handleAdDisplay() {
-    Logger.log('adimpression', {format: 'display'});
-  }
-
   receiveMessage(payload) {
-    switch(payload.id) {
+    switch (payload.id) {
       case 'request-hide':
         overwolf.windows.sendMessage(this.props.widgetWindowid, 'hide-yourself', null, () => {});
-        break;
+        return undefined;
       case 'open-main':
         this.props.widgetOpenMain();
-        break;
+        return undefined;
+      default: return undefined;
     }
   }
 
-  render () {
+  render() {
     const { page, mainWindowVisible } = this.props;
 
     if (!mainWindowVisible) {
@@ -141,16 +145,18 @@ class App extends React.Component {
       case 'settings':
         pageComp = <PageSettings />;
         break;
+      default:
+        pageComp = null;
     }
 
     return (
-      <div className='app-container'>
-        <div className='main-window'>
+      <div className="app-container">
+        <div className="main-window">
           <Navbar />
 
           {pageComp}
         </div>
-        <div className='bottom-widget' id="bottom-ad-widget" ref={(el) => {this.bottomAdElement = el;}} />
+        <div className="bottom-widget" id="bottom-ad-widget" ref={(el) => { this.bottomAdElement = el; }} />
       </div>
     );
   }
@@ -166,5 +172,13 @@ export default connect(
     adsSdkLoaded: state.app.adsSdkLoaded,
     selectedHero: state.app.selectedHero,
   }),
-  { updateWindowid, updateWidgetWindowid, getTalentData, toggleMainWindow, widgetOpenMain, getSavedSettings, adsSdkArrived }
+  {
+    updateWindowid,
+    updateWidgetWindowid,
+    getTalentData,
+    toggleMainWindow,
+    widgetOpenMain,
+    getSavedSettings,
+    adsSdkArrived,
+  },
 )(App);

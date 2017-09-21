@@ -36,7 +36,6 @@ class WidgetTab extends React.Component {
 
   render() {
     const { widgetSettings } = this.props;
-    console.log(widgetSettings);
     return (
       <Tab.Pane as='div'>
         <div className="columns">

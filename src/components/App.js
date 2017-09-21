@@ -7,7 +7,6 @@ import PageHome from './PageHome';
 import PageHeroes from './PageHeroes';
 import PageBuilds from './PageBuilds';
 import PageSettings from './PageSettings';
-import Overwolf from '../overwolf/Overwolf';
 
 class App extends React.Component {
   static handleAdError(e) {
@@ -20,8 +19,6 @@ class App extends React.Component {
 
   constructor() {
     super();
-    console.log(Overwolf);
-    Overwolf.Profile.getCurrentUser();
 
     this.receiveMessage = this.receiveMessage.bind(this);
   }
@@ -60,6 +57,9 @@ class App extends React.Component {
       document.body.appendChild(adScript);
     }
 
+    // Deep down in overwolf callbacks, props.widgetSettings becomes undefined and causes errors in the 'init-data' phase. Needs to clean this up.
+    const CLEAN_THIS_UP = Object.assign({}, this.props.widgetSettings);
+
     // Get main window's id
     overwolf.windows.getCurrentWindow((result) => {
       if (result.status === 'success') {
@@ -74,15 +74,20 @@ class App extends React.Component {
               setTimeout(() => {
                 overwolf.windows.sendMessage(wresult.window.id, 'init-data', {
                   mainWindowId: result.window.id,
-                  settings: this.props.widgetSettings,
+                  settings: CLEAN_THIS_UP,
                 }, () => {});
                 overwolf.windows.sendMessage(wresult.window.id, 'hide-yourself', null, () => {});
               }, 200);
+
+              this.props.updateWidgetWindowid(wresult.window.id);
+              // Get saved settings now that we have windows
+
+              // Add a slight delay to prevent race conditions in setStates in the widget
+              setTimeout(() => {
+                this.props.getSavedSettings(wresult.window.id);
+              }, 250);
             }
           });
-          this.props.updateWidgetWindowid(wresult.window.id);
-          // Get saved settings now that we have windows
-          this.props.getSavedSettings();
         });
 
         // Register hotkey callback

@@ -69,7 +69,7 @@ export const changeWidgetOpt = (key, value) => (dispatch, getState) => {
   localforage.setItem('widgetSettings', settings);
 };
 
-export const getSavedSettings = () => (dispatch, getState) => {
+export const getSavedSettings = (wid) => (dispatch, getState) => {
   const { app } = getState();
 
   localforage.getItem('widgetSettings').then((value) => {
@@ -82,10 +82,15 @@ export const getSavedSettings = () => (dispatch, getState) => {
       if (typeof storedSettings.position === 'undefined') {
         storedSettings.position = 0.06;
       }
-      overwolf.windows.sendMessage(app.widgetWindowid, 'update-settings', storedSettings, () => {});
-      return dispatch({ type: APP_UPDATE_SETTINGS, storedSettings });
+
+      overwolf.windows.sendMessage(wid, 'update-settings', storedSettings, (r) => {
+        return dispatch({ type: APP_UPDATE_SETTINGS, storedSettings });
+      });
+
+    } else {
+      return localforage.setItem('widgetSettings', app.widgetSettings);
     }
-    return localforage.setItem('widgetSettings', app.widgetSettings);
+
   });
 };
 

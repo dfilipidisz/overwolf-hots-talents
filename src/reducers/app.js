@@ -88,7 +88,7 @@ export default function (state = initialState, action) {
     });
   } else if (action.type === APP_UPDATE_SETTINGS) {
     return Object.assign({}, state, {
-      widgetSettings: action.value,
+      widgetSettings: action.storedSettings,
     });
   } else if (action.type === APP_ADS_SDK_LOADED) {
     return Object.assign({}, state, {

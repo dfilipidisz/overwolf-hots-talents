@@ -172,7 +172,7 @@ class Widget extends React.Component {
           position: payload.content.settings.position,
         });
         overwolf.windows.changePosition(this.state.ownId,
-          payload.content.settings.placement === 'left' ? 0 : window.screen.width - 240,
+          payload.content.settings.placement === 'left' ? 0 : Math.round(window.screen.width - 240),
           Math.round((window.screen.height - 300) * payload.content.settings.position)
         );
         break;
@@ -194,7 +194,7 @@ class Widget extends React.Component {
           position: payload.content.position,
         });
         overwolf.windows.changePosition(this.state.ownId,
-          payload.content.placement === 'left' ? 0 : window.screen.width - 240,
+          payload.content.placement === 'left' ? 0 : Math.round(window.screen.width - 240),
           Math.round((window.screen.height - 300) * payload.content.position)
         );
         break;

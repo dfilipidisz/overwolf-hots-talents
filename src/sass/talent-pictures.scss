@@ -651,53 +651,48 @@
 .Azmodan.fifth-circle           { background-position: -240px 0px; }
 
 //Brightwing
-.Brightwing.unfurling-spray,
-.Brightwing.mistified,
-.Brightwing.revitalizing-mist,
-.Brightwing.hyper-shift,
-.Brightwing.peekaboo,
-.Brightwing.phase-shield,
-.Brightwing.manic-pixie,
-.Brightwing.pixie-boost,
-.Brightwing.bouncy-dust,
-.Brightwing.arcane-barrage,
-.Brightwing.dream-shot,
-.Brightwing.sticky-flare,
-.Brightwing.unstable-anomaly,
-.Brightwing.greater-polymorph,
-.Brightwing.blink-heal,
-.Brightwing.double-wyrmhole,
-.Brightwing.emerald-wind,
-.Brightwing.continuous-winds,
-.Brightwing.shield-dust,
-.Brightwing.critterize { background: url(../assets/img/talents/brightwing.png); }
+.mistified,
+.revitalizing-mist,
+.hyper-shift,
+.peekaboo,
+.phase-shield,
+.manic-pixie,
+.pixie-boost,
+.bouncy-dust,
+.dream-shot,
+.sticky-flare,
+.unstable-anomaly,
+.greater-polymorph,
+.blink-heal,
+.double-wyrmhole,
+.emerald-wind,
+.continuous-winds,
+.shield-dust,
+.critterize { background: url(../assets/img/talents/brightwing.png); }
 
-.Brightwing.unfurling-spray,
-.Brightwing.mistified,
-.Brightwing.revitalizing-mist { background-position:    0px 0px; }
-.Brightwing.hyper-shift,
-.Brightwing.peekaboo,
-.Brightwing.phase-shield      { background-position:  -30px 0px; }
-.Brightwing.manic-pixie,
-.Brightwing.pixie-boost,
-.Brightwing.bouncy-dust       { background-position:  -60px 0px; }
-.Brightwing.arcane-barrage,
-.Brightwing.dream-shot,
-.Brightwing.sticky-flare      { background-position:  -90px 0px; }
-.Brightwing.unstable-anomaly,
-.Brightwing.greater-polymorph { background-position: -120px 0px; }
-.Brightwing.blink-heal,
-.Brightwing.double-wyrmhole   { background-position: -150px 0px; }
-.Brightwing.emerald-wind,
-.Brightwing.continuous-winds  { background-position: -180px 0px; }
-.Brightwing.shield-dust       { background-position: -210px 0px; }
-.Brightwing.critterize        { background-position: -240px 0px; }
+.mistified,
+.revitalizing-mist { background-position:    0px 0px; }
+.hyper-shift,
+.peekaboo,
+.phase-shield      { background-position:  -30px 0px; }
+.manic-pixie,
+.pixie-boost,
+.bouncy-dust       { background-position:  -60px 0px; }
+.dream-shot,
+.sticky-flare      { background-position:  -90px 0px; }
+.unstable-anomaly,
+.greater-polymorph { background-position: -120px 0px; }
+.blink-heal,
+.double-wyrmhole   { background-position: -150px 0px; }
+.emerald-wind,
+.continuous-winds  { background-position: -180px 0px; }
+.shield-dust       { background-position: -210px 0px; }
+.critterize        { background-position: -240px 0px; }
 
 //Cassia
 .thunderstroke,
 .grounding-bolt,
 .Cassia.pierce,
-.true-sight,
 .seraphs-hymn,
 .charged-strikes,
 .inner-light,
@@ -717,7 +712,6 @@
 .thunderstroke,
 .grounding-bolt,
 .Cassia.pierce { background-position:    0px 0px; }
-.true-sight,
 .seraphs-hymn { background-position: -30px 0px; }
 .charged-strikes { background-position: -60px 0px; }
 .inner-light { background-position: -90px 0px; }
@@ -735,65 +729,63 @@
 .imprisoning-light { background-position: -360px 0px; }
 
 //Chen
-.Chen.keg-toss,
-.Chen.full-keg,
-.Chen.a-touch-of-honey,
-.Chen.grounding-brew,
-.Chen.combat-stance,
-.Chen.enough-to-share,
-.Chen.bottomless-mug,
-.Chen.consuming-flame,
-.Chen.deep-breath,
-.Chen.ring-of-fire,
-.Chen.swift-reflexes,
-.Chen.deadly-strike,
-.Chen.brew-strike,
-.Chen.pressure-point,
-.Chen.brewmasters-balance,
-.Chen.bolder-flavor,
-.Chen.wandering-keg,
-.Chen.untapped-potential,
-.Chen.storm-earth-fire,
-.Chen.elemental-conduit,
-.Chen.combination-attack,
-.Chen.accumulating-flame,
-.Chen.freshest-ingredients,
-.Chen.withering-flames,
-.Chen.flying-leap,
-.Chen.another-round,
-.Chen.purifying-brew,
-.Chen.elusive-brawler,
-.Chen.stormstout-secret-recipe { background: url(../assets/img/talents/chen.png); }
+.keg-toss,
+.full-keg,
+.a-touch-of-honey,
+.combat-stance,
+.enough-to-share,
+.bottomless-mug,
+.consuming-flame,
+.deep-breath,
+.ring-of-fire,
+.swift-reflexes,
+.deadly-strike,
+.brew-strike,
+.pressure-point,
+.brewmasters-balance,
+.bolder-flavor,
+.wandering-keg,
+.untapped-potential,
+.storm-earth-fire,
+.elemental-conduit,
+.combination-attack,
+.accumulating-flame,
+.freshest-ingredients,
+.withering-flames,
+.flying-leap,
+.another-round,
+.purifying-brew,
+.elusive-brawler,
+.stormstout-secret-recipe { background: url(../assets/img/talents/chen.png); }
 
-.Chen.keg-toss,
-.Chen.full-keg,
-.Chen.another-round,
-.Chen.a-touch-of-honey      { background-position:    0px 0px; }
-.Chen.combat-stance,
-.Chen.enough-to-share,
-.Chen.freshest-ingredients,
-.Chen.brewmasters-balance,
-.Chen.bottomless-mug        { background-position:  -30px 0px; }
-.Chen.consuming-flame,
-.Chen.deep-breath,
-.Chen.accumulating-flame,
-.Chen.withering-flames,
-.Chen.ring-of-fire          { background-position:  -60px 0px; }
-.Chen.swift-reflexes        { background-position:  -90px 0px; }
-.Chen.deadly-strike,
-.Chen.brew-strike,
-.Chen.flying-leap,
-.Chen.pressure-point        { background-position: -120px 0px; }
-.Chen.grounding-brew,
-.Chen.purifying-brew,
-.Chen.bolder-flavor         { background-position: -150px 0px; }
-.Chen.wandering-keg,
-.Chen.untapped-potential    { background-position: -180px 0px; }
-.Chen.storm-earth-fire,
-.Chen.elemental-conduit     { background-position: -210px 0px; }
-.Chen.combination-attack    { background-position: -240px 0px; }
-.Chen.elusive-brawler       { background-position: -270px 0px; }
-.Chen.stormstout-secret-recipe { background-position: -300px 0px; }
+.keg-toss,
+.full-keg,
+.another-round,
+.a-touch-of-honey      { background-position:    0px 0px; }
+.combat-stance,
+.enough-to-share,
+.freshest-ingredients,
+.brewmasters-balance,
+.bottomless-mug        { background-position:  -30px 0px; }
+.consuming-flame,
+.deep-breath,
+.accumulating-flame,
+.withering-flames,
+.ring-of-fire          { background-position:  -60px 0px; }
+.swift-reflexes        { background-position:  -90px 0px; }
+.deadly-strike,
+.brew-strike,
+.flying-leap,
+.pressure-point        { background-position: -120px 0px; }
+.purifying-brew,
+.bolder-flavor         { background-position: -150px 0px; }
+.wandering-keg,
+.untapped-potential    { background-position: -180px 0px; }
+.storm-earth-fire,
+.elemental-conduit     { background-position: -210px 0px; }
+.combination-attack    { background-position: -240px 0px; }
+.elusive-brawler       { background-position: -270px 0px; }
+.stormstout-secret-recipe { background-position: -300px 0px; }
 
 //Cho
 .surging-dash,

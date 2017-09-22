@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BabiliPlugin = require('babili-webpack-plugin');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 const NODE_ENV = process.env.NODE_ENV;
 const buildPath = path.resolve(__dirname, './dist/app/Files');
@@ -60,7 +60,7 @@ const plugins = [
 
 if (NODE_ENV === 'production') {
   plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
-  plugins.push(new BabiliPlugin());
+  plugins.push(new MinifyPlugin());
 }
 
 module.exports = {

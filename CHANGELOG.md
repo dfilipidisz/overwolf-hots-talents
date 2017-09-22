@@ -1,3 +1,10 @@
+**v5.3.0** - 2017.09.22
+
+* Added: Widget positioning options
+* Added: Ad display
+* Changed: Talent updates for patch 2.27
+* Internal: Minor updates
+
 **v5.2.2** - 2017.09.10
 
 * Fix build loading from localstorage

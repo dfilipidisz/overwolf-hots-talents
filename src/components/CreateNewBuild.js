@@ -45,7 +45,8 @@ class CreateNewBuild extends React.Component {
     return (
       <div className='page-builds'>
         <Form>
-          <Form.Input label='Build Name' value={newBuild.name} onChange={this.props.changeName} />
+          <label>Build Name</label>
+          <input className="input is-fullwidth" type="text" value={newBuild.name} onChange={this.props.changeName} />
           <Form.Field>
             <label>Select Talents</label>
             <NewBuildTalentChooser hero={newBuild.hero} heroData={this.props.heroData} talents={newBuild.talents} />

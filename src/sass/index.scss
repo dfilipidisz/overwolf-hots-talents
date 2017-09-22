@@ -1,5 +1,12 @@
-@import '~bulma/sass/utilities/variables';
+//@import '~bulma/sass/utilities/variables';
+@import "~bulma/sass/utilities/_all";
+
+// Overwrite bulma variables
+$family-primary: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+@import "~bulma/sass/grid/columns";
 @import '~bulma/sass/components/dropdown';
+@import '~bulma/sass/elements/form';
 @import '~font-awesome/css/font-awesome.css';
 @import '~react-select/scss/default';
 
@@ -91,7 +98,6 @@ body {
   left: 0;
   width: $mainWidth;
   height: 90px;
-  background-color: purple;
 }
 
 .app-navbar {
@@ -280,4 +286,61 @@ body {
   label {
     color: $primaryTextColor !important;
   }
+}
+
+// Range slider
+.range-slider {
+  width: 100%;
+}
+
+.range-slider__range {
+  -webkit-appearance: none;
+  width: calc(100% - (73px));
+  height: 10px;
+  border-radius: 5px;
+  background: #d7dcdf;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.range-slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: lighten($primaryColor, 15%);
+  cursor: pointer;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+.range-slider__range::-webkit-slider-thumb:hover {
+  background: lighten($primaryColor, 25%);
+}
+.range-slider__range:active::-webkit-slider-thumb {
+  background: lighten($primaryColor, 25%);
+}
+
+.range-slider__value {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: lighten($primaryColor, 15%);
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+.range-slider__value:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid lighten($primaryColor, 15%);
+  border-bottom: 7px solid transparent;
+  content: '';
 }

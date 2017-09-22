@@ -70,10 +70,8 @@ class HotkeyTab extends React.Component {
     const { hotkey } = this.state;
     return (
       <Tab.Pane as='div'>
-        <Form>
-          <Form.Input label='Toggle Main Window' value={hotkey} readOnly />
-          <a href='overwolf://settings/hotkeys#toggle_main_window' className='ui blue button'>Change Hotkey</a>
-        </Form>
+        <input className="input" type="text" value={hotkey} readOnly />
+        <a href='overwolf://settings/hotkeys#toggle_main_window' className='ui blue button' style={{ marginTop: '10px' }}>Change Hotkey</a>
       </Tab.Pane>
     );
   }

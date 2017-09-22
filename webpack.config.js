@@ -3,9 +3,9 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BabiliPlugin = require('babili-webpack-plugin');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
-const nodeEnv = process.env.NODE_ENV;
+const NODE_ENV = process.env.NODE_ENV;
 const buildPath = path.resolve(__dirname, './dist/app/Files');
 const sourcePath = path.join(__dirname, './src');
 
@@ -26,8 +26,9 @@ const plugins = [
   }),
   new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: JSON.stringify(nodeEnv),
+      NODE_ENV: JSON.stringify(NODE_ENV),
     },
+    DEVELOPMENT: JSON.stringify(NODE_ENV === 'development'),
   }),
   new HtmlWebpackPlugin({
     template: path.join(sourcePath, 'assets/html/index.html'),
@@ -57,9 +58,9 @@ const plugins = [
   ]),
 ];
 
-if (nodeEnv === 'production') {
+if (NODE_ENV === 'production') {
   plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
-  plugins.push(new BabiliPlugin());
+  plugins.push(new MinifyPlugin());
 }
 
 module.exports = {

@@ -120,11 +120,10 @@ class App extends React.Component {
     switch (payload.id) {
       case 'request-hide':
         overwolf.windows.sendMessage(this.props.widgetWindowid, 'hide-yourself', null, () => {});
-        return undefined;
+        break;
       case 'open-main':
         this.props.widgetOpenMain();
-        return undefined;
-      default: return undefined;
+        break;
     }
   }
 

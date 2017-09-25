@@ -1,3 +1,7 @@
+**v5.3.1** - 2017.09.25
+
+* Fix: Widget bug
+
 **v5.3.0** - 2017.09.22
 
 * Added: Widget positioning options

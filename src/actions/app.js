@@ -46,16 +46,33 @@ export const getTalentData = () => (dispatch) => {
 export const changeHeroTalentFilter = value => dispatch =>
   dispatch({ type: APP_CHANGE_HERO_TALENT_FILTER, value });
 
-export const toggleMainWindow = payload => (dispatch) => {
+export const toggleMainWindow = payload => (dispatch, getState) => {
   if (payload.status === 'success') {
-    return dispatch({ type: APP_TOGGLE_MAIN_WINDOW });
+    const { app } = getState();
+    if (app.mainWindowVisible) {
+      overwolf.windows.minimize(app.windowid, (e) => {
+        console.log('minimized by toggle', e);
+      });
+    } else {
+      overwolf.windows.restore(app.windowid, (e) => {
+        console.log('maxi by toggle', e);
+      });
+    }
+    dispatch({ type: APP_TOGGLE_MAIN_WINDOW });
   }
-  return undefined;
 };
 
 export const widgetOpenMain = () => dispatch => dispatch({ type: APP_WIDGET_OPEN_MAIN });
 
-export const minimizeMainWindow = () => dispatch => dispatch({ type: APP_MINIMIZE_MAIN });
+// export const minimizeMainWindow = () => dispatch => dispatch({ type: APP_MINIMIZE_MAIN });
+export const minimizeMainWindow = () => (dispatch, getState) => {
+  // dispatch({ type: APP_MINIMIZE_MAIN });
+  const { app } = getState();
+  overwolf.windows.minimize(app.windowid, (e) => {
+    console.log('minimized', e);
+  });
+  dispatch({ type: APP_MINIMIZE_MAIN });
+};
 
 export const changeWidgetOpt = (key, value) => (dispatch, getState) => {
   dispatch({ type: APP_WIDGET_UPDATE_OPT, key, value });

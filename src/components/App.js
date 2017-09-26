@@ -67,6 +67,8 @@ class App extends React.Component {
         overwolf.windows.changeSize(result.window.id, 729, 540);
         this.props.updateWindowid(result.window.id);
 
+        overwolf.windows.onStateChanged.addListener(this.handleMainWindowStateChange);
+
         // Open widget window
         overwolf.windows.obtainDeclaredWindow('WidgetWindow', (wresult) => {
           overwolf.windows.restore(wresult.window.id, (f) => {
@@ -127,12 +129,16 @@ class App extends React.Component {
     }
   }
 
+  handleMainWindowStateChange(e) {
+    console.log(e);
+  }
+
   render() {
     const { page, mainWindowVisible } = this.props;
 
-    if (!mainWindowVisible) {
+    /* if (!mainWindowVisible) {
       return null;
-    }
+    } */
 
     let pageComp = null;
 

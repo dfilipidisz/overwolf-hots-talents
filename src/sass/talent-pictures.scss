@@ -168,7 +168,8 @@
 .ice-blink,
 .caduceus-feedback,
 .mithril-mace,
-.shroud-of-the-dead-king { background: url(../assets/img/talents/general.png); }
+.shroud-of-the-dead-king,
+.dynamic-shooting { background: url(../assets/img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -292,6 +293,7 @@
 .let-the-killing-begin,
 .shooting-star,                                                 //Tyrande
 .mithril-mace,                                                  //Leoric
+.dynamic-shooting,                                              //Ana
 .berserk                 { background-position:  -1050px 0px; }
 .maelstrom-shells,                                              //Sgt. Hammer
 .throwing-axes,                                                 //Rexxar
@@ -415,6 +417,51 @@
 .rite-of-rakshir       { background-position: -270px 0px; }
 .last-laugh            { background-position: -300px 0px; }
 .hasty-bargain         { background-position: -330px 0px; }
+
+// Ana
+.grenade-calibration,
+.air-strike,
+.contact-healing,
+.piercing-darts,
+.temporary-blindness,
+.detachable-box-magazine,
+.overdose,
+.aim-down-sights,
+.custom-optics,
+.mindnumbing-agent,
+.somnolent-doses,
+.debilitating-dart,
+.nano-boost,
+.nano-infusion,
+.eye-of-horus,
+.ballistic-advantage,
+.speed-serum,
+.sharpshooter,
+.purifying-darts,
+.concentrated-doses,
+.smelling-salts { background: url(../assets/img/talents/ana.webp); }
+
+.grenade-calibration,
+.air-strike,
+.contact-healing         { background-position:    0px 0px; }
+.piercing-darts,
+.temporary-blindness     { background-position:  -30px 0px; }
+.detachable-box-magazine { background-position:  -60px 0px; }
+.overdose                { background-position:  -90px 0px; }
+.aim-down-sights,
+.custom-optics           { background-position: -120px 0px; }
+.mindnumbing-agent,
+.somnolent-doses         { background-position: -150px 0px; }
+.debilitating-dart       { background-position: -180px 0px; }
+.nano-boost,
+.nano-infusion           { background-position: -210px 0px; }
+.eye-of-horus,
+.ballistic-advantage     { background-position: -240px 0px; }
+.speed-serum,
+.sharpshooter            { background-position: -270px 0px; }
+.purifying-darts,
+.concentrated-doses      { background-position: -300px 0px; }
+.smelling-salts          { background-position: -330px 0px; }
 
 //Anub'arak
 .extended-spikes,

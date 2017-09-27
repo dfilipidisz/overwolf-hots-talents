@@ -169,7 +169,9 @@
 .caduceus-feedback,
 .mithril-mace,
 .shroud-of-the-dead-king,
-.dynamic-shooting { background: url(../assets/img/talents/general.png); }
+.dynamic-shooting,
+.holy-fury,
+.blinded-by-the-light { background: url(../assets/img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -219,6 +221,7 @@
 .ruthless-momentum,                                             //Alarak
 .hardened-focus          { background-position:   -240px 0px; }
 .Tassadar.shield-battery,
+.blinded-by-the-light,                                          //Johanna
 .storm-shield            { background-position:   -270px 0px; }
 .rewind                  { background-position:   -300px 0px; }
 .ossein-renewal,                                                //Leoric
@@ -315,6 +318,7 @@
 .rime,                                                          //Arthas
 .block                   { background-position:  -1170px 0px; }
 .wildfire-bear,                                                 //Rexxar
+.holy-fury,                                                     //Johanna
 .burning-rage            { background-position:  -1200px 0px; }
 .nerubian-armor,                                                //Anub
 .dampen-magic            { background-position:  -1230px 0px; }
@@ -1556,7 +1560,6 @@
 .numbing-blast           { background-position: -270px 0px; }
 
 //Johanna
-.righteous-smash,
 .roar,
 .subdue,
 .knight-takes-pawn,
@@ -1564,7 +1567,6 @@
 .conviction,
 .blessed-hammer,
 .laws-of-hope,
-.the-crusade-marches-on,
 .hold-your-ground,
 .fanaticism,
 .sins-exposed,
@@ -1573,26 +1575,28 @@
 .heavens-fury,
 .blessed-shield,
 .radiating-faith,
-.indestructible { background: url(../assets/img/talents/johanna.png); }
+.indestructible,
+.zealous-glare,
+.blessed-hammer { background: url(../assets/img/talents/johanna.webp); }
 
-.righteous-smash,
+.conviction              { background-position:    0px 0px; }
 .roar,
 .subdue                  { background-position:  -30px 0px; }
 .knight-takes-pawn,
 .eternal-retaliation,
-.conviction,
 .blessed-hammer          { background-position:  -60px 0px; }
 .laws-of-hope            { background-position:  -90px 0px; }
-.the-crusade-marches-on,
 .hold-your-ground,
 .fanaticism              { background-position: -120px 0px; }
 .sins-exposed,
+.zealous-glare,
 .holy-renewal            { background-position: -150px 0px; }
 .falling-sword,
-.heavens-fury           { background-position: -180px 0px; }
+.heavens-fury            { background-position: -180px 0px; }
 .blessed-shield,
 .radiating-faith         { background-position: -210px 0px; }
 .indestructible          { background-position: -240px 0px; }
+.blessed-hammer          { background-position: -270px 0px; }
 
 //Kael'thas
 .convection,

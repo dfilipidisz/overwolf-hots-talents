@@ -45,6 +45,7 @@ export const FRANCHISES = [
 export const HEROES = [
   { value: 'Abathur', label: 'Abathur', role: 'specialist', franchise: 'starcraft' },
   { value: 'Alarak', label: 'Alarak', role: 'assassin', franchise: 'starcraft' },
+  { value: 'Ana', label: 'Ana', role: 'support', franchise: 'overwatch' },
   { value: 'Anubarak', label: 'Anub\'arak', role: 'warrior', franchise: 'warcraft' },
   { value: 'Artanis', label: 'Artanis', role: 'warrior', franchise: 'starcraft' },
   { value: 'Arthas', label: 'Arthas', role: 'warrior', franchise: 'warcraft' },

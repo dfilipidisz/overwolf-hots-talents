@@ -168,7 +168,10 @@
 .ice-blink,
 .caduceus-feedback,
 .mithril-mace,
-.shroud-of-the-dead-king { background: url(../assets/img/talents/general.png); }
+.shroud-of-the-dead-king,
+.dynamic-shooting,
+.holy-fury,
+.blinded-by-the-light { background: url(../assets/img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -218,6 +221,7 @@
 .ruthless-momentum,                                             //Alarak
 .hardened-focus          { background-position:   -240px 0px; }
 .Tassadar.shield-battery,
+.blinded-by-the-light,                                          //Johanna
 .storm-shield            { background-position:   -270px 0px; }
 .rewind                  { background-position:   -300px 0px; }
 .ossein-renewal,                                                //Leoric
@@ -292,6 +296,7 @@
 .let-the-killing-begin,
 .shooting-star,                                                 //Tyrande
 .mithril-mace,                                                  //Leoric
+.dynamic-shooting,                                              //Ana
 .berserk                 { background-position:  -1050px 0px; }
 .maelstrom-shells,                                              //Sgt. Hammer
 .throwing-axes,                                                 //Rexxar
@@ -313,6 +318,7 @@
 .rime,                                                          //Arthas
 .block                   { background-position:  -1170px 0px; }
 .wildfire-bear,                                                 //Rexxar
+.holy-fury,                                                     //Johanna
 .burning-rage            { background-position:  -1200px 0px; }
 .nerubian-armor,                                                //Anub
 .dampen-magic            { background-position:  -1230px 0px; }
@@ -415,6 +421,51 @@
 .rite-of-rakshir       { background-position: -270px 0px; }
 .last-laugh            { background-position: -300px 0px; }
 .hasty-bargain         { background-position: -330px 0px; }
+
+// Ana
+.grenade-calibration,
+.air-strike,
+.contact-healing,
+.piercing-darts,
+.temporary-blindness,
+.detachable-box-magazine,
+.overdose,
+.aim-down-sights,
+.custom-optics,
+.mindnumbing-agent,
+.somnolent-doses,
+.debilitating-dart,
+.nano-boost,
+.nano-infusion,
+.eye-of-horus,
+.ballistic-advantage,
+.speed-serum,
+.sharpshooter,
+.purifying-darts,
+.concentrated-doses,
+.smelling-salts { background: url(../assets/img/talents/ana.webp); }
+
+.grenade-calibration,
+.air-strike,
+.contact-healing         { background-position:    0px 0px; }
+.piercing-darts,
+.temporary-blindness     { background-position:  -30px 0px; }
+.detachable-box-magazine { background-position:  -60px 0px; }
+.overdose                { background-position:  -90px 0px; }
+.aim-down-sights,
+.custom-optics           { background-position: -120px 0px; }
+.mindnumbing-agent,
+.somnolent-doses         { background-position: -150px 0px; }
+.debilitating-dart       { background-position: -180px 0px; }
+.nano-boost,
+.nano-infusion           { background-position: -210px 0px; }
+.eye-of-horus,
+.ballistic-advantage     { background-position: -240px 0px; }
+.speed-serum,
+.sharpshooter            { background-position: -270px 0px; }
+.purifying-darts,
+.concentrated-doses      { background-position: -300px 0px; }
+.smelling-salts          { background-position: -330px 0px; }
 
 //Anub'arak
 .extended-spikes,
@@ -1509,7 +1560,6 @@
 .numbing-blast           { background-position: -270px 0px; }
 
 //Johanna
-.righteous-smash,
 .roar,
 .subdue,
 .knight-takes-pawn,
@@ -1517,7 +1567,6 @@
 .conviction,
 .blessed-hammer,
 .laws-of-hope,
-.the-crusade-marches-on,
 .hold-your-ground,
 .fanaticism,
 .sins-exposed,
@@ -1526,26 +1575,28 @@
 .heavens-fury,
 .blessed-shield,
 .radiating-faith,
-.indestructible { background: url(../assets/img/talents/johanna.png); }
+.indestructible,
+.zealous-glare,
+.blessed-hammer { background: url(../assets/img/talents/johanna.webp); }
 
-.righteous-smash,
+.conviction              { background-position:    0px 0px; }
 .roar,
 .subdue                  { background-position:  -30px 0px; }
 .knight-takes-pawn,
 .eternal-retaliation,
-.conviction,
 .blessed-hammer          { background-position:  -60px 0px; }
 .laws-of-hope            { background-position:  -90px 0px; }
-.the-crusade-marches-on,
 .hold-your-ground,
 .fanaticism              { background-position: -120px 0px; }
 .sins-exposed,
+.zealous-glare,
 .holy-renewal            { background-position: -150px 0px; }
 .falling-sword,
-.heavens-fury           { background-position: -180px 0px; }
+.heavens-fury            { background-position: -180px 0px; }
 .blessed-shield,
 .radiating-faith         { background-position: -210px 0px; }
 .indestructible          { background-position: -240px 0px; }
+.blessed-hammer          { background-position: -270px 0px; }
 
 //Kael'thas
 .convection,
@@ -2331,7 +2382,6 @@
 .double-tap,
 .crippling-shot,
 .covert-ops,
-.remote-delivery,
 .lethal-decoy,
 .rapid-projection,
 .holo-stability,
@@ -2355,7 +2405,6 @@
 .double-tap,
 .crippling-shot      { background-position:  -60px 0px; }
 .covert-ops          { background-position:  -90px 0px; }
-.remote-delivery,
 .lethal-decoy        { background-position: -120px 0px; }
 .rapid-projection    { background-position: -150px 0px; }
 .holo-stability      { background-position: -180px 0px; }

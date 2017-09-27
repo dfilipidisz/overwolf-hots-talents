@@ -1,3 +1,8 @@
+**v5.3.2** - 2017.09.27
+
+* Added: Ana
+* Updated: Johanna, Nova
+
 **v5.3.1** - 2017.09.25
 
 * Fix: Widget bug

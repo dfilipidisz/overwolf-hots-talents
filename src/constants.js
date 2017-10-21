@@ -70,6 +70,7 @@ export const HEROES = [
   { value: 'Illidan', label: 'Illidan', role: 'assassin', franchise: 'warcraft' },
   { value: 'Jaina', label: 'Jaina', role: 'assassin', franchise: 'warcraft' },
   { value: 'Johanna', label: 'Johanna', role: 'warrior', franchise: 'diablo' },
+  { value: 'Junkrat', label: 'Junkrat', role: 'assassin', franchise: 'overwatch' },
   { value: 'Kaelthas', label: 'Kael\'thas', role: 'assassin', franchise: 'warcraft' },
   { value: 'KelThuzad', label: 'Kel\'Thuzad', role: 'assassin', franchise: 'warcraft' },
   { value: 'Kerrigan', label: 'Kerrigan', role: 'assassin', franchise: 'starcraft' },

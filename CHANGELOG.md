@@ -1,3 +1,8 @@
+**v5.3.3** - 2017.10.21
+
+* Added: Junkrat
+* Updated: Muradin, Zul'Jin
+
 **v5.3.2** - 2017.09.27
 
 * Added: Ana

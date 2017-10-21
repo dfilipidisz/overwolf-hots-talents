@@ -94,7 +94,6 @@
 .angelic-momentum,
 .lunar-momentum,
 .swarm-momentum,
-.Muradin.ironforged-momentum,
 .dampen-magic,
 .hammer-gains,
 .spectral-leech,
@@ -133,7 +132,6 @@
 .master-warpblade,
 .vigor,
 .combat-readiness,
-.you-want-axe,
 .let-the-killing-begin,
 .a-fishy-deal,
 .time-to-krill,
@@ -171,7 +169,9 @@
 .shroud-of-the-dead-king,
 .dynamic-shooting,
 .holy-fury,
-.blinded-by-the-light { background: url(../assets/img/talents/general.png); }
+.blinded-by-the-light,
+.eye-of-zuljin,
+.bronzebeard-rage { background: url(../assets/img/talents/general.png); }
 
 .follow-through,
 .giant-killer,
@@ -245,7 +245,6 @@
 .twilight-veil,                                                 //Cho
 .shroud-of-the-dead-king,                                       //Leoric
 .hardened-skin           { background-position:   -510px 0px; } //Rexxar
-.you-want-axe,
 .seasoned-marksman       { background-position:   -540px 0px; }
 .impatience-is-a-virtue,                                        //The Lost Vikings
 .Diablo.diabolical-momentum,
@@ -254,7 +253,6 @@
 .angelic-momentum,                                              //Tyrael
 .lunar-momentum,                                                //Tyrande
 .swarm-momentum,                                                //Zagara
-.Muradin.ironforged-momentum,
 .mocking-strikes,                                               //Alarak
 .runed-gauntlet,                                                //Cho
 .thirst-for-battle,                                             //Garrosh
@@ -319,6 +317,7 @@
 .block                   { background-position:  -1170px 0px; }
 .wildfire-bear,                                                 //Rexxar
 .holy-fury,                                                     //Johanna
+.bronzebeard-rage,                                              //Muradin
 .burning-rage            { background-position:  -1200px 0px; }
 .nerubian-armor,                                                //Anub
 .dampen-magic            { background-position:  -1230px 0px; }
@@ -327,6 +326,7 @@
 .cleaver                 { background-position:  -1290px 0px; } //Butcher
 .caduceus-feedback,                                             //Morales
 .templars-will           { background-position:  -1320px 0px; } //Tassadar
+.eye-of-zuljin           { background-position:  -1350px 0px; }
 
 //Abathur
 .Abathur.pressurized-glands,
@@ -1598,6 +1598,52 @@
 .indestructible          { background-position: -240px 0px; }
 .blessed-hammer          { background-position: -270px 0px; }
 
+//Junkrat
+.put-some-english-on-it,
+.extrawound-timers,
+.bouncy-bouncy,
+.taste-for-explosions,
+.tricky-shuffles,
+.bonzer-hits,
+.ripper-air,
+.boom-pow,
+.gotta-trap-em-all,
+.chattering-teeth,
+.big-as,
+.sticky-wicket,
+.riptire,
+.extra-oomph,
+.rocket-ride,
+.puckish-scamp,
+.bogged-down,
+.burst-fire,
+.endless-nades,
+.spread-volley,
+.cannonball { background: url(../assets/img/talents/junkrat.webp); }
+
+.put-some-english-on-it { background-position:    0px 0px; }
+.extrawound-timers      { background-position:  -30px 0px; }
+.bouncy-bouncy          { background-position:  -60px 0px; }
+.taste-for-explosions,
+.tricky-shuffles        { background-position:  -90px 0px; }
+.bonzer-hits,
+.ripper-air,
+.boom-pow               { background-position: -120px 0px; }
+.gotta-trap-em-all,
+.chattering-teeth       { background-position: -150px 0px; }
+.big-as                 { background-position: -180px 0px; }
+.sticky-wicket          { background-position: -210px 0px; }
+.riptire,
+.extra-oomph            { background-position: -240px 0px; }
+.rocket-ride,
+.puckish-scamp          { background-position: -270px 0px; }
+.bogged-down            { background-position: -300px 0px; }
+.burst-fire             { background-position: -330px 0px; }
+.endless-nades          { background-position: -360px 0px; }
+.spread-volley          { background-position: -390px 0px; }
+.cannonball             { background-position: -420px 0px; }
+
+
 //Kael'thas
 .convection,
 .burned-flesh,
@@ -2213,16 +2259,13 @@
 //Muradin
 .infused-hammer,
 .sledgehammer,
-.piercing-bolt,
 .perfect-storm,
 .reverberation,
-.crowd-control,
 .healing-static,
 .third-wind,
 .stoneform,
 .thunder-burn,
 .thunder-strike,
-.landing-momentum,
 .dwarf-launch,
 .skullcracker,
 .avatar,
@@ -2233,17 +2276,14 @@
 .thunder-burn { background: url(../assets/img/talents/muradin.png); }
 
 .infused-hammer,
-.sledgehammer,
-.piercing-bolt     { background-position:    0px 0px; }
+.sledgehammer      { background-position:    0px 0px; }
 .perfect-storm     { background-position:  -30px 0px; }
 .reverberation,
 .thunder-strike    { background-position:  -60px 0px; }
 .third-wind,
 .stoneform         { background-position:  -90px 0px; }
 .thunder-burn,
-.crowd-control,
 .healing-static    { background-position: -120px 0px; }
-.landing-momentum,
 .dwarf-launch      { background-position: -150px 0px; }
 .skullcracker      { background-position: -180px 0px; }
 .avatar,
@@ -3650,10 +3690,8 @@
 //Zul'jin
 .boneslicer,
 .vicious-assault,
-.eye-of-zuljin,
 .arcanite-axes,
 .wrong-place-wrong-time,
-.swirling-death,
 .trolls-blood,
 .forest-medicine,
 .headhunter,
@@ -3665,14 +3703,15 @@
 .buzzsaw,
 .voodoo-shuffle,
 .lacerate,
-.ensnare { background: url(../assets/img/talents/zuljin.png); }
+.ensnare,
+.amani-rage,
+.no-mercy { background: url(../assets/img/talents/zuljin.png); }
 
 .boneslicer,
 .vicious-assault,
-.eye-of-zuljin           { background-position:    0px 0px; }
+.no-mercy                { background-position:    0px 0px; }
 .arcanite-axes,
-.wrong-place-wrong-time,
-.swirling-death          { background-position:  -30px 0px; }
+.wrong-place-wrong-time  { background-position:  -30px 0px; }
 .trolls-blood,
 .forest-medicine         { background-position:  -60px 0px; }
 .headhunter              { background-position:  -90px 0px; }
@@ -3682,6 +3721,7 @@
 .amani-resilience        { background-position: -150px 0px; }
 .guillotine,
 .buzzsaw                 { background-position: -180px 0px; }
+.amani-rage,
 .voodoo-shuffle          { background-position: -210px 0px; }
 .lacerate                { background-position: -240px 0px; }
 .ensnare                 { background-position: -270px 0px; }
